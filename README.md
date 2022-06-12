@@ -42,5 +42,5 @@ Added photo labelled "git_commit.png" will be referenced in markdown file as `![
 ### 2. *teaching-notes*:
 This folder contains the teaching notes for the Unix and Git/GitHub workshops. Teaching notes include additional information on each slide to reference, as well as optional material. These notes are designed to guide the instructor and give more detailed information to supplement the slides.
 
-### 3. *pdf*:
+### 3. *pdf-slides*:
 This folder contains the PDF versions of the slides for students to follow. Slides should be referenced before class to prepare or after class to review. During class will be live-coding, therefore, there is no need to follow them during class. They contain all information that was discussed in class and are a great resource in the future if students need to reassess their knowledge.
