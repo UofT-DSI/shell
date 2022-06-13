@@ -44,3 +44,8 @@ This folder contains the teaching notes for the Unix and Git/GitHub workshops. T
 
 ### 3. *pdf-slides*:
 This folder contains the PDF versions of the slides for students to follow. Slides should be referenced before class to prepare or after class to review. During class will be live-coding, therefore, there is no need to follow them during class. They contain all information that was discussed in class and are a great resource in the future if students need to reassess their knowledge.
+
+### 4. *homework*:
+This folder contains homeowork for students to practice. It is separated by week, then by day. Please complete the Unix Shell homework in the first week, and the Git/GitHub homework in the second.
+
+It is just a suggestion but it will help students throughout the workshop, as content is cumulative and will only get more difficult. Unfortunately, there is not enough time to review previous content each class so while this homework is **not** graded, it is highly recommended.
