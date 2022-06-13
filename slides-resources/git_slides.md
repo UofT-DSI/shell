@@ -683,10 +683,6 @@ We can also delete files in a folder of our working directory:
 ```console
 $ git rm -f dir1/\*.sh
 ```
----
-<!--_color: white -->
-<!--_backgroundColor: #33857a -->
-**Questions?**
 
 ---
 <!--_color: white -->
@@ -698,6 +694,11 @@ Using `git mv`, we can rename files conveniently and succinctly:
 ```console
 $ git mv test.txt test.sh
 ```
+
+---
+<!--_color: white -->
+<!--_backgroundColor: #33857a -->
+**Questions?**
 
 ---
 <!--_color: white -->
