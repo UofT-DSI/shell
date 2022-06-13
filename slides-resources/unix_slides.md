@@ -2017,8 +2017,6 @@ fi
 ```
 If the second `if` condition is met, then the break immediately terminates the loop and resumes with the next statement.
 
----
-
 
 
 
