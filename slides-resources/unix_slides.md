@@ -1307,7 +1307,6 @@ Now let's change and add a few things to see what happens:
 <!--_color: white -->
 <!--_backgroundColor: #33857a -->
 **Questions?**
-- working through difficulties. step-by-step approach to see what each component does.
 
 ---
 ##### **Parameter Expansion**
@@ -1689,7 +1688,7 @@ Similarly, what will happen if...
 ---
 <!--_color: white -->
 <!--_backgroundColor: #33857a -->
-**Questions**
+**Questions?**
 
 ---
 <!--_color: white -->
