@@ -1,6 +1,6 @@
 # DSI Workshop for Unix, Git and GitHub
 
-## Table of Contents:
+## Contents:
 1. [Description](https://github.com/rachaellam/dsi-workshop#description)
 2. [Learning Outcomes](https://github.com/rachaellam/dsi-workshop#learning-outcomes)
 3. [Design](https://github.com/rachaellam/dsi-workshop#design)
