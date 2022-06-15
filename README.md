@@ -2,11 +2,17 @@
 
 ## Table of Contents:
 [1. Description](https://github.com/rachaellam/dsi-workshop#description)
+
 [2. Learning Outcomes](https://github.com/rachaellam/dsi-workshop#learning-outcomes)
+
 [3. Design](https://github.com/rachaellam/dsi-workshop#design)
+
 [4. Expectations](https://github.com/rachaellam/dsi-workshop#expectations)
+
 [5. Policies](https://github.com/rachaellam/dsi-workshop#policies)
+
 [6. Schedule](https://github.com/rachaellam/dsi-workshop#schedule)
+
 [7. Folder Structure](https://github.com/rachaellam/dsi-workshop#folder-structure)
 
 ## Description:
