@@ -1,19 +1,13 @@
 # DSI Workshop for Unix, Git and GitHub
 
 ## Table of Contents:
-[1. Description](https://github.com/rachaellam/dsi-workshop#description)
-
-[2. Learning Outcomes](https://github.com/rachaellam/dsi-workshop#learning-outcomes)
-
-[3. Design](https://github.com/rachaellam/dsi-workshop#design)
-
-[4. Expectations](https://github.com/rachaellam/dsi-workshop#expectations)
-
-[5. Policies](https://github.com/rachaellam/dsi-workshop#policies)
-
-[6. Schedule](https://github.com/rachaellam/dsi-workshop#schedule)
-
-[7. Folder Structure](https://github.com/rachaellam/dsi-workshop#folder-structure)
+1. [Description](https://github.com/rachaellam/dsi-workshop#description)
+2. [Learning Outcomes](https://github.com/rachaellam/dsi-workshop#learning-outcomes)
+3. [Design](https://github.com/rachaellam/dsi-workshop#design)
+4. [Expectations](https://github.com/rachaellam/dsi-workshop#expectations)
+5. [Policies](https://github.com/rachaellam/dsi-workshop#policies)
+6. [Schedule](https://github.com/rachaellam/dsi-workshop#schedule)
+7. [Folder Structure](https://github.com/rachaellam/dsi-workshop#folder-structure)
 
 ## Description:
 The workshop was createde by the University of Toronto's Data Science Institute. The beginning of the course will introduce the basic language of Unix shell including how to navigate and manipulate files and directories. Learners will then learn certain commands, how to create scripts and write basic functions using pipes, filters and loops. 
