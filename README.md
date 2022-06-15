@@ -34,7 +34,8 @@ The course is a live-coding class. Students are expected to follow along with th
 TBA
 
 ## Schedule
-TBA
+Day 1: Setup and introductory commands
+Day 2: Input/output and pipes/filters
 
 ## Folder Structure
 Below are the folders contained in this repo with a description of what they contain and information on how to use them.
