@@ -35,6 +35,7 @@ TBA
 
 ## Schedule
 Day 1: Setup and introductory commands
+
 Day 2: Input/output and pipes/filters
 
 ## Folder Structure
