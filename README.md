@@ -38,7 +38,7 @@ Day 1: Setup and introductory commands
 
 Day 2: Input/output and pipes/filters
 
-Day 3: Shell scripts, shell functions, parameters, flow control (if/else)
+Day 3: Shell scripts, shell functions, parameters, flow control (`if/else`)
 
 Day 4: Finished flow control, version control, and introduced Git
 
