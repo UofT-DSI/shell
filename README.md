@@ -31,7 +31,7 @@ The workshop will be held over tow weeks, three days a week. Two of the three da
 The course is a live-coding class. Students are expected to follow along with the coding, creating files and folders to navigate and manipulate. Students should be active participants while coding and are encouraged to ask questions throughout. Although slides will be available for students to reference, they should be referenced before or after class, as during class will be dedicated to coding with the instructor.
 
 ## Policies
-TBA
+TBA (camera, attendance (timing))
 
 ## Schedule
 Day 1: Setup and introductory commands
@@ -42,9 +42,9 @@ Day 3: Shell scripts, shell functions, parameters, flow control (`if/else`)
 
 Day 4: Finished flow control, version control, and introduced Git
 
-Day 5: TBD
+Day 5: Basic Git commands
 
-Day 6: TBD
+Day 6: Remote repositories and collaboration
 
 ## Folder Structure
 Below are the folders contained in this repo with a description of what they contain and information on how to use them.
@@ -74,7 +74,7 @@ This folder contains the PDF versions of the slides for students to follow. Slid
 This folder contains the html versions of the slides. Either the pdf slides or the html slides can be used when teaching. If slides are edited to contain any gifs, the instructor will need to use the html slides so that the gifs are active.
 
 ### 5. *pdf-homework*:
-This folder contains homeowork for students to practice. It is separated by week, then by day. Please complete the Unix Shell homework in the first week, and the Git/GitHub homework in the second.
+This folder contains homework for students to practice Unix and Git/GitHub workshops. It is separated by week, then by day. Please complete the Unix Shell homework in the first week, and the Git/GitHub homework in the second.
 
 It is just a suggestion but it will help students throughout the workshop, as content is cumulative and will only get more difficult. Unfortunately, there is not enough time to review previous content each class so while this homework is **not** graded, it is highly recommended.
 
