@@ -31,20 +31,27 @@ The workshop will be held over tow weeks, three days a week. Two of the three da
 The course is a live-coding class. Students are expected to follow along with the coding, creating files and folders to navigate and manipulate. Students should be active participants while coding and are encouraged to ask questions throughout. Although slides will be available for students to reference, they should be referenced before or after class, as during class will be dedicated to coding with the instructor.
 
 ## Policies
-TBA (camera, attendance (timing))
+1. Camera is optional although highly encouraged. We understand that not everyone may have the space at home to have the camera on.
+2. Class will start 5 minutes past the designated time.
 
 ## Schedule
-Day 1: Setup and introductory commands
+Day 1: Unix Shell I (introducing the Shell, introductory commands, files and directoriews)
 
-Day 2: Input/output and pipes/filters
+Day 2: Unix Shell II (input/output and pipes/filters)
 
-Day 3: Shell scripts, shell functions, parameters, flow control (`if/else`)
+Day 3: Unix Shell III (shell scripts, shell functions, parameters, flow control)
 
-Day 4: Finished flow control, version control, and introduced Git
+Day 4: Version Control and GitHub I (introducing version control and GitHub, basic Git commands)
 
-Day 5: Basic Git commands
+Day 5: Version Control and GitHub II (remote repositories; branching)
 
-Day 6: Remote repositories and collaboration
+Day 6: Version Control and GitHub III (collaborting, dealing with conflicts)
+
+Day 7: Problem solve, reproducibility, ethics, inequity
+
+Day 8: Professional Skills - Industry Case Study
+
+Day 9: Data Science Foundations - Review and Practice
 
 ## Folder Structure
 Below are the folders contained in this repo with a description of what they contain and information on how to use them.
@@ -83,3 +90,6 @@ This folder contains the editable versions of the pdf homework. Can be changed b
 
 ### 7. *post-workship*:
 This folder contains the exit surveys for students to complete. It holds both the md and docx versions of the survey.
+
+### 8. *assignments*:
+This folder contains the assignments for the workshop. Students are expected to complete them one week after the content has been delivered
