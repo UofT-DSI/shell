@@ -92,14 +92,6 @@ Please practice the following commands. You can upload different datasets relave
 ---
 ##### **To Review:**
 It's time to put everything we've learned together!
-1. Write a script that takes the parking_data.csv file as a positional parameter from the terminal as the input (this is so that the script can be run from any computer, so long as the csv file is available).
 
-    - You can find the Toronto parking ticket data at Toronto’s Open Data Portal: https://open.toronto.ca/dataset/parking-tickets/ 
-
----
-2. Build a function into the script that for every type of infraction_description, find the mean, median, max, and min set_fine_amount
-
-    - The script should be able to navigate to the directory housing the csv file
-    - Functions should include loops
-    - You will need to use outside sources (Google and StackOverflow) to build these calculations. Remember to cite any code that was used.
+Please complete assignment 1 by October 30th. Submit assignment by email to your TA by 11:59 PM.
 
