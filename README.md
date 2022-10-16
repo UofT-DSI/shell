@@ -10,7 +10,7 @@
 7. [Folder Structure](https://github.com/rachaellam/dsi-workshop#folder-structure)
 
 ## Description:
-The workshop was createde by the University of Toronto's Data Science Institute. The beginning of the course will introduce the basic language of Unix shell including how to navigate and manipulate files and directories. Learners will then learn certain commands, how to create scripts and write basic functions using pipes, filters and loops. 
+The workshop was created by the University of Toronto's Data Science Institute. The beginning of the course will introduce the basic language of Unix shell including how to navigate and manipulate files and directories. Learners will then learn certain commands, how to create scripts and write basic functions using pipes, filters and loops. 
 
 The next portion of the lesson will be dedicated to getting started with version control and GitHub, and how it connects to the ethical discussions of reproducibility. Learners will learn how to set up Git and initialize and utilize repositories, including recording, viewing and undoing changes. They will also learn how to create branches and collaborate with others with shared branches. This course will put it all together and introduce some more advanced commands such as de-bugging and history editing.
 
@@ -25,7 +25,7 @@ This course is designed for those who have a degree in something other than Comp
 4. Appreciate the importance of reproducibility and essential features.
 
 ## Design
-The workshop will be held over tow weeks, three days a week. Two of the three days will be 2-hours long and the last day will be 3-hours. Being mindful of online fatigue, there will be one break during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
+The workshop will be held over three weeks, three days a week. Two of the three days will be 2-hours long and the last day will be 3-hours. Being mindful of online fatigue, there will be one break during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
 
 ## Expectations
 The course is a live-coding class. Students are expected to follow along with the coding, creating files and folders to navigate and manipulate. Students should be active participants while coding and are encouraged to ask questions throughout. Although slides will be available for students to reference, they should be referenced before or after class, as during class will be dedicated to coding with the instructor.
@@ -35,7 +35,7 @@ The course is a live-coding class. Students are expected to follow along with th
 2. Class will start 5 minutes past the designated time.
 
 ## Schedule
-Day 1: Unix Shell I (introducing the Shell, introductory commands, files and directoriews)
+Day 1: Unix Shell I (introducing the Shell, introductory commands, files and directories)
 
 Day 2: Unix Shell II (input/output and pipes/filters)
 
@@ -45,7 +45,7 @@ Day 4: Version Control and GitHub I (introducing version control and GitHub, bas
 
 Day 5: Version Control and GitHub II (remote repositories; branching)
 
-Day 6: Version Control and GitHub III (collaborting, dealing with conflicts)
+Day 6: Version Control and GitHub III (collaborating, dealing with conflicts)
 
 Day 7: Problem solve, reproducibility, ethics, inequity
 
@@ -85,7 +85,7 @@ It is just a suggestion but it will help students throughout the workshop, as co
 ### 5. *homework*:
 This folder contains the editable versions of the pdf homework. Can be changed based on the amount of content that was completed each day.
 
-### 6. *post-workship*:
+### 6. *post-workshop*:
 This folder contains the exit surveys for students to complete. It holds both the md and docx versions of the survey.
 
 ### 7. *assignments*:
