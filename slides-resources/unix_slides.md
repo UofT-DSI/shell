@@ -246,7 +246,7 @@ $ ls -l
 $ ls -lt
 ```
 ```console
-$ ls -lt --reverse
+$ ls -lt -reverse
 ```
 `-l` long format
 `-t` modification time
