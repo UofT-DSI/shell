@@ -19,10 +19,11 @@ Finally, learners will determine how to problem-solve by identifying where the i
 This course is designed for those who have a degree in something other than Computer Science/Statistics who are looking to enhance their data science skills for their career.
 
 ## Learning Outcomes
-1. Ability to comfortably use the Unix shell.
-2. Understand the importance of version control and implement fundamentals in GitHub. 
-3. Confidence with problem-solving code.
-4. Appreciate the importance of reproducibility and essential features.
+Students will know how to...
+1. Comfortably access the terminal and write scripts using basic commands, variables, pipes, filters and loops. This will be assessed in Assignment 1.
+2. How to use version control to preserve personal work, access and edit pervious code versions, collaborate with others, and find and debug errors. This will be assessed in Assignment 2.
+3. Self-problem solve by identifying issues, researching, or properly formulating questions using components of reproducibility. This will be assessed in both Assignment 1 and Assignment 2.
+4. Situate all work within wider discussions of ethics and inequity. Students will actively scrutinize who is and isn't in our datasets and develop knowledge of past abuses of power to better engage their work with ethical considerations. This will be assessed in Assignment 2.
 
 ## Design
 The workshop will be held over three weeks, three days a week. Two of the three days will be 2-hours long and the last day will be 3-hours. Being mindful of online fatigue, there will be one break during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
