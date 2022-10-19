@@ -43,26 +43,13 @@ Because each class builds upon the last, it's important to review the content, a
 
 ---
 ##### **To Review:**
-Please practice the following commands. You can upload different datasets relavent to your work to play with.
+Please practice the following commands.
 1. current directory `pwd`
 2. set working directory `cd`
 3. list contents of working directory `ls`
 4. create directory `mkdir`
 5. create file `touch`
 6. copy `cp`
-7. move and rename `mv`
-8. remove `rm`
-
----
-9. concatenate `cat`
-
-10. extract columns from output `cut`
-11. sort lines of text `sort`
-12. report or omit repeated lines `uniq`
-13. print lines matching a patter `grep`
-14. search directories and subdirectories for files `find`
-15. ouput the first part of a file `head`
-16. output the last part of a file `tail`
 
 ---
 <!--_color: white -->
@@ -72,14 +59,29 @@ Please practice the following commands. You can upload different datasets relave
 ---
 ##### **To Review:**
 
-1. Play around with the commands we learned last week using:
+Continue to practice commmands that we learned last week in addition to the new ones. You can upload different datasets relavent to your work to play with.
+1. move and rename `mv`
+2. remove `rm`
+3. concatenate `cat`
+4. extract columns from output `cut`
+5. sort lines of text `sort`
+6. report or omit repeated lines `uniq`
+
+---
+7. print lines matching a patter `grep`
+8. search directories and subdirectories for files `find`
+9. ouput the first part of a file `head`
+10. output the last part of a file `tail`
+<br>
+
+Try each commmand with different...
 - `-options`
 - Wildcards
 - Expansions
 - Quoting and backslashing.
 
 ---
-2. Create any script using functions. Try to include:
+Create any script using functions. Try to include:
 - Global variables
 - Local variables
 - Positional parameters
