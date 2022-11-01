@@ -1064,7 +1064,7 @@ $ git pull origin main
 ---
 <!--_color: white -->
 <!--_backgroundColor: #33857a -->
-**Discussion/Questions Placeholder**
+Questions?
 
 ---
 <!--_color: white -->
@@ -1818,10 +1818,6 @@ fi
 ##### **2. Good comments do not excuse unclear code**
 - Our aim should always be having clear code, rather than relying on our comments to add clarity.
 - Remember, we should not be adding more bulk to the code that makes it more difficult to understand.
-
-```bash
-Add example here
-```
 
 ---
 ##### **3. If you can’t write a clear comment, there may be a problem with the code**
