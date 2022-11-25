@@ -16,6 +16,10 @@ The next portion of the lesson will be dedicated to getting started with version
 
 Finally, learners will determine how to problem-solve by identifying where the issue is and how to search with Google and Stack Overflow. This will then lead to the topic of reproducibility and how to contribute by commenting code and writing documentation.
 
+In the final week, students will learn about ethics and inequity and why it's important to include these discussions within their projects. This class will be discussion based and will require students to do readings before the class.
+
+Throughout the entire course, students will learn how to problem solve through live coding. They will also learn about reproducibility and how to centre it within their work.
+
 This course is designed for those who have a degree in something other than Computer Science/Statistics who are looking to enhance their data science skills for their career.
 
 ## Learning Outcomes
