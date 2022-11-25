@@ -1719,8 +1719,8 @@ Questions?
 
 ---
 <!--_color: white -->
-<!--_backgroundColor: #33857a -->
-What is reproducibility?
+<!--_backgroundColor: #f4a534 -->
+## `Reproducibility`
 
 ---
 - Reproducibility is the ability for for independent researches to obtain the same or similar results when repeating an experiment or test.
@@ -1755,9 +1755,65 @@ How can we make our work reproducible?
 
 ---
 There are a number of practices that can help make our work reproducible including:
+- Reproducible Examples
 - Commenting Code
 - Technical Documentation
 - Folder Structure
+
+---
+<!--_color: white -->
+<!--_backgroundColor: #f4a534 -->
+## `Reproducible Examples`
+
+---
+##### **Reprex**
+- A reprex is a **REPR**oducible **EX**ample.
+
+- It contains just enough of the code to reproduce the error, ie. it is **self-contained**
+
+- We might have to create a smaller version of the code in order to create the reprex. Don't include anything that isn't related to the problem.
+
+- Sometimes, this process will help us solve our issue.
+
+---
+##### **Inclusions**
+A minimal dataset to demonstrate the problem. This could be a regularly used one such as *iris* 
+```python
+install.packages("dyplr")
+library(dplyr)
+head(mtcars)
+```
+
+or one easily built yourself.
+```python
+df <- data.frame (col1  = c(1, 2),
+                  col2 = c(3, 4))
+df
+```
+
+---
+- Make sure to include classes that are necessary to your reprex (ex. dates, factors, etc.)
+
+- If you're using randomly sampled data, set the seed to so the same data is produced each time.
+```rstudio
+set.seed(853)
+```
+
+---
+Include all packages that you need.
+<br>
+
+- Make sure they are placed at the top of the script so it's quick and easy to see what is necessary for the reprex.
+
+---
+##### **Other Inclusions**
+- Details about the issues you are facing.
+
+- Comments that will add clarification to your error.
+
+- Add what fixes have been attempted. This could include pages to StackOverflow articles that you've viewed.
+
+- Communicate cleary what you're desired outcome is.
 
 ---
 <!--_color: white -->
