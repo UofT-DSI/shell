@@ -95,3 +95,6 @@ This folder contains the exit surveys for students to complete. It holds both th
 
 ### 7. *assignments*:
 This folder contains the assignments for the workshop. Students are expected to complete them one week after the content has been delivered
+
+### 8. *guides*:
+This folder includes guides specifically for windows to set up Ubuntuu environment and SSH Keys. Students who experience difficulty with these topics should reference the guides to debug.
