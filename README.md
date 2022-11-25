@@ -76,25 +76,24 @@ Example:
 
 Added photo labelled "git_commit.png" will be referenced in markdown file as `![w:1000 left](pics/git_commit.png)`
 
+This folder also includes the html versions of the slides. Either the pdf slides or the html slides can be used when teaching. If slides are edited to contain any gifs, the instructor will need to use the html slides so that the gifs are active.
+
 ### 2. *pdf-slides*:
-This folder contains the PDF versions of the slides for students to follow. Slides should be referenced before class to prepare or after class to review. During class will be live-coding, therefore, there is no need to follow them during class. They contain all information that was discussed in class and are a great resource in the future if students need to reassess their knowledge.
+This folder contains the pdf versions of the slides for students to follow. Slides should be referenced before class to prepare or after class to review. During class will be live-coding, therefore, there is no need to follow them during class. They contain all information that was discussed in class and are a great resource in the future if students need to reassess their knowledge.
 
-### 3. *html-slides*:
-This folder contains the html versions of the slides. Either the pdf slides or the html slides can be used when teaching. If slides are edited to contain any gifs, the instructor will need to use the html slides so that the gifs are active.
-
-### 4. *pdf-homework*:
+### 3. *pdf-homework*:
 This folder contains homework for students to practice Unix and Git/GitHub workshops. It is separated by week, then by day. Please complete the Unix Shell homework in the first week, and the Git/GitHub homework in the second.
 
 It is just a suggestion but it will help students throughout the workshop, as content is cumulative and will only get more difficult. Unfortunately, there is not enough time to review previous content each class so while this homework is **not** graded, it is highly recommended.
 
-### 5. *homework*:
+### 4. *homework*:
 This folder contains the editable versions of the pdf homework. Can be changed based on the amount of content that was completed each day.
 
-### 6. *post-workshop*:
+### 5. *post-workshop*:
 This folder contains the exit surveys for students to complete. It holds both the md and docx versions of the survey.
 
-### 7. *assignments*:
+### 6. *assignments*:
 This folder contains the assignments for the workshop. Students are expected to complete them one week after the content has been delivered
 
-### 8. *guides*:
+### 7. *guides*:
 This folder includes guides specifically for windows to set up Ubuntuu environment and SSH Keys. Students who experience difficulty with these topics should reference the guides to debug.
