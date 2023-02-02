@@ -47,7 +47,7 @@ Homework will be released after each class and is due on the day of the next cla
 
 ---
 ##### **Prompt:**
-Create one directory on in any parent directory of your choice. This new directory should contain three additional directories. Within one of these additional subdirectories, please create two text files (.txt)
+Create one directory in any parent directory of your choice. This new directory should contain three additional directories. Within one of these additional subdirectories, please create two text files (.txt)
 
 **To submit:**
     1. A screenshot of your terminal commands.
