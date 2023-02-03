@@ -60,3 +60,27 @@ Create one directory in any parent directory of your choice. This new directory 
 - list contents of working directory `ls`
 - create directory `mkdir`
 - create file `touch`
+
+---
+<!--_color: white -->
+<!--_backgroundColor: #f4a534 -->
+## `Day 2`
+
+---
+##### **Prompt:**
+Download a csv of your choice. This could be from Toronto Open Data or another source but use a different csv than the one used in class. Place the new csv in a directory of your choice and rename it. Extract one column and the unique values from that column. Redirect the standard output to be a txt file.
+
+**To submit:**
+    1. A screenshot of your terminal commands.
+    2. The txt file
+
+---
+##### **Potential Commands**
+
+- commands from previous class
+- `mv`
+- `cp`
+- `cat`
+- `cut`
+- `sort`
+- `uniq`
