@@ -84,3 +84,16 @@ Download a csv of your choice. This could be from Toronto Open Data or another s
 - `cut`
 - `sort`
 - `uniq`
+
+---
+<!--_color: white -->
+<!--_backgroundColor: #f4a534 -->
+## `Day 3`
+
+---
+##### **Prompt:**
+Create a shell script that extracts some data using pipes (ie. a column, particular rows using `grep`, or anything else you want to play around with) from the same csv file from Day 2 homework. The filter should be contained within a function and include at least one variable.
+
+**To submit:**
+    1. A screenshot of your terminal commands.
+    2. The shell script file
