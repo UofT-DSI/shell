@@ -97,3 +97,11 @@ Create a shell script that extracts some data using pipes (ie. a column, particu
 **To submit:**
     1. A screenshot of your terminal commands.
     2. The shell script file
+
+---
+<!--_color: white -->
+<!--_backgroundColor: #f4a534 -->
+## `Day 4`
+
+---
+No homework. Please work on Assignment 1.
