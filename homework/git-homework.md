@@ -52,3 +52,17 @@ Initiate a new git directory. Add your homework from previous classes (copy or m
 **To submit:**
     1. A screenshot of your terminal commands.
 
+---
+<!--_color: white -->
+<!--_backgroundColor: #f4a534 -->
+## `Day 2`
+
+---
+##### **Prompt:**
+Clone a repo of your choice from GitHub. Save the first 10 instances of `git log` to a txt file. Please include the commentor name, relative date and subject. Then add a test file, commit the test file and push it to the remote repo. This test file does not have to have anything to do with the project itself - just to practice the git process.
+
+**To submit:**
+    1. A screenshot of your terminal commands
+    2. txt file of `git log`
+
+**Due:** Thursday, Feb 16th
