@@ -54,9 +54,7 @@ Day 6: Version Control and GitHub III (collaborating, dealing with conflicts)
 
 Day 7: Problem solve, reproducibility, ethics, inequity
 
-Day 8: Professional Skills - Industry Case Study
-
-Day 9: Data Science Foundations - Review and Practice
+Day 8: Data Science Foundations - Review and Practice
 
 ## Folder Structure
 Below are the folders contained in this repo with a description of what they contain and information on how to use them.
