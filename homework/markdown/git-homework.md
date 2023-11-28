@@ -36,9 +36,6 @@ The goal of this homework is to give students an opportunity to practice what wa
 
 Because each class builds upon the last, it's important to review the content and become comfortable with it, as time is too limited for a full in-class review.
 
----
-##### **Due Dates**
-Homework will be released after each class and is due on the day of the next class. For example, after class on Monday, the homework prompt will be released and then homework is expected to be handed in at any time on Thursday.
 
 ---
 <!--_color: white -->
