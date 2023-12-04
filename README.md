@@ -1,16 +1,16 @@
-# DSI Workshop for Unix, Git and GitHub
+# Unix, Git and GitHub
 
-## Contents:
-1. [Description](https://github.com/rachaellam/dsi-workshop#description)
-2. [Learning Outcomes](https://github.com/rachaellam/dsi-workshop#learning-outcomes)
-3. [Design](https://github.com/rachaellam/dsi-workshop#design)
-4. [Expectations](https://github.com/rachaellam/dsi-workshop#expectations)
-5. [Policies](https://github.com/rachaellam/dsi-workshop#policies)
-6. [Schedule](https://github.com/rachaellam/dsi-workshop#schedule)
-7. [Folder Structure](https://github.com/rachaellam/dsi-workshop#folder-structure)
+## Contents
+1. [Description](https://github.com/UofT-DSI/01-shell_git_github#description)
+2. [Learning Outcomes](https://github.com/UofT-DSI/01-shell_git_github#learning-outcomes)
+3. [Design](https://github.com/UofT-DSI/01-shell_git_github#design)
+4. [Expectations](https://github.com/UofT-DSI/01-shell_git_github#expectations)
+5. [Policies](https://github.com/UofT-DSI/01-shell_git_github#policies)
+6. [Schedule](https://github.com/UofT-DSI/01-shell_git_github#schedule)
+7. [Folder Structure](https://github.com/UofT-DSI/01-shell_git_github#folder-structure)
 
-## Description:
-The workshop was created by the University of Toronto's Data Science Institute. The beginning of the course will introduce the basic language of Unix shell including how to navigate and manipulate files and directories. Learners will then learn certain commands, how to create scripts and write basic functions using pipes, filters and loops. 
+## Description
+The beginning of the course will introduce the basic language of Unix shell including how to navigate and manipulate files and directories. Learners will then learn certain commands, how to create scripts and write basic functions using pipes, filters and loops. 
 
 The next portion of the lesson will be dedicated to getting started with version control and GitHub, and how it connects to the ethical discussions of reproducibility. Learners will learn how to set up Git and initialize and utilize repositories, including recording, viewing and undoing changes. They will also learn how to create branches and collaborate with others with shared branches. This course will put it all together and introduce some more advanced commands such as de-bugging and history editing.
 
@@ -23,7 +23,7 @@ Throughout the entire course, students will learn how to problem solve through l
 This course is designed for those who have a degree in something other than Computer Science/Statistics who are looking to enhance their data science skills for their career.
 
 ## Learning Outcomes
-Students will know how to...
+Students will know how to:
 1. Comfortably access the terminal and write scripts using basic commands, variables, pipes, filters and loops. This will be assessed in Assignment 1.
 2. How to use version control to preserve personal work, access and edit pervious code versions, collaborate with others, and find and debug errors. This will be assessed in Assignment 2.
 3. Self-problem solve by identifying issues, researching, or properly formulating questions using components of reproducibility. This will be assessed in both Assignment 1 and Assignment 2.
@@ -65,7 +65,7 @@ Assignments related to each chapter will have a dedicated submission deadline. T
 ## Folder Structure
 Below are the folders contained in this repo with a description of what they contain and information on how to use them.
 
-### 1. *slides-resources*:
+### 1. *slides-resources*
 This folder contains all editable slides. To edit, download the entire folder, including the *pics* folder as this folder contains the pictures which are relationally referenced in the markdown files.
 
 To change a photo, edit the markdown where photos are referenced.
@@ -82,22 +82,22 @@ Added photo labelled "git_commit.png" will be referenced in markdown file as `![
 
 This folder also includes the html versions of the slides. Either the pdf slides or the html slides can be used when teaching. If slides are edited to contain any gifs, the instructor will need to use the html slides so that the gifs are active.
 
-### 2. *pdf-slides*:
+### 2. *pdf-slides*
 This folder contains the pdf versions of the slides for students to follow. Slides should be referenced before class to prepare or after class to review. During class will be live-coding, therefore, there is no need to follow them during class. They contain all information that was discussed in class and are a great resource in the future if students need to reassess their knowledge.
 
-### 3. *pdf-homework*:
+### 3. *pdf-homework*
 This folder contains homework for students to practice Unix and Git/GitHub workshops. It is separated by week, then by day. Please complete the Unix Shell homework in the first week, and the Git/GitHub homework in the second.
 
 It is just a suggestion but it will help students throughout the workshop, as content is cumulative and will only get more difficult. Unfortunately, there is not enough time to review previous content each class so while this homework is **not** graded, it is highly recommended.
 
-### 4. *homework*:
+### 4. *homework*
 This folder contains the editable versions of the pdf homework. Can be changed based on the amount of content that was completed each day.
 
-### 5. *post-workshop*:
+### 5. *post-workshop*
 This folder contains the exit surveys for students to complete. It holds both the md and docx versions of the survey.
 
-### 6. *assignments*:
+### 6. *assignments*
 This folder contains the assignments for the workshop. Students are expected to complete them one week after the content has been delivered
 
-### 7. *guides*:
-This folder includes guides specifically for windows to set up Ubuntuu environment and SSH Keys. Students who experience difficulty with these topics should reference the guides to debug.
+### 7. *guides*
+This folder includes guides specifically for windows to set up Ubuntu environment and SSH Keys. Students who experience difficulty with these topics should reference the guides to debug.
