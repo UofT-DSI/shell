@@ -58,9 +58,19 @@ Day 8: Data Science Foundations - Review and Practice
 
 ## Deadlines
 Homework Submission:
+
 Homework assignments are expected to be submitted within 2 days of their release date. For example, if homework-1 is released on Saturday, December 2nd, the submission deadline is Monday, December 4th.
+
 Chapter Assignments Submission:
+
 Assignments related to each chapter will have a dedicated submission deadline. These assignments are typically due one week after the conclusion of the respective chapter. As an illustration, if you are working on assignment-1 released on Saturday, December 2nd, the due date for submission is Saturday, December 9th.
+
+Assignment-1 due date: Saturday, Dec 9th
+
+Assignment-2 due date: TBD
+
+All Homework and Assignment submissions can be submitted through [this google form link](https://forms.gle/YJsEuZCKBoZkrnqt5)
+
 
 ## Folder Structure
 Below are the folders contained in this repo with a description of what they contain and information on how to use them.
