@@ -1,16 +1,16 @@
 # Unix
 
 ## Contents
-1. [Description](https://github.com/UofT-DSI/01-shell/#description)
-2. [Learning Outcomes](https://github.com/UofT-DSI/01-shell/#learning-outcomes)
-3. [Course Contacts](https://github.com/UofT-DSI/01-shell/#course-contacts)
-4. [Pre-Course Work](https://github.com/UofT-DSI/01-shell/#pre-course-work)
-5. [Design](https://github.com/UofT-DSI/01-shell/#design)
-6. [Schedule](https://github.com/UofT-DSI/01-shell/#schedule)
-7. [Prerequisites](https://github.com/UofT-DSI/01-shell/#prerequisites)
-7. [Expectations](https://github.com/UofT-DSI/01-shell/#expectations)
-8. [Policies](https://github.com/UofT-DSI/01-shell/#policies)
-9. [Folder Structure](https://github.com/UofT-DSI/01-shell/#folder-structure)
+1. [Description](https://github.com/UofT-DSI/shell/#description)
+2. [Learning Outcomes](https://github.com/UofT-DSI/shell/#learning-outcomes)
+3. [Course Contacts](https://github.com/UofT-DSI/shell/#course-contacts)
+4. [Pre-Course Work](https://github.com/UofT-DSI/shell/#pre-course-work)
+5. [Design](https://github.com/UofT-DSI/shell/#design)
+6. [Schedule](https://github.com/UofT-DSI/shell/#schedule)
+7. [Prerequisites](https://github.com/UofT-DSI/shell/#prerequisites)
+7. [Expectations](https://github.com/UofT-DSI/shell/#expectations)
+8. [Policies](https://github.com/UofT-DSI/shell/#policies)
+9. [Folder Structure](https://github.com/UofT-DSI/shell/#folder-structure)
 
 ## Description
 This section of the course will start by introducing the fundamental language of Unix shell, covering topics such as file and directory navigation and manipulation. Following this, students will gain proficiency in various commands, script creation, and the development of basic functions utilizing pipes, filters, and loops. 
