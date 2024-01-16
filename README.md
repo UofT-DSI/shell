@@ -32,7 +32,7 @@ After completing this section of the course, the students will:
 * TA: **Julia Gallucci** (she/her). Emails to the teaching assistant can be sent to julia.gallucci@mail.utoronto.ca.
 
 ## Pre-Course Work
-Before the first class please get your computer set up by following these instructions: https://github.com/dtxe/DSI-Onboarding/tree/windows_onboarding/environment_setup
+Before the first class please get your computer set up by following these instructions: https://github.com/UofT-DSI/Onboarding
 
 ## Design
 The course runs synchronously over Zoom. The Unix section consists of four classes over one week. Classes are 6:00 PM - 8:30 PM EDT on weekdays, and 9:00 AM - 11:30 AM EDT on Saturday. Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions. 
@@ -54,7 +54,7 @@ The course is a live coding class. Learners are expected to follow along with th
  
 ### Technology requirements
 * Learners must have a computer and an internet connection to participate in online activities.
-* Learners must have set up their computer using this [link](https://github.com/dtxe/DSI-Onboarding/tree/windows_onboarding/environment_setup).
+* Learners must have set up their computer using this [link](https://github.com/UofT-DSI/Onboarding).
  
 ## Policies
 * **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this course more accessible to you, please let us know.
