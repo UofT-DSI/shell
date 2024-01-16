@@ -1,16 +1,17 @@
 # Unix
 
 ## Contents
-1. [Description](https://github.com/UofT-DSI/01-shell/#description)
-2. [Learning Outcomes](https://github.com/UofT-DSI/01-shell/#learning-outcomes)
-3. [Course Contacts](https://github.com/UofT-DSI/01-shell/#course-contacts)
-4. [Pre-Course Work](https://github.com/UofT-DSI/01-shell/#pre-course-work)
-5. [Design](https://github.com/UofT-DSI/01-shell/#design)
-6. [Schedule](https://github.com/UofT-DSI/01-shell/#schedule)
-7. [Prerequisites](https://github.com/UofT-DSI/01-shell/#prerequisites)
-7. [Expectations](https://github.com/UofT-DSI/01-shell/#expectations)
-8. [Policies](https://github.com/UofT-DSI/01-shell/#policies)
-9. [Folder Structure](https://github.com/UofT-DSI/01-shell/#folder-structure)
+1. [Description](#description)
+2. [Learning Outcomes](#learning-outcomes)
+3. [Course Contacts](#course-contacts)
+4. [Pre-Course Work](#pre-course-work)
+5. [Design](#design)
+6. [Schedule](#schedule)
+7. [Prerequisites](#prerequisites)
+7. [Expectations](#expectations)
+8. [Policies](#policies)
+9. [Folder Structure](#folder-structure)
+10. [Acknowledgements](#acknowledgements)
 
 ## Description
 This section of the course will start by introducing the fundamental language of Unix shell, covering topics such as file and directory navigation and manipulation. Following this, students will gain proficiency in various commands, script creation, and the development of basic functions utilizing pipes, filters, and loops. 
@@ -31,7 +32,7 @@ After completing this section of the course, the students will:
 * TA: **Julia Gallucci** (she/her). Emails to the teaching assistant can be sent to julia.gallucci@mail.utoronto.ca.
 
 ## Pre-Course Work
-Before the first class please get your computer set up by following these instructions: https://github.com/dtxe/DSI-Onboarding/tree/windows_onboarding/environment_setup
+Before the first class please get your computer set up by following these instructions: https://github.com/UofT-DSI/Onboarding
 
 ## Design
 The course runs synchronously over Zoom. The Unix section consists of four classes over one week. Classes are 6:00 PM - 8:30 PM EDT on weekdays, and 9:00 AM - 11:30 AM EDT on Saturday. Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions. 
@@ -53,7 +54,7 @@ The course is a live coding class. Learners are expected to follow along with th
  
 ### Technology requirements
 * Learners must have a computer and an internet connection to participate in online activities.
-* Learners must have set up their computer using this [link](https://github.com/dtxe/DSI-Onboarding/tree/windows_onboarding/environment_setup).
+* Learners must have set up their computer using this [link](https://github.com/UofT-DSI/Onboarding).
  
 ## Policies
 * **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this course more accessible to you, please let us know.
@@ -86,3 +87,6 @@ The course is a live coding class. Learners are expected to follow along with th
 | Format | Details | Submission Instructions |
 | :----: | :----- | :---------------------- |
 | Assignment 1 | Due on **Monday, January 22 at 11:59pm** | Submit assignment via your Google Drive. Upload your code file (LASTNAME_FIRSTNAME_shell_assignment1.pdf). |
+
+## Acknowledgements
+Course materials were originally developed by Rachael Lam under the supervision of Rohan Alexander. Materials have been modified by Delaram Pouyabahar, Kaylie Lau, and Simeon Wong for 2023, and 2024.
