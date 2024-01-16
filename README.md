@@ -11,6 +11,7 @@
 7. [Expectations](https://github.com/UofT-DSI/shell/#expectations)
 8. [Policies](https://github.com/UofT-DSI/shell/#policies)
 9. [Folder Structure](https://github.com/UofT-DSI/shell/#folder-structure)
+10. [Acknowledgements](https://github.com/UofT-DSI/shell/#acknowledgements)
 
 ## Description
 This section of the course will start by introducing the fundamental language of Unix shell, covering topics such as file and directory navigation and manipulation. Following this, students will gain proficiency in various commands, script creation, and the development of basic functions utilizing pipes, filters, and loops. 
@@ -86,3 +87,6 @@ The course is a live coding class. Learners are expected to follow along with th
 | Format | Details | Submission Instructions |
 | :----: | :----- | :---------------------- |
 | Assignment 1 | Due on **Monday, January 22 at 11:59pm** | Submit assignment via your Google Drive. Upload your code file (LASTNAME_FIRSTNAME_shell_assignment1.pdf). |
+
+## Acknowledgements
+Course materials were originally developed by Rachael Lam under the supervision of Rohan Alexander. Materials have been modified by Delaram Pouyabahar, Kaylie Lau, and Simeon Wong for 2023, and 2024.
