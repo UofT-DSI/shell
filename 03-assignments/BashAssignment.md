@@ -3,7 +3,9 @@
 ## Instructions
 * Complete the listed tasks in Bash
 * Your assignment submission should consist of one PDF file with screenshots of both your command and the output of your command, if any, and one ZIP file with the contents of the `tidied_data` directory.
-* *Hint*: Write your bash commands in a text file and 
+* *Hint*: Write your bash commands in a text file (a shell script!) and paste into your terminal so that:
+    * you can keep track of your progress
+    * you can start over and get back to where you were if anything goes wrong
 
 
 ## Introduction
@@ -13,7 +15,8 @@ Unfortunately, when they were silly undergraduates, they didn't know to keep the
 
 ## Tasks
 ### Task 1: Setup your environment
-1. Download their undergraduate data package and unzip it into your directory
+1. Download their undergraduate data package: [dataset.zip](dataset.zip?raw=1)
+1. Unzip it into your directory
     * *Hint*: Consider the `unzip` command
 1. Change directory into the folder containing the data package contents
 1. To make sure we're keeping good records this time, print the current path to your working directory
@@ -24,19 +27,19 @@ Unfortunately, when they were silly undergraduates, they didn't know to keep the
 1. List all the EEG files and write this list to a text file in the tidied_data folder named `eeg_inventory.txt`. Preview the **first 8 lines** of this file.
 
 ### Task 3: Taking inventory, part 2
-1. Let's double check: does the naming convention of the EEG files match `EEG_[subject number]_[session].edf`?
-1. Based on the `eeg_inventory.txt` file and the naming convention, generate a list of subject numbers and write it a file named `eeg_subjects.txt`. Preview the **first 8 lines** of this file.
+1. Let's double check: does the naming convention of the EEG files match `eeg_[subjectid]_[session].edf`?
+1. Based on the `eeg_inventory.txt` file and the naming convention, generate a list of subject numbers and write it a file named `subject_ids_from_eeg.txt`. Preview the **first 8 lines** of this file.
     * *Hint*: Consider the `cut` command
-1. Sort the `eeg_subjects.txt` file and write the output to `sorted_eeg_subjects.txt`. Preview the **first 8 lines** of this file.
+1. Sort the `subject_ids_from_eeg.txt` file and write the output to `subject_ids_from_eeg_sorted.txt`. Preview the **first 8 lines** of this file.
 1. Let's double check: does each subject have multiple EEG files? Are their subject IDs duplicated?
-1. Create a unique list of subject IDs and write the output to `subject_inventory.txt`. Preview the **first 8 lines** of this file.
+1. Create a unique list of subject IDs and write the output to `subject_ids.txt`. Preview the **first 8 lines** of this file.
 
 ### Task 4: The life changing magic of tidying up
 1. For each subject:
     1. create a folder named after the subject ID in the `tidied_data` directory
     1. Move all files relating to that subject into their respective directories   
     *Hint*: Consider a for-loop
-1. Notice that all the notes files have not been named consistently. Rename all the note files to `[subject_number]_notes.txt` within each subject folder.
+1. Notice that all the notes files have not been named consistently. Rename all the note files to `[subjectid]_notes.txt` within each subject folder.
 
 ### Task 5: Checking our work
 1. Confirm that you've copied all the files over to the `tidied_data` directory
