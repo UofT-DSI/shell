@@ -86,7 +86,9 @@ The course is a live coding class. Learners are expected to follow along with th
 
 | Format | Details | Submission Instructions |
 | :----: | :----- | :---------------------- |
-| Assignment 1 | Due on **Monday, January 22 at 11:59pm** | Submit assignment via your Google Drive. Upload your pdf file using the convention LASTNAME_FIRSTNAME_shell_assignment1.pdf |
+| Assignment 1 | Due on **Monday, January 22 at 11:59pm** | Submit 
+assignment via your Google Drive. Upload your shell script file using the 
+convention LASTNAME_FIRSTNAME_shell_assignment1.sh |
 
 ## Acknowledgements
 Course materials were originally developed by Rachael Lam under the supervision of Rohan Alexander. Materials have been modified by Delaram Pouyabahar, Kaylie Lau, and Simeon Wong for 2023, and 2024.
