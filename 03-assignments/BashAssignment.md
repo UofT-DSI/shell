@@ -25,7 +25,7 @@ Unfortunately, when they were silly undergraduates, they didn't know to keep the
     * Preview the **first 8 lines** of this file, does this look right?
 
 ### Task 3: Taking inventory, part 2
-1. Let's double check: does the naming convention of the EEG files match `eeg_[subjectid]_[session].edf`?
+1. Let's double check: does the naming convention of the EEG files match `eeg_[subjectid]_[session].EDF`?
 1. Based on the `eeg_inventory.txt` file and the naming convention, generate a list of subject numbers and write it a file named `subject_ids_from_eeg.txt`. 
     * Preview the **first 8 lines** of this file.
     * *Hint*: Consider the `cut` command
