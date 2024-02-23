@@ -5,7 +5,7 @@
 # ---------- #
 
 # Hard code the folder locations
-folder_md="slides-resources"
+folder_md="other-slides/markdown-slides"
 folder_pdf="lessons"
 
 # Make the lessons folder if it does not exist already
