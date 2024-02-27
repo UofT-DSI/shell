@@ -57,7 +57,6 @@ style: |
 
 ```
 $ echo "Data Sciences Institute"
-$ echo "by: Rachael Lam"
 ```
 
 ---
@@ -295,13 +294,13 @@ it in quotes.
 $ cp file1 file2
 ```
 
+---
 We can also copy files or directories into a directory.
 
 ```
 $ cp file1 dir1
 ```
 
----
 And all files from one directory into another using wildcards:
 
 ```
@@ -334,6 +333,7 @@ Here, `mv` moves file1 to dir1
 $ mv file1 dir1 (Moves file1 to dir1)
 ```
 
+---
 We can also move directories into other directories:
 
 ```
@@ -377,6 +377,7 @@ $ mv dir1/* dir2
 
 ---
 This is a combination of the directory `dir1`, pathnames `/` and wildcards `*`. Here, `di1/*` takes the all the contents of `dir1` and puts it in `dir2`.
+
 We could also use the same techqniue to specify certain files to move rather than all of them. How do you think this would be done?
 
 ---

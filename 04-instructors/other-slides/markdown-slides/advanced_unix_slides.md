@@ -58,7 +58,6 @@ style: |
 
 ```
 $ echo "Data Sciences Institute"
-$ echo "by: Rachael Lam"
 ```
 
 ---
@@ -1678,6 +1677,7 @@ Commands issue a value to the system when they terminate, which is an integer in
 
 Conventionally, zero indicates success and any other value indicates failure.
 
+---
 Let's list a file that we know exists on our desktop:
 
 ```
@@ -1689,6 +1689,7 @@ $ echo $?
 
 `$?` returns the value of the last executed command. The value being either zero for success or any other number for failure.
 
+---
 If we then list a file that we know does not exist in our desktop and return the value of `$?`, what do we expect to happen?
 
 ```

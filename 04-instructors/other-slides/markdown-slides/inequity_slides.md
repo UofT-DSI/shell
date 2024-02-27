@@ -59,7 +59,6 @@ style: |
 # **Inequity**
 ```bash
 $ echo "Data Sciences Institute"
-$ echo "Rachael Lam"
 ```
 
 ---

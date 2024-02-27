@@ -59,7 +59,6 @@ style: |
 # **Ethics**
 ```bash
 $ echo "Data Sciences Institute"
-$ echo "Rachael Lam"
 ```
 
 ---

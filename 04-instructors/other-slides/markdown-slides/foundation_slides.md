@@ -54,7 +54,6 @@ style: |
 # **Foundations Overview**
 ```bash
 $ echo "Data Sciences Institute"
-$ echo "Rachael Lam"
 ```
 
 ---
