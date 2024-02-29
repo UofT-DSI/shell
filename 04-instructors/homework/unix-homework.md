@@ -3,47 +3,28 @@ marp: true
 theme: uncover
 _class: invert
 paginate: true
-
 ---
-<style>
-    p {
-        text-align: left;
-        font-size: 30px
-    }
-    ul {
-        margin: 0;
-        font-size: 30px;
-    }
-    table {
-        font-size: 30px;
-    }
-    ol {
-        margin: 0;
-        font-size: 30px;
-    }
-</style>
 
-
-# **Unix Shell Homework**
-```console
+# Unix Shell Homework
+```
 $ echo "Data Sciences Institute"
 ```
 
 ---
-##### **Expectations**
+##### Expectations
 The goal of this homework is to give students an opportunity to practice what was learned during each class. This will help students remember the content and prepare for the next class.
 
 Because each class builds upon the last, it's important to review the content and become comfortable with it, as time is too limited for a full in-class review.
 
 ---
-##### **Prompt:**
+##### Prompt:
 Create one directory in any parent directory of your choice. This new directory should contain three additional directories. Within one of these additional subdirectories, please create two text files (.txt)
 
-**To submit:**
+To submit:
     1. A screenshot of your terminal commands.
 
 ---
-##### **Potential Commands**
+##### Potential Commands
 
 - current directory `pwd`
 - set working directory `cd`
@@ -52,15 +33,15 @@ Create one directory in any parent directory of your choice. This new directory 
 - create file `touch`
 
 ---
-##### **Prompt:**
+##### Prompt:
 Download a csv of your choice. This could be from Toronto Open Data or another source but use a different csv than the one used in class. Place the new csv in a directory of your choice and rename it. Extract one column and the unique values from that column. Redirect the standard output to be a txt file.
 
-**To submit:**
+To submit:
     1. A screenshot of your terminal commands.
     2. The txt file
 
 ---
-##### **Potential Commands**
+##### Potential Commands
 
 - commands from previous class
 - `mv`
@@ -71,9 +52,9 @@ Download a csv of your choice. This could be from Toronto Open Data or another s
 - `uniq`
 
 ---
-##### **Prompt:**
+##### Prompt:
 Create a shell script that extracts some data using pipes (ie. a column, particular rows using `grep`, or anything else you want to play around with) from the same csv file from Day 2 homework. The filter should be contained within a function and include at least one variable.
 
-**To submit:**
+To submit:
     1. A screenshot of your terminal commands.
     2. The shell script file

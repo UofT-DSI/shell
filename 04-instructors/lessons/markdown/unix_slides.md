@@ -1,57 +1,9 @@
 ---
 marp: true
-theme: uncover
+theme: dsi-certificates-theme
 _class: invert
 paginate: true
-
-style: |
-    img[alt~="center"] {
-      display: block;
-      margin: 0 auto;
-    }
 ---
-<style>
-    p {
-        text-align: left;
-        font-size: 35px
-    }
-    ul {
-        margin: 0;
-        font-size: 35px;
-    }
-    table {
-        font-size: 35px;
-    }
-    ol {
-        margin: 0;
-        font-size: 35px;
-    }
-
-    blockquote {
-        border-left: 10px solid #ccc;
-        margin: 1.5em 10px;
-        padding: 0.5em 30px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
-
-    blockquote:before {
-        color: #ccc;
-        content: none;
-        font-size: 4em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-    }
-
-    blockquote:after{
-        content: none;
-    }
-
-    footer {
-        margin-bottom: 0px;
-        text-align: left;
-    }
-</style>
 
 # Unix Shell
 
@@ -341,11 +293,11 @@ $ mv dir1 dir2
 ```
 
 ---
-In this case, if `dir2` **exists**, `dir1` will be moved to `dir2`. If `dir2` does not exist, it will be created and `dir1` will be moved to the newly created `dir2`. In both casesm the entire directory will be moved to another/new directory, rather than the contents.
+In this case, if `dir2` exists, `dir1` will be moved to `dir2`. If `dir2` does not exist, it will be created and `dir1` will be moved to the newly created `dir2`. In both casesm the entire directory will be moved to another/new directory, rather than the contents.
 
 ---
 Let's say we're in the directory `Desktop` and we just moved
-`file1` into `dir1` but now we want to put it back in `Desktop`. How would we move a file out of a directory into another one? Unfortunatly we **can't** just say
+`file1` into `dir1` but now we want to put it back in `Desktop`. How would we move a file out of a directory into another one? Unfortunatly we can't just say
 
 ```
 $ mv file1 Desktop
@@ -389,7 +341,7 @@ We could also use the same techqniue to specify certain files to move rather tha
 ### rm
 
 To remove files we use the command `rm`. Because we're now
-deleting files, it's important that you're sure of what you're deleting because **there is no way to undo**. Fortunately!! there
+deleting files, it's important that you're sure of what you're deleting because there is no way to undo. Fortunately!! there
 are ways to do this.
 
 ```

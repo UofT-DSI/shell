@@ -1,59 +1,9 @@
 ---
 marp: true
-theme: uncover
+theme: dsi-certificates-theme
 _class: invert
 paginate: true
-
-style: |
-    img[alt~="center"] {
-      display: block;
-      margin: 0 auto;
-    }
-
 ---
-<style>
-    p {
-        text-align: left;
-        font-size: 35px
-    }
-    ul {
-        margin: 0;
-        font-size: 35px;
-    }
-    table {
-        font-size: 35px;
-    }
-    ol {
-        margin: 0;
-        font-size: 35px;
-    }
-
-    blockquote {
-        border-left: 10px solid #ccc;
-        margin: 1.5em 10px;
-        padding: 0.5em 30px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
-
-    blockquote:before {
-        color: #ccc;
-        content: none;
-        font-size: 4em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-    }
-
-    blockquote:after{
-        content: none;
-    }
-
-    footer {
-        margin-bottom: 0px;
-        text-align: left;
-    }
-</style>
-
 # Advanced Unix Shell
 
 ```
