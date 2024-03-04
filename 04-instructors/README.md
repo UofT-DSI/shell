@@ -17,11 +17,8 @@ The `/03-homework` directory contains all the homework, a learner can do to demo
 
 ### Week 1
 
-#### Lecture 1
-The focus of the first lecture is to introduce them to basic bash commands such as `cd`, `pwd`, and creating files using `touch` and directories using `mkdir`.
-
-#### Lecture 2
-The focus of the second lecture is to introduce them to intermediate commands like `rm` and how to recursively remove files from a nested directory, and how to make copies or move files using `mv`.
+#### Lecture
+The focus of the sole lecture is to introduce them to basic bash commands such as `cd`, `pwd`, and creating files using `touch` and directories using `mkdir`. As well as intermediate commands like `rm` and how to recursively remove files from a nested directory, and how to make copies or move files using `mv`.
 
 #### Assignment
 The assignment for this week is to have learners find the secret password by navigating directories and files!
