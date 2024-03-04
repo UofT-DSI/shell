@@ -1,81 +1,19 @@
-# Unix Shell
+---
+marp: true
+theme: dsi-certificates-theme
+_class: invert
+paginate: true
+---
+# Advanced Unix Shell
 
 ```
 $ echo "Data Sciences Institute"
-$ echo "by: Rachael Lam"
 ```
 
-## Unix
-
-### What is Unix?
-
-Unix was created in 1970 and since then has branched into
-other versions including Linux. Linux was created from Unix
-with very similar features, although there are some minor
-differences in commands.
-
-Unix shells - more specifically bash - is a powerful tool for
-quickly and easily navigating and manipulating files, scaling
-automated tasks, accessing Git and processing data.
-
-### So what is the shell?
-
-The shell is any user interface/program that takes an input from
-the user, translates it into instructions that the operating
-system can understand, and conveys the output back to the
-user.
-
-There are various types of user interfaces:
-
-- graphical user interfaces (GUI)
-- touch screen interfaces
-- command line interfaces (CLI)
-
-### And what is bash?
-
-We'll be focusing on command line interfaces (CLI), more
-specifically bash, which stands for Bourne Again SHell.
-
-We'll also need a terminal emulator to interact with the shell.
-This is most likely called terminal on our menu.
-
-### Let's get started!
-
-First, we'll open our terminal. As mentioned earlier, this is most
-likely called terminal and can be found by searching our
-computer, which on a Mac would be through cmd + space
-
-Let's take a look at the terminal. What do we notice?
-
-- last login
-- name
-- location
-- shell
-
-### Looking at the Shell
-
-If we type echo $SHELL in our terminal, the output will tell us
-what shell we are working with. Most often, our shell will
-already be bash but in newer Macs, it could be zsh which is
-almost identical to bash. We can also see where bash is
-located by typing:
-
-- whereis bash
-- whence bash
-- which bash
-
-Let's start with a few commands and see what happens in our
-terminal.
-$ echo Rachael
-$ date
-$ cal
-$ lksjfs
-
-- What happens when we type something that does not exist?
-- What happens with errors?
-
+---
 # Navigate Files / Directories
 
+---
 ## Files
 
 Knowing the different types of files available helps us better
@@ -86,6 +24,7 @@ understand how to navigate and manipulate them.
 - Shell scripts are executable files that we can read whereas
   bash is a non-human-readable executable file.
 
+---
 ## Directories
 
 Directories are files that are like folders which contain other
@@ -98,65 +37,8 @@ structure.
   listing the directory names in order from the root, separated
   by slashes, followed by the file's name.
 
-Let's try three commands that help us navigate our system:
-
-1. First, let's run the code below and see what happens:
-
-```
-$ pwd
-```
-
-`pwd` prints our working directory. If we ever need to know
-where we are, we can execute this command.
-
-2. Now, let's run the code below and see again what happens:
-
-```
-$ cd
-```
-
-By default, `cd` changes your working directory to your home
-directory. You can also use `cd` to set your working directory by
-including the desired pathname
-
-```
-$ cd Desktop
-```
-
-In the previous example, we were able to just state `Desktop`
-because it is a directory in our working directory. If we changed
-our working directory to `Desktop`, and then wanted to change
-it again to a directory in `Desktop`, we could again just specify
-the folder.
-If we wanted to change the working directory to a directory
-outside of our working directory, we would need to specify a
-pathname:
-
-```
-$ cd /Users/rachaellam/Desktop
-```
-
-3. To know what files and folders exist in our working directory,
-   we can use the code below:
-
-```
-$ ls
-```
-
-We can add a pathname at the end to list the contents of a
-specified directory.
-
+---
 ## Paths
-
-As we've seen, directory names separated by slashes are paths.
-There are two types of paths, _absolute_ and _relative_.
-
-- An absolute pathname begins at the root directory and
-  includes each directory, separated by slashes until the
-  desired directory or file is reached.
-- A relative pathname starts from the working directory and
-  uses symbols `.` or `..` to represent relative positions in the
-  file tree.
 
 Using `cd` and `pwd` let's take a look at how we can use
 absolute and relative pathnames.
@@ -176,29 +58,14 @@ $ cd 15
 $ pwd
 ```
 
-Here's another example using the /usr pathname.
-
-```
-$ cd /usr/bin
-$ pwd
-```
-
-```
-$ cd /usr
-$ pwd
-```
-
-```
-$ cd ..
-$ pwd
-```
-
+---
 Let's now try move through some directories to get comfortable.
 Try out lots of different paths depending on the file structures
 of your computer. Try getting into different directories from
 different parent directories. The tilde notation ~ in the
 examples below refer to our home directory.
 
+---
 ```
 $ cd ~/Desktop
 $ pwd
@@ -209,6 +76,7 @@ $ cd ~/Desktop/dir1
 $ pwd
 ```
 
+---
 ## Options and Arguements
 
 Options and arguments are used to write commands that can
@@ -218,9 +86,11 @@ make changes to our system. The syntax Is:
 $ command -—option argument
 ```
 
+---
 Options can also be combined, which we'll briefly see now but
 learn more about a bit later.
 
+---
 There are two ways to write an `—option`:
 
 1. Short option: one dash followed by a single character
@@ -230,6 +100,7 @@ There are two ways to write an `—option`:
    `-d` or `--directory`
    `-r` or `--reverse`
 
+---
 Let's try these lines of code and see what happens:
 
 ```
@@ -244,18 +115,21 @@ $ ls -lt
 $ ls -lt --reverse
 ```
 
+---
 - `—l` long format
 - `—t` modification time
 - `—reverse` reverse the sort order
 
 Notice how `-lt` is actually a combination of multiple options.
 
+---
 ## Wildcards
 
 Wildcards give us the ability to rapidly specify groups of
 filenames based on patterns of characters. Let's look at a few
 examples below:
 
+---
 - `*` > matches any character
 - `?` > matches any single character
 - `[characters]` -> matches any character that is in the set
@@ -267,6 +141,7 @@ Some other helpful character wildcards are:
 - `[:lower]` ~ matches any lowercase letter
 - `[:upper:]` > matches any uppercase letter
 
+---
 Let's try a few in our terminal:
 
 ```
@@ -293,191 +168,15 @@ $ ls [[:upper:]]x
 $ ls [![:digit:]]x
 ```
 
-# Working with Files / Directories
-
-We're going to learn some basic commands to begin some
-preliminary coding. We'll also be using these throughout the
-module, so it's important to understand how they work now:
-
-- create directory mkdir
-- create file touch
-- copy cp
-- move and rename mv
-- remove rm
-
-## Commands
-
-### mkdir
-
-First let's make a directory. It's important to remember what
-directory you're working in currently, because that's where the
-new directory will be made. Let's assume for now, we're working
-on our desktop.
-
-```
-$ mkdir directory
-```
-
-We can also create multiple directories at the same time:
-
-```
-$ mkdir dir1 dir2 dir3
-```
-
-### touch
-
-We can also make new files from the command line. This is
-particularly useful when we want to make scripts, which we'll
-learn a bit later. Using touch, we can make a new file in our
-working directory.
-
-```
-$ touch file1
-```
-
-We can also create a specific file type by adding the extension:
-
-```
-$ touch file1.sh
-```
-
-### cp
-
-Now we're going to copy a file that we have on our desktop. It
-can be any file but remember to include the extension or if it
-has multiple characters, special characters and spaces, to wrap
-it in quotes.
-
-```
-$ cp file1 file2
-```
-
-We can also copy files or directories into a directory.
-
-```
-$ cp file1 dir1
-```
-
-And all files from one directory into another using wildcards:
-
-```
-$ cp dirl/* dir2
-```
-
-What does the `/*` in this command mean?
-
-There are some useful `—options` that accompany `cp`:
-| Option | Description |
-| ------ | ------------------------------------------------------------- |
-| -i | Before overwriting an existing file, prompt the user for confirmation. |
-| -R | Recursively copy directories and their contents. |
-| -v | Display informative messages as the copy is performed. |
-
-### mv
-
-The mv command enables us to move and rename files and
-directories, depending on how it's used. In th example below, `mv` renames file1 to file2.
-
-```
-$ mv file1 file2 (Renames file1 to file2)
-```
-
-Here, `mv` moves file1 to dir1
-
-```
-$ mv file1 dir1 (Moves file1 to dir1)
-```
-
-We can also move directories into other directories:
-
-```
-$ mv dir1 dir2
-```
-
-In this casem, if `dir2` **exists**, `dir1` will be moved to `dir2`. If `dir2` does not exist, it will be created and `dir1` will be moved to the newly created `dir2`. In both casesm the entire directory will be moved to another/new directory, rather than the contents.
-
-Let's say we're in the directory `Desktop` and we just moved
-`file1` into `dir1` but now we want to put it back in `Desktop`. How would we move a file out of a directory into another one? Unfortunatly we **can't** just say
-
-```
-$ mv file1 Desktop
-```
-
-because `file1` does not exist in `Desktop` any more and the command will try and rename `file1` to `Desktop`.
-
-The answer involves using pathnames and the tilde `~` notation:
-
-```
-$ mv dir1/file1 ~/Desktop
-```
-
-If we just wanted to move `file1` into `dir2` (if `dir2` is in our working directory), we could type:
-
-```
-$ mv dir1/file1 dir2
-```
-
-What if we want to move just the contents of dir1 to another
-directory rather than the whole folder? HINT: it is very (exactly) similar to copying (`cp`).
-
-```
-$ mv dir1/* dir2
-```
-
-This is a combination of the directory `dir1`, pathnames `/` and wildcards `*`. Here, `di1/*` takes the all the contents of `dir1` and puts it in `dir2`.
-We could also use the same techqniue to specify certain files to move rather than all of them. How do you think this would be done?
-
-#### Questions
-
-- We're starting to combine our knowledge of files, directories and pathnames with some basic commands. How do we feel up to this point?
-
-### rm
-
-To remove files we use the command `rm`. Because we're now
-deleting files, it's important that you're sure of what you're deleting because **there is no way to undo**. Fortunately!! there
-are ways to do this.
-
-```
-$ rm file1
-```
-
-Without specifying any `-options`, `file1` will be deleted
-without any feedback.
-
-To ensure we want to delete something, we can use the option `-i` (interactive) that we learned earlier.
-
-```
-$ rm -i file1
-```
-
-This will prompt a question asking us if we want to delete `file1`. We can respond with `y` (yes) or `n` (no).
-
-If we want to delete a directory, we need to use the option `-r` (recursive) as we did when copying (`cp`). This will recursively delete everything inside of the directory and the directory itself.
-
-```
-$ rm -r dir1
-```
-
-If we're specifying multiple deletions and a directory does not exist, the shell will tell us. If we don't want that message, we can add the `-option`, `-f` (force). Force will override `-i` if it is included.
-
-1. How do you delete multiple directories?
-2. What happens if you delete multiple directories with `-i`?
-3. What happens if you delete multiple directories with `-i` but one does not exist?
-
-Remember, it's extremely important to remember that you cannot undo `rm`. This means, if you start using wildcards to specify filenames and don't include `-i`, you could delete things by accident. For example, let's say you want to delete all `.txt` files in a directory:
-
-```
-$ rm *.txt
-```
-
-If you accidently add a space between `*` and `.txt`,the `rm` command will delete all the files in the directory and then try to find a `.txt` file which does not exist because it delete everything.
-
+---
 ## Input / Output
 
+---
 ### Standard Input/Output
 
 Each program invokes the standard input, output and error. We can think of the standard input default as coming from the keyboard and if we think of everything as a file, a command such as `ls` will result in a file called `standard output` and the status message to a file called `standard error`. By default, both are linked to the screen and not saved to a disk file.
 
+---
 ### Input/Output Redirection
 
 Input/Output redirection allows us to change where the input
@@ -489,6 +188,7 @@ redirection operator `>`.
 $ ls -l /usr/bin > ls—output.txt
 ```
 
+---
 Here we have redirected the output of `ls -—l /usr/bin` to a `.txt` file called _ls-output.txt_.
 
 We can now see the details of that file and if it worked:
@@ -497,6 +197,7 @@ We can now see the details of that file and if it worked:
 $ ls -l ls-output.txt
 ```
 
+---
 By looking at the details, we can see that the file was created and it a fairly large text file, indicating that something was written to it.
 
 If we specify a directory that does not exist, we receive the Standard error:
@@ -505,14 +206,17 @@ If we specify a directory that does not exist, we receive the Standard error:
 $ ls -l /bin/usr > ls—-output.txt
 ```
 
+---
 Why was the standard error not written to the `.txt` file?
 What happened to our _ls-output.txt_ file?
 
+---
 Although the standard error was not written tothe `.txt` file,
 the destination file is always written from the beginning,
 therefore, the redirection began to write the file and once
 noticed there was an error, stopped, resulting in an empty file.
 
+---
 So how do we append rather than rewrite? By using the
 redirection operator `>>`.
 
@@ -520,6 +224,7 @@ redirection operator `>>`.
 $ ls -l /usr/bin >> ls—-output. txt
 ```
 
+---
 If we want to redirect the standard error, we need to use the
 redirection operator `2>`
 
@@ -527,6 +232,7 @@ redirection operator `2>`
 $ ls -l /bin/usr 2> ls—-error.txt
 ```
 
+---
 If we want to redirect both the standard output and standard
 error to one file, we have two options.
 
@@ -542,6 +248,7 @@ $ ls -l /bin/usr > ls-output.txt 2>&1
 $ ls -l /bin/usr & 1ls-output. txt
 ```
 
+---
 ### cat
 
 `cat` takes one or more files and copies them to standard output. Using the _ls-output.txt_ created earlier, we can see how that's done:
@@ -550,12 +257,14 @@ $ ls -l /bin/usr & 1ls-output. txt
 $ cat ls—output.txt
 ```
 
+---
 We can also use it to join files togther. Let's say | have two files, `file1` and `file2` and I want to combine them into a file called `file3`:
 
 ```
 $ cat filel file2 > file3
 ```
 
+---
 Now the contents of file1 and file2 should be combined.
 
 We can also use it to join files togther. Let's say | have two files, `file1` and `file2` and I want to combine them into a file called `file3`:
@@ -564,6 +273,7 @@ We can also use it to join files togther. Let's say | have two files, `file1` an
 $ cat filel file2 > file3
 ```
 
+---
 Now the contents of `file1` and `file2` should be combined.
 
 We can also use `cat` to add to a `.txt` file.
@@ -572,6 +282,7 @@ We can also use `cat` to add to a `.txt` file.
 $ cat > new_cat.txt
 ```
 
+---
 Now we can type the text that we want in the file. Once we're finished, we can use `CTRL-D` to exit.
 
 What would be the difference between `$ cat > new_cat.txt` and `$ cat >> new_cat.txt` ?
@@ -584,12 +295,15 @@ $ cat < new_cat.txt
 
 This is almost identitcal to just typing _$ cat new_cat.txt_ but we can see later how it could be more useful.
 
+---
 # Pipes / Filters
 
+---
 We use pipelines to read data from standard output and send to standard input using the pipe operator `|` . This means the standard output of one command can be piped into the standard input of another.
 
 Several commands put together in a pipeline are often referred to as filters. Filters take an input, change it and then output it.
 
+---
 ## Commands
 
 Let's learn a few more commands that will help us further
@@ -603,6 +317,7 @@ understand pipelines and filters. We'll learn:
 - ouput the first part of a file `head`
 - output the last part of afile `tail`
 
+---
 ### cut
 
 Let's look at a `csv` to see how we Can initially see our data. Because it's a `csv`, each line is separated by a comma. Let's first read that file using `cat`:
@@ -620,6 +335,7 @@ To use cut, I need to pass a couple options:
 
 2. `-f`, which extracts a particular field based on what follows. For example, `-f1` will take the first field or `-f2` will take the second field and so on.
 
+---
 In this example, I'm taking the file _parking_data_ and cutting it based on colons and then only extracting the first field.
 
 ```
@@ -632,8 +348,10 @@ What happens if I add another `-f` option? What does this do?
 $ cut -d, -f1 -f2 < parking_data.csv
 ```
 
+---
 How would I specify more than three fields?
 
+---
 ### sort
 
 How can we make our previous example more readable?
@@ -644,6 +362,7 @@ One answer is to use the sort feature. We can pipe this with the cut feature:
 $ cut -d, -f1 < parking_data.csv | sort
 ```
 
+---
 ### uniq
 
 Additionally, I can make the above command even more readable by removing any duplicates with `uniq`
@@ -652,6 +371,7 @@ Additionally, I can make the above command even more readable by removing any du
 $ cut -d, -f1 < parking_data.csv | sort | uniq
 ```
 
+---
 ### grep
 
 `grep` is a powerful tool for finding patterns in text files. The syntax is:
@@ -660,6 +380,7 @@ $ cut -d, -f1 < parking_data.csv | sort | uniq
 $ grep pattern [file...]
 ```
 
+---
 In our case, we're going to use it with our previous example and
 pipe it with other commands:
 
@@ -669,6 +390,7 @@ $ cut -d, -f1 parking_data.csv | sort | uniq | grep FIRE
 
 The results are all patterns of FIRE in the text file.
 
+---
 ### find
 
 Another useful use for `grep` is to find files in directories. `grep` is nicely combined with `find` for this feature.
@@ -677,8 +399,10 @@ Another useful use for `grep` is to find files in directories. `grep` is nicely 
 $ find ~/Desktop/dir1 | grep cat
 ```
 
+---
 Here we're searching in the directory _dir1_ with the pattern _cat_. This would be helpful if we wanted to know if there were any files with the word cat in the filename.
 
+---
 ### head | tail
 
 We can also extract the first and last part of files using `head` and `tail`. We can also add the option `-n` followed by a number to extract a certain number of lines.
@@ -691,6 +415,7 @@ $ head -n 5 ls-output.txt
 $ tail -n 5 ls-output.txt
 ```
 
+---
 `head` and `tail` can also be used in pipelines:
 
 ```
@@ -701,17 +426,21 @@ $ cut -d, -f1 < parking_data.csv | sort | uniq | head —-n 5
 $ cut -d, -f1 < parking_data.csv | sort | unig | tail -n 5
 ```
 
+---
 ## Expansions
 
+---
 Expansion uses special characters to expand upon something before the shell processes it. We have learned a few expansions so far such as the tilde `~` and wildcards `*`. We've also seen some character wildcards `[characters]`.
 
 Expansions are another feature that help us when we're manipulating and working with files and directories.
 
+---
 Other examples of expansions are:
 
 - arithmetic expansion
 - brace expansion
 
+---
 ### Arithmetic Expansion
 
 Arithmetic expansion basically makes the shell a calculator. The syntax is:
@@ -726,12 +455,14 @@ For example:
 $ echo $((2 + 2))
 ```
 
+---
 Arithmetic expressions can be nested:
 
 ```
 $ echo $(($((2 + 2)) * 3))
 ```
 
+---
 Just for reference, here is a list of the arithmetic operators:
 
 | Operator | Description      |
@@ -742,6 +473,7 @@ Just for reference, here is a list of the arithmetic operators:
 | `/`      | Integer division |
 | `**`     | Exponentiation   |
 
+---
 ### Brace Expansion
 
 Brace expansions allow us to create multiple text strings from a pattern containing braces. Here are a few examples:
@@ -758,12 +490,14 @@ $ echo Number_{1..5}
 $ echo {Z..A}
 ```
 
+---
 Brace expansions can also be nested:
 
 ```
 $ echo a{A{1,2},B{3,4}}b
 ```
 
+---
 We can use brace expansion to help make multiple directories using `mkdir`.
 
 ```
@@ -772,6 +506,7 @@ $ mkdir dir-{1..3}
 
 This command makes 3 directories named _dir-1_, _dir-2_, and _dir-3_
 
+---
 ## Quoting / Backslashing
 
 Quoting suppresses unwanted expansions. We can use double
@@ -782,24 +517,28 @@ quotes, single quotes or backslashes:
 - Single quotes suppress all expansion
 - Backslashes are used to escape single characters
 
+---
 Many times there will be file names or directories that are named with spaces. In this case, we'll need to use double quotes so that the shell can read it. Using `touch` we can create a text file named something separated with two words:
 
 ```
 $ touch "two words.txt"
 ```
 
+---
 We can then see the details of the file we just created:
 
 ```
 $ ls -l "two words.txt"
 ```
 
+---
 If we want to rename the text, we would do as follows:
 
 ```
 $ mv "two words.txt" two_words.txt
 ```
 
+---
 Let's see what these three examples do in shell:
 
 ```
@@ -814,11 +553,13 @@ $ echo '2 * 3 > 5' is an equation
 $ echo 2 \x 3 \> 5 is an equation
 ```
 
+---
 ## Command Line Editing
 
 Getting familiar with command line editing can save you time. Bash uses a library called Redline to use command line editing
 There are many shortcuts and you don’t have to memorize them all, just use the ones that you feel are best. There are even more shortcuts that you can read about in the textbooks!
 
+---
 ### Command Character
 
 | Command | Description                             |
@@ -828,6 +569,7 @@ There are many shortcuts and you don’t have to memorize them all, just use the
 | DEL     | Delete one character backwards          |
 | CTRL-D  | Delete one character at cursor location |
 
+---
 ### Word Commands
 
 | Command | Description               |
@@ -838,6 +580,7 @@ There are many shortcuts and you don’t have to memorize them all, just use the
 | ESC-D   | Delete one word forwards  |
 | CTRL-Y  | Undo                      |
 
+---
 ### Line Commands
 
 Command Description
@@ -848,6 +591,7 @@ Command Description
 | CTRL-K | Delete text from the cursor to the end of the line |
 | CTRL-U | Delete text from the cursor to the beginning of the line |
 
+---
 ### History Line Commands
 
 | Command    | Description                                           |
@@ -859,12 +603,14 @@ Command Description
 | `!string`  | Repeat last history item starting with string         |
 | `!?string` | Repeat last history item containing string            |
 
+---
 ## Completion Command
 
 Completion commands autocomplete your command if it exists by hitting `tab`. If it does not exist, the command will not be able to complete.
 
 If multiple exist, the command will also not be able to complete because it will not know which one to choose.
 
+---
 For example, let's say we have two files called `file1` and `file2`. If would not be able to use autocomplete because the shell will not know which to choose until the last character.
 
 If we have two files, one called `foot.txt` and one called `file.txt`. This command would not be able to autocomplete:
@@ -873,14 +619,17 @@ If we have two files, one called `foot.txt` and one called `file.txt`. This comm
 $ ls f
 ```
 
+---
 But this one will:
 
 ```
 $ ls fil
 ```
 
+---
 # Shell Scripts
 
+---
 ### Shell Scripts
 
 Shell scripts allow us to combine several commands into one file, rather than one by one on the command line.
@@ -889,6 +638,7 @@ The shell will read the script just as if you were to write the command on the c
 
 Most things that can be done in the shell script can be done on the command line and vice versa.
 
+---
 ### Writing Shell Scripts
 
 There are three important considerations when writing the shell script
@@ -899,12 +649,14 @@ There are three important considerations when writing the shell script
 
 3. **Put the shell script somewhere the shell can find it:** the shell script automatically searches certain directories for executable files when no explicit pathname is specified.
 
+---
 ### Set Up
 
 Open either TextEdit or your text editor of choice. Some popular programs are Sublime Text, Vim, Atom, and Notepad++.
 If you want to see the syntax highlighting, you might have to save your script as a `.sh` file. Without doing this, your file will just look like a regular `.txt` file.
 Once you open your text editor and save it, we can begin our first script!
 
+---
 ### Script File Format
 
 We must first tell the shell the name of the interpreter that should be used to execute the script. This is marked by using a shebang: `#!`
@@ -916,10 +668,12 @@ Throughout the script, you can and **should** use `#` to make comments. Comments
 echo "This is our first script!"
 ```
 
+---
 Here we can see we've told the shell to use `/bin/bash` using the shebang `#!`
 We've also added a comment using `#`
 And finally, something quite familiar, we have our first line of script using `echo`
 
+---
 ### A Note on Commenting
 
 Commenting is important not just so you can understand your own work, but also so others can understand your work in collaborative projects. It also helps make your code reproducible.
@@ -937,6 +691,7 @@ or as comment blocks:
 echo "Hello World"
 ```
 
+---
 ### Executable File Permission
 
 In order to execute our file, we have to add file permissions: `chmod` helps make our script executable, `775` is used to make scripts that everyone can execute, `700` is used to make scripts that only the owner can execute
@@ -951,12 +706,14 @@ $ ls -l first_script.sh
 $ chmod 775 first_script.sh
 ```
 
+---
 ### Script File Location
 
 In order to run our script, we have to call it using `./` in front of the script filename ( `./Script` ).
 File location is important to run your script. If just `Script` was written, the shell would not be able to find the script and try to read it as a command, outputting `command not found`.
 Running `echo $PATH` helps us see what directories are being searched for the script.
 
+---
 If we want to run our script without `./`, we can create a `/bin` for our script, move our script into the bin folder and then run it. It's important to note that we have to make this bin in our home directory. If we made it on our Desktop, the script would still not be found.
 
 ```
@@ -965,17 +722,21 @@ $ mv first_script.sh bin
 $ first_script.sh
 ```
 
+---
 In this block of code, we're making the bin folder using `mkdir`,
 moving the script into the bin with `mv` and then running the
 script without `./`.
 
+---
 ### Good Locations for Scripts
 
 For personal use, a good place to put your script is `/bin`.
 For everyone's access, it's better to put scripts in `/usr/local/bin`.
 
+---
 # Shell Functions
 
+---
 ### Functions
 
 Functions are a good way to break down code into smaller, more manageable chunks. Each chunk can represent a task.
@@ -987,6 +748,7 @@ For example, let's say your entire process is make pasta. It can be broken down 
 3. Cook pasta
 4. Serve
 
+---
 Each of these steps can be expanded further into subprocesses. Cook pasta can be:
 
 1. Fill pot with water
@@ -996,6 +758,7 @@ Each of these steps can be expanded further into subprocesses. Cook pasta can be
 5. Cook for 8-12 minutes
 6. Strain
 
+---
 Functions have two syntactic forms:
 
 ```
@@ -1015,6 +778,7 @@ name () {
 `name` is the name of the function
 `commands` are the commands contained in the function
 
+---
 Let's write our first function:
 
 ```
@@ -1024,6 +788,7 @@ function funct {
     return
 }
 
+---
 #program starts here
 
 echo "Step 1"
@@ -1031,8 +796,10 @@ funct
 Echo “Step 3"
 ```
 
+---
 What do you think this function will output?
 
+---
 Let's save and run this function in our terminal to see what happens.
 
 Here's a good time to recap how to save, grant permissions, and run the script.
@@ -1042,8 +809,10 @@ Here's a good time to recap how to save, grant permissions, and run the script.
 - `700` - grant permissions to yourself
 - `/bin` - where to save permissions
 
+---
 ## Variables
 
+---
 ### Global Variables
 
 Let's make our script more complex with some variables. We can first define variables directly through the terminal.
@@ -1053,8 +822,10 @@ $ foo="Something cool"
 $ echo $foo
 ```
 
+---
 Notice how in order to call the variable we need to add `$` before the variable. The quotes are not necessary if the value of the variable doesn't include spaces when defining it. If we did not include the quotes here, we would receive an error.
 
+---
 Now let's add some global variables to our script:
 
 ```
@@ -1076,6 +847,7 @@ echo "Step 3"
 
 What do we think will be the output in this example?
 
+---
 ### Local Variables
 
 Local variables are variables that are contained within the function. Because they're contained, they can have names that already exist in the shell globally or within other shell functions.
@@ -1106,6 +878,7 @@ echo "global: foo = $foo"
 
 ```
 
+---
 What would happen if we removed `local` ?
 
 ```
@@ -1129,8 +902,10 @@ funct_2
 echo "global: foo $foo"
 ```
 
+---
 ## Parameters
 
+---
 ### Positional Parameters
 
 Positional parameters are built-in parameters that allow our programs to get access to the contents of the command line.
@@ -1158,6 +933,7 @@ Number of arguments: $#
 "
 ```
 
+---
 In the example, you may notice that we haven't given `$0` any specific value.
 Let's try to run the script a couple ways through the command line to see what this means:
 
@@ -1166,12 +942,14 @@ Let's try to run the script a couple ways through the command line to see what t
 
 What do we notice?
 
+---
 ### \$\* and $@
 
 `$*` —> Expands into the list of positional parameters, starting with 1. When surrounded by double quotes, it expands into a double-quoted string containing all of the positional parameters, each separated by the first character of the IFS shell variable (by default a space character).
 
 `$@` —> Expands into the list of positional parameters, starting with 1. When surrounded by double quotes, it expands each positional parameter into a separate word surrounded by double quotes.
 
+---
 Let's take a look at this code piece by piece:
 
 ```
@@ -1190,6 +968,7 @@ pass_params () {
 pass_params "word" "words with spaces"
 ```
 
+---
 1. Here we have two functions: `print_params ()` and `pass_params ()`. `pass_params ()` calls on the function `print_params ()` within its function.
 2. In the first function, `echo` is printing the line inside the double quotes. The `\` infront of `$1` escapes the `$`, thus losing its meaning, as we learned earlier.
 
@@ -1202,6 +981,7 @@ print_params () {
 }
 ```
 
+---
 3. In the second function, `echo` again is printing the line inside the single quotes. `"\n"` is adding a tab at the beginning of the line for readability. It is then calling on the first function ( `print_params ()` ) with the argument `$*` . The second echo is calling the first function but with the argument `$*` in double quotes. This is repeated for `$@`
 
 ```
@@ -1213,14 +993,17 @@ pass_params () {
 }
 ```
 
+---
 4. In the final part of the code, we're calling on the `pass_params ()` function and passing two arguments: `"word"` and `"words with spaces"`.
 
 ```
 pass_params "word" "words with spaces"
 ```
 
+---
 Let's see what happens's when we run the script in terminal. Remember, we don't have to pass any arguments in the command line because we have done so in our script.
 
+---
 Let's take a look at another example. In this example we'll get a greater understanding of variables and positional parameters:
 
 ```
@@ -1238,6 +1021,7 @@ echo var1: $var1
 echo $0: $1 $2
 ```
 
+---
 Let's break it down again:
 
 1. In our first function called `afunc` , using `echo` we will print
@@ -1253,12 +1037,14 @@ function afunc {
 }
 ```
 
+---
 2. Outside of the function, we'll create another variable also named `var1` and give it the value of `"outside function"`
 
 ```
 var1="outside function"
 ```
 
+---
 3. We'll then add the program.
    a) `echo`, we'll print `var1`
    b) Print 3 positional parameters
@@ -1274,16 +1060,19 @@ echo var1: $var1
 echo $0: $1 $2
 ```
 
+---
 Let's run it in our terminal without any additional arguments and see what the output is.
 
 - Why did `echo $@: $1 $2` only output one argument?
 - Why did `var1` change the third time to `inside function` rather than `outside function` ?
 
+---
 Now let's change and add a few things to see what happens:
 
 - In our terminal, what happens if we pass two arguments by entering `ascript.sh arg1 arg2` with `ascript.sh` being the name of our script and `arg1 arg2` being two random arguments?
 - What happens if we add `local` to our function?
 
+---
 ### Parameter Expansion
 
 Let's discuss the difference between `$a` and `${a}`
@@ -1294,6 +1083,7 @@ Let's discuss the difference between `$a` and `${a}`
   `a_file` rather than `a`
 - `${a}_file` the shell will now try to expand the variable `a`
 
+---
 This can help us be more flexible when navigating and manipulating files and directories.
 
 Let's look at the code below to see how this helps us:
@@ -1304,10 +1094,12 @@ $ touch $filename
 $ mv $filename ${filename}1
 ```
 
+---
 This block of code creates a file based on our defined variable and then renames it with the same variable but with an additional component.
 
 Parameter expansion also help us if our variables are unset (i.e. do not exist) or are empty. Let's take a look at a couple examples in the next few slides.
 
+---
 1. `${parameter:=x}` If parameter is unset or empty, expansion results in the value of `x` and the value of `x` is assigned to the parameter. If it's not empty, it results in the value of the parameter
 
 ```
@@ -1322,6 +1114,7 @@ $ echo $foo
 
 Through this sequence of commands we can see that when `$foo` is empty, `:-` fills the variable with `"something else"`. Once we define the variable, `:-` results in our defined variable.
 
+---
 2. `${parameter:=x}` If parameter is unset or empty, expansion results in the value of x and the value of x is assigned to the parameter. If it's not empty, it results in the value of the parameter
 
 ```
@@ -1335,6 +1128,7 @@ $ echo $foo
 
 We can see that when `$foo` is empty, `:=` assigns the variable with `"something else"`. If we define the variable again, `:-` results in our second defined variable.
 
+---
 3. `${parameter:?x}` If parameter is unset or empty, this expansion causes the script to exit with an error, and the contents of `x` are sent to standard error. If parameter is not empty, the expansion results in the value of parameter.
 
 ```
@@ -1348,6 +1142,7 @@ $ echo $?
 
 We can see that when `$foo` is empty, `:?` gives us an error which we can see as `echo $?` outputs `1`. If we define the variable again, `:?` results in the value of our variable.
 
+---
 4. `${parameter:+x}` If parameter is unset or empty, the expansion results in nothing. If parameter is not empty, the value of `x` is substituted for parameter; however, the value of parameter is not changed.
 
 ```
@@ -1361,6 +1156,7 @@ $ echo $foo
 
 Here, `:+` resulted in an empty output and the value of `$foo` remains empty. If we define the variable, `:+` will still output what we defined, but it will not reassign the variable permanently.
 
+---
 ### String Operators
 
 String operators are extremely valuable for operations on pathnames. They can help extract parts of pathnames, especially if they follow a pattern. Many pathnames typically follow patterns, such as all extensions are preceded with `.`.
@@ -1369,10 +1165,7 @@ Some character expansions are:
 1. `${#parameter}`
 2. `${parameter:offset}`
 3. `${parameter:offset: Length}`
-
-4.
-
-`${#parameter}` expands into the length of the string
+4. `${#parameter}` expands into the length of the string
 contained by the parameter.
 
 ```
@@ -1380,6 +1173,7 @@ $ foo="Toronto needs more trees"
 $ echo "'$foo' is ${#foo} characters long."
 ```
 
+---
 With the following expansions, we can extract a portion the string contained by the parameter.
 
 2. `${parameter:offset}` will extract characters from _offset_ characters to the end of the string. For example, counting from the beginning of the string, the _n_ of _needs_ is 8 characters from the beginning. Because did not specify an end, `echo` will print from _needs_ onwards.
@@ -1389,6 +1183,7 @@ $ foo="Toronto needs more trees"
 ¢ echo ${foo:8}
 ```
 
+---
 3. `${parameter:offset: length}` will specify the length that we want to extract. This length is counted not from the beginning of the string, but from the offset of the string.
 
 ```
@@ -1396,6 +1191,7 @@ $ foo="Toronto needs more trees"
 $ echo ${foo:8:5}
 ```
 
+---
 We can see that from the beginning of the string, _n_ is 8
 characters in, and from _n_, s of _needs_ is the 5th character from
 _n_. Therefore, our ouput will be _needs_.
@@ -1472,6 +1268,7 @@ $ foo="MP3.MP3"
 $ echo ${foo/MP3/mp3}
 ```
 
+---
 ```
 $ echo ${foo//MP3/mp3}
 ```
@@ -1486,8 +1283,10 @@ $ echo ${foo/%MP3/mp3}
 
 Can you think of when this might be helpful?
 
+---
 Let's say I have a a named "rachaels cool file". I want to rename them because spaces cause problems in filenames. How would I do this?
 
+---
 ### Arithmetic Assignment
 
 We have seen assignment before with examples such as `foo=5` . This is a simple assignment but we can also add complexity to this assignment with other operators.
@@ -1504,6 +1303,7 @@ We can also increase or decrease our parameters by one.
 - `$((++parameter))` increases parameter by one before the parameter is returned
 - `$((--parameter))` decreases parameter by one before the parameter is returned.
 
+---
 These are very subtle changes so let's see what we mean after and before a parameter is returned:
 
 ```
@@ -1518,10 +1318,12 @@ $ echo $((++foo))
 $ echo $foo
 ```
 
+---
 ### Command Substitution
 
 So far we've learned how to get values into variables by using assignment statements ( `x=5` ) and positional parameters ( `x=$1` ). Another way is command substitution which allows you to use the standard output of the command as if it were a variable.
 
+---
 Let's say we want to assign a variable to the output of a command so that we can apply another command to that output. In this particular case, we want to make a variable equalall files beginning with _t_. We then want to apply a sort command on that variable:
 
 ```
@@ -1532,6 +1334,7 @@ $ echo $x | sort
 Although this seems quite simple now, we'll see how this can be
 extremely powerful when we move into flow control.
 
+---
 # Flow Control
 
 Flow control allows programs to "change directions" based on the results from a given input.
@@ -1542,11 +1345,13 @@ Bash supports several constructs:
 - `case`
 - `for`
 
+---
 ## if / else
 
 `if/else` is a conditional statement that chooses whether or
 not to do something based on a true or false statement.
 
+---
 ```
 if condition; then
   commands
@@ -1557,11 +1362,13 @@ if condition; then
 fi
 ```
 
+---
 Here, we've assigned `x` to the value `5`. We've then written an
 `if/else` statement that asks if `x` is equal to `5` than tell us
 that `x` equals `5`. Otherwise (`else`), tell us that `x` does not
 equal `5`.
 
+---
 ```
 x=5
 if [ $x = 5 ]; then
@@ -1571,6 +1378,7 @@ else
 fi
 ```
 
+---
 Let's take a look at a more practical example: we want to know if there are any files in our directory that contain spaces.
 
 ```
@@ -1583,6 +1391,7 @@ else
 fi
 ```
 
+---
 First we've changed our working directory to _dir1_:
 
 ```
@@ -1597,12 +1406,14 @@ option checks if the length of a string is _nonzero_:
 -n $(find . -type f | grep " ")
 ```
 
+---
 By wrapping our output in an if statement, we're stating:
 
 1. `if` the value of `$(find . -type f | grep " ")` is nonzero, then
    print (`echo`) "A file contains a space"
 2. Otherwise (`else`), print (`echo`) `"No files contain a space"`
 
+---
 ### Control Operators
 
 Control operators ( `&&` and `||` ) allow you to test more than one thing at a time. Their syntax is:
@@ -1619,6 +1430,7 @@ if command1 || command2; then
 fi
 ```
 
+---
 With the `&&` operator, command1 is executed and command2 is executed only if command1 is **successful**.
 With the `||` operator, command1 is executed and command2 is
 executed only if command1 is _unsuccessful_.
@@ -1635,12 +1447,14 @@ if grep $word1 $filename && grep $word2 $filename; then
 fi
 ```
 
+---
 Using positional parameters that we learned earlier, what do you think will happen if we run the previous code?
 
 - What happens if both words exist?
 - What happens if only one word exists?
 - What happens if no words exist?
 
+---
 Example of `||`
 
 ```
@@ -1653,12 +1467,14 @@ if grep $word1 $filename || grep $word2 $filename; then
 fi
 ```
 
+---
 Similarly, what will happen if...
 
 - What happens if both words exist?
 - What happens if only one word exists?
 - What happens if no words exist?
 
+---
 ## While
 
 Using the while command, let's discuss looping. Looping allows portions of a program to repeat as long as the condition is false.
@@ -1670,6 +1486,7 @@ while condition; do
 done
 ```
 
+---
 Let's make a basic while script that displays five numbers in sequential order from 1 to 5 and then tells us when it's finished.
 
 ```
@@ -1686,6 +1503,7 @@ done
 echo "Finished."
 ```
 
+---
 Why does the loop end?
 
 While loops are extremely helpful to read lines of a file and then perform some command if a line meets a certain condition. Let's explore how to read lines first:
@@ -1697,6 +1515,7 @@ while read -r line; do
 done < "$file"
 ```
 
+---
 In this script, we're creating a variable with our file. We're then reading the file until the last line is read. In this example, we're using an input redirection that we learned earlier ( `<` ), which passes the file into the read command. We've also used `-r` so that any backslashes are escaped.
 
 Because line is acting as a variable, we can also nest another loop if `$file` meets a condition. Let's say we have a file and we want to know every line that has `bananas` in it.
@@ -1710,6 +1529,7 @@ while read -r line; do
 done < "$file"
 ```
 
+---
 Here we're reading the file line by line using the `while` loop.
 We're then saying `if` our variable, `$line` equals `"banana"` ,
 then print the `$line`.
@@ -1717,6 +1537,7 @@ then print the `$line`.
 1. Why have we added the wildcard `*` ?
 2. What would happen if we didn't include `*` ?
 
+---
 ## Until
 
 Until loops are similar to while, except unlike while loops that run as long as the condition is true, the until loop will run as long as the condition is **false**
@@ -1727,6 +1548,7 @@ until condition; do
 done
 ```
 
+---
 Let's create a script similar to the while statement: a basic while script that displays five numbers in sequential order from 1 to 5 and then tells us when it's finished.
 
 ```
@@ -1741,6 +1563,7 @@ echo "Finished."
 
 How is this script different to the while loop?
 
+---
 How might this be useful? Let's say we want to create 3
 directories labeled _dir1_, _dir2_ and _dir3_:
 
@@ -1753,8 +1576,10 @@ until [[ $x == 4 ]]; do
 done
 ```
 
+---
 Here we've created a variable `x=1` because we want our first directory to be _dir1_. We're then saying up until `x=4`, make a directory `mkdir` called _dir_ plus our variable. We've then added 1 to `x` each iteration using an arithmetic assignment. The `echo` part is just to give us some feedback on what is happening behind the scenes.
 
+---
 ## for
 
 For our final flow control, we're going to learn a powerful loop called `for`. The syntax is:
@@ -1769,33 +1594,40 @@ What we might notice is that this flow uses variables that will increment during
 
 How would we use `for` if we wanted to list all files and directories in a folder?
 
+---
 ```
 for i in $(find x«); do
     echo $i
 done
 ```
 
+---
 The variable `i` becomes all instances of the variable `$(find *)` . For each instance of `i`, we are then printing it. Although this seems quite basic and there more simple ways to list all files and directories ( `ls` ), this enables us to do many things with the looped variable `i` by nesting other loops.
 
 What other ways can we use for loops?
 What other ways can we use for loops within files?
 
+---
 ### Questions?
 
 - Why do we use `i`?
 
+---
 ### Next Week: Git and Github
 
 - Please make sure to come with a GitHub account
 
+---
 ## Additional Material
 
+---
 ### Exit Status
 
 Commands issue a value to the system when they terminate, which is an integer in the range of O and 255 indicating the success or failure of a command's execution.
 
 Conventionally, zero indicates success and any other value indicates failure.
 
+---
 Let's list a file that we know exists on our desktop:
 
 ```
@@ -1807,6 +1639,7 @@ $ echo $?
 
 `$?` returns the value of the last executed command. The value being either zero for success or any other number for failure.
 
+---
 If we then list a file that we know does not exist in our desktop and return the value of `$?`, what do we expect to happen?
 
 ```
@@ -1814,14 +1647,17 @@ $ ls -d /bin/usr
 $ echo $?
 ```
 
+---
 ### Exit Command
 
 The `exit` command ina script replaces the return command and accepts a single, optional argument, which becomes the scripts exit status.
 
 When no argument is passed, it defaults to zero. This enables our scripts to indicate an error.
 
+---
 If the script is a function in a larger program, we can use `return` instead of `exit` with a single, optional argument, allowing our function to indicate an error.
 
+---
 ```
 #!/bin/bash
 
@@ -1863,6 +1699,7 @@ test_file () {
 
 ```
 
+---
 `if / else` statements are most frequently used with `test`
 
 `test` performs a variety of checks and comparisons
@@ -1875,6 +1712,7 @@ Its syntax is:
 
     `[ expression ]`
 
+---
 There are many expressions that are used to evaluate the status
 of files. Some important **File Expressions** include:
 
@@ -1886,6 +1724,7 @@ of files. Some important **File Expressions** include:
 | -r file    | file exists and is readable (has readable permissions for the effective user) |
 | -s file    | file exists and has a length greater than zero                                |
 
+---
 #### String Expressions
 
 | Expression         | Is True If                                |
@@ -1896,6 +1735,7 @@ of files. Some important **File Expressions** include:
 | string1 == string2 | string1 equals string2                    |
 | string1 != string2 | string1 and string2 are not equal         |
 
+---
 ### Breaking Out Of A Loop
 
 Bash has two build-in commands that can be used to control program flow inside loops.
@@ -1904,6 +1744,7 @@ Bash has two build-in commands that can be used to control program flow inside l
 
 - `continue` command skips the remainder the loop that is not needed (ie. a condition has been met) and resumes with the next iteration of the loop. `continue` allows for a more efficient execution
 
+---
 ```
 if condition; then
     if condition; then
@@ -1920,6 +1761,7 @@ else condition; then
 fi
 ```
 
+---
 If the first `if` condition is met, then the second one will be skipped and resumed with the next iteration.
 
 ```
