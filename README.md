@@ -54,7 +54,7 @@ The schedule is tentative and may be modified as needed. Learners will be notifi
  
 ## Policies
 * **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this module more accessible to you, please let us know.
-* **module communications:** Communications take place over email or on Slack. If communicating over email, please include "DSI-Git" or similar in the subject line, e.g. "DSI-Git: pandas question"
+* **module communications:** Communications take place over email or on Slack. If communicating over email, please include "DSI-Shell" or similar in the subject line, e.g. "DSI-Shell: bash question"
 * **Camera:** Keeping your camera on is optional.
 * **Microphone:** Please keep microphones muted unless you need to speak. Please indicate your name before speaking as some Zoom configurations make it hard to tell who is talking!
 * **Assessment:** There will be homework which **is not** graded, but highly recommended, and there will be two assignments which **are** graded.
