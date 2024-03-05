@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # CONFIGURATION
-folder_md="homework/"
-folder_output="homework/pdfs" # This will be used for both PDF and HTML
+folder_md="lessons/"
+folder_output="../01-slides" # This will be used for both PDF and HTML
 
 # Clear the screen for the splash screen
 clear
