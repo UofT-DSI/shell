@@ -94,8 +94,7 @@ Feel free to use the following as resources:
 |-- .gitignore
 ```
 
-* **slides:** Course slides as interactive notebooks (.ipynb files)
-* **pdf slides:** Course slides as PDF files
+* **slides:** Course slides as PDF files
 * **homework:** Optional homework to practice concepts covered in class
 * **assignments:** Graded assignments
 * **instructors:** Instructions for the Instructor on what to teach
