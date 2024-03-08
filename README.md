@@ -25,7 +25,7 @@ Throughout this section of the module, participants will acquire problem-solving
 ## Learning Outcomes
 By the end of the module, learners will:
 * Develop the ability to comfortably access and navigate the terminal
-* Develop the skills to independently troubleshoot issues by identifying problems, conducting research, and formulating questions using components of reproducibility.
+* Develop the skills to create, modify and delete directories and files
 
 ## Assignments
 **The Secret Password Assignment:** You are stuck in a virtual room and can only leave if you figure out the password! Fortunately, somebody left behind 5 clues for you to find the secret password, but the messaging are not that clear. It is your job to discover what the secret password is!
@@ -50,7 +50,7 @@ The schedule is tentative and may be modified as needed. Learners will be notifi
 
 ||Day 1|Day 2|Day 3|Day 4|
 |---|---|---|---|---|
-|Week 1|Lecture 1 (Shell)|Work Period 1|Lecture 2 (Git & Github)|Work Period 2|
+|Week 1|Lecture 1 (Shell)|Work Period 1|Lecture 2 ([Git & Github](https://github.com/UofT-DSI/git))|Work Period 2|
  
 ## Policies
 * **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this module more accessible to you, please let us know.
