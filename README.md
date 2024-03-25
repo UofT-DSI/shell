@@ -4,7 +4,7 @@
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Assignments](#assignments)
-* [module Contacts](#module-contacts)
+* [Module Contacts](#module-contacts)
 * [Delivery of Module](#delivery-of-module)
   + [How the Instructor will deliver](#how-the-instructor-will-deliver)
   + [Expectations](#expectations)
