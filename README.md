@@ -4,7 +4,7 @@
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Assignments](#assignments)
-* [Module Contacts](#module-contacts)
+* [Module Contacts](#contacts)
 * [Delivery of Module](#delivery-of-module)
   + [How the Instructor will deliver](#how-the-instructor-will-deliver)
   + [Expectations](#expectations)
@@ -50,7 +50,7 @@ The schedule is tentative and may be modified as needed. Learners will be notifi
 
 ||Day 1|Day 2|Day 3|Day 4|
 |---|---|---|---|---|
-|Week 1|Lecture 1 (Shell)|Work Period 1|Lecture 2 ([Git & Github](https://github.com/UofT-DSI/git))|Work Period 2|
+|Week 1|Lecture 1 (Shell)|Lecture 2 (Shell)|Lecture 3 ([Git & Github](https://github.com/UofT-DSI/git))|Work Period 1|Work Period 2|
  
 ## Policies
 * **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this module more accessible to you, please let us know.
