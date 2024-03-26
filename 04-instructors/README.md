@@ -41,7 +41,7 @@ Feedback will be given through the pull request a learner had made, and allowing
 <hr>
 
 ## Definitions
-**Lecture**: A Lecture is a synchronous period of time, lasting up to 3 hours, where the instructor will facilitate and deliver the contents and learning outcomes online through Zoom. Learners are encouraged to participate and ask questions as they learn. Breaks are given if lecture goes pass an hour, with a 10 minutes break given for every hour still in a lecture.
+**Lecture**: A Lecture is a synchronous period of time, lasting up to 3 hours, where the instructor will facilitate and deliver the contents and learning outcomes online through Zoom. Learners are encouraged to participate and ask questions as they learn. Breaks are given if lecture goes past an hour, with a 10 minutes break given for every hour still in a lecture.
 
 **Work Period**: A Work Period is an asynchronous period of time, lasting up to 3 hours. The learners will work on their assignments and/or homework during this block of time. A TA will be present online through Zoom to assist the learners and answer any questions they may have. As work periods are asynchronous and flexible, learners can choose to work on their own time. However, it is encouraged to work during the block of time when a TA is present.
 

@@ -42,7 +42,7 @@ Can you think of any examples?
 ---
 
 
-## `Truth and Reconcilliation`
+## `Truth and Reconciliation`
 ###### `Missing Children and Unmarked Burials`
 
 ---
@@ -52,7 +52,7 @@ Can you think of any examples?
 
 - The system's intention was to lead a cultural genocide to assimilate Indigenous children
 
-- More than 130 schools were estabilshed with more than 150,000 Indigenous students attending
+- More than 130 schools were established with more than 150,000 Indigenous students attending
 
 - Children were forcibly removed from their families
 
@@ -76,7 +76,7 @@ Can you think of any examples?
 
 - Instead, the second person can help us feel closer to the stories of survivors and their testimonies
 
-- Oral histories is a significant practise for Indigenous Peoples. It is how knowledge is passed on. To respect the practice and values of Indigenous Peoples, we will engage with oral testimonies from survivors of the Residential School System
+- Oral histories is a significant practice for Indigenous Peoples. It is how knowledge is passed on. To respect the practice and values of Indigenous Peoples, we will engage with oral testimonies from survivors of the Residential School System
 
 ---
 
@@ -88,9 +88,9 @@ Can you think of any examples?
 
 ![bg right contain](../pics/medicinewheel.png)
 ##### Workshop
-Medicine wheels are used by some Indigenous peoples to represents elements of a whole person.
+Medicine wheels are used by some Indigenous peoples to represent elements of a whole person.
 
-We'll use this tool as we listen to stories of Survivors and discuss all together.
+We'll use this tool as we listen to stories of Survivors and discuss everything together.
 
 ---
 Physical:
@@ -132,17 +132,17 @@ What are the consquences of this history for Indigenous Peoples today?
 
 ---
 ##### Intergenerational Impacts
-The legacy of Residential Schools have had lasting impacts on Survivors and their families. Some include:
+The legacy of Residential Schools has had lasting impacts on Survivors and their families. Some include:
 - Alcohol and drug abuse
 - Educational blocks
 - Higher rates of suicide
 - Destruction of social support networks
 - Missing and Murdered Indigenous Women and Girls
-- Higher rate of children in the child welfare system (an extention of Residential Schools)
+- Higher rate of children in the child welfare system (an extension of Residential Schools)
 
 ---
 ##### TRC: Calls to Action
-To redress the legacy of colonization and residential schools, the Truth and Reconciliation Commission drafted 94 calls to action in 2012. Since then, only 14 have been completed.
+To redress the legacy of colonization and residential schools, the Truth and Reconciliation Commission drafted 94 calls to action in 2012. Since then, only [13 have been completed](https://www.indigenouswatchdog.org/2022/04/05/trc-calls-to-action-status-may-13-2022/).
 
 Reading these call to actions can give us a good idea of some of the inequities that exist today
 

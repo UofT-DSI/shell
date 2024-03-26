@@ -13,21 +13,21 @@ $ echo "Data Sciences Institute"
 ---
 ##### Why take this course?
 
-- Unix shells - more specifically bash - is a powerful tool for quickly and easily navigating and manipulating files, scaling automated tasks, accessing Git and processing data.
+- Unix shells, more specifically bash, are powerful tools for quickly and easily navigating and manipulating files, scaling automated tasks, accessing Git and processing data.
 
-- Git is extremely important for reproducibility of your personal work and collaborating with others on group projects.
+- Git is extremely important for the reproducibility of your work and collaborating with others on group projects.
 
 - Git is incredible at keeping a historical reference of the changes you make to your work and debugging your code.
 
-- Github has an amazing community with educational resources, open-sourced projects, and events.
+- GitHub hosts a vibrant community featuring educational resources, open-source projects, and events.
 
 ---
 ##### Learning Outcomes
 1. Become comfortable with Unix basics and more complicated functions
 
-2. Learn how to use Git and Github in solo  and group projects
+2. Learn how to use Git and GitHub in solo and group projects
 
-3. Navigate how to solve problems that you encounter
+3. Learn to navigate and solve encountered problems
 
 4. Understand why reproducibility is important and how to make your code reproducible 
 
@@ -40,15 +40,15 @@ $ echo "Data Sciences Institute"
 
 ---
 ##### Prerequisites
-Please come prepared with a Github account.
+Please come prepared with a GitHub account.
 
 ---
 ##### Assessments
-- A number of formative assessments that continuously put in practice what we learned in class
+- A series of formative assessments that continuously apply what we have learned in class
 
-- Attitudinal assessments to help understand how students feel about the material and any areas for additional review
+- Attitudinal assessments to gauge students' feelings about the material and identify areas needing further review
 
-- One summative assessment that compiles everything we have learned
+- One summative assessment that compiles all learned material
 
 - Written reflections
 
@@ -96,7 +96,7 @@ $ pwd
 ##### Working with Files and Directories
 Readings: Newham et al. chapter 1.7 & Scotts chapters 5, 7, 11
 
-In this section we’ll start manipulating files and directories. This includes creating, copying, moving and more. We’ll then introduce inputs and outputs and how combine them into command pipes.
+In this section, we'll begin manipulating files and directories. This includes creating, copying, moving and more. We’ll then introduce inputs and outputs and how combine them into command pipes.
 
 ---
 ```
@@ -119,7 +119,7 @@ $ ln
 ##### Pipes and Filters
 Readings: Newham et al. chapters 1.9-2 & Scotts chapters 8-9 + 13
 
-Continuing from last lesson, we’ll expand on pipes and introduce some filter commands that will help us gain more shell experience. We’ll also cover some important expansions and command line editing tips.
+Building on the last lesson, we will expand on pipes and introduce various filter commands that will help us gain more shell experience. We’ll also cover some important expansions and command line editing tips.
 
 ---
 ```
@@ -142,7 +142,7 @@ $ find
 ##### Shell Scripts
 Readings: Scotts chapter 25
 
-Now we’ll learn how to group together commands and compile them into shell scripts. This avoids writing commands one by one on the command line. We’ll build our first script and in the process discover how to write, run and store shell scripts.
+Now, we will learn to group commands and compile them into shell scripts. This avoids writing commands one by one on the command line. We’ll build our first script and in the process discover how to write, run and store shell scripts.
 
 ---
 ##### Shell Functions
@@ -234,23 +234,23 @@ Collaborating with others can produce several conflicts. We’ll explore some pr
 
 ---
 ##### Problem Solving
-Problem solving is a necessary skill when writing code. In this section we’ll learn how to identify the problem and effectively search for our solution using Google and Stack Overflow. We’ll also begin a discussion how how reproducibility makes a difference when asking for help.
+Problem-solving is a crucial skill in coding. In this section we’ll learn how to identify the problem and effectively search for our solution using Google and Stack Overflow. We’ll also begin a discussion how how reproducibility makes a difference when asking for help.
 
 ---
 ##### Reproducibility
-Reproducibility is extremely important in reducing and solving errors and increasing trust and transparency. We’ll have thorough discussions on the significance of reproducibility and how to practice it through code commenting, documentation writing and proper folder structures.
+Reproducibility is crucial for reducing and addressing errors and increasing trust and transparency. We’ll have thorough discussions on the significance of reproducibility and how to practice it through code commenting, documentation writing and proper folder structures.
 
 ---
 ##### Ethics
-When looking at open-source projects on Github or other libraries, it’s important to not take the information and results we see at face-value. We’ll be discussing what to look for, and who might be inappropriately excluded from our data. We’ll be examining at several datasets to analyze the ethics of the project and what might be missing. 
+When examining open-source projects on GitHub or other libraries, it’s important to not take the information and results we see at face-value. We’ll be discussing what to look for, and who might be inappropriately excluded from our data. We’ll be examining at several datasets to analyze the ethics of the project and what might be missing. 
 
 ---
 ##### Inequality
-When ethics are not taken into consideration, massive inequality can take place. We’ll further our understanding of what happens when ethics are dismissed and the past abuses of power that have occured under this massively harmful failure.
+When ethics are not taken into consideration, significant inequality can occur. We’ll further our understanding of what happens when ethics are dismissed and the past abuses of power that have occured under this massively harmful failure.
 
 ---
 ##### Professional Skills
-We’ll end this module with a lesson on pertinent and tech based professional skills. This includes healthy work habits, time management and best practices in meetings. We’ll also discuss some team collaboration skills such as code reviews and sprint methodology.
+We will conclude this module with a lesson on relevant and tech-based professional skills. This includes healthy work habits, time management and best practices in meetings. We’ll also discuss some team collaboration skills such as code reviews and sprint methodology.
 
 
 ---

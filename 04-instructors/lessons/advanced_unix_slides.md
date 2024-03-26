@@ -21,15 +21,12 @@ understand how to navigate and manipulate them.
 
 - Regular files are text files with readable characters.
 - Executable files are programs that are invoked as commands.
-- Shell scripts are executable files that we can read whereas
-  bash is a non-human-readable executable file.
+- Shell scripts are readable executable files, in contrast to bash, which is a non-human-readable executable
 
 ---
 ## Directories
 
-Directories are files that are like folders which contain other
-files and directories (subdirectories), creating a hierarchical
-structure.
+Directories, similar to folders, contain files and subdirectories, forming a hierarchical structure.
 
 - We can think of the structure of directories as a tree with the
   top of the tree being the root.
@@ -40,8 +37,7 @@ structure.
 ---
 ## Paths
 
-Using `cd` and `pwd` let's take a look at how we can use
-absolute and relative pathnames.
+Using `cd` and `pwd`, let's explore how to use absolute and relative pathnames.
 
 ```
 $ cd
@@ -77,21 +73,20 @@ $ pwd
 ```
 
 ---
-## Options and Arguements
+## Options and Arguments
 
 Options and arguments are used to write commands that can
-make changes to our system. The syntax Is:
+make changes to our system. The syntax is:
 
 ```
 $ command -—option argument
 ```
 
 ---
-Options can also be combined, which we'll briefly see now but
-learn more about a bit later.
+Options can also be combined, a topic we'll briefly touch on now and explore in more detail later.
 
 ---
-There are two ways to write an `—option`:
+There are two ways to write an `--option`:
 
 1. Short option: one dash followed by a single character
 2. Long option: two dashes followed by a word
@@ -120,14 +115,12 @@ $ ls -lt --reverse
 - `—t` modification time
 - `—reverse` reverse the sort order
 
-Notice how `-lt` is actually a combination of multiple options.
+Notice how the `-lt` command combines multiple options.
 
 ---
 ## Wildcards
 
-Wildcards give us the ability to rapidly specify groups of
-filenames based on patterns of characters. Let's look at a few
-examples below:
+Wildcards allow us to quickly specify groups of filenames based on character patterns. Let's look at a few examples below:
 
 ---
 - `*` > matches any character
@@ -174,7 +167,7 @@ $ ls [![:digit:]]x
 ---
 ### Standard Input/Output
 
-Each program invokes the standard input, output and error. We can think of the standard input default as coming from the keyboard and if we think of everything as a file, a command such as `ls` will result in a file called `standard output` and the status message to a file called `standard error`. By default, both are linked to the screen and not saved to a disk file.
+Each program uses standard input, output, and error channels. We can think of the standard input default as coming from the keyboard and if we think of everything as a file, a command such as `ls` will result in a file called `standard output` and the status message to a file called `standard error`. By default, both are linked to the screen and not saved to a disk file.
 
 ---
 ### Input/Output Redirection
@@ -198,7 +191,7 @@ $ ls -l ls-output.txt
 ```
 
 ---
-By looking at the details, we can see that the file was created and it a fairly large text file, indicating that something was written to it.
+By examining the details, we can see that the file was created and is a fairly large text file, indicating that content was written to it.
 
 If we specify a directory that does not exist, we receive the Standard error:
 
@@ -211,7 +204,7 @@ Why was the standard error not written to the `.txt` file?
 What happened to our _ls-output.txt_ file?
 
 ---
-Although the standard error was not written tothe `.txt` file,
+Although the standard error was not written to the `.txt` file,
 the destination file is always written from the beginning,
 therefore, the redirection began to write the file and once
 noticed there was an error, stopped, resulting in an empty file.
@@ -251,7 +244,7 @@ $ ls -l /bin/usr & 1ls-output. txt
 ---
 ### cat
 
-`cat` takes one or more files and copies them to standard output. Using the _ls-output.txt_ created earlier, we can see how that's done:
+`cat` takes one or more files and copies them to standard output. Using the previously created `ls-output.txt`, we can see how this is done:
 
 ```
 $ cat ls—output.txt
@@ -267,15 +260,6 @@ $ cat filel file2 > file3
 ---
 Now the contents of file1 and file2 should be combined.
 
-We can also use it to join files togther. Let's say | have two files, `file1` and `file2` and I want to combine them into a file called `file3`:
-
-```
-$ cat filel file2 > file3
-```
-
----
-Now the contents of `file1` and `file2` should be combined.
-
 We can also use `cat` to add to a `.txt` file.
 
 ```
@@ -283,9 +267,9 @@ $ cat > new_cat.txt
 ```
 
 ---
-Now we can type the text that we want in the file. Once we're finished, we can use `CTRL-D` to exit.
+Now we can type the desired text into the file. To finish, use `CTRL-D` to exit.
 
-What would be the difference between `$ cat > new_cat.txt` and `$ cat >> new_cat.txt` ?
+What is the difference between `$ cat > new_cat.txt` and `$ cat >> new_cat.txt` ?
 
 Finally, we can redirect the standard input from the keyboard to the file _new_cat.txt_
 
@@ -299,7 +283,7 @@ This is almost identitcal to just typing _$ cat new_cat.txt_ but we can see late
 # Pipes / Filters
 
 ---
-We use pipelines to read data from standard output and send to standard input using the pipe operator `|` . This means the standard output of one command can be piped into the standard input of another.
+Pipelines read data from standard output and send it to standard input using the pipe operator `|` . This means the standard output of one command can be piped into the standard input of another.
 
 Several commands put together in a pipeline are often referred to as filters. Filters take an input, change it and then output it.
 

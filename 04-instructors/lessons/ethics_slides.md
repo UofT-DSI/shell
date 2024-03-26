@@ -13,41 +13,40 @@ $ echo "Data Sciences Institute"
 ---
 
 
-##### Why should we care about ethics in Data Science?
+##### Why Should We Care About Ethics in Data Science?
 
 ---
 
 
-## `Who Counts in our`
-## `Datasets?`
+## `Who Counts in Our Datasets?`
 
 ---
 
-![w:950 center](../pics/torontocrime.png)
+![w:950](../pics/torontocrime.png)
 
 ---
 
-![w:950 center](../pics/covidcases.png)
+![w:950](../pics/covidcases.png)
 
 ---
 
-![w:2300 center](../pics/drivingtrends.png)
+![w:500](../pics/drivingtrends.png)
 - [Kieran Healy](https://kieranhealy.org/blog/archives/2020/05/21/the-kitchen-counter-observatory/)
 
 ---
 
-![w:750 center](../pics/census.png)
+![w:750](../pics/census.png)
 
 ---
 
-##### Os Keyes: Counting the Countless
->Trans lives are ultimately (to a certain degree) about autonomy: about the freedom to set one’s own path. Society isn’t a tremendous fan of this
+##### Os Keyes: 'Counting the Countless'
+> Trans lives are ultimately about autonomy: the freedom to set one's own path. Society isn’t a tremendous fan of this.
 
 ---
-> ...“administrative violence” to refer to the way that administrative systems such as the law — run by the state, that white supremacist capitalist patriarchy — “create narrow categories of gender and force people into them in order to get their basic needs met.”
+> ..."administrative violence" refers to how administrative systems, like the law—operated by the state's white supremacist capitalist patriarchy—"create narrow categories of gender and force people into them in order to get their basic needs met."
 
 ---
-> “data violence” refers to the perpetuation of violence through datalogical systems: everything from YouTube’s recommender algorithm to facial recognition to online advertising.
+> 'Data violence' is the perpetuation of violence through data systems, including YouTube’s recommender algorithm, facial recognition, and online advertising.
 
 ---
 
@@ -75,11 +74,11 @@ Insurance companies are making decisions based on health data (ex. food you buy,
 
 How might this practice exclude people or communities?
 
-Is this practice even ethically reponsible?
+Is this practice ethically responsible?
 
 ---
 
-> "The inhumane reduction of humanity down to what can be counted."
+> "The inhumane reduction of humanity to mere numbers."
 
 ---
 
@@ -88,14 +87,12 @@ Is this practice even ethically reponsible?
 
 ---
 
-
-
-Do you think the reductionist appoach of data science make it easy to ignore realities, or does it force you to confront them as Healy states?
+Does the reductionist approach of data science simplify complex realities, or does it compel confrontation with them, as Healy suggests?
 
 ---
 
 ##### Reforming Data Science
->With administrative violence, Spade notes how “reform” often benefits only the least marginalized while legitimizing the system and giving cover for it to continue its violence.
+> With administrative violence, Spade notes how “reform” often benefits only the least marginalized while legitimizing the system and giving cover for it to continue its violence.
 
 We can see this in facial recognition where people of colour are not well recognized by the program, yet creating a better algorithm only benefits systems of control.
 
@@ -103,9 +100,9 @@ We can see this in facial recognition where people of colour are not well recogn
 
 
 
-Can you think of another product/algorithm/program that further marginalizes communities?
+Can you identify a product, algorithm, or program that further marginalizes communities?
 
-Do you believe we can reform data science?
+Do you believe data science can be reformed?
 
 ---
 ##### References

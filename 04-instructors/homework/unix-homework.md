@@ -12,13 +12,13 @@ $ echo "Data Sciences Institute"
 
 ---
 ##### Expectations
-The goal of this homework is to give students an opportunity to practice what was learned during each class. This will help students remember the content and prepare for the next class.
+The goal of this homework is to provide students with an opportunity to practice what they have learned in each class. This practice aids in content retention and preparation for upcoming classes.
 
-Because each class builds upon the last, it's important to review the content and become comfortable with it, as time is too limited for a full in-class review.
+Since each class builds upon the previous one, reviewing and familiarizing yourself with the content is crucial due to the limited time for comprehensive in-class reviews
 
 ---
 ##### Prompt:
-Create one directory in any parent directory of your choice. This new directory should contain three additional directories. Within one of these additional subdirectories, please create two text files (.txt)
+Create a directory within any parent directory of your choice. This new directory should house three additional directories. Within one of these subdirectories, create two text files (.txt).
 
 To submit:
     1. A screenshot of your terminal commands.
@@ -34,7 +34,7 @@ To submit:
 
 ---
 ##### Prompt:
-Download a csv of your choice. This could be from Toronto Open Data or another source but use a different csv than the one used in class. Place the new csv in a directory of your choice and rename it. Extract one column and the unique values from that column. Redirect the standard output to be a txt file.
+Download a CSV of your choice. This could be from Toronto Open Data or another source, but ensure it's a different CSV than the one utilized in class. Place the new CSV in a directory of your choice and rename it. Extract one column and the unique values from that column. Redirect the standard output to be a txt file.
 
 To submit:
     1. A screenshot of your terminal commands.
@@ -53,7 +53,7 @@ To submit:
 
 ---
 ##### Prompt:
-Create a shell script that extracts some data using pipes (ie. a column, particular rows using `grep`, or anything else you want to play around with) from the same csv file from Day 2 homework. The filter should be contained within a function and include at least one variable.
+Create a shell script that extracts specific data using pipes (i.e., a column, particular rows using `grep`, or any other element you wish to explore) from the same CSV file used in the Day 2 homework. Ensure the filter is encapsulated within a function and includes at least one variable.
 
 To submit:
     1. A screenshot of your terminal commands.

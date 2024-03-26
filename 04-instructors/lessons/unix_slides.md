@@ -16,22 +16,14 @@ $ echo "Data Sciences Institute"
 
 ### What is Unix?
 
-Unix was created in 1970 and since then has branched into
-other versions including Linux. Linux was created from Unix
-with very similar features, although there are some minor
-differences in commands.
+Unix was created in 1970, and since then, has branched into other versions, including Linux. Linux was created from Unix with very similar features, although there are some minor differences in commands.
 
-Unix shells - more specifically bash - is a powerful tool for
-quickly and easily navigating and manipulating files, scaling
-automated tasks, accessing Git and processing data.
+Unix shells, more specifically Bash, are powerful tools for quickly and easily navigating and manipulating files, scaling automated tasks, accessing Git and processing data.
 
 ---
 ### So what is the shell?
 
-The shell is any user interface/program that takes an input from
-the user, translates it into instructions that the operating
-system can understand, and conveys the output back to the
-user.
+The shell is any user interface/program that takes an input from the user, translates it into instructions that the operating system can understand, and conveys the output back to the user.
 
 ---
 There are various types of user interfaces:
@@ -41,13 +33,13 @@ There are various types of user interfaces:
 - command line interfaces (CLI)
 
 ---
-### And what is bash?
+### And what is Bash?
 
 We'll be focusing on command line interfaces (CLI), more
-specifically bash, which stands for Bourne Again SHell.
+specifically Bash, which stands for Bourne Again SHell.
 
 We'll also need a terminal emulator to interact with the shell.
-This is most likely called terminal on our menu.
+This is most likely called "Terminal" on our menu.
 
 ---
 ### Let's get started!
@@ -69,14 +61,14 @@ Let's take a look at the terminal. What do we notice?
 
 If we type echo $SHELL in our terminal, the output will tell us
 what shell we are working with. Most often, our shell will
-already be bash but in newer Macs, it could be zsh which is
-almost identical to bash. We can also see where bash is
+already be Bash but in newer Macs, it could be zsh which is
+almost identical to Bash. We can also see where Bash is
 located by typing:
 
 ---
-- whereis bash
-- whence bash
-- which bash
+- whereis Bash
+- whence Bash
+- which Bash
 
 ---
 Let's start with a few commands and see what happens in our
@@ -204,10 +196,10 @@ module, so it's important to understand how they work now:
 First let's make a directory. It's important to remember what
 directory you're working in currently, because that's where the
 new directory will be made. Let's assume for now, we're working
-on our desktop.
+on our Desktop.
 
 ```
-$ mkdir directory
+$ mkdir my_directory
 ```
 
 We can also create multiple directories at the same time:
@@ -237,7 +229,7 @@ $ touch file1.sh
 ---
 ### cp
 
-Now we're going to copy a file that we have on our desktop. It
+Now we're going to copy a file that we have on our Desktop. It
 can be any file but remember to include the extension or if it
 has multiple characters, special characters and spaces, to wrap
 it in quotes.
