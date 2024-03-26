@@ -10,7 +10,7 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 6. The fourth word to the fourth Hanger Games movie
 
 ## Instructions
-1. Use your bash skills (such as `cd`, `cat`, etc.) to figure out what the secret password is!
+1. Use your bash skills (such as `cd`, `cat`, etc.) to figure out what the secret password is! You will be exploring the `clues` directory in your bash terminal.
 2. Write the secret password in this markdown below!
 3. Submit your answer to _!
 
