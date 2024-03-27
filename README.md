@@ -36,7 +36,7 @@ By the end of the module, learners will:
 * Technical Facilitator: 
   * name and pronouns: `<Name>`, `<Pronouns>` 
   * email: `<first_name.last_name@mail.ca>`
-* Learning Support: 
+* Learning Support Staff: 
   * name and pronouns: `<Name>`, `<Pronouns>` 
   * email: `<first_name.last_name@mail.ca>`
  
