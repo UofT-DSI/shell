@@ -94,7 +94,6 @@ Below is an outline of the folder structure for this module:
 .
 ├── 01-slides
 ├── 02-assignments
-├── 02-homework
 ├── 03-homework
 ├── 04-instructors
 ├── LICENSE
