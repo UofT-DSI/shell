@@ -84,7 +84,7 @@ Feel free to use the following as resources:
 - [Bash in 100 seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
 
 ### How to get help
-![image](/steps-to-ask-for-help.png)
+![image](/steps_to_ask_for_help.png)
 
 <hr>
 
@@ -92,13 +92,13 @@ Feel free to use the following as resources:
 Below is an outline of the folder structure for this module:
 ```markdown
 .
-├── 01-slides
-├── 02-assignments
-├── 03-homework
-├── 04-instructors
+├── 01_slides
+├── 02_assignments
+├── 03_homework
+├── 04_instructors
 ├── LICENSE
 ├── README.md
-└── steps-to-ask-for-help.png
+└── steps_to_ask_for_help.png
 ```
 
 * **slides:** Course slides as PDF files.
