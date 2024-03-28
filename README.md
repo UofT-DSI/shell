@@ -6,7 +6,7 @@
 * [Assignments](#assignments)
 * [Module Contacts](#contacts)
 * [Delivery of Module](#delivery-of-module)
-  + [How the technical facilitator will deliver](#how-the-technical-facilitator-will-deliver)
+  + [How the Technical Facilitator will deliver](#how-the-technical-facilitator-will-deliver)
   + [Expectations](#expectations)
 * [Schedule](#schedule)
 * [Policies](#policies)
