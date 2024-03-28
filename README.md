@@ -84,7 +84,7 @@ Feel free to use the following as resources:
 - [Bash in 100 seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
 
 ### How to get help
-![image](/steps-to-ask-for-help.png)
+![image](/steps_to_ask_for_help.png)
 
 <hr>
 
