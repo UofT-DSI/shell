@@ -47,4 +47,4 @@ Feedback will be given through the pull request a learner had made, and allowing
 
 **Work Period**: A Work Period is an asynchronous period of time, lasting up to 3 hours. The learners will work on their assignments and/or homework during this block of time. A Learning Support Staff will be present online through Zoom to assist the learners and answer any questions they may have. As work periods are asynchronous and flexible, learners can choose to work on their own time. However, it is encouraged to work during the block of time when a Learning Support Staff is present.
 
-**Assignments**: An Assignment is work assigned as part of the program. They are slightly more difficult, providing an opportunity for learners to integrate and synthesize what they have learned throughout the week to meet the set learning outcomes.
+**Assignments**: An Assignment is work assigned as part of the certification. They are slightly more difficult, providing an opportunity for learners to integrate and synthesize what they have learned throughout the week to meet the set learning outcomes.
