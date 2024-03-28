@@ -98,7 +98,7 @@ Below is an outline of the folder structure for this module:
 ├── 04-instructors
 ├── LICENSE
 ├── README.md
-└── steps-to-ask-for-help.png
+└── steps_to_ask_for_help.png
 ```
 
 * **slides:** Course slides as PDF files.
