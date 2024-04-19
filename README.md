@@ -6,7 +6,7 @@
 * [Learning Outcomes](#learning-outcomes)
 * [Assignments](#assignments)
 * [Contacts](#contacts)
-* [Delivery of the Learning Module](#delivery-of-module)
+* [Delivery of the Learning Module](#delivery-of-the-learning-module)
 * [Schedule](#schedule)
 * [Requirements](#requirements)
 * [Resources](#resources)
