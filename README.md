@@ -37,16 +37,17 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 **Questions can be submitted to the _#cohort-3-help_ channel on Slack**
 
-* Technical Facilitator: 
-  * `Simeon Wong`, `<Pronouns>` 
-  * `simeonm.wong@mail.utoronto.ca`
+* Technical Facilitator:   
+  * **Simeon Wong** (he/him)  
+    simeonm.wong@utoronto.ca
+
 * Learning Support Staff: 
-  * `Michaela Drouillard`, `<Pronouns>` 
-  * `michaela.drouillard@mail.utoronto.ca`
-  * `Julia Gallucci`, `<Pronouns>`
-  * `julia.gallucci@mail.utoronto.ca`
-  * `Emma Teng`, `<Pronouns>`
-  * `e.teng@mail.utoronto.ca`
+  * **Michaela Drouillard** (she/her)  
+  michaela.drouillard@mail.utoronto.ca
+  * **Julia Gallucci** (she/her)  
+  julia.gallucci@mail.utoronto.ca
+  * **Emma Teng**  
+  e.teng@mail.utoronto.ca
  
 ## Delivery of the Learning Module
 
