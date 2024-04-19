@@ -5,10 +5,8 @@
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Assignments](#assignments)
-* [Module Contacts](#contacts)
-* [Delivery of Module](#delivery-of-module)
-  + [How the Technical Facilitator will deliver](#how-the-technical-facilitator-will-deliver)
-  + [Expectations](#expectations)
+* [Contacts](#contacts)
+* [Delivery of the Learning Module](#delivery-of-module)
 * [Schedule](#schedule)
 * [Requirements](#requirements)
 * [Resources](#resources)
@@ -19,58 +17,56 @@
 
 ## Description
 
-This module starts by introducing the Unix shell language, covering topics such as file and directory navigation and manipulation. After this learners will gain proficiency in various commands, script creation, and writing basic functions using pipes, filters, and loops. 
+This module introduces the Unix shell language and covers file and directory navigation and manipulation. Participants gain proficiency in various commands, script creation, and writing basic functions using pipes, filters, and loops. 
 
-Learners will acquire problem-solving skills through live coding sessions. Additionally, they will explore the concept of reproducibility and its integration into their work.
+Participants will acquire problem-solving skills through live coding sessions. Additionally, they will explore the concept of reproducibility and its integration into their work.
 
 ## Learning Outcomes
 
-By the end of the module, learners will:
-* Develop the ability to comfortably access and navigate the terminal
-* Develop the skills to create, modify and delete directories and files
+By the end of the module, participants will:
+* Comfortably access and navigate the terminal
+* Create, modify and delete directories and files
 
 ## Assignments
 
 1. [The Secret Password Assignment](https://github.com/UofT-DSI/shell/blob/main/02_assignments/assignment.md)
 
+Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
+
 ## Contacts
 
-**Questions can be submitted to the _#questions_ channel on Slack or as an email**
+**Questions can be submitted to the _#cohort-3-help_ channel on Slack**
 
 * Technical Facilitator: 
-  * name and pronouns: `<Name>`, `<Pronouns>` 
-  * email: `<first_name.last_name@mail.ca>`
+  * `Simeon Wong`, `<Pronouns>` 
+  * `simeonm.wong@mail.utoronto.ca`
 * Learning Support Staff: 
-  * name and pronouns: `<Name>`, `<Pronouns>` 
-  * email: `<first_name.last_name@mail.ca>`
+  * `Michaela Drouillard`, `<Pronouns>` 
+  * `michaela.drouillard@mail.utoronto.ca`
+  * `Julia Gallucci`, `<Pronouns>`
+  * `julia.gallucci@mail.utoronto.ca`
+  * `Emma Teng`, `<Pronouns>`
+  * `e.teng@mail.utoronto.ca`
  
-## Delivery of Module
+## Delivery of the Learning Module
 
-The module will run synchronously twice a week on Zoom. The first two days are "lectures" and will last a maximum of 3 hours. During this time, the technical facilitator will introduce the concepts for the week. The last two days are used for as optional, asynchronous work periods. The work periods will also last for up to 3 hours. During these two days, a technical facilitator or learning support will be present on Zoom to assist learners reach the intended learning outcomes.
-
-### How the technical facilitator will deliver the module
-
-The technical facilitator will introduce concepts through collaborative demonstrations and the use of slides.
+This module will include live learning sessions and optional, asynchronous work periods. During live learning sessions, the Technical Facilitator will introduce and explain key concepts and demonstrate core skills. Learning is facilitated during this time. Before and after each live learning session, the instructional team will be available for questions related to the core concepts of the module. Optional work periods are to be used to seek help from peers, the Learning Support team, and to work through the homework and assignments in the learning module, with access to live help. Content is not facilitated, but rather this time should be driven by participants. We encourage participants to come to these work periods with questions and problems to work through. 
  
-### Expectations
-
-Learners are encouraged to be active participants in coding and to ask questions throughout the module.
+Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
 ## Schedule
 
-The schedule is tentative and may be modified as needed. Learners will be notified of schedule changes.
-
 ||Day 1|Day 2|Day 3|Day 4|Day 5|
 |---|---|---|---|---|---|
-|Week 1|Lecture 1 (Shell)|Lecture 2 (Shell)|Lecture 3 ([Git & Github](https://github.com/UofT-DSI/git))|Work Period 1|Work Period 2|
+|Week 1|Live Learning Session 1 (Shell)|Live Learning Session 2 (Shell)|Live Learning Session 3 ([Git & Github](https://github.com/UofT-DSI/git))|Work Period 1|Work Period 2|
  
 ## Requirements
 
-* Learners are not expected to have any coding experience; we have designed the learning content for beginners.
-* Learners are encouraged to ask questions, and collaborate with others to enhance learning.
-* Learners must have a computer and an internet connection to participate in online activities.
-* Learners must not use generative AI such as ChatGPT to generate code in order to complete assignments. It should be used as a supportive tool to seek out answers to questions you may have.
-* We expect learners to have completed the instructions mentioned in the [onboarding repo](https://github.com/UofT-DSI/onboarding/).
+* Participants are not expected to have any coding experience; the learning content has been designed for beginners.
+* Participants are encouraged to ask questions, and collaborate with others to enhance their learning experience.
+* Participants must have a computer and an internet connection to participate in online activities.
+* Participants must not use generative AI such as ChatGPT to generate code in order to complete assignments. It should be used as a supportive tool to seek out answers to questions you may have.
+* We expect Participants to have completed the instructions mentioned in the [onboarding repo](https://github.com/UofT-DSI/onboarding/).
 * Using a camera is optional but highly encouraged. We understand not everyone may have the space at home to keep the camera on.
 
 ## Resources
@@ -105,8 +101,8 @@ Below is an outline of the folder structure for this module:
 ```
 
 * **slides:** Course slides as PDF files.
-* **homework:** Optional homework to practice concepts covered in class.
-* **assignments:** Graded assignments.
+* **homework:** Homework to practice concepts covered in class.
+* **assignments:** Assignments.
 * **instructors:** This folder provides guidance for Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
 * README: This file!
 * .gitignore: Files to exclude from this repo, specified by the instructing team.
