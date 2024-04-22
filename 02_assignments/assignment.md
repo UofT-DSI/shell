@@ -11,8 +11,9 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 
 ## Instructions
 1. Use your bash skills (such as `cd`, `cat`, etc.) to figure out what the secret password is! You will be exploring the `clues` directory in your bash terminal.
-2. Write the secret password in this markdown below!
-3. Submit your answer to _!
+1. Paste your work into a Bash script. Save this script to `02_assignments/solutions.sh` in this repository.
+2. Write the secret password in this markdown file as indicated below!
+3. Submit your assignment via a GitHub pull request: Add your changes to staging, commit your answer and script, push to GitHub, and create a pull request!
 
 **What is the secret password?**
 <!-- Your answer here -->
