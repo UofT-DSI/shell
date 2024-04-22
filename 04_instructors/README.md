@@ -1,7 +1,7 @@
 # Instructional Team Playbook
 
 ## How do you interact with the repo?
-The Technical Facilitator will deliver the content in the `/01_slides` directory. You are encouraged to live code with participants during live sessions. Please ensure that live-coding files are uploaded to a new directory called `/live-coding` under `/01_slides` in this repository using a new branch. Please open up a pull request for it to be merge.
+The Technical Facilitator will deliver the content in the `/01_slides` directory. You are encouraged to live code with participants during live sessions. Please ensure that live-coding files are uploaded to a new directory called `/live-coding` under `/01_slides` in this repository using a new branch. Please open a pull request for it to be merged.
 
 ## How does the module flow?
 The module is organized into 3 main directories:
@@ -28,8 +28,8 @@ The assignment for this week is to have participants find the secret password by
 ## How do you assign assignments?
 Technical Facilitators are encouraged to introduce assignments as early as possible in the learning module. The Technical Facilitator should describe the assignment to participants and explain how the topics covered in the module will equip them with the knowledge and skills to complete the assignment. 
 
-## How an assignment is expected to be completed and delivered?
-Participants are expected to complete the assignment by the end of the first week. They will deliver the assignment by opening up a pull request on their copied repo. The learner will also add a Learning Support Staff as a reviewer indicating they delivered a completed assignment, and it is ready to be evaluated as `complete` or `incomplete`.
+## How is an assignment is expected to be completed and delivered?
+Participants are expected to complete the assignment by the end of the first week. They will deliver the assignment by opening a pull request on their copied repo. The learner will also add a Learning Support Staff as a reviewer indicating they delivered a completed assignment, and it is ready to be evaluated as `complete` or `incomplete`.
 
 ## What is the criteria for `complete` or `incomplete`?
 The criteria for a `complete` or `incomplete` is if all parts of the program are working, and nothing in the code is broken. For some assignments, a rubric is provided outlining the criteria needed to assess an assignment as incomplete.
@@ -38,7 +38,7 @@ The criteria for a `complete` or `incomplete` is if all parts of the program are
 If the participant's solution works, then their assignment should be assessed as `complete`! Technical Facilitators and the Learning Support Staff should focus on providing constructive feedback to participants who need to improve their code. If the solution does not work, then the assignment is `incomplete`. Facilitators should provide constructive feedback on their existing code, and guide them to get their solution working.
 
 ## How will feedback be given?
-Feedback should be given through the pull request a participants has made. Technical Facilitators are encouraged to allow participants to make revisions if needed. In order to maximize learning, feedback should be constructive, and specific.
+Feedback should be given through the pull request a participant has made. Technical Facilitators are encouraged to allow participants to make revisions if needed. In order to maximize learning, feedback should be constructive, and specific.
 
 <hr>
 
