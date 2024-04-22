@@ -1,7 +1,7 @@
-# Instructor Playbook
+# Instructional Team Playbook
 
 ## How do you interact with the repo?
-The Technical Facilitator will teach using the content provided in the `/01_slides` directory. You are allowed to live code with them during your lecture. Just make sure you upload the live-coding files to a new directory called `/live-coding` under `/01_slides` to this repository using a new branch and open up a pull request for it to be merge.
+The Technical Facilitator will teach using the content provided in the `/01_slides` directory. You are encouraged to live code with participants during live sessions. Please ensure that live-coding files are uploaded to a new directory called `/live-coding` under `/01_slides` to this repository using a new branch and open up a pull request for it to be merge.
 
 ## How does the module flow?
 The module is organized into 3 main directories:
