@@ -59,7 +59,7 @@ Participants are encouraged to engage actively during the learning module. They 
 
 ||Day 1|Day 2|Day 3|Day 4|Day 5|
 |---|---|---|---|---|---|
-|Week 1|Live Learning Session 1 (Shell)|Live Learning Session 2 (Shell)|Live Learning Session 3 ([Git](https://github.com/UofT-DSI/git))|Work Period 1|Work Period 2|
+|Week 1|Live Learning Session 1 (Shell)|Live Learning Session 2 (Shell)|Live Learning Session 3 ([Git & GitHub](https://github.com/UofT-DSI/git))|Work Period 1|Work Period 2|
  
 ## Requirements
 
