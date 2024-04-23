@@ -20,3 +20,23 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 |Criteria|Pass|Fail|
 |---|---|---|
 |Secret Password|The user properly used the proper bash commands to find the secret password.|The user did not properly used the proper bash commands to find the secret password.|
+
+## Submission Information
+
+🚨**Please review our [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md)**🚨 for detailed instructions on how to format, branch, and submit your work. Following these guidelines is crucial for your submissions to be evaluated correctly.
+
+### Submission Parameters:
+* Submission Due Date: `HH:MM AM/PM - DD/MM/YYYY`
+* The branch name for your repo should be: `assignment`
+* What to submit for this assignment:
+    * This markdown file (assignment.md) should be populated and should be the only change in your pull request.
+* What the pull request link should look like for this assignment: `https://github.com/<your_github_username>/shell/pull/<pr_id>`
+    * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
+
+Checklist:
+- [ ] Create a branch called `assignment`.
+- [ ] Ensure that the repository is public.
+- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [ ] Verify that the link is accessible in a private browser window.
+
+If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack at `#cohort-3-help`. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
