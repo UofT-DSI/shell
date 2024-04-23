@@ -104,6 +104,6 @@ Below is an outline of the folder structure for this module:
 * **slides:** Module slides as PDF files.
 * **homework:** Homework to practice concepts covered in learning modules.
 * **assignments:** Assignments.
-* **instructors:** This folder provides guidance for Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
+* **instructors:** This folder guides Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
 * README: This file!
 * .gitignore: Files to exclude from this repo, specified by the instructing team.
