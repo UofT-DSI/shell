@@ -78,4 +78,4 @@ echo "#9. All directories and files have been deleted."
 # 10. How would you verify that all directories and files have been deleted?
 ls
 
-# ===================== END ======================= 
+# ===================== END ==========================
