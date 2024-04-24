@@ -11,7 +11,6 @@ mkdir -p ./dir1 dir2 dir3 dir4 dir5
 echo "#1. Directories created."
 # 2. How would you verify the creation of all 5 directories?
 ls -l
-echo "#2. Directories verified."
 
 # 3. In each directory, how would you create 5 .txt files and write "I love data" into each within the directories?
 
@@ -28,7 +27,7 @@ find "$base_directory" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
         echo -n "I love data" > "$file_path"
     done
 done
-echo "#3. Text files with "I love data" created."
+echo "#3. Text files with ""I love data"" created."
 
 # 4. How would you verify the presence of all 5 files?
 
