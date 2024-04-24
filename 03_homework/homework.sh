@@ -8,7 +8,7 @@
 
 # 1. How would you create 5 directories? Feel free to use any name for your directories.
 mkdir -p dir1 dir2 dir3 dir4 dir5
-# 2. How would you verify the creation of all 5 directories?
+# 2. How would you verify the creation of all 5 directories? 
 ls -l
 
 # 3. In each directory, how would you create 5 .txt files and write "I love data" into each within the directories?
@@ -70,3 +70,5 @@ rm -r dir1 dir2 dir3 dir4 dir5
 
 # 10. How would you verify that all directories and files have been deleted?
 ls
+
+# ===================== END ======================= 
