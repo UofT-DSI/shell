@@ -7,6 +7,7 @@
 # On your terminal, input all the commands you have used to create the following:
 
 # 1. How would you create 5 directories? Feel free to use any name for your directories.
+mkdir dir1 dir2 dir3 dir4 dir5
 
 # 2. How would you verify the creation of all 5 directories?
 
