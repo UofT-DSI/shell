@@ -27,9 +27,11 @@
 
 # 6. How would you verify that the text was indeed appended to the existing file?
     code dir5/file.txt
+    or
+    nano dir5/file.txt
 
 # 7. How would you delete all files except for the one with the appended text?
-    this one I don't know 
+    grep -L ' and machine learning!' */*.txt | xargs rm
 
 # 8. How would you navigate back to the parent directory containing all the directories?
     cd ~
