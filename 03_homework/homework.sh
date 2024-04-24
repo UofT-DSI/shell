@@ -10,10 +10,14 @@
 mkdir dir1 dir2 dir3 dir4 dir5
 
 # 2. How would you verify the creation of all 5 directories?
+ls
 
 # 3. In each directory, how would you create 5 .txt files and write "I love data" into each within the directories?
+cd dir1
+code file1.txt file2.txt file3.txt file4.txt file5.txt
 
 # 4. How would you verify the presence of all 5 files?
+ls
 
 # 5. How would you append to one of the existing files " and machine learning!"?
 
