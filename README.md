@@ -1,4 +1,4 @@
-# Unix shell
+nn# Unix shell
 
 ## Content
 
@@ -20,7 +20,7 @@
 This module introduces the Unix shell language and covers file and directory navigation and manipulation. Participants gain proficiency in various commands, script creation, and writing basic functions using pipes, filters, and loops. 
 
 Participants will acquire problem-solving skills through live coding sessions. Additionally, they will explore the concept of reproducibility and its integration into their work.
-
+Testing lol
 ## Learning Outcomes
 
 By the end of the module, participants will be able to:
