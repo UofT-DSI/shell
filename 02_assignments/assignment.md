@@ -35,6 +35,15 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 **What is the secret password?**
 ```
 Your answer here...
+1. The very odd and inedible ingredient in a cake recipe Paper Rings
+2. The season number that contains only 18 episodes (Hint: How do you list them?) ls -a Season 10
+3. Fifth word of Season 6, Episode 21 of Friends -  Meets (or Elizabeth’ if you don’t count article as a word)
+4. Fifth word of the fifth fictional Space Wars series - and 
+5. Second word of this song that's exactly 4 minutes long in this "colour" album - song_5.txt - Lucky (if not count article  /One )
+6. The fourth word to the fourth Hunger Games movie -Stars 
+
+Paper Rings 10 Elizabeth’ and One Stars
+
 
 
 
