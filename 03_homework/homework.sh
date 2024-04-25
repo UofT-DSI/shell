@@ -21,7 +21,7 @@ cat dir2/text1.txt
 # 7. How would you delete all files except for the one with the appended text?
 find ./ -name '*.txt' -type f -exec grep -q -v 'and machine learning' {} \; -exec rm {} +
 # 8. How would you navigate back to the parent directory containing all the directories?
-# As of now I am still in the parent directory
+# As of now I am still in the parent directory.
 cd .
 # 9. How would you remove each directory along with its contents?
 rm -rf *
