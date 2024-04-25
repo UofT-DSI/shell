@@ -19,7 +19,7 @@ echo -n " and machine learning" >> dir2/text1.txt
 # 6. How would you verify that the text was indeed appended to the existing file?
 cat dir2/text1.txt
 # 7. How would you delete all files except for the one with the appended text?
-find ./ -name '*.txt' -type f -exec grep -q -v 'ML' {} \; -exec rm {} +
+find ./ -name '*.txt' -type f -exec grep -q -v 'and machine learning' {} \; -exec rm {} +
 # 8. How would you navigate back to the parent directory containing all the directories?
 # As of now I am still in the parent directory
 cd .
