@@ -20,12 +20,12 @@ Checklist:
 
 You are stuck in a virtual room and can only leave if you figure out the password! Fortunately, somebody left behind 6 clues for you to find the secret password, but the messaging is not that clear. It is your job to discover what the secret password is!
 
-1. The very odd and inedible ingredient in a cake recipe
-2. The season number that contains only 18 episodes (Hint: How do you list them?)
-3. Fifth word of Season 6, Episode 21 of Friends
-4. Fifth word of the fifth fictional Space Wars series
-5. Second word of this song that's exactly 4 minutes long in this "colour" album
-6. The fourth word to the fourth Hunger Games movie
+1. The very odd and inedible ingredient in a cake recipe-- paper rings
+2. The season number that contains only 18 episodes (Hint: How do you list them?)-- 10
+3. Fifth word of Season 6, Episode 21 of Friends  -- meets
+4. Fifth word of the fifth fictional Space Wars series --and
+5. Second word of this song that's exactly 4 minutes long in this "colour" album -- lucky
+6. The fourth word to the fourth Hunger Games movie -- the
 
 ## Instructions
 1. Fork this Shell learning module repository following these [instructions](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
@@ -35,7 +35,7 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 **What is the secret password?**
 ```
 Your answer here...
-
+paper rings 10 meets and lucky the
 
 
 
