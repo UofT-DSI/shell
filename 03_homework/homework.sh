@@ -23,15 +23,18 @@ cp -r dir1 dir5/
 ls
 # 5. How would you append to one of the existing files " and machine learning!"?
 code file1.txt
-and machine learning!
+add "and machine learning!"
 
 # 6. How would you verify that the text was indeed appended to the existing file?
+git status
+git add file1.txt
+git commit
 
 # 7. How would you delete all files except for the one with the appended text?
+rm file2.txt file3.txt file4.txt file5.txt
 
 # 8. How would you navigate back to the parent directory containing all the directories?
-pwd
-cd parent directory
+cd ../
 # 9. How would you remove each directory along with its contents?
 rm -r 
 # 10. How would you verify that all directories and files have been deleted?
