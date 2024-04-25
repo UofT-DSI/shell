@@ -20,7 +20,7 @@ cp -r dir1 dir4/
 cp -r dir1 dir5/
 
 # 4. How would you verify the presence of all 5 files?
-ls
+ls -al
 # 5. How would you append to one of the existing files " and machine learning!"?
 code file1.txt
 add "and machine learning!"
