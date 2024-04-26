@@ -34,7 +34,7 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 
 **What is the secret password?**
 ```
-The lucky 10 meets paper ring legacies 
+The lucky 10 meets paper and ring 
 
 
 
