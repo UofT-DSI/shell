@@ -289,6 +289,39 @@ Hanger Games & the Stars of Darkness
 
 ##6-Stars
 
+(base)
+Talan@Talan MINGW64 ~/Desktop/Assignements/shell/02_assignments/clues/movies (assignment_1)
+$ cd
+
+
+(base)
+Talan@Talan MINGW64 ~
+$ cd Desktop/Assignements/shell/02_assignments/
+
+
+(base)
+Talan@Talan MINGW64 ~/Desktop/Assignements/shell/02_assignments (assignment_1)
+$ git add assignment.md 
+
+
+(base)
+Talan@Talan MINGW64 ~/Desktop/Assignements/shell/02_assignments (assignment_1)
+$ git status
+On branch assignment_1
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   assignment.md
+
+
+
+(base)
+Talan@Talan MINGW64 ~/Desktop/Assignements/shell/02_assignments (assignment_1)
+$ git commit -m "psswrd complete"
+[assignment_1 3afad48] psswrd complete
+ 1 file changed, 252 insertions(+)
 
 
 ```
