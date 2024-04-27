@@ -39,51 +39,101 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 
 
 $ git pull http://github.com/monzchan/shell.git
+
 $ cd ~/Desktop/homework/shell/02_assignments/clues
+
 $ ls
+
 $ cd food
+
 $ ls
+
 $ cd cake
+
 $ ls
+
 $ cat chocolate_cake.txt red_velvet_cake.txt vanilla_cake.txt
+
+
 
 [[Q1: Paper Rings]]
 
+
+
 $ cd ..
+
 $ cd ..
+
 $ cd shows
+
 $ ls
+
 $ cd friends
+
 $ ls
+
 $ ls -R
+
+
 
 [[Q2: 10]]
 
+
+
 $ cd season_6
+
 $ cat ep_21.txt
+
+
+
 
 [[Q3: meets]]
 
+
+
 $ cd ~/Desktop/homeork/shell/02_assignments/clues/movies/space_wars
+
 $ ls
+
 $ cat fifth_movie.txt
+
+
+
 
 [[Q4: and]]
 
+
+
 $ cd ~/Desktop/homeork/shell/02_assignments/clues/albums
+
 $ ls
+
 $ cd red
+
 $ cat *
+
+
+
 
 [[Q5: lucky]]
 
+
+
 $ cd ~/Desktop/homeork/shell/02_assignments/clues/movies
+
 $ ls
+
 $ cd hunger_games
+
 $ ls
+
 $ cat movie_4.txt
 
+
+
 [[Q6: stars]]
+
+
 
 So, the password is "Paper Rings 10 Meets And Lucky Stars"
 
