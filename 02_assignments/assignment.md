@@ -36,7 +36,7 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 ```
 Your answer here...
 
-## ANSWER: Paper Ring 10 Meets and Lucky Stars
+## Paper Ring 10 Meets and Lucky Stars
 
 ## pushed a new branch into my github called "assignment_1" with a textfile called "SecretPsswrd"
 (base)
