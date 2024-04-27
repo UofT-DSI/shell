@@ -11,10 +11,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [V ] Create a branch called `assignment`.
+- [V ] Ensure that the repository is public.
+- [V ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [V ] Verify that the link is accessible in a private browser window.
 
 # Assignment: The Secret Password
 
@@ -32,14 +32,62 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 2. Use your bash skills (such as `cd`, `cat`, etc.) to figure out what the secret password is! You will be exploring the `clues` directory in your bash terminal.
 3. Write the secret password in your own version of this markdown file in your forked repo.
 
+
+
 **What is the secret password?**
-```
-Your answer here...
+"Paper Rings 10 Meets And Lucky Stars"
 
 
+$ git pull http://github.com/monzchan/shell.git
+$ cd ~/Desktop/homework/shell/02_assignments/clues
+$ ls
+$ cd food
+$ ls
+$ cd cake
+$ ls
+$ cat chocolate_cake.txt red_velvet_cake.txt vanilla_cake.txt
+
+[[Q1: Paper Rings]]
+
+$ cd ..
+$ cd ..
+$ cd shows
+$ ls
+$ cd friends
+$ ls
+$ ls -R
+
+[[Q2: 10]]
+
+$ cd season_6
+$ cat ep_21.txt
+
+[[Q3: meets]]
+
+$ cd ~/Desktop/homeork/shell/02_assignments/clues/movies/space_wars
+$ ls
+$ cat fifth_movie.txt
+
+[[Q4: and]]
+
+$ cd ~/Desktop/homeork/shell/02_assignments/clues/albums
+$ ls
+$ cd red
+$ cat *
+
+[[Q5: lucky]]
+
+$ cd ~/Desktop/homeork/shell/02_assignments/clues/movies
+$ ls
+$ cd hunger_games
+$ ls
+$ cat movie_4.txt
+
+[[Q6: stars]]
+
+So, the password is "Paper Rings 10 Meets And Lucky Stars"
 
 
-```
 
 |Criteria|Complete|Incomplete|
 |---|---|---|
