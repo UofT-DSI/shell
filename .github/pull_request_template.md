@@ -10,8 +10,5 @@
 
 ## A reference to a related issue in your repository (if applicable)
 
-## @mentions of the person or team responsible for reviewing proposed changes (At least 2 people)
-- 
-
 ## Checklist
 - [ ] I can confirm that my changes are working as intended
