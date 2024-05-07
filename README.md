@@ -22,7 +22,6 @@ This module introduces the Unix shell language and covers file and directory nav
 Participants will acquire problem-solving skills through live coding sessions. Additionally, they will explore the concept of reproducibility and its integration into their work.
 
 ## Learning Outcomes
-
 By the end of the module, participants will be able to:
 * Comfortably access and navigate the terminal
 * Create, modify and delete directories and files
