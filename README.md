@@ -89,20 +89,24 @@ Feel free to use the following as resources:
 
 ## Folder Structure
 Below is an outline of the folder structure for this module:
-```markdown
+```
 .
-├── 01_materials/slides
-├── 02_activities/assignments
-├── 02_activities/homework
+├── .github
+├── 01_materials
+├── 02_activities
 ├── 03_instructional_team
+├── 04_cohort_three
+├── .gitignore
 ├── LICENSE
 ├── README.md
 └── steps_to_ask_for_help.png
 ```
-
-* **slides:** Module slides as PDF files.
-* **homework:** Homework to practice concepts covered in learning modules.
-* **assignments:** Assignments.
-* **instructors:** This folder guides Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
-* README: This file!
-* .gitignore: Files to exclude from this repo, specified by the instructing team.
+* **.github**: Contains issue templates and pull request templates for the repository.
+* **materials**: Module slides and interactive notebooks (.ipynb files) used during learning sessions.
+* **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
+* **instructional_team**: Resources for the instructional team.
+* **cohort_three**: Additional materials and resources for cohort three.
+* **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
+* **LICENSE**: The license for this repository.
+* **README**: This file.
+* **steps_to_ask_for_help.png**: Guide on how to ask for help.
