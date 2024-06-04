@@ -28,7 +28,7 @@ By the end of the module, participants will be able to:
 
 ## Assignments
 
-1. [The Secret Password Assignment](https://github.com/UofT-DSI/shell/blob/main/02_assignments/assignment.md)
+1. [The Secret Password Assignment](https://github.com/UofT-DSI/shell/blob/main/02_activities/assignments/assignment.md)
 
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
@@ -91,10 +91,10 @@ Feel free to use the following as resources:
 Below is an outline of the folder structure for this module:
 ```markdown
 .
-├── 01_slides
-├── 02_assignments
-├── 03_homework
-├── 04_instructional_team
+├── 01_materials/slides
+├── 02_activities/assignments
+├── 02_activities/homework
+├── 03_instructional_team
 ├── LICENSE
 ├── README.md
 └── steps_to_ask_for_help.png
