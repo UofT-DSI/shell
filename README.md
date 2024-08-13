@@ -91,7 +91,7 @@ Feel free to use the following as resources:
 
 #### 2. Try searching the web for your error message
 - Sometimes, the error has common solutions that can be easy to find!
-   - This will be faster than waiting for an answer from someone else
+   - This will be faster than waiting for an answer
 - If none of the solutions apply, consider asking a Generative AI tool
    - Paste your code, the error message, and a description of your overall goals
 
@@ -99,7 +99,8 @@ Feel free to use the following as resources:
 - Since we're all working through the same material, there's a good chance one of your peers has encountered the same error, or has already solved it
 - Try searching in the DSI Certificates Slack help channel for whether a similar query has been posted
 - If the question has not yet been answered, post your question!
-   - Make sure to **copy and paste** your code, your error message, and the overall context and specific description of what you were trying to accomplish
+   - Describe your the overall goals, the context, and the specific details of what you were trying to accomplish
+   - Make sure to **copy and paste** your code, your error message
    - Copying and pasting helps:
       1. your peers and teaching team quickly try out your code
       1. others to find your question in the future
@@ -109,6 +110,9 @@ Feel free to use the following as resources:
 - [How do I ask a good question? - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
 - [The XY problem: A question pitfall that won't get useful answers](https://xyproblem.info/)
 - [How to create a minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+
+#### Getting help: A summary
+<img src="steps_to_ask_for_help.png" width="700">
 
 <hr>
 
