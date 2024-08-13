@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # CONFIGURATION
-folder_md="lessons/"
+folder_md="markdown_slides/"
 folder_output="../01_materials/slides" # This will be used for both PDF and HTML
 
 # Clear the screen for the splash screen
@@ -38,7 +38,7 @@ function show_help() {
     echo ""
     echo "Options:"
     echo "  --html                   Generate slides in HTML format. This option"
-    echo "                           processes all Markdown files in the 'lessons'"
+    echo "                           processes all Markdown files in the 'markdown_slides'"
     echo "                           directory, outputting HTML files."
     echo ""
     echo "  --pdf                    Generate slides in PDF format. Similar to --html,"
@@ -60,7 +60,7 @@ function show_help() {
     echo ""
     echo "Note:"
     echo "  Ensure Node.js is installed and npm is accessible in your system's PATH."
-    echo "  The script processes Markdown (.md) files located in the 'lessons'"
+    echo "  The script processes Markdown (.md) files located in the 'markdown_slides'"
     echo -e "  directory, preserving filenames but changing extensions to .html or .pdf.\n\n"
 }
 
@@ -77,6 +77,7 @@ if ! command -v npx >/dev/null 2>&1; then
 fi
 
 if ! npx marp --version >/dev/null 2>&1; then
+    echo "- Marp CLI is not installed. Installing Marp CLI in this repository..."
     npm install --no-save @marp-team/marp-cli
 fi
 
