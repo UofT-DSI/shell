@@ -3,6 +3,16 @@
 
 @import 'uncover';
 
+section {
+    font-family: 'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Helvetica Neue',
+        'Arial',
+        sans-serif;
+    letter-spacing: normal;
+}
+
 img[alt~="center"] {
     display: block;
     margin: 0 auto;
@@ -13,13 +23,16 @@ p {
     text-align: left;
     font-size: 35px
 }
+
 ul {
     margin: 0;
     font-size: 35px;
 }
+
 table {
     font-size: 35px;
 }
+
 ol {
     margin: 0;
     font-size: 35px;
@@ -29,7 +42,7 @@ blockquote {
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 30px;
-    quotes: "\201C""\201D""\2018""\2019";
+    quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 blockquote:before {
@@ -41,7 +54,7 @@ blockquote:before {
     vertical-align: -0.4em;
 }
 
-blockquote:after{
+blockquote:after {
     content: none;
 }
 
