@@ -17,7 +17,7 @@ $ echo "Data Sciences Institute"
 ---
 ### What is Unix?
 
-Unix was a text-based operating system created in 1970, with many derivatives including Linux and MacOS.
+Unix was a text-based operating system created in 1970. Many of its derivatives are commonly used today, including Linux and MacOS.
 
 Linux powers
 * 90% of global cloud infrastructure
@@ -82,6 +82,25 @@ $ lksjfs
 ---
 - What happens when we type something that does not exist?
 - What happens with errors?
+
+---
+# Getting help and accessing documentation
+Bash includes built-in documentation for all commands
+
+```bash
+$ man ls
+```
+
+Retrieve the **man**ual for each commands using `man`.
+* Many manuals are also available online
+
+
+---
+View a list of commonly used Bash commands
+
+```bash
+$ help
+```
 
 ---
 # Navigate Files / Directories
@@ -300,7 +319,7 @@ There are some useful *options* that accompany `cp`:
 ### mv
 
 The mv command enables us to move and rename files and
-directories, depending on how it's used. In th example below, `mv` renames file1 to file2.
+directories, depending on how it's used. In th example below, `mv` renames `file1` to `file2`.
 
 Rename a file:
 ```bash
@@ -320,7 +339,16 @@ $ mv dir1 dir2
 ```
 
 ---
-In this case, if `dir2` exists, `dir1` will be moved to `dir2`. If `dir2` does not exist, it will be created and `dir1` will be moved to the newly created `dir2`. In both cases the entire directory will be moved to another/new directory, rather than the contents.
+
+```bash
+$ mv dir1 dir2
+```
+
+In this case, if `dir2` exists, `dir1` will be moved into `dir2` (eg. from `./dir1` to `./dir2/dir1`). 
+
+If `dir2` does not exist, `dir1` will be renamed to `dir2`. 
+
+In both cases the entire directory will be affected (moved into another directory, or renamed), rather than the contents.
 
 ---
 Let's say we're in the directory `Desktop` and we just moved
@@ -338,6 +366,8 @@ The answer involves using *absolute pathnames* and the tilde `~` notation:
 ```
 $ mv dir1/file1 ~/Desktop
 ```
+
+The `~` is shortform for your *home directory*.
 
 ---
 If we just wanted to move `file1` into `dir2` (if `dir2` is in our *working directory*), we could type:
@@ -420,7 +450,17 @@ If you accidently add a space between `*` and `.txt`,the `rm` command will delet
 
 
 ---
-## Editing text files
+## Working with text files
+---
+Output the contents of any text file using `cat`
+
+```bash
+$ cat file1.txt
+```
+
+* Quick way to preview file contents
+* Note, this might flood your terminal if the file is too big.
+
 ---
 We can edit text files in the command line using `nano`
 
@@ -462,12 +502,15 @@ rm tempdir/*
 ```
 
 ---
-Bash scripts often have a special *comment* as the very first line that indicates which shell should be used to run the script.
-* Sometimes this is known as the sh-bang (ha**sh** symbol + exclamation mark/**bang**)
+Bash scripts usually have a special *comment* as the very first line that indicates which shell should be used to run the script.
+* This is also known as the sh-bang (ha**sh** symbol + exclamation mark/**bang**)
 
-Typically, it is bash:
+Typically, the shell used is bash:
 ```bash
 #!/bin/bash
+
+# do stuff
+cp file1 dir2/
 ```
 
 ---
