@@ -83,7 +83,32 @@ Feel free to use the following as resources:
 - [Bash in 100 seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
 
 ### How to get help
-![image](./steps_to_ask_for_help.png)
+#### 1. Gather information about your problem
+- Copy and paste your error message
+- Copy and paste the code that caused the error, and the last few commands leading up to the error
+- Write down what you are trying to accomplish with your code. Include both the specific action, and the bigger picture and context
+- (optional) Take a screenshot of your entire workspace
+
+#### 2. Try searching the web for your error message
+- Sometimes, the error has common solutions that can be easy to find!
+   - This will be faster than waiting for an answer from someone else
+- If none of the solutions apply, consider asking a Generative AI tool
+   - Paste your code, the error message, and a description of your overall goals
+
+#### 3. Try asking in your cohort's Slack help channel
+- Since we're all working through the same material, there's a good chance one of your peers has encountered the same error, or has already solved it
+- Try searching in the DSI Certificates Slack help channel for whether a similar query has been posted
+- If the question has not yet been answered, post your question!
+   - Make sure to **copy and paste** your code, your error message, and the overall context and specific description of what you were trying to accomplish
+   - Copying and pasting helps:
+      1. your peers and teaching team quickly try out your code
+      1. others to find your question in the future
+
+#### Great resources on how to ask good technical questions that get useful answers
+- [Asking for Help - The Odin Project](https://www.theodinproject.com/lessons/foundations-asking-for-help)
+- [How do I ask a good question? - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
+- [The XY problem: A question pitfall that won't get useful answers](https://xyproblem.info/)
+- [How to create a minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
 
 <hr>
 
