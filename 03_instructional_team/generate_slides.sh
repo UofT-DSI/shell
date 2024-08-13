@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # CONFIGURATION
-folder_md="lessons/"
+folder_md="markdown_slides/"
 folder_output="../01_materials/slides" # This will be used for both PDF and HTML
 
 # Clear the screen for the splash screen
@@ -38,7 +38,7 @@ function show_help() {
     echo ""
     echo "Options:"
     echo "  --html                   Generate slides in HTML format. This option"
-    echo "                           processes all Markdown files in the 'lessons'"
+    echo "                           processes all Markdown files in the 'markdown_slides'"
     echo "                           directory, outputting HTML files."
     echo ""
     echo "  --pdf                    Generate slides in PDF format. Similar to --html,"
@@ -59,8 +59,8 @@ function show_help() {
     echo "    $0 --pdf"
     echo ""
     echo "Note:"
-    echo "  Ensure Marp CLI is installed and accessible in your system's PATH."
-    echo "  The script processes Markdown (.md) files located in the 'lessons'"
+    echo "  Ensure Node.js is installed and npm is accessible in your system's PATH."
+    echo "  The script processes Markdown (.md) files located in the 'markdown_slides'"
     echo -e "  directory, preserving filenames but changing extensions to .html or .pdf.\n\n"
 }
 
@@ -71,9 +71,14 @@ if [ "$#" -lt 1 ]; then
 fi
 
 # Check for Marp CLI installation
-if ! command -v marp &> /dev/null; then
-    echo "- Error: Marp CLI is not installed. Please install Marp CLI to proceed."
+if ! command -v npx >/dev/null 2>&1; then
+    echo "- Error: npx is not installed. Please install Node.js to proceed."
     exit 1
+fi
+
+if ! npx marp --version >/dev/null 2>&1; then
+    echo "- Marp CLI is not installed. Installing Marp CLI in this repository..."
+    npm install --no-save @marp-team/marp-cli
 fi
 
 # Defaults
@@ -144,12 +149,12 @@ for markdown_file in $markdown_files; do
         # Generate HTML
         output_file+=".html"
         echo "  - Generating HTML: $output_file"
-        marp "$markdown_file" --output "$output_file" --html --allow-local-files ${theme_path:+--theme-set $theme_path} # &> /dev/null
+        npx marp "$markdown_file" --output "$output_file" --html --allow-local-files ${theme_path:+--theme-set $theme_path} # &> /dev/null
     elif [ "$output_type" = "--pdf" ]; then
         # Generate PDF
         output_file+=".pdf"
         echo "  - Generating PDF: $output_file"
-        marp "$markdown_file" --output "$output_file" --pdf --allow-local-files --pdf-notes ${theme_path:+--theme-set $theme_path} # &> /dev/null
+        npx marp "$markdown_file" --output "$output_file" --pdf --allow-local-files --pdf-notes ${theme_path:+--theme-set $theme_path} # &> /dev/null
     else
         # nahhh
         show_help
