@@ -2,3 +2,8 @@
 .vscode/
 ./03_instructional_team/lessons/pdf/*
 ./03_instructional_team/lessons/html/*
+
+# local node modules
+node_modules/
+package-lock.json
+package.json
