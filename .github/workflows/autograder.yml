@@ -21,9 +21,8 @@ jobs:
       - name: Run assignment script
         run: |
           bash -c "bash assignment.sh 2>&1 | tee $GITHUB_WORKSPACE/03_instructional_team/autograder/output.txt"
-        working-directory: $GITHUB_WORKSPACE/02_activities/assignments
+        working-directory: 02_activities/assignments
       - name: Grade responses
         id: grade
         run: |
           python 03_instructional_team/autograder/autograder.py
-          
