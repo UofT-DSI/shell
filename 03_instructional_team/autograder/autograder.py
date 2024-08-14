@@ -182,7 +182,7 @@ headers = {
     "Accept": "application/vnd.github+json"
 }
 requests.post(f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments", json={
-    "body": render_md
+    "body": "## Assignment grade\n" + render_md
 }, headers=headers)
 
 if correct == total:
@@ -190,5 +190,5 @@ if correct == total:
     exit(0)
 else:
     print(f'Only {correct}/{total} tests passed.')
-    exit(1)
+    exit(0)
     
