@@ -26,16 +26,4 @@ jobs:
         id: grade
         run: |
           python 03_instructional_team/autograder/autograder.py
-
-      - name: Create PR review with results
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const event = steps.grade.outcome === 'success' ? 'APPROVE' : 'REQUEST_CHANGES';
-            github.rest.pulls.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.payload.pull_request.number,
-                body: steps.step1.outputs,
-                event: event
-            });
+          
