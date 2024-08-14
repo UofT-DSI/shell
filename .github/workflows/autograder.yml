@@ -20,7 +20,8 @@ jobs:
           pip install -r 03_instructional_team/autograder/requirements.txt
       - name: Run assignment script
         run: |
-          bash -c "cd 02_activities/assignments/; bash assignment.sh 2>&1 | tee 03_instructional_team/autograder/output.txt"
+          bash -c "bash assignment.sh 2>&1 | tee $GITHUB_WORKSPACE/03_instructional_team/autograder/output.txt"
+        working-directory: $GITHUB_WORKSPACE/02_activities/assignments
       - name: Grade responses
         id: grade
         run: |
