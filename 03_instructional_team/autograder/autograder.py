@@ -2,8 +2,9 @@ import pandas as pd
 import os.path
 import os
 import requests
+import re
 
-base_dir = '02_activities/assignments'
+base_dir = os.environ['GITHUB_WORKSPACE'] + '/02_activities/assignments'
 
 # get environment variables for output
 github_step_output = os.environ['GITHUB_STEP_SUMMARY']
@@ -74,7 +75,7 @@ else:
 if os.path.isfile(f'{base_dir}/dir2/file3.txt'):
     with open(f'{base_dir}/dir2/file3.txt', 'r') as f:
         file3 = f.read()
-    if file3.strip() == 'hello world':
+    if file3.strip().lower() == 'hello world':
         s.append({'question': 4, 'status': 1})
     else:
         s.append({
