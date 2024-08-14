@@ -1,0 +1,40 @@
+name: Assignment autograder
+on: 
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+jobs:
+  autograder:
+    name: Assignment autograder
+    if: github.head_ref == 'assignment'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r 03_instructional_team/autograder/requirements.txt
+      - name: Run assignment script
+        run: |
+          bash -c "cd 02_activities/assignments/; bash assignment.sh 2>&1 | tee 03_instructional_team/autograder/output.txt"
+      - name: Grade responses
+        id: grade
+        run: |
+          python 03_instructional_team/autograder/autograder.py
+
+      - name: Create PR review with results
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const event = steps.grade.outcome === 'success' ? 'APPROVE' : 'REQUEST_CHANGES';
+            github.rest.pulls.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                body: steps.step1.outputs,
+                event: event
+            });
