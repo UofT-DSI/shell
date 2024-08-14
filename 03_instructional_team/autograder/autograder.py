@@ -1,11 +1,16 @@
 import pandas as pd
 import os.path
 import os
+import requests
 
 base_dir = '02_activities/assignments'
 
 # get environment variables for output
 github_step_output = os.environ['GITHUB_STEP_SUMMARY']
+github_token = os.environ["GITHUB_TOKEN"]
+github_repo_owner = os.environ["REPO_OWNER"]
+github_repo_name = os.environ["REPO_NAME"]
+github_pr_number = os.environ["PR_NUMBER"]
 
 status_c = '✅'
 status_i = '❌'
@@ -168,7 +173,17 @@ df['status'] = df['status'].replace({1: status_c, 0: status_i})
 df.to_markdown(github_step_output, index=False)
 
 # also display markdown to console
-print(df.to_markdown(index=False))
+render_md = df.to_markdown(index=False)
+print(render_md)
+
+# create GitHub comment with markdown
+headers = {
+    "Authorization": f"Bearer {github_token}",
+    "Accept": "application/vnd.github+json"
+}
+requests.post(f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments", json={
+    "body": render_md
+}, headers=headers)
 
 if correct == total:
     print('All tests passed!')

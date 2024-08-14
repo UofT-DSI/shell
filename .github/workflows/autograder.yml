@@ -24,5 +24,10 @@ jobs:
         working-directory: ./02_activities/assignments
       - name: Grade responses
         id: grade
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           python 03_instructional_team/autograder/autograder.py
