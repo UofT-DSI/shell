@@ -26,7 +26,7 @@ script_rslt = [{
 ############################################################################################################
 ############################################################################################################
 # step 1: check if required directories exist
-isdir = [os.path.isdir(f'dir{i}') for i in range(1, 4)]
+isdir = [os.path.isdir(f'{base_dir}/dir{i}') for i in range(1, 4)]
 if all(isdir):
     s.append({'question': 1, 'status': 1})
 else:
@@ -139,6 +139,7 @@ else:
 # check that ls was run
 indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
 if len(indx) > 0:
+    indx = indx[-1:]
     if any(['dir4' in script_rslt[i]['output'] for i in indx]) or any(
         ['dir5' in script_rslt[i]['output'] for i in indx]):
         s.append({
