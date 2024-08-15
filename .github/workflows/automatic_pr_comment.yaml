@@ -6,6 +6,7 @@ on:
 
 jobs:
   comment:
+    if: github.repository_owner == 'UofT-DSI'
     runs-on: ubuntu-latest
     steps:
       - name: Comment on PR
@@ -16,11 +17,9 @@ jobs:
             const repo = context.repo;
             const commentBody = `Hello, thank you for your contribution. If you are a participant, please close this pull request and open it in your own forked repository instead of here. Please read the instructions on your onboarding [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) more carefully. If you are not a participant, please give us up to 72 hours to review your PR. Alternatively, you can reach out to us directly to expedite the review process.`;
             // Check if the PR is made to a repo in the UofT-DSI organization
-            if (repo.owner === 'UofT-DSI') {
-              github.rest.issues.createComment({
-                owner: repo.owner,
-                repo: repo.repo,
-                issue_number: issue_number,
-                body: commentBody
-              });
-            }
+            github.rest.issues.createComment({
+              owner: repo.owner,
+              repo: repo.repo,
+              issue_number: issue_number,
+              body: commentBody
+            });
