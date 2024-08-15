@@ -1,4 +1,4 @@
-name: Automatic PR Comment
+name: UofT-DSI Main Repository PR Workflow
 
 on:
   pull_request_target:
