@@ -47,7 +47,9 @@ else:
 # if output contains "+ ls" followed by a line containing assignment.sh, then correct
 indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
 if len(indx) > 0:
-    if any(['assignment.sh' in script_rslt[i]['output'] for i in indx]):
+    if any([('assignment.sh' in script_rslt[i]['output']) and all(
+        [f'dir{n:.0f}' in script_rslt[i]['output'] for n in range(1, 6)])
+            for i in indx]):
         s.append({'question': 2, 'status': 1})
     else:
         s.append({
@@ -62,7 +64,9 @@ else:
 # step 3: check that the 5 specified files were created in dir2
 file_names = [f'dir2/file{i}.txt' for i in range(1, 6)]
 
-touch_commands = [x['command'] for x in script_rslt if x['command'].startswith('touch')]
+touch_commands = [
+    x['command'] for x in script_rslt if x['command'].startswith('touch')
+]
 command_run = [any([x in f for f in touch_commands]) for x in file_names]
 
 # file_exists = [os.path.isfile(f'{base_dir}/dir2/file{i}.txt') for i in range(1, 6)]
@@ -190,9 +194,10 @@ headers = {
     "Authorization": f"Bearer {github_token}",
     "Accept": "application/vnd.github+json"
 }
-requests.post(f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments", json={
-    "body": "## Autograder results\n" + render_md
-}, headers=headers)
+requests.post(
+    f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments",
+    json={"body": "## Autograder results\n" + render_md},
+    headers=headers)
 
 if correct == total:
     print('All tests passed!')
@@ -200,4 +205,3 @@ if correct == total:
 else:
     print(f'Only {correct}/{total} tests passed.')
     exit(0)
-    
