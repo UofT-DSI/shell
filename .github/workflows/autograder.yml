@@ -1,0 +1,33 @@
+name: Assignment autograder
+on: 
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+jobs:
+  autograder:
+    name: Assignment autograder
+    if: startsWith(github.head_ref, 'assignment')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r 03_instructional_team/autograder/requirements.txt
+      - name: Run assignment script
+        run: |
+          bash -c "bash assignment.sh 2>&1 | tee $GITHUB_WORKSPACE/03_instructional_team/autograder/output.txt"
+        working-directory: ./02_activities/assignments
+      - name: Grade responses
+        id: grade
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          python 03_instructional_team/autograder/autograder.py
