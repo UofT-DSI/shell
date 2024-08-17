@@ -28,25 +28,24 @@ By the end of the module, participants will be able to:
 
 ## Assignments
 
-1. [The Secret Password Assignment](https://github.com/UofT-DSI/shell/blob/main/02_activities/assignments/assignment.md)
+1. [Shell script assignment](https://github.com/UofT-DSI/shell/blob/main/02_activities/assignments/assignment_instructions.md)
 
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
 ## Contacts
 
-**Questions can be submitted to the _#cohort-3-help_ channel on Slack**
+**Questions can be submitted to the _#cohort-4-help_ channel on Slack**
 
 * Technical Facilitator:   
   * **Simeon Wong** (he/him)  
     simeonm.wong@utoronto.ca
 
 * Learning Support Staff: 
-  * **Michaela Drouillard** (she/her)  
-  michaela.drouillard@mail.utoronto.ca
-  * **Julia Gallucci** (she/her)  
-  julia.gallucci@mail.utoronto.ca
-  * **Emma Teng**  
+  * **Emma Teng**  (she/her)
   e.teng@mail.utoronto.ca
+  * **Sidra Bushra** (she/her)
+  contact.sidra.bushra@gmail.com
+  * **Pedram Asli**
  
 ## Delivery of the Learning Module
 
@@ -124,7 +123,7 @@ Below is an outline of the folder structure for this module:
 ├── 01_materials
 ├── 02_activities
 ├── 03_instructional_team
-├── 04_cohort_three
+├── 04_this_cohort
 ├── .gitignore
 ├── LICENSE
 ├── README.md
@@ -134,7 +133,7 @@ Below is an outline of the folder structure for this module:
 * **materials**: Module slides and interactive notebooks (.ipynb files) used during learning sessions.
 * **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
 * **instructional_team**: Resources for the instructional team.
-* **cohort_three**: Additional materials and resources for cohort three.
+* **this_cohort**: Additional materials for this cohort.
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
 * **LICENSE**: The license for this repository.
 * **README**: This file.
