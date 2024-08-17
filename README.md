@@ -26,11 +26,22 @@ By the end of the module, participants will be able to:
 * Comfortably access and navigate the terminal
 * Create, modify and delete directories and files
 
-## Assignments
 
-1. [Shell script assignment](https://github.com/UofT-DSI/shell/blob/main/02_activities/assignments/assignment_instructions.md)
+## Activities
+This module has two types of activities.
+1. Assignments are mandatory, and form part of your evaluation.
+1. Homework is not assessed, but are provided to you for extra practice. We encourage you to check each other's homework solutions during Work Periods or ask a Learning Support!
 
+### Assignments
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
+
+Assignments are typically due on the Sunday following the module's live learning session.
+
+1. [Shell script assignment](./02_activities/assignments/assignment_instructions.md)
+
+### Homework
+1. [Shell Homework](./02_activities/homework/homework.sh)
+
 
 ## Contacts
 
