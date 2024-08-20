@@ -462,7 +462,25 @@ $ cat file1.txt
 * Note, this might flood your terminal if the file is too big.
 
 ---
-We can edit text files in the command line using `nano`
+Write the output of a command to a text file using `>` or `>>`
+
+```bash
+$ ls >> dirlist.txt
+```
+
+* `>` replaces the destination file (deletes existing content)
+* `>>` appends to the destination file
+
+---
+
+We can also write custom content
+
+```bash
+$ echo "Hello, world!" > myfile.txt
+```
+
+---
+We can also edit text files in the command line using `nano`
 
 ```bash
 $ nano file1.txt
