@@ -56,7 +56,8 @@ Assignments are typically due on the Sunday following the module's live learning
   e.teng@mail.utoronto.ca
   * **Sidra Bushra** (she/her)
   contact.sidra.bushra@gmail.com
-  * **Pedram Asli**
+  * **Pedram Asli** (he/him)
+  pedram.aliniayeasli@gmail.com
  
 ## Delivery of the Learning Module
 
