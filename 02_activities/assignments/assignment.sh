@@ -7,6 +7,7 @@ set -x
 # > Edit this file below to complete the homework assignment
 # > Add your code below each comment to complete the tasks
 
+# My parent directory is called main_directory
 # 1. Create 5 directories named dir1, dir2, dir3, dir4, and dir5
 mkdir dir1 dir2 dir3 dir4 dir5
 
