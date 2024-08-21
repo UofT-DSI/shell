@@ -18,6 +18,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r 03_instructional_team/autograder/requirements.txt
+      - name: Clean assignment folder
+        run: |
+          find 02_activities/assignments -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
       - name: Run assignment script
         run: |
           bash -c "bash assignment.sh 2>&1 | tee $GITHUB_WORKSPACE/03_instructional_team/autograder/output.txt"
