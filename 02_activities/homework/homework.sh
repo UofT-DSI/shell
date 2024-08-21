@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Instructions: 
-# Please run the following command in the terminal where homework.sh is located to make the file executable.
-# chmod +x ./homework.sh
-
 # On your terminal, input all the commands you have used to create the following:
 
 # 1. How would you create 5 directories? Feel free to use any name for your directories.
