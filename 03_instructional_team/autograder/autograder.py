@@ -87,7 +87,7 @@ else:
 if os.path.isfile(f'{base_dir}/dir2/file3.txt'):
     with open(f'{base_dir}/dir2/file3.txt', 'r') as f:
         file3 = f.read()
-    if file3.strip().lower() == 'hello world':
+    if re.sub(r'[^a-z]', '', file3.lower()) == 'helloworld':
         s.append({'question': 4, 'status': 1})
     else:
         s.append({
