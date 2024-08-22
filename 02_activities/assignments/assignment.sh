@@ -14,6 +14,7 @@ mkdir dir1 dir2 dir3 dir4 dir5
 ls
 
 # 3. Create 5 text files in dir2 named file1, file2, file3, file4, and file5
+
 touch dir2/file1 
 touch dir2/file2 
 touch dir2/file3 
@@ -24,7 +25,11 @@ touch dir2/file5
 echo "Hello world" >> dir2/file3
 
 # 5. Verify that file3 contains the words "hello world" by printing the contents of the file in the terminal
-cat file3
+
+cat dir2/file3
+
+# 6. Delete file4
+rm file4
 
 # 6. Delete file4
 rm /dir2/file4
