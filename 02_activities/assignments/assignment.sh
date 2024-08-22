@@ -23,7 +23,7 @@ touch dir2/file4.txt
 touch dir2/file5.txt
 
 # 4. Append the words "Hello world" to dir2/file3.txt
-echo "Hello world" >> file3.txt
+echo "Hello world" >> dir2/file3.txt
 
 # 5. Verify that file3.txt contains the words "hello world" by printing the contents of the file in the terminal
 cat dir2/file3.txt
