@@ -12,7 +12,6 @@ mkdir dir1 dir2 dir3 dir4 dir5
 # 2. List the contents of the parent directory to verify the presence of the 5 directories
 ls
 # 3. Create 5 text files in dir2 named file1, file2, file3, file4, and file5
-cd dir2/ # change to directory dir2
 touch file1 file2 file 3 file4 file5
 # 4. Append the words "Hello world" to dir2/file3
 echo "Hello world">> file3
@@ -21,6 +20,5 @@ cat file3
 # 6. Delete file4
 rm file4
 # 7. Delete directories dir4 and dir5 including all their contents (if any)
-cd../ # go back to parent directory to delete dir4 and dir5
 rm -r dir4/ dir5/
 # 8. List the contents of the parent directory to verify the deletion of dir4 and dir5
