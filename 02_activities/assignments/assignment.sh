@@ -15,17 +15,16 @@ mkdir dir1 dir2 dir3 dir4 dir5
 ls
 
 # 3. Create 5 text files in dir2 named file1, file2, file3, file4, and file5
-cd dir2
-touch file1 file2 file3 file4 file5
+touch dir2/file1 dir2/file2 dir2/file3 dir2/file4 dir2/file5
 
 # 4. Append the words "Hello world" to dir2/file3
-echo "Hello world" >> file3
+echo "Hello world" >> dir2/file3
 
 # 5. Verify that file3 contains the words "hello world" by printing the contents of the file in the terminal
-cat file3
+cat dir2/file3
 
 # 6. Delete file4
-rm -r file4
+rm -r dir2/file4
 
 # 7. Delete directories dir4 and dir5 including all their contents (if any)
 cd main_directory
