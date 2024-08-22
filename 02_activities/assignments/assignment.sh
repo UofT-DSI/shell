@@ -13,6 +13,7 @@ mkdir dir2
 mkdir dir3
 mkdir dir4
 mkdir dir5
+mkdir dir6
 # 2. List the contents of the parent directory to verify the presence of the 5 directories
 ls
 # 3. Create 5 text files in dir2 named file1, file2, file3, file4, and file5
