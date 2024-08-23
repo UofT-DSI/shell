@@ -23,3 +23,4 @@ rm dir2/file4.txt
 rm -r dir4 dir5
 # 8. List the contents of the parent directory to verify the deletion of dir4 and dir5
 ls
+
