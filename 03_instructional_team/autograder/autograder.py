@@ -158,15 +158,18 @@ else:
 indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
 if len(indx) > 0:
     indx = indx[-1:]
-    if any(['dir4' in script_rslt[i]['output'] for i in indx]) or any(
-        ['dir5' in script_rslt[i]['output'] for i in indx]):
+    if any([
+            'assignment.sh' in script_rslt[i]['output'] for i in indx
+    ]) and not (any(['dir4' in script_rslt[i]['output'] for i in indx])
+                or any(['dir5' in script_rslt[i]['output'] for i in indx])):
+        s.append({'question': 8, 'status': 1})
+    else:
         s.append({
             'question': 8,
             'status': 0,
             'comment': '`ls` command run on the wrong directory'
         })
-    else:
-        s.append({'question': 8, 'status': 1})
+
 else:
     s.append({'question': 8, 'status': 0, 'comment': '`ls` command not run'})
 
