@@ -6,7 +6,7 @@ set -x
 ################
 # > Edit this file below to complete the homework assignment
 # > Add your code below each comment to complete the tasks
-#cd my_directory
+#cd assignments
 # 1. Create 5 directories named dir1, dir2, dir3, dir4, and dir5
 mkdir dir1 dir2 dir3 dir4 dir5 
 
@@ -30,8 +30,8 @@ cat file3.txt
 # 6. Delete file4
 rm -i file4.txt
 # 7. Delete directories dir4 and dir5 including all their contents (if any)
-cd my_directory
-rm dir4
-rm dir5
+cd assignments
+rm -r dir4
+rm -r dir5
 # 8. List the contents of the parent directory to verify the deletion of dir4 and dir5
 ls 
