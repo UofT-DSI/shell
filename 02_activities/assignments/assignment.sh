@@ -6,7 +6,7 @@ set -x
 ################
 # > Edit this file below to complete the homework assignment
 # > Add your code below each comment to complete the tasks
-cd my_directory
+#cd my_directory
 # 1. Create 5 directories named dir1, dir2, dir3, dir4, and dir5
 mkdir dir1 dir2 dir3 dir4 dir5 
 
@@ -19,16 +19,16 @@ touch file2.txt
 touch file3.txt
 touch file4.txt
 touch file5.txt
-
+ls
 # 4. Append the words "Hello world" to dir2/file3
 
 echo "Hello world" > file3.txt
 
 # 5. Verify that file3 contains the words "hello world" by printing the contents of the file in the terminal
-cat file3
+cat file3.txt
 
 # 6. Delete file4
-rm -i file4
+rm -i file4.txt
 # 7. Delete directories dir4 and dir5 including all their contents (if any)
 cd my_directory
 rm dir4
