@@ -14,7 +14,7 @@ mkdir dir1 dir2 dir3 dir4 dir5
 ls
 
 # 3. Create 5 text files in dir2 named file1, file2, file3, file4, and file5
-Touch file1 file2 file3 file4 file5
+dir2/ Touch file1.txt file2.txt file3.txt file4.txt file5.txt
 
 # 4. Append the words "Hello world" to dir2/file3
 echo "Hello World" >> dir2/file3.txt
@@ -26,7 +26,7 @@ cat dir2/file3.txt
 rm dir2/file4
 
 # 7. Delete directories dir4 and dir5 including all their contents (if any)
-rm dir4 dir5
+rm_ dir4 dir5
 
 # 8. List the contents of the parent directory to verify the deletion of dir4 and dir5
-ls
+ls /dir4 dir 5
