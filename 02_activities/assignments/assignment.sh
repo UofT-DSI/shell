@@ -15,11 +15,11 @@ ls
 
 # 3. Create 5 text files in dir2 named file1, file2, file3, file4, and file5
 cd dir2/
-Touch file1.txt 
-Touch file2.txt 
-Touch file3.txt 
-Touch file4.txt 
-Touch file5.txt
+touch file1.txt 
+touch file2.txt 
+touch file3.txt 
+touch file4.txt 
+touch file5.txt
 
 # 4. Append the words "Hello world" to dir2/file3
 echo "Hello World" >> dir2/file3.txt
