@@ -8,9 +8,9 @@ set -x
 # > Add your code below each comment to complete the tasks
 
 # 1. Create 5 directories named dir1, dir2, dir3, dir4, and dir5
-
+mkdir dir1 dir2 dir3 dir4 dir5
 # 2. List the contents of the current working directory to verify the presence of the 5 directories
-
+ls
 # 3. Create 5 text files in dir2 named file1.txt, file2.txt, file3.txt, file4.txt, and file5.txt
 
 # 4. Append the words "Hello world" to dir2/file3.txt
