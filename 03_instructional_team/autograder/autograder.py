@@ -1,10 +1,8 @@
 import pandas as pd
-import os.path
 import os
 import requests
 import re
-
-base_dir = os.environ['GITHUB_WORKSPACE'] + '/02_activities/assignments'
+import glob
 
 # get environment variables for output
 github_step_output = os.environ['GITHUB_STEP_SUMMARY']
@@ -12,6 +10,7 @@ github_token = os.environ["GITHUB_TOKEN"]
 github_repo_owner = os.environ["REPO_OWNER"]
 github_repo_name = os.environ["REPO_NAME"]
 github_pr_number = os.environ["PR_NUMBER"]
+working_dir = os.environ["WORKING_DIR"]
 
 status_c = '✅'
 status_i = '❌'
@@ -19,8 +18,8 @@ status_i = '❌'
 # score table
 s = []
 
-# load script
-with open('03_instructional_team/autograder/output.txt', 'r') as f:
+# load script output
+with open(working_dir + '_output.txt', 'r') as f:
     script_rslt = f.read()
 
 script_rslt = script_rslt.split('\n+')
@@ -30,150 +29,157 @@ script_rslt = [{
 } for x in script_rslt]
 
 ############################################################################################################
-############################################################################################################
-# step 1: check if required directories exist
-isdir = [os.path.isdir(f'{base_dir}/dir{i}') for i in range(1, 4)]
-if all(isdir):
+# Step 1: Check if 'data' directory exists
+if os.path.isdir(os.path.join(working_dir, 'data')):
     s.append({'question': 1, 'status': 1})
 else:
-    s.append({
-        'question': 1,
-        'status': 0,
-        'comment': 'missing required directories'
-    })
+    s.append({'question': 1, 'status': 0, 'comment': 'data directory does not exist'})
 
 ############################################################################################################
-# step 2: check that the ls command was run
-# if output contains "+ ls" followed by a line containing assignment.sh, then correct
+# Step 2: Check that 'rawdata' directory was moved to 'data/raw'
+if os.path.isdir(os.path.join(working_dir, 'data/raw')) and not os.path.exists(os.path.join(working_dir, 'rawdata')):
+    s.append({'question': 2, 'status': 1})
+else:
+    s.append({'question': 2, 'status': 0, 'comment': 'rawdata not moved to data/raw'})
+
+############################################################################################################
+# Step 4: Check that 'ls data/raw' command was run
 indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
 if len(indx) > 0:
-    if any([('assignment.sh' in script_rslt[i]['output']) and all(
-        [f'dir{n:.0f}' in script_rslt[i]['output'] for n in range(1, 6)])
-            for i in indx]):
-        s.append({'question': 2, 'status': 1})
-    else:
-        s.append({
-            'question': 2,
-            'status': 0,
-            'comment': '`ls` command run in the wrong directory'
-        })
-else:
-    s.append({'question': 2, 'status': 0, 'comment': '`ls` command not run'})
-
-############################################################################################################
-# step 3: check that the 5 specified files were created in dir2
-file_names = [f'dir2/file{i}.txt' for i in range(1, 6)]
-
-touch_commands = [
-    x['command'] for x in script_rslt if x['command'].startswith('touch')
-]
-command_run = [any([x in f for f in touch_commands]) for x in file_names]
-
-# file_exists = [os.path.isfile(f'{base_dir}/dir2/file{i}.txt') for i in range(1, 6)]
-if all(command_run):
-    s.append({'question': 3, 'status': 1})
-else:
-    print(file_names)
-    print(touch_commands)
-    print(command_run)
-    s.append({
-        'question': 3,
-        'status': 0,
-        'comment': 'missing required files in `dir2`'
-    })
-
-############################################################################################################
-# step 4: check that dir2/file3 contains "hello world"
-if os.path.isfile(f'{base_dir}/dir2/file3.txt'):
-    with open(f'{base_dir}/dir2/file3.txt', 'r') as f:
-        file3 = f.read()
-    if re.sub(r'[^a-z]', '', file3.lower()) == 'helloworld':
+    if any(['data/raw' in script_rslt[i]['command'] for i in indx]):
         s.append({'question': 4, 'status': 1})
     else:
         s.append({
             'question': 4,
             'status': 0,
-            'comment': '`dir2/file3.txt` does not contain "Hello, World!"'
+            'comment': '`ls` command run on wrong directory'
         })
 else:
+    s.append({'question': 4, 'status': 0, 'comment': '`ls` command not run'})
+
+############################################################################################################
+# Step 5: Check that in 'data/processed', the directories server_logs, user_logs, and event_logs were created
+dirs = [
+    'data/processed/server_logs', 'data/processed/user_logs',
+    'data/processed/event_logs'
+]
+if all([os.path.isdir(os.path.join(working_dir, d)) for d in dirs]):
+    s.append({'question': 5, 'status': 1})
+else:
+    missing_dirs = [d for d in dirs if not os.path.isdir(os.path.join(working_dir, d))]
     s.append({
-        'question': 4,
+        'question': 5,
         'status': 0,
-        'comment': '`dir2/file3.txt` does not exist'
+        'comment': f'Missing directories: {", ".join(missing_dirs)}'
     })
 
 ############################################################################################################
-# step 5: check that dir2/file3 contains "hello world"
-# check that cat was run on dir2/file3
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('cat')]
-if len(indx) > 0:
-    if any([f'dir2/file3.txt' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': 5, 'status': 1})
-    else:
-        s.append({
-            'question': 5,
+# Step 6: Check that server log files were copied from 'data/raw' to 'data/processed/server_logs'
+def check_logs(log_type):
+    raw_logs = glob.glob(os.path.join(working_dir, f'data/raw/*{log_type}*.log'))
+    processed_logs = glob.glob(os.path.join(working_dir, f'data/processed/{log_type}_logs/*'))
+    if len(raw_logs) == 0:
+        return {
             'status': 0,
-            'comment': '`cat` command run on the wrong file'
-        })
+            'comment': f'No {log_type} log files in data/raw'
+        }
+    else:
+        raw_log_files = [os.path.basename(f) for f in raw_logs]
+        processed_log_files = [os.path.basename(f) for f in processed_logs]
+        if all([f in processed_log_files for f in raw_log_files]):
+            return {'status': 1}
+        else:
+            missing_files = [
+                f for f in raw_log_files if f not in processed_log_files
+            ]
+            return {
+                'status':
+                0,
+                'comment':
+                f'Missing files in data/processed/{log_type}_logs: {", ".join(missing_files)}'
+            }
+
+# Check server logs
+result = check_logs('server')
+if result['status'] == 1:
+    s.append({'question': 6, 'status': 1})
 else:
-    s.append({'question': 5, 'status': 0, 'comment': '`cat` command not run'})
+    s.append({'question': 6, 'status': 0, 'comment': result['comment']})
 
 ############################################################################################################
-# step 6: check that dir2/file4 was deleted with rm
-# check that rm was run on dir2/file4
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('rm')]
-if len(indx) > 0:
-    if any([f'dir2/file4.txt' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': 6, 'status': 1})
-    else:
-        s.append({
-            'question': 6,
-            'status': 0,
-            'comment': '`rm` command run on the wrong file'
-        })
+# Step 7: Check that user logs and event logs were copied appropriately
+result_user = check_logs('user')
+result_event = check_logs('event')
+
+if result_user['status'] == 1 and result_event['status'] == 1:
+    s.append({'question': 7, 'status': 1})
 else:
-    s.append({'question': 6, 'status': 0, 'comment': '`rm` command not run'})
+    comments = []
+    if result_user['status'] == 0:
+        comments.append(result_user['comment'])
+    if result_event['status'] == 0:
+        comments.append(result_event['comment'])
+    s.append({
+        'question': 7,
+        'status': 0,
+        'comment': '; '.join(comments)
+    })
 
 ############################################################################################################
-# step 7: check that dir4 and dir5 were deleted
-# check that rm was run on dir4 and dir5
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('rm')]
-if len(indx) > 0:
-    if any(['dir4' in script_rslt[i]['command'] for i in indx]) and any(
-        ['dir5' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': 7, 'status': 1})
-    else:
-        s.append({
-            'question': 7,
-            'status': 0,
-            'comment': '`rm` command run on the wrong directory'
-        })
-
-else:
-    s.append({'question': 7, 'status': 0, 'comment': '`rm` command not run'})
-
-############################################################################################################
-# step 8: check that ls was run to verify deletion of dir4 and dir5
-# check that ls was run
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
-if len(indx) > 0:
-    indx = indx[-1:]
-    if any([
-            'assignment.sh' in script_rslt[i]['output'] for i in indx
-    ]) and not (any(['dir4' in script_rslt[i]['output'] for i in indx])
-                or any(['dir5' in script_rslt[i]['output'] for i in indx])):
+# Step 8: Check that 'data/inventory.txt' was created and contains all files in 'data/processed' subfolders
+if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
+    with open(os.path.join(working_dir, 'data/inventory.txt'), 'r') as f:
+        inventory_files = [line.strip() for line in f.readlines()]
+    # Now, find all files in 'data/processed' and its subfolders
+    processed_files = []
+    for root, dirs, files in os.walk(os.path.join(working_dir, 'data/processed')):
+        for name in files:
+            processed_files.append(os.path.join(root, name))
+    # Compare inventory_files and processed_files
+    inventory_files_set = set(inventory_files)
+    processed_files_set = set(processed_files)
+    if inventory_files_set == processed_files_set:
         s.append({'question': 8, 'status': 1})
     else:
+        missing_in_inventory = processed_files_set - inventory_files_set
+        extra_in_inventory = inventory_files_set - processed_files_set
+        comments = []
+        if missing_in_inventory:
+            comments.append('Files missing in inventory.txt: ' +
+                            ', '.join(missing_in_inventory))
+        if extra_in_inventory:
+            comments.append('Extra files in inventory.txt: ' +
+                            ', '.join(extra_in_inventory))
         s.append({
             'question': 8,
             'status': 0,
-            'comment': '`ls` command run on the wrong directory'
+            'comment': '; '.join(comments)
         })
-
 else:
-    s.append({'question': 8, 'status': 0, 'comment': '`ls` command not run'})
+    s.append({
+        'question': 8,
+        'status': 0,
+        'comment': 'data/inventory.txt does not exist'
+    })
 
 ############################################################################################################
+# Step 9: Check that files containing 'ipaddr' in the filename were removed from 'data/raw' and 'data/processed/user_logs'
+ipaddr_files_raw = glob.glob(os.path.join(working_dir, 'data/raw/*ipaddr*'))
+ipaddr_files_user_logs = glob.glob(os.path.join(working_dir, 'data/processed/user_logs/*ipaddr*'))
+
+if not ipaddr_files_raw and not ipaddr_files_user_logs:
+    s.append({'question': 9, 'status': 1})
+else:
+    comments = []
+    if ipaddr_files_raw:
+        comments.append('Files with ipaddr in data/raw not removed: ' +
+                        ', '.join(ipaddr_files_raw))
+    if ipaddr_files_user_logs:
+        comments.append(
+            'Files with ipaddr in data/processed/user_logs not removed: ' +
+            ', '.join(ipaddr_files_user_logs))
+    s.append({'question': 9, 'status': 0, 'comment': '; '.join(comments)})
+
 ############################################################################################################
 
 ### Postprocessing ###

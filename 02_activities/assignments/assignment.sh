@@ -1,24 +1,40 @@
 #!/bin/bash
 set -x
 
-################
-# Instructions #
-################
-# > Edit this file below to complete the homework assignment
-# > Add your code below each comment to complete the tasks
+############################################
+# DSI CONSULTING INC. Project setup script #
+############################################
+# This script creates standard analysis and output directories
+# for a new project. It also creates a README file with the
+# project name and a brief description of the project.
+# Then it unzips the raw data provided by the client.
 
-# 1. Create 5 directories named dir1, dir2, dir3, dir4, and dir5
+mkdir analysis output
+touch README.md
+touch analysis/main.py
+unzip rawdata.zip
 
-# 2. List the contents of the current working directory to verify the presence of the 5 directories
+###########################################
+# Complete assignment here
 
-# 3. Create 5 text files in dir2 named file1.txt, file2.txt, file3.txt, file4.txt, and file5.txt
+# 1. Create a directory named data
 
-# 4. Append the words "Hello world" to dir2/file3.txt
+# 2. Move the ./rawdata directory to ./data/raw
 
-# 5. Verify that file3.txt contains the words "hello world" by printing the contents of the file in the terminal
+# 4. List the contents of the ./data/raw directory
 
-# 6. Delete file4.txt
+# 5. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 
-# 7. Delete directories dir4 and dir5 including all their contents (if any)
+# 6. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 
-# 8. List the contents of the current working directory to verify the deletion of dir4 and dir5
+# 7. Repeat the above step for user logs and event logs
+
+# 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
+
+# 9. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+
+
+
+###########################################
+
+echo "Project setup is complete!"
