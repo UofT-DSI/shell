@@ -14,8 +14,11 @@ You've been asked to update this script to also automate the initial organizatio
 
 #### Merge in updates from your coworkers
 At the same time, your coworkers made some other changes to the bash script.
-You've been asked to incorporate their changes, then make one big pull request with it
-* Merge the DSI's `coworker-changes` branch into your `assignment` branch using the command `git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase`
+You've been asked to incorporate their changes, if sensible, then make one big pull request with your working script
+* Merge the DSI's `coworker-changes` branch into your `assignment` branch using the command:
+```bash
+$ git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase
+```
 
 #### Submit your changes for automatic testing and peer review by your coworkers
 1. Commit your changes in the `assignment` branch
