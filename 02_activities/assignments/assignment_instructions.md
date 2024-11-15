@@ -20,7 +20,7 @@ You've been asked to incorporate their changes, then make one big pull request w
 #### Submit your changes for automatic testing and peer review by your coworkers
 1. Commit your changes in the `assignment` branch
 1. Click on the **Actions** tab in your repository and click the button to enable workflows
-1. Create a pull request from `assignment` → `main`
+1. Create a pull request from your repo's `assignment` → your repo's `main`
 1. After a few minutes, the autograder should post a comment in your PR with your assignment grade
 
 
