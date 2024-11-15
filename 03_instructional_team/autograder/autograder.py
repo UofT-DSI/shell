@@ -3,6 +3,7 @@ import os
 import requests
 import re
 import glob
+import subprocess
 
 # get environment variables for output
 github_step_output = os.environ['GITHUB_STEP_SUMMARY']
@@ -171,6 +172,21 @@ else:
         'status': 0,
         'comment': 'data/inventory.txt does not exist'
     })
+
+############################################################################################################
+# Step 10: Check if a commit with ID 4207a6b14ce5624a8a3d30c5338efecb6fea20ac is in the commit history
+commit_id = '4207a6b14ce5624a8a3d30c5338efecb6fea20ac'
+
+try:
+    # Get list of all commit IDs
+    commit_list = subprocess.check_output(['git', 'rev-list', 'HEAD'], universal_newlines=True)
+    commit_list = commit_list.strip().split('\n')
+    if commit_id in commit_list:
+        s.append({'question': 10, 'status': 1})
+    else:
+        s.append({'question': 10, 'status': 0, 'comment': f'Commit {commit_id} from `coworker-changes` branch not found in commit history'})
+except:
+    s.append({'question': 10, 'status': 0, 'comment': f'Error checking git commit history.'})
 
 
 ############################################################################################################
