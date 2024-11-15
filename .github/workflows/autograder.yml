@@ -23,9 +23,9 @@ jobs:
         run: |
           UUID=$(uuidgen)
           echo "UUID=$UUID" >> $GITHUB_ENV
-          mkdir /temp/$UUID
-          cp -r $GITHUB_WORKSPACE/02_activities/assignments/* /tmp/$UUID
-          wget -O /tmp/$UUID/rawdata.zip https://raw.githubusercontent.com/UofT-DSI/shell/refs/heads/main/02_activities/assignments/rawdata.zip
+          mkdir /tmp/$UUID
+          cp $GITHUB_WORKSPACE/02_activities/assignments/assignment.sh /tmp/$UUID
+          wget -O /tmp/$UUID/rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/assignment_rawdata/rawdata.zip
       - name: Run assignment script
         run: |
           bash -c "bash assignment.sh 2>&1 | tee /tmp/${{ env.UUID }}_output.txt"

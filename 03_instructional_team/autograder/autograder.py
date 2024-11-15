@@ -89,14 +89,11 @@ def check_logs(log_type):
         if all([f in processed_log_files for f in raw_log_files]):
             return {'status': 1}
         else:
-            missing_files = [
-                f for f in raw_log_files if f not in processed_log_files
-            ]
             return {
                 'status':
                 0,
                 'comment':
-                f'Missing files in data/processed/{log_type}_logs: {", ".join(missing_files)}'
+                f'Missing files in data/processed/{log_type}_logs'
             }
 
 # Check server logs
@@ -130,11 +127,16 @@ else:
 if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
     with open(os.path.join(working_dir, 'data/inventory.txt'), 'r') as f:
         inventory_files = [line.strip() for line in f.readlines()]
+
     # Now, find all files in 'data/processed' and its subfolders
     processed_files = []
     for root, dirs, files in os.walk(os.path.join(working_dir, 'data/processed')):
+        # remove working_dir from start of root
+        root = root[len(working_dir)+1:]
+
         for name in files:
             processed_files.append(os.path.join(root, name))
+
     # Compare inventory_files and processed_files
     inventory_files_set = set(inventory_files)
     processed_files_set = set(processed_files)
@@ -145,11 +147,9 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
         extra_in_inventory = inventory_files_set - processed_files_set
         comments = []
         if missing_in_inventory:
-            comments.append('Files missing in inventory.txt: ' +
-                            ', '.join(missing_in_inventory))
+            comments.append('Files missing in inventory.txt')
         if extra_in_inventory:
-            comments.append('Extra files in inventory.txt: ' +
-                            ', '.join(extra_in_inventory))
+            comments.append('Extra files in inventory.txt')
         s.append({
             'question': 8,
             'status': 0,
@@ -172,12 +172,10 @@ if not ipaddr_files_raw and not ipaddr_files_user_logs:
 else:
     comments = []
     if ipaddr_files_raw:
-        comments.append('Files with ipaddr in data/raw not removed: ' +
-                        ', '.join(ipaddr_files_raw))
+        comments.append('One or more files with ipaddr in data/raw not removed.')
     if ipaddr_files_user_logs:
         comments.append(
-            'Files with ipaddr in data/processed/user_logs not removed: ' +
-            ', '.join(ipaddr_files_user_logs))
+            'One or more files with ipaddr in data/processed/user_logs not removed')
     s.append({'question': 9, 'status': 0, 'comment': '; '.join(comments)})
 
 ############################################################################################################
