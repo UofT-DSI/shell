@@ -18,13 +18,16 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r 03_instructional_team/autograder/requirements.txt
-      - name: Clean assignment folder
+      - name: Setup working directory for script
         run: |
-          find 02_activities/assignments -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
+          UUID=$(uuidgen)
+          echo "UUID=$UUID" >> $GITHUB_ENV
+          mkdir /tmp/$UUID
+          cp $GITHUB_WORKSPACE/02_activities/assignments/assignment.sh /tmp/$UUID
       - name: Run assignment script
         run: |
-          bash -c "bash assignment.sh 2>&1 | tee $GITHUB_WORKSPACE/03_instructional_team/autograder/output.txt"
-        working-directory: ./02_activities/assignments
+          bash -c "bash assignment.sh 2>&1 | tee /tmp/${{ env.UUID }}_output.txt"
+        working-directory: /tmp/${{ env.UUID }}
       - name: Grade responses
         id: grade
         env:
@@ -32,5 +35,8 @@ jobs:
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO_BRANCH: ${{ github.event.pull_request.head.ref }}
+          WORKING_DIR: /tmp/${{ env.UUID }}
         run: |
-          python 03_instructional_team/autograder/autograder.py
+          wget -O /tmp/autograder.py https://github.com/UofT-DSI/shell/raw/refs/heads/main/03_instructional_team/autograder/autograder.py
+          python /tmp/autograder.py

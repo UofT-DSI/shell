@@ -1,9 +1,18 @@
 .DS_Store
 .vscode/
-./03_instructional_team/lessons/pdf/*
-./03_instructional_team/lessons/html/*
+03_instructional_team/lessons/pdf/*
+03_instructional_team/lessons/html/*
 
 # local node modules
 node_modules/
 package-lock.json
 package.json
+
+### Running the assignment script unzips a large number of files into the tree
+# Ignore all files in shell/02_activities/assignments/
+02_activities/assignments/*
+
+# Un-ignore the specific files
+!02_activities/assignments/assignment.sh
+!02_activities/assignments/assignment_instructions.md
+
