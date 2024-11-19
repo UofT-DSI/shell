@@ -1,24 +1,43 @@
 #!/bin/bash
 set -x
 
-################
-# Instructions #
-################
-# > Edit this file below to complete the homework assignment
-# > Add your code below each comment to complete the tasks
+############################################
+# DSI CONSULTING INC. Project setup script #
+############################################
+# This script creates standard analysis and output directories
+# for a new project. It also creates a README file with the
+# project name and a brief description of the project.
+# Then it unzips the raw data provided by the client.
 
-# 1. Create 5 directories named dir1, dir2, dir3, dir4, and dir5
+mkdir analysis output
+touch README.md
+touch analysis/main.py
 
-# 2. List the contents of the current working directory to verify the presence of the 5 directories
+# download client data
+wget -O rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
+unzip rawdata.zip
 
-# 3. Create 5 text files in dir2 named file1.txt, file2.txt, file3.txt, file4.txt, and file5.txt
+###########################################
+# Complete assignment here
 
-# 4. Append the words "Hello world" to dir2/file3.txt
+# 1. Create a directory named data
 
-# 5. Verify that file3.txt contains the words "hello world" by printing the contents of the file in the terminal
+# 2. Move the ./rawdata directory to ./data/raw
 
-# 6. Delete file4.txt
+# 3. List the contents of the ./data/raw directory
 
-# 7. Delete directories dir4 and dir5 including all their contents (if any)
+# 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 
-# 8. List the contents of the current working directory to verify the deletion of dir4 and dir5
+# 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
+
+# 6. Repeat the above step for user logs and event logs
+
+# 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+
+# 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
+
+
+
+###########################################
+
+echo "Project setup is complete!"
