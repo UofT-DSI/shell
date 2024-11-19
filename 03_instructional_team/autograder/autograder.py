@@ -33,24 +33,28 @@ def is_commit_in_branch(
     response = requests.get(other_commit_url, headers=headers)
     response.raise_for_status()
     other_commit_sha = response.json()['sha']
+    print(f'Commit SHA of {other_owner}/{other_repo}/{other_branch}: {other_commit_sha}')
 
     # Step 2: Check if this commit exists in the given repository
     commit_in_repo_url = f'https://api.github.com/repos/{owner}/{repo}/commits/{other_commit_sha}'
     response = requests.get(commit_in_repo_url, headers=headers)
     if response.status_code == 404:
         # Commit does not exist in the given repository
+        print(f'Commit {other_commit_sha} not found in {owner}/{repo}')
         return False
     response.raise_for_status()
 
     # Step 3: Compare the commit with the branch in the given repository
-    compare_url = f'https://api.github.com/repos/{owner}/{repo}/compare/{other_commit_sha}...{branch}'
+    compare_url = f'https://api.github.com/repos/{owner}/{repo}/compare/main...{branch}'
     response = requests.get(compare_url, headers=headers)
     response.raise_for_status()
     compare_data = response.json()
-    status = compare_data['status']
 
-    # If the status is 'behind' or 'identical', the commit is in the history
-    return status in ['behind', 'identical']
+    commit_shas = [commit['sha'] for commit in compare_data['commits']]
+
+    # If the status is 'ahead' or 'identical', the commit is in the history
+    print(f'Commit SHAs in {owner}/{repo}/{branch}: {commit_shas}')
+    return other_commit_sha in commit_shas
 
 
 # score table
