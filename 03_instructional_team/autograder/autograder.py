@@ -1,26 +1,62 @@
 import pandas as pd
-import os.path
 import os
 import requests
 import re
-
-base_dir = os.environ['GITHUB_WORKSPACE'] + '/02_activities/assignments'
+import glob
+import subprocess
 
 # get environment variables for output
 github_step_output = os.environ['GITHUB_STEP_SUMMARY']
 github_token = os.environ["GITHUB_TOKEN"]
 github_repo_owner = os.environ["REPO_OWNER"]
 github_repo_name = os.environ["REPO_NAME"]
+github_repo_branch = os.environ["REPO_BRANCH"]
 github_pr_number = os.environ["PR_NUMBER"]
+working_dir = os.environ["WORKING_DIR"]
 
 status_c = '✅'
 status_i = '❌'
 
+
+# functions
+def is_commit_in_branch(owner, repo, branch, commit_id, token=None):
+    """
+    Check if a commit ID is in the history of a branch in a GitHub repository.
+
+    :param owner: Repository owner's username.
+    :param repo: Repository name.
+    :param branch: Branch name.
+    :param commit_id: The commit SHA to check.
+    :param token: (Optional) Personal access token for authenticated requests.
+    :return: True if the commit is in the branch history, False otherwise.
+    """
+    url = f'https://api.github.com/repos/{owner}/{repo}/compare/{commit_id}...{branch}'
+    headers = {}
+    if token:
+        headers['Authorization'] = f'token {token}'
+
+    response = requests.get(url, headers=headers)
+
+    if response.status_code != 200:
+        print(f"Error: Unable to compare commits. HTTP Status Code: {response.status_code}")
+        print(f"Message: {response.json().get('message', '')}")
+        return False
+
+    data = response.json()
+    status = data.get('status')
+
+    if status in ('ahead', 'identical'):
+        print(f"Commit {commit_id} is in the history of branch {branch}.")
+        return True
+    else:
+        print(f"Commit {commit_id} is NOT in the history of branch {branch}.")
+        return False
+
 # score table
 s = []
 
-# load script
-with open('03_instructional_team/autograder/output.txt', 'r') as f:
+# load script output
+with open(working_dir + '_output.txt', 'r') as f:
     script_rslt = f.read()
 
 script_rslt = script_rslt.split('\n+')
@@ -29,151 +65,181 @@ script_rslt = [{
     'output': x.split('\n')[1:]
 } for x in script_rslt]
 
-############################################################################################################
-############################################################################################################
-# step 1: check if required directories exist
-isdir = [os.path.isdir(f'{base_dir}/dir{i}') for i in range(1, 4)]
-if all(isdir):
-    s.append({'question': 1, 'status': 1})
-else:
-    s.append({
-        'question': 1,
-        'status': 0,
-        'comment': 'missing required directories'
-    })
+qn = 0
 
 ############################################################################################################
-# step 2: check that the ls command was run
-# if output contains "+ ls" followed by a line containing assignment.sh, then correct
+# Step 1: Check if 'data' directory exists
+qn += 1
+if os.path.isdir(os.path.join(working_dir, 'data')):
+    s.append({'question': qn, 'status': 1})
+else:
+    s.append({'question': qn, 'status': 0, 'comment': 'data directory does not exist'})
+
+############################################################################################################
+# Step 2: Check that 'rawdata' directory was moved to 'data/raw'
+qn += 1
+if os.path.isdir(os.path.join(working_dir, 'data/raw')) and not os.path.exists(os.path.join(working_dir, 'rawdata')):
+    s.append({'question': qn, 'status': 1})
+else:
+    s.append({'question': qn, 'status': 0, 'comment': 'rawdata not moved to data/raw'})
+
+############################################################################################################
+# Step 4: Check that 'ls data/raw' command was run
+qn += 1
 indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
 if len(indx) > 0:
-    if any([('assignment.sh' in script_rslt[i]['output']) and all(
-        [f'dir{n:.0f}' in script_rslt[i]['output'] for n in range(1, 6)])
-            for i in indx]):
-        s.append({'question': 2, 'status': 1})
+    if any(['data/raw' in script_rslt[i]['command'] for i in indx]):
+        s.append({'question': qn, 'status': 1})
     else:
         s.append({
-            'question': 2,
+            'question': qn,
             'status': 0,
-            'comment': '`ls` command run in the wrong directory'
+            'comment': '`ls` command run on wrong directory'
         })
 else:
-    s.append({'question': 2, 'status': 0, 'comment': '`ls` command not run'})
+    s.append({'question': qn, 'status': 0, 'comment': '`ls` command not run'})
 
 ############################################################################################################
-# step 3: check that the 5 specified files were created in dir2
-file_names = [f'dir2/file{i}.txt' for i in range(1, 6)]
-
-touch_commands = [
-    x['command'] for x in script_rslt if x['command'].startswith('touch')
+# Step 5: Check that in 'data/processed', the directories server_logs, user_logs, and event_logs were created
+qn += 1
+dirs = [
+    'data/processed/server_logs', 'data/processed/user_logs',
+    'data/processed/event_logs'
 ]
-command_run = [any([x in f for f in touch_commands]) for x in file_names]
-
-# file_exists = [os.path.isfile(f'{base_dir}/dir2/file{i}.txt') for i in range(1, 6)]
-if all(command_run):
-    s.append({'question': 3, 'status': 1})
+if all([os.path.isdir(os.path.join(working_dir, d)) for d in dirs]):
+    s.append({'question': qn, 'status': 1})
 else:
-    print(file_names)
-    print(touch_commands)
-    print(command_run)
+    missing_dirs = [d for d in dirs if not os.path.isdir(os.path.join(working_dir, d))]
     s.append({
-        'question': 3,
+        'question': qn,
         'status': 0,
-        'comment': 'missing required files in `dir2`'
+        'comment': f'Missing directories: {", ".join(missing_dirs)}'
     })
 
 ############################################################################################################
-# step 4: check that dir2/file3 contains "hello world"
-if os.path.isfile(f'{base_dir}/dir2/file3.txt'):
-    with open(f'{base_dir}/dir2/file3.txt', 'r') as f:
-        file3 = f.read()
-    if re.sub(r'[^a-z]', '', file3.lower()) == 'helloworld':
-        s.append({'question': 4, 'status': 1})
-    else:
-        s.append({
-            'question': 4,
+# Step 6: Check that server log files were copied from 'data/raw' to 'data/processed/server_logs'
+def check_logs(log_type):
+    raw_logs = glob.glob(os.path.join(working_dir, f'data/raw/*{log_type}*.log'))
+    processed_logs = glob.glob(os.path.join(working_dir, f'data/processed/{log_type}_logs/*'))
+    if len(raw_logs) == 0:
+        return {
             'status': 0,
-            'comment': '`dir2/file3.txt` does not contain "Hello, World!"'
-        })
+            'comment': f'No {log_type} log files in data/raw'
+        }
+    else:
+        raw_log_files = [os.path.basename(f) for f in raw_logs]
+        processed_log_files = [os.path.basename(f) for f in processed_logs]
+        if all([f in processed_log_files for f in raw_log_files]):
+            return {'status': 1}
+        else:
+            return {
+                'status':
+                0,
+                'comment':
+                f'Missing files in data/processed/{log_type}_logs'
+            }
+
+# Check server logs
+qn += 1
+result = check_logs('server')
+if result['status'] == 1:
+    s.append({'question': qn, 'status': 1})
 else:
+    s.append({'question': qn, 'status': 0, 'comment': result['comment']})
+
+############################################################################################################
+# Step 7: Check that user logs and event logs were copied appropriately
+qn += 1
+
+result_user = check_logs('user')
+result_event = check_logs('event')
+
+if result_user['status'] == 1 and result_event['status'] == 1:
+    s.append({'question': qn, 'status': 1})
+else:
+    comments = []
+    if result_user['status'] == 0:
+        comments.append(result_user['comment'])
+    if result_event['status'] == 0:
+        comments.append(result_event['comment'])
     s.append({
-        'question': 4,
+        'question': qn,
         'status': 0,
-        'comment': '`dir2/file3.txt` does not exist'
+        'comment': '; '.join(comments)
     })
 
 ############################################################################################################
-# step 5: check that dir2/file3 contains "hello world"
-# check that cat was run on dir2/file3
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('cat')]
-if len(indx) > 0:
-    if any([f'dir2/file3.txt' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': 5, 'status': 1})
-    else:
-        s.append({
-            'question': 5,
-            'status': 0,
-            'comment': '`cat` command run on the wrong file'
-        })
+# Step 8: Check that files containing 'ipaddr' in the filename were removed from 'data/raw' and 'data/processed/user_logs'
+qn += 1
+
+ipaddr_files_raw = glob.glob(os.path.join(working_dir, 'data/raw/*ipaddr*'))
+ipaddr_files_user_logs = glob.glob(os.path.join(working_dir, 'data/processed/user_logs/*ipaddr*'))
+
+if not ipaddr_files_raw and not ipaddr_files_user_logs:
+    s.append({'question': qn, 'status': 1})
 else:
-    s.append({'question': 5, 'status': 0, 'comment': '`cat` command not run'})
+    comments = []
+    if ipaddr_files_raw:
+        comments.append('One or more files with ipaddr in data/raw not removed.')
+    if ipaddr_files_user_logs:
+        comments.append(
+            'One or more files with ipaddr in data/processed/user_logs not removed')
+    s.append({'question': qn, 'status': 0, 'comment': '; '.join(comments)})
+
 
 ############################################################################################################
-# step 6: check that dir2/file4 was deleted with rm
-# check that rm was run on dir2/file4
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('rm')]
-if len(indx) > 0:
-    if any([f'dir2/file4.txt' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': 6, 'status': 1})
+# Step 9: Check that 'data/inventory.txt' was created and contains all files in 'data/processed' subfolders
+qn += 1
+
+if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
+    with open(os.path.join(working_dir, 'data/inventory.txt'), 'r') as f:
+        inventory_files = [line.strip() for line in f.readlines()]
+
+    # Now, find all files in 'data/processed' and its subfolders
+    processed_files = []
+    for root, dirs, files in os.walk(os.path.join(working_dir, 'data/processed')):
+        # remove working_dir from start of root
+        root = root[len(working_dir)+1:]
+
+        for name in files:
+            processed_files.append(name)
+
+    foldername_in_inventory = ['data/processed' in x for x in inventory_files]
+    files_in_inventory = [any([f in x for x in inventory_files]) for f in processed_files]
+
+    if foldername_in_inventory and all(files_in_inventory):
+        s.append({'question': qn, 'status': 1})
     else:
         s.append({
-            'question': 6,
+            'question': qn,
             'status': 0,
-            'comment': '`rm` command run on the wrong file'
+            'comment': 'data/inventory.txt does not contain all files in data/processed'
         })
 else:
-    s.append({'question': 6, 'status': 0, 'comment': '`rm` command not run'})
+    s.append({
+        'question': qn,
+        'status': 0,
+        'comment': 'data/inventory.txt does not exist'
+    })
 
 ############################################################################################################
-# step 7: check that dir4 and dir5 were deleted
-# check that rm was run on dir4 and dir5
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('rm')]
-if len(indx) > 0:
-    if any(['dir4' in script_rslt[i]['command'] for i in indx]) and any(
-        ['dir5' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': 7, 'status': 1})
+# Step 10: Check if the coworker's commit ID is in the commit history
+qn += 1
+commit_id = '4207a6b14ce5624a8a3d30c5338efecb6fea20ac'
+
+try:
+    # Check if commit_id is in git rev-list HEAD using grep and wc -l
+    result = is_commit_in_branch(github_repo_owner, github_repo_name, github_repo_branch, commit_id, github_token)
+    if result:
+        s.append({'question': qn, 'status': 1})
     else:
-        s.append({
-            'question': 7,
-            'status': 0,
-            'comment': '`rm` command run on the wrong directory'
-        })
+        s.append({'question': qn, 'status': 0, 'comment': f'Commit {commit_id} from `coworker-changes` branch not found in commit history'})
 
-else:
-    s.append({'question': 7, 'status': 0, 'comment': '`rm` command not run'})
+except Exception as e:
+    s.append({'question': qn, 'status': 0, 'comment': f'Error checking git commit history.'})
+    print(f"Error checking git commit history: {e}")
 
-############################################################################################################
-# step 8: check that ls was run to verify deletion of dir4 and dir5
-# check that ls was run
-indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
-if len(indx) > 0:
-    indx = indx[-1:]
-    if any([
-            'assignment.sh' in script_rslt[i]['output'] for i in indx
-    ]) and not (any(['dir4' in script_rslt[i]['output'] for i in indx])
-                or any(['dir5' in script_rslt[i]['output'] for i in indx])):
-        s.append({'question': 8, 'status': 1})
-    else:
-        s.append({
-            'question': 8,
-            'status': 0,
-            'comment': '`ls` command run on the wrong directory'
-        })
 
-else:
-    s.append({'question': 8, 'status': 0, 'comment': '`ls` command not run'})
-
-############################################################################################################
 ############################################################################################################
 
 ### Postprocessing ###
