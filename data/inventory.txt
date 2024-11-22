@@ -1,0 +1,5 @@
+data/processed/event_logs/:
+
+data/processed/server_logs/:
+
+data/processed/user_logs/:
