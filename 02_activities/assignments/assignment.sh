@@ -23,10 +23,10 @@ unzip rawdata.zip
 # 1. Create a directory named data
 
 mkdir data
-
+## I had to unzip the raw data myself, it was not automatically unzipped. 
 # 2. Move the ./rawdata directory to ./data/raw
+## Since there is no sub-directory in data called raw, first a sub-directory called raw shall be made in data directory
 
-mkdir rawdata
 mkdir data/raw
 mv rawdata data/raw
 
@@ -34,28 +34,52 @@ mv rawdata data/raw
 ls data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
-
+## Since there is no sub-directory in data called processed, first a sub-directory called processed shall be made in data directory
 mkdir data/processed
+
 mkdir data/processed/server_logs
 mkdir data/processed/user_logs
 mkdir data/processed/event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-touch data/raw/server.log
-touch data/raw/server_log.log
-cp data/raw/*.log data/processed/server_logs
+## log files (files with "server" in the name AND a .log extension) are inside sub-directory of data/raw so I can copy these files by using data/raw/rawdata path and not data/raw only
+### This questions means files with .log extension, server in name, and server in name and .log extensions, so there will be 3 scenarios.
 
+cp data/raw/rawdata/*server*.log data/processed/server_logs
+cp data/raw/rawdata/*server* data/processed/server_logs
+cp data/raw/rawdata/*.log data/processed/server_logs
 
 # 6. Repeat the above step for user logs and event logs
-cp data/raw/*.log data/processed/user_logs
-cp data/raw/*.log data/processed/event_logs
+### Same as above means files with .log extension, server in name, and server in name and .log extensions, so there will be 3 scenarios.
+
+cp data/raw/rawdata/*server*.log data/processed/user_logs
+cp data/raw/rawdata/*server* data/processed/user_logs
+cp data/raw/rawdata/*.log data/processed/user_logs
+
+cp data/raw/rawdata/*server*.log data/processed/event_logs
+cp data/raw/rawdata/*server* data/processed/event_logs
+cp data/raw/rawdata/*.log data/processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+## In order to see inside data/raw, you will have to open sub-directory of data/raw which is data/raw/rawdata
+
+rm -i data/raw/rawdata/*ipaddr*
+
+rm -i data/processed/user_logs/*ipaddr*
 
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
+touch data/inventory.txt
 
+## I searched that using > will direct the output of any command in file - So combining ls and <, I can list and odirect the results inside my inventory.txt file.
+### Also adding -1, I can list the folders on a new line 
+
+ls -1 data/processed > inventory.txt
+
+## cat command will confirm that all subforlders of data/processed are listed in inventory.txt
+
+cat inventory.txt 
 
 ###########################################
 
