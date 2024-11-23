@@ -37,7 +37,7 @@ mkdir ./data/processed/server_logs ./data/processed/user_logs /data/processed/ev
 cp ./data/raw/*server*.log ./data/processed/server_logs/
 
 # 6. Repeat the above step for user logs and event logs
-cp ./data/raw/*user*.log ./data/raw/*event*.log ./data/processed/server_logs/
+cp ./data/raw/*user*.log ./data/raw/*event*.log ./data/processed/server_logs/git
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 rm ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
