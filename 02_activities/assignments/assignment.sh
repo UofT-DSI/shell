@@ -16,7 +16,6 @@ touch analysis/main.py
 
 # download client data
 curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
-unzip rawdata.zip
 
 ###########################################
 # Complete assignment here
@@ -49,24 +48,17 @@ cp data/raw/rawdata/*server*.log data/processed/server_logs
 
 
 # 6. Repeat the above step for user logs and event logs
-### Same as above process. 
+## Same as above process. 
 
 cp data/raw/rawdata/*server*.log data/processed/user_logs
 
 cp data/raw/rawdata/*server*.log data/processed/event_logs
 
-
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-<<<<<<< HEAD
 ## In order to see inside data/raw, you will have to open sub-directory of data/raw which is data/raw/rawdata
-
 rm -i data/raw/rawdata/*ipaddr*
 
 rm -i data/processed/user_logs/*ipaddr*
-
-=======
-rf -rf ./data
->>>>>>> ea20676d33161a6f4d0fcd3c4f7aa5360f0f4309
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
