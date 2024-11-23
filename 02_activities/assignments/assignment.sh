@@ -43,22 +43,17 @@ mkdir data/processed/event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 ## log files (files with "server" in the name AND a .log extension) are inside sub-directory of data/raw so I can copy these files by using data/raw/rawdata path and not data/raw only
-### This questions means files with .log extension, server in name, and server in name and .log extensions, so there will be 3 scenarios.
 
 cp data/raw/rawdata/*server*.log data/processed/server_logs
-cp data/raw/rawdata/*server* data/processed/server_logs
-cp data/raw/rawdata/*.log data/processed/server_logs
+
 
 # 6. Repeat the above step for user logs and event logs
-### Same as above means files with .log extension, server in name, and server in name and .log extensions, so there will be 3 scenarios.
+### Same as above process. 
 
 cp data/raw/rawdata/*server*.log data/processed/user_logs
-cp data/raw/rawdata/*server* data/processed/user_logs
-cp data/raw/rawdata/*.log data/processed/user_logs
 
 cp data/raw/rawdata/*server*.log data/processed/event_logs
-cp data/raw/rawdata/*server* data/processed/event_logs
-cp data/raw/rawdata/*.log data/processed/event_logs
+
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 ## In order to see inside data/raw, you will have to open sub-directory of data/raw which is data/raw/rawdata
@@ -80,7 +75,6 @@ ls -1 data/processed > inventory.txt
 ## cat command will confirm that all subforlders of data/processed are listed in inventory.txt
 
 cat inventory.txt 
-
 ###########################################
 
 echo "Project setup is complete!"
