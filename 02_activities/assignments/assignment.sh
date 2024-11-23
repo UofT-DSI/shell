@@ -21,6 +21,8 @@ curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_ac
 # Complete assignment here
 
 # 1. Create a directory named data
+mkdir data
+
 
 mkdir data
 ## I had to unzip the raw data myself, it was not automatically unzipped. 
