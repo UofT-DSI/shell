@@ -24,7 +24,6 @@ curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_ac
 mkdir data
 
 
-mkdir data
 ## I had to unzip the raw data myself, it was not automatically unzipped. 
 # 2. Move the ./rawdata directory to ./data/raw
 ## Since there is no sub-directory in data called raw, first a sub-directory called raw shall be made in data directory
