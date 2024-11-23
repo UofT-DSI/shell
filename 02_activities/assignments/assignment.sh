@@ -35,7 +35,7 @@ cp ./data/raw/*server*.log ./data/processed/server_logs  # copy server log files
 cp ./data/raw/*user*.log ./data/processed/user_logs  # copy user log files to user_logs folder
 cp ./data/raw/*event*.log ./data/processed/event_logs  # copy event log files to event_logs folder
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-
+rm ./data/processed/user_logs/*ipaddr* ./data/raw/*ipaddr*  # delte ipaddr files in both directories
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
 
