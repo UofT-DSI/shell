@@ -29,18 +29,18 @@ cd data
 mv ../rawdata raw
 
 # 3. List the contents of the ./data/raw directory
-ls raw/rawdata
+ls raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 mkdir processed
 mkdir processed/server_logs processed/user_logs processed/event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-cp raw/rawdata/*server*.log processed/server_logs
+cp raw/*server*.log processed/server_logs
 
 # 6. Repeat the above step for user logs and event logs
-cp raw/rawdata/*user*.log processed/user_logs
-cp raw/rawdata/*event*.log processed/event_logs
+cp raw/*user*.log processed/user_logs
+cp raw/*event*.log processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 rm raw/*ipaddr*
