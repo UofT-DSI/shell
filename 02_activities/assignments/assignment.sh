@@ -43,7 +43,7 @@ find ./data/raw -type f -name "*ipaddr*" -exec rm -f {} \;
 find ./data/processed/user_logs -type f -name "*ipaddr*" -exec rm -f {} \;
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-git checkout coworker-changes
+git checkout -b coworker-changes
 find ./data/processed -type f > ./data/inventory.txt
  
 
