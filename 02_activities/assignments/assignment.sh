@@ -44,9 +44,10 @@ find ./data/processed/user_logs -type f -name "*ipaddr*" -exec rm -f {} \;
 find ./data/processed -type f > ./data/inventory.txt
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase
+git branch
 git checkout -b coworker-changes
-git fetch coworker-changes
+git commit -m "complete part 2 of assignment"
+git push origin coworker-changes
 
 
 
