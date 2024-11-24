@@ -47,8 +47,7 @@ find ./data/processed -type f > ./data/inventory.txt
 git branch
 git checkout -b coworker-changes
 git commit -m "complete part 2 of assignment"
-find ./data/processed -type f > ./data/inventory.txt
-
+git fetch origin
 git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase
 
 
