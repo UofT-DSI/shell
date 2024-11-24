@@ -29,4 +29,4 @@ cd ..
 rm -rf *
 
 # 10. How would you verify that all directories and files have been deleted?
-l
+ls
