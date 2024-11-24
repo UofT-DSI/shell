@@ -22,7 +22,7 @@ unzip rawdata.zip
 
 # 1. Create a directory named data
 mkdir data
-mv rawdata/* data/raw/
+mv ./rawdata ./data/raw
 
 # 2. Move the ./rawdata directory to ./data/raw
 cd data
