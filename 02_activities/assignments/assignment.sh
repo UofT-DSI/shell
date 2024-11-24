@@ -25,6 +25,8 @@ unzip rawdata.zip
 
 mkdir data
 
+mkdir data
+
 # 2. Move the ./rawdata directory to ./data/raw
 
 mv ./rawdata data/raw
@@ -50,6 +52,13 @@ find data/raw -type f -name "*event*.log" -exec cp {} data/processed/event_logs/
 
 find data/raw -type f -name "*ipaddr*" -exec rm -f {} \;
 find data/processed/user_logs -type f -name "*ipaddr*" -exec rm -f {} \;
+
+cd ../data
+cd raw
+rm *ipaddr*
+cd ../processed
+cd user_logs
+rm .*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
