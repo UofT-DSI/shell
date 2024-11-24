@@ -45,7 +45,8 @@ find ./data/processed -type f > ./data/inventory.txt
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase
-
+git branch -b coworker-changes
+git fetch coworker-changes
 
 
  
