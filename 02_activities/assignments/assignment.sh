@@ -50,7 +50,6 @@ git commit -m "complete part 2 of assignment"
 git push origin coworker-changes
 git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase
 
-$
 
  
 
