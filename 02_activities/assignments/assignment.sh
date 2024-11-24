@@ -53,7 +53,6 @@ cp ./data/raw/rawdata/user_log_*.log ./data/processed/user_logs
 cp ./data/raw/rawdata/event_log_*.log ./data/processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-rf -rf ./data
 
 rm ./data/raw/rawdata/*ipaddr*
 rm ./data/processed/user_logs/*ipaddr*
