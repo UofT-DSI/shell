@@ -10,8 +10,8 @@ package.json
 
 ### Running the assignment script unzips a large number of files into the tree
 # Ignore all files in shell/02_activities/assignments/
-02_activities/assignments/*
-
+# 02_activities/assignments/*
+02_activities/assignments/data/raw/*
 # Un-ignore the specific files
 !02_activities/assignments/assignment.sh
 !02_activities/assignments/assignment_instructions.md
