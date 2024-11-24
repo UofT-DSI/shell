@@ -1,0 +1,1484 @@
+[33mcommit d758bfd92fbe0ac22b348d34d93345c4cbfa8c29[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32massignment[m[33m, [m[1;31morigin/assignment[m[33m, [m[1;32mmain[m[33m)[m
+Author: jcpeinado <julianpeinado.996@gmail.com>
+Date:   Wed Nov 20 20:03:12 2024 -0500
+
+    complete part 1 of assignment
+
+[33mcommit 92b601c24eab44afee25b569c26f84d6588b1297[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: jcpeinado <julianpeinado.996@gmail.com>
+Date:   Wed Nov 20 19:17:35 2024 -0500
+
+    'Hello World'
+
+[33mcommit 3276c3b88dc9fcddff0ed4cc2fdb58f8d177e86c[m
+Merge: 737e414 a6e9f00
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Tue Nov 19 17:23:26 2024 -0500
+
+    Merge pull request #146 from dtxe/autograder
+    
+    New C5 assignment: combine Shell + Git
+
+[33mcommit a6e9f0081ec269a3ce68bc7d1043d727aa0da3ec[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Nov 19 15:44:02 2024 -0500
+
+    update assignment due date
+
+[33mcommit a98ea68525666c57c6e11cbd01a46cab211934b9[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Nov 19 13:29:36 2024 -0500
+
+    update assignment instructions
+
+[33mcommit a6f5efa4e8c94b9e38d9f0d3bc9f758db47561a9[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Nov 19 12:10:32 2024 -0500
+
+    update URL for downloading autograder back to UofT-DSI
+
+[33mcommit bb876728a7bdc7d2bcf672e399803dc02b00277b[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Nov 19 11:57:40 2024 -0500
+
+    directly look for target sha in compare to main
+
+[33mcommit cfb96e3c925b6b3ef52ca141d793b1026cd60ce4[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Nov 19 11:40:30 2024 -0500
+
+    identify latest commit for merge check from branch name, instead of hard coding commit ID
+
+[33mcommit 6d03bed7d00f362a17ab9eb76c4562ff818cc648[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Mon Nov 18 23:45:23 2024 -0500
+
+    update assignment to combine git/shell with new autograder
+
+[33mcommit 737e414972ceac8b647fcf1aa55c8febdf77e66b[m
+Merge: 01efb7c d1f5d15
+Author: Simeon Wong <7825879+dtxe@users.noreply.github.com>
+Date:   Mon Nov 18 21:48:28 2024 -0500
+
+    Merge pull request #149 from dtxe/add_rawdata
+    
+    Add C5 assignment rawdata.zip
+
+[33mcommit d1f5d15f1753fd54176c4d18e198835a421e6622[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Mon Nov 18 21:46:44 2024 -0500
+
+    add assignment rawdata
+
+[33mcommit 01efb7c035b99a837554a5107148eed38562f572[m
+Merge: 7e0a1e6 24d0048
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Mon Nov 18 14:42:52 2024 -0500
+
+    Merge pull request #147 from dtxe/slides_update
+    
+    Add terminology explainer to shell slides
+
+[33mcommit 7e0a1e69682667278e2aff8b9718d57aa6cd0c8f[m
+Merge: 08a4a45 ad5b639
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Mon Nov 18 14:41:19 2024 -0500
+
+    Merge pull request #148 from dtxe/readme
+    
+    Update README for C5
+
+[33mcommit ad5b63931563b35a9df74ffff8f626c782196ef1[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Mon Nov 18 11:29:52 2024 -0500
+
+    update instructor contact on readme
+
+[33mcommit 24d0048b5ec8094fa804c60dc8f63965ce074643[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Fri Nov 15 18:02:19 2024 -0500
+
+    add terminology explainer to shell slides
+
+[33mcommit 08a4a454692550206c7ec080a1649212dc979ba5[m
+Merge: 85eb7eb 5077c89
+Author: Simeon Wong <7825879+dtxe@users.noreply.github.com>
+Date:   Thu Aug 22 16:36:21 2024 -0400
+
+    Merge pull request #115 from dtxe/main
+    
+    autograder q8 hotfix
+
+[33mcommit 5077c89a7245417d2c3752446b5ee58966c400a9[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Thu Aug 22 16:35:23 2024 -0400
+
+    autograder q8 hotfix
+
+[33mcommit 85eb7eba53f7661dc1e63990c9b2db68d82ce7e0[m
+Merge: 058c2c5 d03a2a9
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Thu Aug 22 09:00:52 2024 -0400
+
+    Merge pull request #110 from dtxe/main
+
+[33mcommit d03a2a9ea5d3245b1c8f8fa28ecace3a729960de[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 21 22:54:53 2024 -0400
+
+    update assignment instructions, update autograder q8 check
+
+[33mcommit 058c2c5bd367b179c48163d59d7fe8726126360d[m
+Merge: 128fc1c 2417e93
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Wed Aug 21 10:00:35 2024 -0400
+
+    Merge pull request #97 from dtxe/main
+    
+    autograder workflow improvements
+
+[33mcommit 2417e93da687f960c1fb777c35b31e5998739972[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 21 09:37:50 2024 -0400
+
+    clean output files from folder before running assignment script
+
+[33mcommit 128fc1cd11f9212f63dcd3388b16005ae6781e60[m
+Merge: 4ec2539 443985f
+Author: Simeon Wong <7825879+dtxe@users.noreply.github.com>
+Date:   Tue Aug 20 21:10:21 2024 -0400
+
+    Merge pull request #94 from dtxe/main
+    
+    clarify assignment, remove confusing instructions from homework, upda…
+
+[33mcommit 443985f0605c1f8d0778d55cc5dacf5628e063ec[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 20 21:09:28 2024 -0400
+
+    clarify assignment, remove confusing instructions from homework, update autograder to be permissive of punctuation and whitespace
+
+[33mcommit 4ec25397ddbcc57dd934ca02d63309ee4c3ae472[m
+Merge: 2ba62e6 c49edf4
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Tue Aug 20 09:14:17 2024 -0400
+
+    Merge pull request #92 from dtxe/main
+    
+    README updates, minor content
+
+[33mcommit c49edf4b7e6a011f9636800ed3891bf821fdeb3e[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 20 01:04:23 2024 -0400
+
+    readme update LS
+
+[33mcommit f86663e1d05967430b068bde4b11349892eb4104[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Sat Aug 17 22:39:14 2024 -0400
+
+    add bash redirect
+
+[33mcommit 9b57327ef5a3bae3650970797ef89cefb69ca1bc[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Sat Aug 17 01:12:43 2024 -0400
+
+    instructions and readme updates
+
+[33mcommit fdc20b88f24a6edda99a7df8261ecff6e732483d[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Sat Aug 17 00:57:23 2024 -0400
+
+    update instructor details in readme, rename cohort_three to this_cohort
+
+[33mcommit 2ba62e6cdaf8b9807242be93899ad45854ad5d04[m
+Merge: 64cd9eb 31d7481
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Fri Aug 16 16:55:16 2024 -0400
+
+    Merge pull request #91 from dtxe/main
+    
+    Replace assignment, add autograder
+
+[33mcommit 31d7481fe904e860c4c17e9374d6ed638fbd0954[m
+Author: Simeon Wong <7825879+dtxe@users.noreply.github.com>
+Date:   Fri Aug 16 16:54:09 2024 -0400
+
+    rename instructions file for clarity
+
+[33mcommit 6997d16e31e5d6aa568e6b9d8fc711cc24fbf0b4[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Thu Aug 15 18:32:30 2024 -0400
+
+    update assignment instructions for C4, update dsi repo pr action name
+
+[33mcommit 32136ce774ff7c60577694e21d78da7482dbcbd3[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Thu Aug 15 18:03:04 2024 -0400
+
+    move repo owner check earlier, so it doesn't appear in list of actions that run upon PR for autograding
+
+[33mcommit 5aef646f6b27125f3957d9408eb0a4869969996c[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Thu Aug 15 17:59:15 2024 -0400
+
+    edge case bugfix q2
+
+[33mcommit 0f518a894fc8722f4d95e68d9faac16e98ef59bb[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Thu Aug 15 17:50:12 2024 -0400
+
+    autograder action: now runs on any branch beginning with assignment instead of exact match
+
+[33mcommit 550313a610940ddd30390bb3801597c752ca79a9[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Thu Aug 15 17:46:39 2024 -0400
+
+    updated working autograder for this script: look for touch command instead
+
+[33mcommit f101650da24db28e8931faa935e69d41c0b24f12[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:55:27 2024 -0400
+
+    use absolute path for checks
+
+[33mcommit ca1a49dc24694a1a314513911349dea55a1210f9[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:49:23 2024 -0400
+
+    autograder status should be ok if all tests ran successfully, regardless of score
+
+[33mcommit f42b49bce9151ca5cc25eb2203c516a9e311f098[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:44:58 2024 -0400
+
+    add requests module
+
+[33mcommit 2950db38978101e3f8e1ca68c38564a5574600af[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:43:44 2024 -0400
+
+    try posting comment from python autograder
+
+[33mcommit d55d3ce6ceeea9127ae52a558e9e3c7f10d14151[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:30:29 2024 -0400
+
+    autograder fixes
+
+[33mcommit d6dc5cffa57165108edd28b0605aaa1a762e2a15[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:19:59 2024 -0400
+
+    autograder bugfix
+
+[33mcommit 8c6a2c653c546a69a00fc4eb6436fc79996211ca[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:18:07 2024 -0400
+
+    remove PR comment for now
+
+[33mcommit 605bca97342f927be5f11c32d628a91a7ad4ea98[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:17:46 2024 -0400
+
+    autograder fix paths bug
+
+[33mcommit fdb3801b1867795159b754c1bcf7481ee558bac9[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Aug 14 00:09:52 2024 -0400
+
+    add autograder
+
+[33mcommit 64cd9eba428dab0c8d8e77fed8bf3a577f6a12ef[m
+Merge: 3c4a973 73de78c
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Tue Aug 13 14:28:46 2024 -0400
+
+    Merge pull request #90 from dtxe/main
+    
+    Cohort 4 content update
+
+[33mcommit 73de78c20851eca69b0e29420c2e02d0f96c3870[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 13 14:24:34 2024 -0400
+
+    add man, cat, misc small changes
+
+[33mcommit 8780180ab83a4f79d992ab3d17a43e5ce0f2766c[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 13 14:04:18 2024 -0400
+
+    revert help flowchart, small misc changes
+
+[33mcommit 4db351e9988c56a6499f9e771a2a242badb0a95a[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 13 13:57:37 2024 -0400
+
+    remove unused theme css file
+
+[33mcommit 888ba5713ba70c5fdd8714f7d647193c1c966b34[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 13 13:56:59 2024 -0400
+
+    revert renaming markdown_slides => lessons, update generate_slides.sh accordingly
+
+[33mcommit b3c0e0496e52c5ffd419f28e7499c6b19a86ca54[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 13 00:17:31 2024 -0400
+
+    update asking questions help flow
+
+[33mcommit 525d85bfe45e931e6275fcb73c8d096d4ba0357b[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Tue Aug 13 00:14:19 2024 -0400
+
+    Update materials for Cohort 4, improve slide generation workflow
+    * Slide contents
+    * Rename markdown_slides to lessons, as called for in generate_slides.sh
+    * Automatically install marp-cli locally if node is available, but marp is not
+    * Use npx in generate_slides.sh for compatibility with marp-cli's recommended installation location
+    * Remove reference dsi_certificates_theme.css in unix_slides.md because it wasn't being used in recent generated versions of the slides
+    * Adapt font CSS to improve compatibility on Windows systems
+
+[33mcommit 510fd77b025698137dcd24828f636f6b8fbce21e[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Mon Aug 12 23:07:05 2024 -0400
+
+    ignore node_modules dependencies folder for slide generation
+
+[33mcommit 3c4a9736e0b75e491f915a0b33492139ab74eb13[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Mon Jul 15 12:35:40 2024 -0400
+
+    Updating workflow
+
+[33mcommit a33f2dea84ec222591361481ab5e4630c246b318[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Mon Jul 8 11:35:09 2024 -0400
+
+    Workflow added for automated comments.
+
+[33mcommit a9b2edc689db6b50057d87152c45a10bfa6defcf[m
+Merge: 47de83b 56c44a1
+Author: Rohan Alexander <rohan.alexander@utoronto.ca>
+Date:   Tue Jun 4 12:49:37 2024 -0230
+
+    Merge pull request #89 from UofT-DSI/fs-update
+    
+    file system update
+
+[33mcommit 56c44a193988798850d8a57d564652c7f75c7614[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Jun 4 10:59:12 2024 -0400
+
+    updated the readme.md
+
+[33mcommit 5b313578b359ecfbf83260bde11e6391107a2f2c[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Jun 4 10:53:14 2024 -0400
+
+    file system update
+
+[33mcommit 47de83b21e9cc37b4633fb7438244f0a2f2232ca[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Tue May 7 16:25:06 2024 -0400
+
+    Update README.md
+
+[33mcommit 073992b91301ff32816a940b1c4f1933f0377b78[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Tue May 7 15:30:58 2024 -0400
+
+    Update README.md
+
+[33mcommit 77a2fadb957dc89887a49446c9cf70fdcbe768b0[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Fri May 3 16:09:22 2024 -0400
+
+    Making live_code snake cased.
+
+[33mcommit f659b3393cc89de44f66adc93b01acabf0789d2f[m
+Merge: c818eff 266a749
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Fri May 3 16:04:50 2024 -0400
+
+    Merge pull request #88 from UofT-DSI/curtissfnorman-patch-1
+    
+    Update README.md
+
+[33mcommit 266a749698bcd36f6a9991369cab695a461747e6[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Fri May 3 16:01:26 2024 -0400
+
+    Update README.md
+
+[33mcommit c818effde1a3794ac3949549214b1f0c96c7a68f[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Fri May 3 15:45:52 2024 -0400
+
+    Adding in Cohort three folder.
+
+[33mcommit e32c043c34c7fbbd1a9a78b58eab5ba46443facd[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Wed May 1 10:33:42 2024 -0400
+
+    Updating the Pull Request templates to remove mention of adding Learning Supports and Technical Facilitators as reviewer.
+
+[33mcommit df5e36609c7257923873eb29de34060c463fa3d7[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Tue Apr 23 15:39:10 2024 -0400
+
+    Update README.md
+
+[33mcommit bc72313d3783e3b7582b9e461500c347b99d3bf2[m
+Merge: 8c9ccd9 eb738af
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Tue Apr 23 14:32:07 2024 -0400
+
+    Merge pull request #30 from dtxe/main
+    
+    Add assignment deadline
+
+[33mcommit eb738af7d25999ae6124616a62ff7cdfaa43116a[m
+Author: Simeon Wong <simeon.wong@sickkids.ca>
+Date:   Tue Apr 23 14:09:43 2024 -0400
+
+    add deadline
+
+[33mcommit 8c9ccd912bd979f0df622ed56a4d0f6403bf3998[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Apr 23 12:33:14 2024 -0400
+
+    renaming lessons/slides folder in the instructors folder to "markdown_slides"
+
+[33mcommit dd673eb7fa8baefba3a0ed280768453cae994130[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Tue Apr 23 12:06:15 2024 -0400
+
+    Update README.md
+
+[33mcommit 1804ecc6c78604247b457b5eedaa0e60bca8b15c[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Tue Apr 23 11:57:43 2024 -0400
+
+    Update assignment.md
+
+[33mcommit 09de88b24689a5f90b16c08b4f89668e38b4544c[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Apr 23 10:59:15 2024 -0400
+
+    a grammatical change
+
+[33mcommit 21ef78487af5cc01080c0c105498b428041a7e28[m
+Merge: 5487557 f179d24
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Tue Apr 23 09:32:33 2024 -0400
+
+    Merge pull request #29 from UofT-DSI/miscellaneous
+    
+    Miscellaneous Tasks.
+
+[33mcommit f179d2421a18febf38d717943c3a1bde1b7517df[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Apr 23 09:31:12 2024 -0400
+
+    Reverting "Git & GitHub" Topic Name back to the original value.
+
+[33mcommit 002df171979ad31ec3f704f071464d81832adf99[m
+Merge: ebbf221 5487557
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Apr 23 09:25:59 2024 -0400
+
+    Merge branch 'main' into miscellaneous
+
+[33mcommit ebbf221c80821dbaf6ecc7dfe1de7d36afb5cea8[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Apr 23 09:19:21 2024 -0400
+
+    Miscellaneous tasks.
+
+[33mcommit 54875577b79ad6921ce8f26fd8053a6be2a8abd3[m
+Merge: 979bb1b a4d1d2d
+Author: Rohan Alexander <rohan.alexander@utoronto.ca>
+Date:   Mon Apr 22 17:19:39 2024 -0400
+
+    Merge pull request #27 from UofT-DSI/curtissfnorman-patch-1
+    
+    Update README.md
+
+[33mcommit a4d1d2ddf502d0748ba39ee38c8dc4234e924d8b[m
+Author: Rohan Alexander <rohan.alexander@utoronto.ca>
+Date:   Mon Apr 22 17:19:01 2024 -0400
+
+    Fix typo and minor sentence tweak
+
+[33mcommit b9c7b249d4d73c78259c5546ffa915cdd1863e82[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Mon Apr 22 16:45:20 2024 -0400
+
+    Update README.md
+
+[33mcommit 979bb1b58be2a4b9dd08b812e556d8b7838564f2[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Mon Apr 22 16:20:05 2024 -0400
+
+    Update README.md
+
+[33mcommit 0dda31e74bcbdd51b0050f9f16516e84ac2154a6[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Mon Apr 22 15:33:14 2024 -0400
+
+    Update README.md
+
+[33mcommit 13a12722b2b36c6f0f6b102c0611d185f70aec39[m
+Merge: 26cca4c ed62810
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Fri Apr 19 17:43:07 2024 -0400
+
+    Merge pull request #26 from dtxe/contacts_update
+    
+    update contacts formatting in README file
+
+[33mcommit ed6281023d646e7ffc342c076d16d35557818650[m
+Author: Simeon Wong <simeon.wong@sickkids.ca>
+Date:   Fri Apr 19 12:41:20 2024 -0400
+
+    Update contacts in README.md and improve formatting.
+
+[33mcommit 26cca4c4ef213de8fc8885b3134989bf69aef92a[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Fri Apr 19 11:28:15 2024 -0400
+
+    Update README.md
+
+[33mcommit 954e2d922d9d101db7e17cce4308d6b70fb54bc3[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Fri Apr 19 11:07:08 2024 -0400
+
+    Update README.md
+
+[33mcommit 2c249fa3802a1de359d46d8751b04584755868b3[m
+Author: curtissfnorman <151059094+curtissfnorman@users.noreply.github.com>
+Date:   Fri Apr 19 11:02:30 2024 -0400
+
+    Update README.md
+
+[33mcommit 62a2856b94ae5807e6db91006b47dbf61dbf0a71[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Apr 9 16:40:58 2024 -0400
+
+    Removing Policies.
+
+[33mcommit 44b33fb76b14354f04f938b06990bfcaa7fa2ce9[m
+Merge: d4709fd 4fae5fb
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Tue Apr 9 09:30:02 2024 -0400
+
+    Merge pull request #25 from UofT-DSI/RohanAlexander-patch-1
+    
+    Update README.md
+
+[33mcommit 4fae5fb9462faaa1e7c15684a6cb129db4c22933[m
+Author: Rohan Alexander <rohan.alexander@utoronto.ca>
+Date:   Tue Apr 9 09:21:09 2024 -0400
+
+    Update README.md
+
+[33mcommit d4709fd9f5d0a6ab688c12c8884cd7c4d8136fbd[m
+Merge: dc3f4d3 ebbef5a
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 17:33:22 2024 -0400
+
+    Merge pull request #22 from UofT-DSI/snake_case
+    
+    removed irrelevant pictures and made all files snake_case
+
+[33mcommit ebbef5a93a98fdd8612708e4f094de230e4201bb[m
+Merge: eccf2ec dc3f4d3
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 17:31:39 2024 -0400
+
+    Merge branch 'main' into snake_case
+
+[33mcommit eccf2ec3cf50c8f76373e701acc955ff4c42bd96[m
+Merge: 817e954 e2ff5d0
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 17:29:25 2024 -0400
+
+    Merge branch 'snake_case' of https://github.com/UofT-DSI/shell into snake_case
+
+[33mcommit dc3f4d3a2f5c1ca814ecc7ac8c52a6d92f7701ac[m
+Merge: 950a6cd 9d1f3f4
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 17:17:51 2024 -0400
+
+    Merge pull request #24 from UofT-DSI/update-image
+    
+    Updating the ask for help image
+
+[33mcommit 9d1f3f4010da9466765ee59675c83326b5d453e5[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Thu Mar 28 17:16:37 2024 -0400
+
+    Using snake case
+
+[33mcommit fb1b67d3f553a8b0de177a3eda7ab74b360bf8ea[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Thu Mar 28 17:12:37 2024 -0400
+
+    Updating the ask for help image
+
+[33mcommit e2ff5d069f02711132bfb4fcbb55b781be6e44d6[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 15:11:38 2024 -0400
+
+    removed irrelevant pictures and made all files snake_case
+
+[33mcommit 950a6cd7ad8a6215d730a91b1575ce448e8c7254[m
+Merge: 2856543 47d8bd2
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 16:52:51 2024 -0400
+
+    Merge pull request #23 from UofT-DSI/readme-typo
+    
+    Readme typo
+
+[33mcommit 47d8bd283ede67b165f0eafa8a87278a2f3a83b7[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Thu Mar 28 16:14:23 2024 -0400
+
+    Adding certification to word rather than program
+
+[33mcommit 817e9548ac3ea4d6f07fe2e45a4dad981f703d6f[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 15:11:38 2024 -0400
+
+    removed irrelevant pictures and made all files snake_case
+
+[33mcommit 5e688d9192d1d209259b36466c5d009391a9ac0d[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Thu Mar 28 13:40:45 2024 -0400
+
+    Changing TA to Learning Suport Staff
+
+[33mcommit 28565436a1b51629c9a83e8f8739dffd67edd545[m
+Merge: c6c8bc7 90986f2
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 12:55:04 2024 -0400
+
+    Merge pull request #21 from UofT-DSI/new-changes
+    
+    Raymond's changes on the shell repo
+
+[33mcommit 90986f28f5735c9e60aa4d546a84f0dbbb8d190b[m
+Merge: d59204b 3440d57
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 12:54:07 2024 -0400
+
+    Merge branch 'new-changes' of https://github.com/UofT-DSI/shell into new-changes
+
+[33mcommit d59204bee32edf42716f72624d8687984c9e16e7[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 12:49:35 2024 -0400
+
+    polishing repo
+
+[33mcommit 3440d57e0ca251ca70293c1b8563cfa363f6e875[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Thu Mar 28 12:49:35 2024 -0400
+
+    polishing repo
+
+[33mcommit 31ecc7a829ab596910a364329f60fd1188889d8a[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Wed Mar 27 10:22:47 2024 -0400
+
+    Fixing typo
+
+[33mcommit 6629e7ace4ed3b18f7a628d5ea1db18aec56fcfc[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Wed Mar 27 10:20:32 2024 -0400
+
+    Adding staff to the README
+
+[33mcommit 0a6c90283f87de2bdb9573882b4605e2567c1d9a[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Tue Mar 26 15:23:25 2024 -0400
+
+    Updating the assignment
+
+[33mcommit 2fd23be632e46f83dbd52e66ac701573501d4a8a[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Mar 26 15:22:20 2024 -0400
+
+    Some minor changes
+
+[33mcommit 7c0e4ff7d1656080981fa908e33bfcdac587810c[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Mar 25 14:20:08 2024 -0400
+
+    Fixing table
+
+[33mcommit ede5d78b525f4b842466369c4a76b20605c82963[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Mar 25 14:18:10 2024 -0400
+
+    Updating schedule
+
+[33mcommit 2d444cfac51319cb62560838a80dea6045c9df27[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Mar 25 12:22:47 2024 -0400
+
+    Replacing course with module
+
+[33mcommit 1be57f017ede0fdbac217ccaaf199b024e9a3af5[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Fri Mar 8 14:37:36 2024 -0500
+
+    Changing image name
+
+[33mcommit d0dd8def8aacfa6b01eb1cae35a27ac8b6e04d5f[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Fri Mar 8 14:27:13 2024 -0500
+
+    Updated readme based on Rohan's feedback
+
+[33mcommit dd59d01347dbecc9de1cf4b2af8703a9c23ad162[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Wed Mar 6 10:08:55 2024 -0500
+
+    adjusting the folder structure
+
+[33mcommit 45e10f7e302ca7e24c30c2c050f0e3c503e19320[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Wed Mar 6 10:07:10 2024 -0500
+
+    Fixing foler structure
+
+[33mcommit 95b4e89879af1c3d5d35bb6b004ad38957cdb032[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Tue Mar 5 11:21:29 2024 -0500
+
+    Updating generate_slides
+
+[33mcommit 27f60c78f02d83eaf3bb7a32743ff8d8e536d010[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Tue Mar 5 11:04:31 2024 -0500
+
+    Adding in slides
+
+[33mcommit b1350b11b3552071d07d8f096ce8ad5ba0bf5583[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Tue Mar 5 09:12:04 2024 -0500
+
+    Updating the repo structure
+
+[33mcommit cf48ee2526ade4ef001cdc362521b9cf8eaab7fb[m
+Author: Daniel Razavi <daniel.razavi@utoronto.ca>
+Date:   Mon Mar 4 17:06:43 2024 -0500
+
+    Instructor dir added in. (#17)
+    
+    * Instructor dir added in.
+    
+    * Made some modifications
+    
+    * Updating slides to include no names
+    
+    * organizing instructor folder
+    
+    * generate_slides.sh update
+    
+    changed generate_slides.sh so that it can also apply a uniform theme across the board instead of every md file having their own unique theme. Also made the shell script easier to use.
+    
+    * Removed pdf and markdown mid folders.
+    
+    * Adding instructor playbook
+    
+    * Updated the instructor playbook
+    
+    ---------
+    
+    Co-authored-by: rchung95 <raymond.chung24@outlook.com>
+    Co-authored-by: Raymond Chung <10456188+rchung95@users.noreply.github.com>
+
+[33mcommit c6bee498cc17db5e543b533502ed86fff5f45cf9[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Mar 4 16:43:40 2024 -0500
+
+    Fixing README.md
+
+[33mcommit 834bcac0dfe6ebb6ce4cb4752d3a3f48d6eb837d[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Mar 4 16:16:45 2024 -0500
+
+    Adding solution
+
+[33mcommit 8645902380ca3359b2df7c08b822085a9c905dd8[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Mar 4 16:16:45 2024 -0500
+
+    Adding solution
+
+[33mcommit bbb00efd29d0d636d08b547d67e4ba06bbab0b03[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Mar 4 11:57:57 2024 -0500
+
+    Adding solution
+
+[33mcommit df8942dd316e7a8cc0af41f0650be3a92169bcb7[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Mon Feb 26 20:55:30 2024 -0500
+
+    Updating the directory to be aligned with the Python repo
+
+[33mcommit 6925b8915c24ac259acc1e05e27e0a6e8f2af12a[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Thu Feb 22 18:15:56 2024 -0500
+
+    Adding steps
+
+[33mcommit c8d146c4b6e66c3e75a53b65de414b2de78b896e[m
+Author: rchung95 <raymond.chung24@outlook.com>
+Date:   Sun Feb 18 11:35:07 2024 -0500
+
+    Updated slides, assignment and resources
+
+[33mcommit c6c8bc7345f3868c28edc0ca6c57adeb5a35b336[m
+Author: kaylielau <76798414+kaylielau@users.noreply.github.com>
+Date:   Thu Jan 18 12:33:53 2024 -0500
+
+    fixed formatting issue (#15)
+
+[33mcommit 5808e369394ecdcdb29ff8ee5231004de3550dbc[m
+Merge: b2f9fcf bc50803
+Author: kaylielau <76798414+kaylielau@users.noreply.github.com>
+Date:   Thu Jan 18 12:29:37 2024 -0500
+
+    Merge pull request #14 from UofT-DSI/update
+    
+    Submission instructions
+
+[33mcommit bc50803a2eec297605b05a52eecc683287e4998e[m
+Author: Kaylie Lau <kaylie.lau@mail.utoronto.ca>
+Date:   Thu Jan 18 12:25:42 2024 -0500
+
+    Update Assignment #1 submission instructions.
+
+[33mcommit bfef9a6f33393c8735bcfff807cd58721c143714[m
+Merge: a269e4c b2f9fcf
+Author: Kaylie Lau <kaylie.lau@mail.utoronto.ca>
+Date:   Thu Jan 18 12:23:21 2024 -0500
+
+    Merge remote-tracking branch 'origin/main' into update
+    merge branch 'main' into update
+
+[33mcommit b2f9fcf098997770de3d17b980059038c5f2e254[m
+Author: Simeon Wong <simeon.wong@sickkids.ca>
+Date:   Tue Jan 16 23:57:55 2024 -0500
+
+    remove home directory info, not relevant with Git Bash
+
+[33mcommit ec2e1f2d77647e6a1defb9b33a4790f32789d8bf[m
+Author: Simeon Wong <simeon.wong@sickkids.ca>
+Date:   Tue Jan 16 23:13:30 2024 -0500
+
+    move instructor content to instructor repo for learner clarity
+
+[33mcommit cbab2b66edd04b8c40f4af0601057ba45e7ba3e0[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Wed Jan 17 00:26:07 2024 -0500
+
+    update assignment deliverable to be a shell script
+
+[33mcommit 5ccdcd05a47c5649b79613c2ce9a175e444d83f1[m
+Merge: d6e82f1 0861cff
+Author: kaylielau <76798414+kaylielau@users.noreply.github.com>
+Date:   Tue Jan 16 23:51:12 2024 -0500
+
+    Merge pull request #7 from dtxe/main
+    
+    New Bash Assignment
+
+[33mcommit 0861cff1f52f9898262feb6bf1421d27086392f6[m
+Author: Simeon Wong <simeon.wong@sickkids.ca>
+Date:   Tue Jan 16 23:46:49 2024 -0500
+
+    finalize unix shell assignment and data files
+
+[33mcommit d6e82f125a096cdc614b9b33c545e667fd4cb707[m
+Author: kaylielau <76798414+kaylielau@users.noreply.github.com>
+Date:   Tue Jan 16 17:35:36 2024 -0500
+
+    Add class example (#11)
+    
+    * Update README.md for homework/assignment submission instructions.
+    
+    * Remove Pre-Workshop Assignments, not necessary due to Onboarding repo
+    
+    * Add directories/files for in-class example
+    
+    ---------
+    
+    Co-authored-by: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+
+[33mcommit a269e4c5979d916212343268cf0a1f497d38f0dd[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Tue Jan 16 17:29:40 2024 -0500
+
+    Add directories/files for in-class example
+
+[33mcommit 8e6a046adb9968c2c46e8d4f9aa67b645ee37f48[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Tue Jan 16 16:22:25 2024 -0500
+
+    Remove Pre-Workshop Assignments, not necessary due to Onboarding repo
+
+[33mcommit 228055561a5a9c754faf43abf7350a82baa2a867[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Tue Jan 16 16:22:25 2024 -0500
+
+    Remove Pre-Workshop Assignments, not necessary due to Onboarding repo
+
+[33mcommit eb92a456f0be6df8fd0c168f85d51f53a9f4a7e2[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Tue Jan 16 16:07:32 2024 -0500
+
+    Update README.md for homework/assignment submission instructions.
+
+[33mcommit 1a5c82a9b11ba62924086d7c7ddeead8d911f500[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Tue Jan 16 16:07:32 2024 -0500
+
+    Update README.md for homework/assignment submission instructions.
+
+[33mcommit 0a4307d6b99272e230563a7a50a7c89a29fe6b04[m
+Merge: ec3e853 5a80891
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Tue Jan 16 15:04:23 2024 -0500
+
+    Merge pull request #8 from UofT-DSI/update
+    
+    Update README.md
+
+[33mcommit 5a808917c2cd7a7a100221791dc660baa5262c02[m
+Author: Simeon Wong <simeon.wong@sickkids.ca>
+Date:   Tue Jan 16 14:56:41 2024 -0500
+
+    use relative links in README
+
+[33mcommit 36d5963001951a2fe6a82c7de8e6121dce509cbc[m
+Author: Simeon Wong <simeon.wong@sickkids.ca>
+Date:   Tue Jan 16 14:54:19 2024 -0500
+
+    update assignment
+
+[33mcommit 208976a751b0ece1a68976a6f02c121631c4c771[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Tue Jan 16 13:40:20 2024 -0500
+
+    Reverted accidental changes on .gitignore and updated README.md
+
+[33mcommit 99f5bf50006f38334724fe7cb6e4a34423ea3a22[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Tue Jan 16 13:12:02 2024 -0500
+
+    Add .gitignore file
+
+[33mcommit 148e2c7766c8d8d1a2b109b2a017605b13fe0287[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Mon Jan 15 22:10:46 2024 -0500
+
+    remove old bash assignment
+
+[33mcommit 54a61758a3f8851d806c9619db471886d06e87cb[m
+Author: Simeon Wong <dtxe@users.noreply.github.com>
+Date:   Mon Jan 15 22:10:22 2024 -0500
+
+    proposed bash assignment with a reasonable task that would be done in the shell
+
+[33mcommit 579108037eddd71908696bdffccb717ba5f481ed[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Mon Jan 15 19:58:00 2024 -0500
+
+    Add acknowledgementsto README.md
+
+[33mcommit 52cb4db8fbb053b78d6503b3ebecee75c1e8f366[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Mon Jan 15 18:34:06 2024 -0500
+
+    Updated README.md
+
+[33mcommit ec3e853bf095f2510404e99996928951b10deb6e[m
+Merge: 28c5517 56b2521
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Mon Jan 15 16:35:11 2024 -0500
+
+    Merge pull request #6 from UofT-DSI/update
+    
+    Create separate shell repo
+
+[33mcommit 56b2521f41891433793a0df8f6355e620dc7120e[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Mon Jan 15 12:03:26 2024 -0500
+
+    Rename folders to include numerical prefixes for better organization
+
+[33mcommit 11f7337df6a6ac57bf6c915aba1457caf4cad726[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Mon Jan 15 11:46:09 2024 -0500
+
+    Update README.md
+
+[33mcommit 80ad6a42bd4e43a505d899a915f7d65b9fd74f18[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Mon Jan 15 11:14:26 2024 -0500
+
+    Renamed 'slide-resources' to 'instructor-resources'
+
+[33mcommit 1428e2f8da74828f5da04622f31f7cd4d2213639[m
+Author: Kaylie Lau <kaylielau@Kaylies-MacBook-Pro.local>
+Date:   Mon Jan 15 11:07:05 2024 -0500
+
+    Remove Git/GitHub material
+
+[33mcommit 28c551752a76bcc499571656a8ec7a752038583f[m
+Merge: 2edc6a6 e92c973
+Author: Delaram Pouyabahar <61254803+delipouya@users.noreply.github.com>
+Date:   Wed Dec 6 10:11:13 2023 -0500
+
+    Merge pull request #4 from UofT-DSI/delipouya-patch-1
+    
+    Adding submission links to  README.md
+
+[33mcommit e92c9736e01d8bf162a76a8e86f0f200760b1937[m
+Author: Delaram Pouyabahar <61254803+delipouya@users.noreply.github.com>
+Date:   Wed Dec 6 09:50:18 2023 -0500
+
+    Adding submission links to  README.md
+
+[33mcommit 2edc6a644b1dac9dc8fcf4fb2264b43a69151232[m
+Merge: eae5653 78b3808
+Author: Delaram Pouyabahar <61254803+delipouya@users.noreply.github.com>
+Date:   Mon Dec 4 16:59:36 2023 -0500
+
+    Merge pull request #3 from RohanAlexander/main
+    
+    Update README.md
+
+[33mcommit 78b38088b49e23b1fbd3b603bec88f83f07e0a1f[m
+Author: Rohan Alexander <rohan.alexander@utoronto.ca>
+Date:   Tue Dec 5 08:51:20 2023 +1100
+
+    Update README.md
+    
+    Tweaks to README
+
+[33mcommit eae5653285bbf7bc3ee12606a20c0acd54195031[m
+Merge: b49d190 7895286
+Author: Delaram Pouyabahar <61254803+delipouya@users.noreply.github.com>
+Date:   Mon Dec 4 16:37:51 2023 -0500
+
+    Merge pull request #2 from UofT-DSI/delipouya-patch-1
+    
+    add deadline due dates to README.md
+
+[33mcommit 789528659b64b6bf791fbbdbe781137936a60c77[m
+Author: Delaram Pouyabahar <61254803+delipouya@users.noreply.github.com>
+Date:   Mon Dec 4 16:27:48 2023 -0500
+
+    add deadline due dates to README.md
+
+[33mcommit b49d190cb53ca9de697fcd5df47ec4da5fac9a62[m
+Author: Daniel R <daniel.razavi@utoronto.ca>
+Date:   Mon Nov 27 19:12:25 2023 -0500
+
+    Repo Organization and Touch Up.
+
+[33mcommit 672aff465033f0c4c46954b93af6077e1f1ce21d[m
+Author: Delaram Pouyabahar <d.pouyabahar@gmail.com>
+Date:   Sat Nov 25 18:12:54 2023 -0500
+
+    updating assignment docs
+
+[33mcommit 7762096d09fd8fe2cd8054d445ea6f732d3bebde[m
+Author: Delaram Pouyabahar <61254803+delipouya@users.noreply.github.com>
+Date:   Sat Nov 25 17:42:54 2023 -0500
+
+    Update README.md
+
+[33mcommit e5b5bc55058e1950059f3d7195ac386f6e706d8a[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Thu Feb 16 21:29:10 2023 -0500
+
+    changes to A2
+
+[33mcommit 82dc59a01944ac341955da53ac9f9a4e357cda08[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Feb 13 14:31:09 2023 -0500
+
+    git homework update day 2
+
+[33mcommit cc994d703bc7e1ca7b4c84fb086838e93e0708b3[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Feb 10 12:34:28 2023 -0500
+
+    git homework update day 1
+
+[33mcommit df8a5ff58916f4b7c80329d43659358ee12e4888[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Feb 10 12:34:11 2023 -0500
+
+    unix homeowrk update day 4
+
+[33mcommit 32bd2272c99da1742973a45564ace2dc7e762a9c[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Feb 5 18:53:38 2023 -0500
+
+    homework update day 3
+
+[33mcommit 4f5f0b3a019d3cedf7a6e9e3d66c2a3b841f6c08[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Feb 3 10:59:34 2023 -0500
+
+    homework update day 2
+
+[33mcommit 00b493e130e55c8e4ae2c01b88cfc2918eedd428[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Thu Feb 2 10:08:50 2023 -0500
+
+    typo update on unix homework
+
+[33mcommit 372b1e809d314ab86fceebe18a0d8f6f308bab08[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Feb 1 17:04:29 2023 -0500
+
+    updated unix homework pdf
+
+[33mcommit 143be152795786157fed1fbb16635f024977391e[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Feb 1 17:03:40 2023 -0500
+
+    updated day one homework prompt
+
+[33mcommit ca5914e0cbd0587ff0781ff6aed23d26c4bd4000[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Nov 25 16:42:40 2022 -0500
+
+    added all html slides to repo
+
+[33mcommit fde86a36e24a7096525d281ee94ec8b18ac1c0a3[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Nov 25 16:41:04 2022 -0500
+
+    updated readme to reflect folder changes
+
+[33mcommit 4cfeb6d991390830987c2e570c59441c7fe0da43[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Nov 25 16:39:18 2022 -0500
+
+    moved html slides for teachers into slides-resources
+
+[33mcommit 68c6da6e73feff571a6417676fb1b4248b3ddc69[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Nov 25 16:38:02 2022 -0500
+
+    added description of guides folder
+
+[33mcommit 44348dfe648decf134db29b0336b30132aeff669[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Nov 25 16:35:50 2022 -0500
+
+    added set up guides for windows users
+
+[33mcommit cafe6775e9ec9b03a37f62fc9bc4c11129cfbde2[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Nov 25 16:35:28 2022 -0500
+
+    updated README with changes to slides
+
+[33mcommit 0aedd406668b8c7636d75240dee83530908f44f2[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Nov 25 16:25:12 2022 -0500
+
+    deleted unnecessary slides and combined slide as taught in class
+
+[33mcommit ea1a8e081d5a22401e4a79abfd8ade881394b5a8[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Tue Nov 1 10:53:45 2022 -0400
+
+    additions to git slides html pdf and md
+
+[33mcommit 85b617ecbbcdbcee7da481b12dbbba1a5339d13e[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sat Oct 29 08:47:19 2022 -0400
+
+    added reproducibility to the end of git slides
+
+[33mcommit dabffb13fce25c0b8fca774cc63e44fb81e9fd4c[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Oct 19 11:54:52 2022 -0400
+
+    changed homework to reflect what was completed in day 1
+
+[33mcommit 1663fb5e4e735381d32c42866ff75be93a87993d[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Oct 17 11:26:33 2022 -0400
+
+    changed learning outcomes
+
+[33mcommit 8ba2725f61f1ef6a3af43bdc6e82104886edf055[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Oct 16 18:14:12 2022 -0400
+
+    spelling errors in README
+
+[33mcommit e55e54083f7bc191c04e1a3c1d22e402f95c6062[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Oct 16 12:53:00 2022 -0400
+
+    added all assignments
+
+[33mcommit 325d31b128a7617c6958c94597cd224fa56bb1c2[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Oct 16 12:45:53 2022 -0400
+
+    updated homework to include assignment on day 3
+
+[33mcommit 2457ab4b6be5f315d662c6de994ce635b71abadc[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Oct 16 12:38:27 2022 -0400
+
+    updated README
+
+[33mcommit b96b3ef35a69eaedd7bde41fd3625ad94aee35d1[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Oct 16 12:37:21 2022 -0400
+
+    deleted unnecessary file
+
+[33mcommit 64d7615183a656601c6866a7db7da61f25a50776[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Oct 16 12:36:59 2022 -0400
+
+    unix slides update with error
+
+[33mcommit e994abfa800b0a0dfa8b050e0ce1bbb17e617ff5[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Oct 16 12:36:13 2022 -0400
+
+    updated unix slide with error
+
+[33mcommit caf5dc7e7d7aa7b11ab8b48d92791660f0e05aaf[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sat Oct 1 11:33:29 2022 -0700
+
+    added assignments folder with first pre-workshop assignment
+
+[33mcommit 56c3affa87df79c9b302da92613f1c1f1484c518[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Fri Sep 30 14:05:08 2022 -0400
+
+    updated schedule, folders and policies in readme
+
+[33mcommit 1eb742ce8a351117fe20c0f6db8501a07dd5e449[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Thu Jun 30 14:34:55 2022 -0400
+
+    added all slides for workshop not taught 06.13-06.25
+
+[33mcommit cdcf485009f6ed0744a36188182918ccabd9e437[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Thu Jun 30 14:32:51 2022 -0400
+
+    minor edits to README
+
+[33mcommit a5f33c61388ba8222565d6fe918af8f9360b144f[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 22 12:02:42 2022 -0400
+
+    style change
+
+[33mcommit f25e891821e15236d4e1028fd6e7b3aec22345e0[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 22 12:02:18 2022 -0400
+
+    updated schedule based on what was actually completed
+
+[33mcommit c2f7a62cc734f8e215d34f88e257b85541c6767a[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 22 11:57:04 2022 -0400
+
+    changes to readme to include new folders and files
+
+[33mcommit b4570d1b3b508a872a466dfbaf2441d242652f72[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 22 11:51:05 2022 -0400
+
+    added html versions of git and unix slides
+
+[33mcommit 55a6116d6a00cbc6332921e58c5dd5d4b064eeec[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 22 11:50:37 2022 -0400
+
+    added Exit Surveys to post-workshop folder and added updated teaching notes
+
+[33mcommit 49719ce23345614c4ac94c00b2dd1293f322ee03[m
+Merge: 6e06aba e61bed1
+Author: Rachael <77597363+rachaellam@users.noreply.github.com>
+Date:   Wed Jun 22 11:48:38 2022 -0400
+
+    Merge pull request #2 from Eirrehs/exitsurvey
+    
+    merged Exitsurvey
+
+[33mcommit e61bed175ba4e411eb241744d6358e6646312ed9[m
+Author: Eirrehs <wenzhesherrie.xu@utoronto.ca>
+Date:   Mon Jun 20 18:01:10 2022 -0400
+
+    Create Exit Survey - DS Foundations.md
+
+[33mcommit 32f082eb23d220713460b42fa2609a8414ae8915[m
+Author: Eirrehs <wenzhesherrie.xu@utoronto.ca>
+Date:   Mon Jun 20 17:34:44 2022 -0400
+
+    Create Exit Survey - DS Foundations.docx
+
+[33mcommit 6e06abae5de902bd43e6a51d8158186fb1c1c45b[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sat Jun 18 01:57:43 2022 -0400
+
+    pdf versions of homework
+
+[33mcommit 36dbd07c00ecef94d78c7249c83a00d4d0b46d47[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 19:15:07 2022 -0400
+
+    input space for schedule
+
+[33mcommit d205f3db99a07915bcb0481c879df77f8610857c[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 19:12:01 2022 -0400
+
+    spacing issue
+
+[33mcommit 2fc8d4ac003e466a7f107d2fba420d8eb5797fa1[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 19:11:20 2022 -0400
+
+    unix teaching note update
+
+[33mcommit cda90ede16a36677a38c322ac3c6e053d85d04d2[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 19:11:01 2022 -0400
+
+    schedule up to day 2
+
+[33mcommit a96cf77b4658ba619bd80fceba56a3f03cfa7660[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 13:18:48 2022 -0400
+
+    update to unix teaching notes
+
+[33mcommit 8bfd91777a0bc29b13790f072cf758bf32d46ca5[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 13:17:52 2022 -0400
+
+    heading change
+
+[33mcommit 89f92cfdfd4cc1549ea59b70869dbae58a3ea666[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 13:17:07 2022 -0400
+
+    link changes
+
+[33mcommit cbfaa785b237a7c938022b352dc73ba2799fc10d[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 13:15:34 2022 -0400
+
+    line breaks
+
+[33mcommit a9604ee456909de93022088ab8d36cca525cdfc3[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Wed Jun 15 13:14:54 2022 -0400
+
+    added headers for additional content and table of contents
+
+[33mcommit f8880e4a49339dc9fceca7b0a01368df6b3dbfd4[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 15:58:27 2022 -0400
+
+    unix update
+
+[33mcommit d3f3faa78e4d3abad5a71b06572044b18b4201e3[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 15:58:14 2022 -0400
+
+    updated pdfs
+
+[33mcommit 1ed292c7cadb62dc56f0a9d2dabe4b7906e479cc[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 15:07:43 2022 -0400
+
+    added homework instructions to README
+
+[33mcommit 14e33ccae1fbf8b9404b689ebbaed194a22bf35f[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 15:02:44 2022 -0400
+
+    moved homework into homework folder
+
+[33mcommit ad2559e6ce13f6a76312f23b729035363272e9b6[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 15:01:54 2022 -0400
+
+    added git homework
+
+[33mcommit f2b4d60be4dd8d7a75674c1258eb462dc8b6a476[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 15:01:39 2022 -0400
+
+    small changes to git slides
+
+[33mcommit c6de7e0f5ab941f3026d1680edbe7afc4599745e[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 14:39:46 2022 -0400
+
+    adding homework for unix
+
+[33mcommit c35cb0e9aa0e5359e34dd8e1e1e55d5ad59adbf9[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Mon Jun 13 14:39:09 2022 -0400
+
+    small changes to unix slides
+
+[33mcommit cbc1d6988f5f969ac9729d70b9c338cfd4e34611[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Jun 12 20:21:54 2022 -0400
+
+    changes to git and unix teaching notes
+
+[33mcommit ebd41d837cab6379df468d4333042ea4559f8585[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Jun 12 19:25:26 2022 -0400
+
+    change pdf folder to pdf-slides
+
+[33mcommit 6c144e7022d6746697ce63d3a1cbffba41a3b471[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Jun 12 19:24:30 2022 -0400
+
+    file dump including editable files, teaching notes and pdf
+
+[33mcommit 3586d36a01cd30bb0b083d539dbf58c44b48f144[m
+Author: rachaellam <rachael.a.lam@gmail.com>
+Date:   Sun Jun 12 19:20:13 2022 -0400
+
+    README.md upload
+
+[33mcommit 8276f6d0f0f59a967681d332545f497a48dc77c0[m
+Author: Rachael <77597363+rachaellam@users.noreply.github.com>
+Date:   Sun Jun 12 19:18:17 2022 -0400
+
+    Initial commit
