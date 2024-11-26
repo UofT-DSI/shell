@@ -14,12 +14,8 @@ touch README.md
 touch analysis/main.py
 
 # download client data
-# pip install wget
-wget -O rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
-#  pip install unzip
+curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
 unzip rawdata.zip
-
-###########################################
 # Complete assignment here
 
 # 1. Create a directory named data
