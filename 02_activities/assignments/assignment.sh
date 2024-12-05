@@ -25,8 +25,6 @@ unzip rawdata.zip
 
 mkdir data
 
-mkdir data
-
 # 2. Move the ./rawdata directory to ./data/raw
 
 mv ./rawdata data/raw
