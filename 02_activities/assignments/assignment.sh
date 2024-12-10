@@ -95,3 +95,16 @@ find data/processed -type f > data/inventory.txt
 echo "Project setup is complete!" 
 chmod +x setup_project.sh
 ./setup_project.sh
+#!/bin/bash
+
+# Step 1: Create client directories
+mkdir -p data/raw data/processed data/reports
+
+# Step 2: Move raw data files to the raw directory
+mv *.csv data/raw/
+
+# Step 3: Create a README file with client details
+echo "Client Data Directory Initialized on $(date)" > README.md
+
+# Step 4: Confirm script execution completion
+echo "Data ingest script executed successfully."
