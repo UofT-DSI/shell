@@ -48,16 +48,14 @@ Assignments are typically due on the Sunday following the module's live learning
 **Questions can be submitted to the _#cohort-4-help_ channel on Slack**
 
 * Technical Facilitator:   
-  * **Simeon Wong**
-    simeonm.wong@utoronto.ca
+  * **Abhishek Moturu**
+    abhishek.moturu@utoronto.ca
 
 * Learning Support Staff: 
-  * **Anjali Shrivastava**
-  anju_shrivastava@yahoo.com
-  * **Moniz Chan**
-  chanmoniz526@gmail.com
-  * **Pedram Asli**
-  pedram.aliniayeasli@gmail.com
+  * **Keli Chiu**
+  keli.chiu.kc@gmail.com
+  * **Ananya Jha**
+  ananya.jha@mail.utoronto.ca
  
 ## Delivery of the Learning Module
 
