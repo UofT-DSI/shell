@@ -14,6 +14,7 @@ You've been asked to update this script to also automate the initial organizatio
    ```bash
    git checkout -b assignment
    ```
+   test
 
 ---
 
