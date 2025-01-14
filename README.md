@@ -45,19 +45,17 @@ Assignments are typically due on the Sunday following the module's live learning
 
 ## Contacts
 
-**Questions can be submitted to the _#cohort-4-help_ channel on Slack**
+**Questions can be submitted to the _#dc-help_ channel on Slack**
 
 * Technical Facilitator:   
-  * **Simeon Wong**
-    simeonm.wong@utoronto.ca
+  * **Abhishek Moturu**
+    abhishek.moturu@mail.utoronto.ca
 
 * Learning Support Staff: 
-  * **Anjali Shrivastava**
-  anju_shrivastava@yahoo.com
-  * **Moniz Chan**
-  chanmoniz526@gmail.com
-  * **Pedram Asli**
-  pedram.aliniayeasli@gmail.com
+  * **Keli Chiu**
+  keli.chiu.kc@gmail.com
+  * **Ananya Jha**
+  ananya.jha@mail.utoronto.ca
  
 ## Delivery of the Learning Module
 
@@ -67,9 +65,9 @@ Participants are encouraged to engage actively during the learning module. They 
 
 ## Schedule
 
-||Day 1|Day 2|Day 3|Day 4|Day 5|
-|---|---|---|---|---|---|
-|Week 1|Live Learning Session 1 (Shell)|Live Learning Session 2 (Shell)|Live Learning Session 3 ([Git & GitHub](https://github.com/UofT-DSI/git))|Work Period 1|Work Period 2|
+||Jan 7|Jan 9|Jan 10|Jan 14|
+|---|---|---|---|---|
+|Week 1|Live Learning Session 1 ([Shell](https://github.com/UofT-DSI/shell))|Live Learning Session 2 (Git & Github)|Work Period|Live Learning Session 3 (Git & Github)|
  
 ## Requirements
 
