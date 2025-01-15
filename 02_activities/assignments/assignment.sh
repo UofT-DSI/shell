@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-############################################
+#############################################
 # DSI CONSULTING INC. Project setup script #
 ############################################
 # This script creates standard analysis and output directories
