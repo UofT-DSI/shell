@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x
 
+# I've created a dummy commit after enabling actions/auto-grader. This is the dummy comment.
+
 ############################################
 # DSI CONSULTING INC. Project setup script #
 ############################################
