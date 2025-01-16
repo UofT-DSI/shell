@@ -36,6 +36,7 @@ cp /Users/admin/DSI/shell/data/raw/*.log /Users/admin/DSI/shell/data/processed/s
 # 6. Repeat the above step for user logs and event logs
 #user log
 cp /Users/admin/DSI/shell/data/raw/user* /Users/admin/DSI/shell/data/processed/user_logs/
+###
 
 #event logs
 cp /Users/admin/DSI/shell/data/raw/event* /Users/admin/DSI/shell/data/processed/event_logs/
