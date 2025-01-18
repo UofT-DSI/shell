@@ -68,6 +68,7 @@ Your coworkers have made some other changes to the script. You'll need to incorp
    git status
    ```
 2. **Enable GitHub Actions**: Click on the **Actions** tab in your repository and enable workflows if prompted.
+![](./github_actions.png)
 3. **Create a Pull Request**:
    - Open a pull request from your `assignment` branch to your repository's `main` branch.
    - The autograder will run automatically and post your assignment grade as a comment.
@@ -79,7 +80,7 @@ Your coworkers have made some other changes to the script. You'll need to incorp
 🚨 **Please review our [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md)** 🚨 for detailed instructions on how to format, branch, and submit your work. Following these guidelines is crucial for your submissions to be evaluated correctly.
 
 ### Submission Parameters:
-* Submission Due Date: `2024-11-24 - 23:59`
+* Submission Due Date: `2025-01-15 - 23:59`
 * The branch name for your repo should be: `assignment`
 * What to submit for this assignment:
     * One or more commits that update the `assignment.sh` script
