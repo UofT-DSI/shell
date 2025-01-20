@@ -68,6 +68,7 @@ Your coworkers have made some other changes to the script. You'll need to incorp
    git status
    ```
 2. **Enable GitHub Actions**: Click on the **Actions** tab in your repository and enable workflows if prompted.
+![](./github_actions.png)
 3. **Create a Pull Request**:
    - Open a pull request from your `assignment` branch to your repository's `main` branch.
    - The autograder will run automatically and post your assignment grade as a comment.
