@@ -11,6 +11,7 @@ set -x
 
 mkdir analysis output
 touch README.md
+echo "# Project Name: DSI Consulting Inc." > README.md
 touch analysis/main.py
 
 # download client data
@@ -21,21 +22,39 @@ unzip rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
-
+mkdir data
 # 2. Move the ./rawdata directory to ./data/raw
-
+ls
+mv ./rawdata ./data/raw
 # 3. List the contents of the ./data/raw directory
-
+ls /data/raw
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
-
+mkdir ./data/processed 
+mkdir server_logs user_logs event_logs
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-
+cp /Users/admin/DSI/shell/data/raw/server* /Users/admin/DSI/shell/data/processed/server_logs
+cp /Users/admin/DSI/shell/data/raw/*.log /Users/admin/DSI/shell/data/processed/server_logs/
 # 6. Repeat the above step for user logs and event logs
+#user log
+cp /Users/admin/DSI/shell/data/raw/user* /Users/admin/DSI/shell/data/processed/user_logs/
+###
+
+#event logs
+cp /Users/admin/DSI/shell/data/raw/event* /Users/admin/DSI/shell/data/processed/event_logs/
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-
+#IP addresss removal for raw data
+rm -R /Users/admin/DSI/shell/data/raw/user_ipaddr*
+rm -R /Users/admin/DSI/shell/data/raw/ipaddr*
+ls
+#IP addresss removal for user_logs
+rm -R /Users/admin/DSI/shell/data/processed/user_logs/user_ipaddr*
+ls
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-
+cd ../..
+find ./data/processed -type f > ./data/inventory.txt
+cd data/
+nano inventory.txt
 
 
 ###########################################
