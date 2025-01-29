@@ -12,7 +12,7 @@
 * [Resources](#resources)
   + [Cheat sheet](#cheat-sheet)
   + [Videos](#videos)
-  + [How to get help](#how-to-get-help)
+  + [How to Get Help](#how-to-get-help)
 * [Folder Structure](#folder-structure)
 
 ## Description
