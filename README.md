@@ -120,11 +120,6 @@ Feel free to use the following as resources:
 - [The XY problem: A question pitfall that won't get useful answers](https://xyproblem.info/)
 - [How to create a minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
 
-#### Getting help: A summary
-<img src="steps_to_ask_for_help.png" width="700">
-
-<hr>
-
 ## Folder Structure
 Below is an outline of the folder structure for this module:
 ```
