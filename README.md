@@ -91,7 +91,7 @@ Feel free to use the following as resources:
 - [Deleting Files and Directories](https://www.youtube.com/watch?v=-L3XeZPwj_Y)
 - [Bash in 100 seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
 
-### How to get help
+### How to Get Help
 #### 1. Gather information about your problem
 - Copy and paste your error message
 - Copy and paste the code that caused the error, and the last few commands leading up to the error
