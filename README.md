@@ -111,8 +111,8 @@ Feel free to use the following as resources:
    - Describe your the overall goals, the context, and the specific details of what you were trying to accomplish
    - Make sure to **copy and paste** your code, your error message
    - Copying and pasting helps:
-      1. your peers and teaching team quickly try out your code
-      1. others to find your question in the future
+      1. Your peers and teaching team quickly try out your code
+      1. Others to find your question in the future
 
 #### Great resources on how to ask good technical questions that get useful answers
 - [Asking for Help - The Odin Project](https://www.theodinproject.com/lessons/foundations-asking-for-help)
@@ -131,8 +131,8 @@ Below is an outline of the folder structure for this module:
 ├── 04_this_cohort
 ├── .gitignore
 ├── LICENSE
-├── README.md
-└── steps_to_ask_for_help.png
+└── README.md
+
 ```
 * **.github**: Contains issue templates and pull request templates for the repository.
 * **materials**: Module slides and interactive notebooks (.ipynb files) used during learning sessions.
@@ -142,4 +142,4 @@ Below is an outline of the folder structure for this module:
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
 * **LICENSE**: The license for this repository.
 * **README**: This file.
-* **steps_to_ask_for_help.png**: Guide on how to ask for help.
+
