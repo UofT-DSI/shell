@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css"> <!-- Inline styles for parsons layout and problem styling -->
+    <style>
+        body {
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+        }
+
+        .problem {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .parsons-container {
+            display: flex;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .multiple-choice-container {
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .freeform-textbox {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+        }
+
+        .parsons-left,
+        .parsons-right {
+            flex: 1;
+            padding: 10px;
+            border: 1px dashed #ccc;
+            min-height: 100px;
+        }
+
+        .parsons-item {
+            margin: 5px;
+            padding: 5px;
+            background: #eee;
+            border: 1px solid #ccc;
+            cursor: move;
+        }
+
+        .parsons-item p {
+            margin: 0;
+        }
+
+        label {
+            font-weight: normal;
+        }
+
+        .solution {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style> <!-- Load js-yaml and marked for YAML and markdown parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h4 id="title"></h4>
+            </div>
+        </div>
+    </div>
+    <script> window.addEventListener('DOMContentLoaded', async () => { // Get problem set name from the URL hash (e.g., "shell_moderate") 
+            const hash = window.location.hash.slice(1); if (!hash) {
+                document.getElementById("title").innerText = "No problem set specified in URL hash."; return;
+            }
+            const yamlFile = hash + '.yml';
+
+            try {
+                const response = await fetch(yamlFile);
+                if (!response.ok)
+                    throw new Error("Failed to load YAML file: " + yamlFile);
+                const yamlText = await response.text();
+                const data = jsyaml.load(yamlText);
+
+                // Set the document title and the h4#title using the YAML title 
+                document.title = data.title;
+                document.getElementById("title").innerText = data.title;
+
+                // Create a container for the problems 
+                const problemsContainer = document.createElement("div");
+                problemsContainer.id = "problems";
+                document.querySelector(".container").appendChild(problemsContainer);
+
+                // Render each problem 
+                data.problems.forEach((problem, index) => {
+                    const problemDiv = document.createElement("div");
+                    problemDiv.className = "problem";
+                    // Problem title 
+                    const problemTitle = document.createElement("h5");
+                    problemTitle.innerText = (index + 1) + ". " + problem.title;
+                    problemDiv.appendChild(problemTitle);
+
+                    // Problem description (rendered as markdown) 
+                    const descDiv = document.createElement("div");
+                    descDiv.innerHTML = marked.parse(problem.description);
+                    problemDiv.appendChild(descDiv);
+
+                    // Create the interactive area based on the question type 
+                    let interactiveElement;
+                    if (problem.questiontype === "freeform") {
+                        interactiveElement = document.createElement("textarea");
+                        interactiveElement.classList.add("freeform-textbox");
+
+                        // If a solution template is provided, prefill the textbox 
+                        if (problem.solution_template) {
+                            console.log(problem.solution_template);
+                            interactiveElement.value = problem.solution_template;
+                        }
+
+                    } else if (problem.questiontype === "multiplechoice") {
+                        interactiveElement = document.createElement("div");
+                        interactiveElement.className = "multiple-choice-container";
+                        if (problem.options && Array.isArray(problem.options)) {
+                            problem.options.forEach((option, idx) => {
+                                const label = document.createElement("label");
+                                const radio = document.createElement("input");
+                                radio.type = "radio";
+                                radio.name = "problem_" + index;
+                                radio.value = option;
+                                label.appendChild(radio);
+                                label.appendChild(document.createTextNode(" " + option));
+                                interactiveElement.appendChild(label);
+                            });
+                        }
+
+                    } else if (problem.questiontype === "parsons") {
+                        interactiveElement = document.createElement("div");
+                        interactiveElement.className = "parsons-container";
+
+                        // Left column for draggable items 
+                        const leftCol = document.createElement("div");
+                        leftCol.className = "parsons-left";
+
+                        // Right column as drop zone 
+                        const rightCol = document.createElement("div");
+                        rightCol.className = "parsons-right";
+                        if (problem.options && Array.isArray(problem.options)) {
+                            // Shuffle the options array
+                            problem.options = problem.options.sort(() => Math.random() - 0.5);
+                            problem.options.forEach((option, idx) => {
+                                const item = document.createElement("div");
+                                item.className = "parsons-item";
+                                item.draggable = true;
+                                item.id = "parsons-" + index + "-" + idx;
+                                item.innerHTML = marked.parse(option);
+                                item.addEventListener("dragstart", (e) => {
+                                    e.dataTransfer.setData("text/plain", item.id);
+                                    e.dataTransfer.effectAllowed = "move";
+                                });
+                                leftCol.appendChild(item);
+                            });
+                        }
+
+                        // Allow dropping items in the right column
+                        rightCol.addEventListener("dragover", (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = "move";
+                        });
+                        rightCol.addEventListener("drop", (e) => {
+                            e.preventDefault();
+                            const id = e.dataTransfer.getData("text/plain");
+                            const draggable = document.getElementById(id);
+                            if (draggable) {
+                                rightCol.appendChild(draggable);
+                            }
+                        });
+
+                        // Allow dropping items back in the left column
+                        leftCol.addEventListener("dragover", (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = "move";
+                        });
+                        leftCol.addEventListener("drop", (e) => {
+                            e.preventDefault();
+                            const id = e.dataTransfer.getData("text/plain");
+                            const draggable = document.getElementById(id);
+                            if (draggable) {
+                                leftCol.appendChild(draggable);
+                            }
+                        });
+
+                        interactiveElement.appendChild(leftCol);
+                        interactiveElement.appendChild(rightCol);
+                    }
+
+                    if (interactiveElement) {
+                        problemDiv.appendChild(interactiveElement);
+                    }
+
+                    // Create the "Show solutions" button and solution area 
+                    const solutionButton = document.createElement("button");
+                    solutionButton.innerText = "Show solutions";
+                    const solutionDiv = document.createElement("div");
+                    solutionDiv.className = "solution";
+                    solutionDiv.style.display = "none";
+                    solutionDiv.innerHTML = '<b>SOLUTION:</b><br>' + marked.parse(problem.solution);
+
+                    solutionButton.addEventListener("click", () => {
+                        if (solutionDiv.style.display === "none") {
+                            solutionDiv.style.display = "block";
+                            solutionButton.innerText = "Hide solutions";
+                        }
+                        else {
+                            solutionDiv.style.display = "none"; solutionButton.innerText = "Show solutions";
+                        }
+                    });
+
+                    problemDiv.appendChild(solutionButton);
+                    problemDiv.appendChild(solutionDiv);
+                    problemsContainer.appendChild(problemDiv);
+                });
+            }
+            catch (error) {
+                console.error(error);
+                document.getElementById("title").innerText = "Error loading problem set: " + error.message;
+            }
+        }); 
+    </script>
+</body>
+
+</html>

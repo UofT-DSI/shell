@@ -1,0 +1,110 @@
+title: Unix Shell Moderate Practice Problems
+problems:
+  - title: "File and Directory Management"
+    description: |
+      Create a directory structure for a project with the following hierarchy:
+      ```
+      project/
+      ├── src/
+      │   ├── main.py
+      │   └── utils.py
+      ├── data/
+      │   ├── input.csv
+      │   └── output.csv
+      └── README.md
+      ```
+    questiontype: freeform
+    solution: |
+      ```bash
+      mkdir -p project/src project/data
+      touch project/src/main.py project/src/utils.py project/data/input.csv project/data/output.csv project/README.md
+      ```
+
+  - title: "Debugging 1"
+    description: |
+      You are trying to run a script but encounter an error. The script is supposed to print the current date and time.
+      However, it fails with the following error:
+      ```
+      bash: ./script.sh: No such file or directory
+      ```
+      What is the likely cause of this error?
+    questiontype: multiplechoice
+    options:
+      - The script does not exist in the current directory.
+      - The script does not have execute permissions.
+      - The script is not in your PATH.
+      - There is a syntax error in the script.
+    solution: The script does not exist in the current directory.
+    
+  - title: "Debugging 2"
+    description: |
+      Suppose this is the contents of a directory on your computer:
+      ```bash
+      user@computer:~$ ls ~
+          myfile.txt    mydata.csv    myscript.sh   myfolders/
+      ```
+
+      When you type the following commands, you get an error:
+      ```bash
+      user@computer:~$ mv mydata.csv myfolder/
+          mv: cannot move 'mydata.csv' to 'myfolder/': No such file or directory
+      user@computer:~$ mv myfile.txt myfolder/
+          mv: cannot move 'myfile.txt' to 'myfolder/': No such file or directory
+      user@computer:~$ mv myscript.sh myfolder/
+          mv: cannot move 'myscript.sh' to 'myfolder/': No such file or directory
+      ```
+      
+      How can you fix this error?
+    questiontype: freeform
+    solution_template:  |
+      user@computer:~$ mv mydata.csv myfolder/
+      user@computer:~$ mv myfile.txt myfolder/
+      user@computer:~$ mv myscript.sh myfolder/
+    solution: |
+      The error indicates that the directory `myfolder/` does not exist.
+      Ordinarily, we could create the directory using the `mkdir` command, but in this case, it looks like the directory is already created as `myfolders/`.
+      To fix the error, we can either create the directory `myfolder/` or move the files to `myfolders/` instead.
+
+      ```bash
+      user@computer:~$ mv mydata.csv myfolders/
+      user@computer:~$ mv myfile.txt myfolders/
+      user@computer:~$ mv myscript.sh myfolders/
+      ```
+
+  - title: "Organizing files"
+    description: |
+      Suppose this is the contents of a folder on your computer:
+      ```bash
+      user@computer:~$ ls /data/MYPROJECT/scripts
+          analyze_data.py     dataset1.db        dataset2.db      outputimg.png       
+          outputimg2.png
+      ```
+
+      You've just opened a new terminal and want to organize the files by moving datasets and outputs in separate folders.
+      Select and order the following commands to accomplish this task.
+    questiontype: parsons
+    options:
+      - "`cd /data/MYPROJECT`"
+      - "`mkdir datasets`"
+      - "`mkdir outputs`"
+      - "`mv dataset* datasets/`"
+      - "`mv scripts/dataset* datasets/`"
+      - "`mv output* outputs/`"
+      - "`mv scripts/output* outputs/`"
+      - "`cd data`"
+      - "`cd outputs`"
+      - "`echo scripts/output*`"
+      - "`movefile dataset* datasets/`"
+      - "`movefile output* outputs/`"
+      - "`cd`"
+      - "`ls`"
+    solution: |
+      ```bash
+      user@computer:~$ cd /data/MYPROJECT
+      user@computer:/data/MYPROJECT$ mkdir datasets
+      user@computer:/data/MYPROJECT$ mkdir outputs
+      user@computer:/data/MYPROJECT$ mv scripts/dataset* datasets/
+      user@computer:/data/MYPROJECT$ mv scripts/output* outputs/
+      ```
+
+  
