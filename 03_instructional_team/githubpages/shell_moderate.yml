@@ -57,9 +57,9 @@ problems:
       How can you fix this error?
     questiontype: freeform
     solution_template:  |
-      user@computer:~$ mv mydata.csv myfolder/
-      user@computer:~$ mv myfile.txt myfolder/
-      user@computer:~$ mv myscript.sh myfolder/
+      mv mydata.csv myfolder/
+      mv myfile.txt myfolder/
+      mv myscript.sh myfolder/
     solution: |
       The error indicates that the directory `myfolder/` does not exist.
       Ordinarily, we could create the directory using the `mkdir` command, but in this case, it looks like the directory is already created as `myfolders/`.
