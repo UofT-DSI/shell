@@ -38,5 +38,5 @@ jobs:
           REPO_BRANCH: ${{ github.event.pull_request.head.ref }}
           WORKING_DIR: /tmp/${{ env.UUID }}
         run: |
-          wget -O /tmp/autograder.py https://github.com/dtxe/DSI_shell/raw/refs/heads/autograder/03_instructional_team/autograder/autograder.py
+          wget -O /tmp/autograder.py https://github.com/UofT-DSI/shell/raw/refs/heads/main/03_instructional_team/autograder/autograder.py
           python /tmp/autograder.py
