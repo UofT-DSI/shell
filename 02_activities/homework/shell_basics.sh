@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#######################################################################
+# Note: This is optional homework that is not required to be submitted. 
+# It is meant for practice and self-assessment.
+#######################################################################
+
 # On your terminal, input all the commands you have used to create the following:
 
 # 1. How would you create 5 directories? Feel free to use any name for your directories.
