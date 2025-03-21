@@ -156,7 +156,6 @@
 
                         // If a solution template is provided, prefill the textbox 
                         if (problem.solution_template) {
-                            console.log(problem.solution_template);
                             interactiveElement.value = problem.solution_template;
                         }
 
@@ -280,7 +279,7 @@
                                 const rightCol = problemDiv.querySelector(".parsons-right");
 
                                 // Highlight correct items in the left column
-                                leftCol.childNodes.forEach((item) => {
+                                const highlight = (item) => {
                                     const this_index = parseInt(item.dataset.index, 10);
                                     const sol_order = problem.correct_options.findIndex(option => {
                                         if (Array.isArray(option)) {
@@ -301,7 +300,9 @@
                                         number.style.float = 'right';
                                         item.appendChild(number);
                                     }
-                                });
+                                };
+                                leftCol.childNodes.forEach(highlight);
+                                rightCol.childNodes.forEach(highlight);
                             }
                         }
                         else {
