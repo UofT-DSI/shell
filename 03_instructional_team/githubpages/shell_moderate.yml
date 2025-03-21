@@ -56,14 +56,14 @@ problems:
     questiontype: freeform
     solution: |
       To create the directory structure, you can use the following commands.
-      - Since the problem asks us to create this in the current directory, we don't need to `cd` anywhere.
-      - `touch` can also be called individually for each file
-      - `cd` can also be used to change into each directory before creating files, but it is not necessary
-
       ```bash
       mkdir -p project/src project/data
       touch project/src/main.py project/src/utils.py project/data/input.csv project/data/output.csv project/README.md
       ```
+      
+      - Since the problem asks us to create this in the current directory, we don't need to `cd` anywhere.
+      - `touch` can also be called individually for each file
+      - `cd` can also be used to change into each directory before creating files, but it is not necessary
 
       **Alternative solution:**
       ```bash
@@ -203,7 +203,7 @@ problems:
       ```
   - title: "Text files"
     description: |
-      Suppose you havea the following script:
+      Suppose you have the following script:
       ```bash
       # preview all my data files
       echo "Data file preview"

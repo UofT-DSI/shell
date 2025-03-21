@@ -14,7 +14,8 @@
             margin-bottom: 10vh;
         }
 
-        code {
+        code,
+        textarea {
             font-size: 1.5rem;
             line-height: 1.5;
         }
@@ -93,8 +94,6 @@
             text-decoration: line-through;
             color: red;
         }
-
-        .sol_decoration {}
     </style> <!-- Load js-yaml and marked for YAML and markdown parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
         integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q=="
@@ -163,14 +162,24 @@
                         interactiveElement = document.createElement("div");
                         interactiveElement.className = "multiple-choice-container";
                         if (problem.options && Array.isArray(problem.options)) {
-                            problem.options.forEach((option, idx) => {
+                            // Store the original index before shuffling
+                            problem.options = problem.options.map((option, idx) => ({ option, idx }));
+
+                            // Shuffle the options array
+                            problem.options = problem.options.sort(() => Math.random() - 0.5);
+
+                            problem.options.forEach(({ option, idx }, shuffledIdx) => {
                                 const label = document.createElement("label");
                                 const radio = document.createElement("input");
                                 radio.type = "radio";
                                 radio.name = "problem_" + index;
                                 radio.value = idx;
                                 label.appendChild(radio);
-                                label.appendChild(document.createTextNode(" " + option));
+                                label.appendChild(document.createTextNode(" "));
+
+                                const span = document.createElement("span");
+                                span.innerHTML = marked.parseInline(option);
+                                label.appendChild(span);
                                 interactiveElement.appendChild(label);
                             });
                         }
@@ -189,8 +198,10 @@
                         if (problem.options && Array.isArray(problem.options)) {
                             // Store the original index before shuffling
                             problem.options = problem.options.map((option, idx) => ({ option, idx }));
+
                             // Shuffle the options array
                             problem.options = problem.options.sort(() => Math.random() - 0.5);
+
                             problem.options.forEach(({ option, idx }, shuffledIdx) => {
                                 const item = document.createElement("div");
                                 item.className = "parsons-item";
@@ -233,6 +244,39 @@
                                 leftCol.appendChild(draggable);
                             }
                         });
+
+                        // Allow reordering items in the right column
+                        rightCol.addEventListener("dragover", (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = "move";
+                        });
+                        rightCol.addEventListener("drop", (e) => {
+                            e.preventDefault();
+                            const id = e.dataTransfer.getData("text/plain");
+                            const draggable = document.getElementById(id);
+                            if (draggable) {
+                                const afterElement = getDragAfterElement(rightCol, e.clientY);
+                                if (afterElement == null) {
+                                    rightCol.appendChild(draggable);
+                                } else {
+                                    rightCol.insertBefore(draggable, afterElement);
+                                }
+                            }
+                        });
+
+                        function getDragAfterElement(container, y) {
+                            const draggableElements = [...container.querySelectorAll('.parsons-item:not(.dragging)')];
+
+                            return draggableElements.reduce((closest, child) => {
+                                const box = child.getBoundingClientRect();
+                                const offset = y - box.top - box.height / 2;
+                                if (offset < 0 && offset > closest.offset) {
+                                    return { offset: offset, element: child };
+                                } else {
+                                    return closest;
+                                }
+                            }, { offset: Number.NEGATIVE_INFINITY }).element;
+                        }
 
                         interactiveElement.appendChild(leftCol);
                         interactiveElement.appendChild(rightCol);
@@ -279,7 +323,7 @@
                                 const rightCol = problemDiv.querySelector(".parsons-right");
 
                                 // Highlight correct items in the left column
-                                const highlight = (item) => {
+                                const highlight = (item, colour) => {
                                     const this_index = parseInt(item.dataset.index, 10);
                                     const sol_order = problem.correct_options.findIndex(option => {
                                         if (Array.isArray(option)) {
@@ -288,7 +332,7 @@
                                         return option === this_index;
                                     });
                                     if (sol_order !== -1) {
-                                        item.classList.add("sol_correct");
+                                        item.classList.add(colour);
 
                                         // add a floating number to the item
                                         const number = document.createElement('span');
@@ -301,8 +345,8 @@
                                         item.appendChild(number);
                                     }
                                 };
-                                leftCol.childNodes.forEach(highlight);
-                                rightCol.childNodes.forEach(highlight);
+                                leftCol.childNodes.forEach(x => highlight(x, "sol_option"));
+                                rightCol.childNodes.forEach(x => highlight(x, "sol_correct"));
                             }
                         }
                         else {

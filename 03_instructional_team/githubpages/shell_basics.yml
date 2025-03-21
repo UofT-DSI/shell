@@ -1,0 +1,123 @@
+title: Shell Basics Practice Problems
+problems:
+  - title: "Creating Directories"
+    description: |
+      You are tasked with creating 5 directories using shell commands.
+      Feel free to use any names for these directories.
+    questiontype: freeform
+    solution: |
+      One possible solution is:
+      ```bash
+      mkdir dir1 dir2 dir3 dir4 dir5
+      ```
+      This command creates 5 directories named “dir1”, “dir2”, “dir3”, “dir4”, and “dir5”.
+
+  - title: "Verifying Directory Creation"
+    description: |
+      After creating 5 directories, how can you verify that all of them have been successfully created?
+    questiontype: freeform
+    solution: |
+      You can verify the creation of directories by listing the contents of the current directory with:
+      ```bash
+      ls
+      ```
+
+      If you want to see only the directories, you can use:
+      ```bash
+      ls -d */
+      ```
+
+  - title: "Creating Text Files"
+    description: |
+      Inside `dir1` directories you created, create a text file named `file1.txt` and `file2.txt`.
+    questiontype: freeform
+    solution: |
+      You can create the text files using:
+      ```bash
+      touch dir1/file1.txt dir1/file2.txt
+      ```
+
+      Alternatively, you can create them one by one, or after navigating into `dir1`:
+      ```bash
+      cd dir1
+      touch file1.txt
+      touch file2.txt
+      ```
+
+  - title: "Appending Text to a File"
+    description: |
+      How would you append the text " and machine learning!" to one of the existing `.txt` files?
+    questiontype: freeform
+    solution: |
+      To append text, use the `>>` operator. For example, if you choose to modify `file1.txt` in `dir1`:
+      ```bash
+      echo " and machine learning!" >> dir1/file1.txt
+      ```
+      This command appends the additional text to the file without overwriting its existing content.
+
+  - title: "Verifying Appended Text"
+    description: |
+      After appending text to a file, how would you verify that " and machine learning!" has been successfully added to the file?
+    questiontype: freeform
+    solution: |
+      You can verify the change by displaying the file's contents with:
+      ```bash
+      cat dir1/file1.txt
+      ```
+      This will output the file's content, allowing you to confirm that the new text is present.
+
+  - title: "Deleting Files and Globs"
+    description: |
+      Suppose you are inside `dir2`.
+      This is your current terminal prompt:
+      ```
+      user@computer:~/dir2$ 
+      ```
+      How would you delete all `.txt` files within `dir1`?
+      
+    questiontype: freeform
+    solution: |
+      You can delete all `.txt` files in `dir1` from `dir2` using:
+      ```bash
+      rm ../dir1/*.txt
+      ```
+      This command uses a relative path to specify the target directory and the glob pattern `*.txt` to match all text files.
+
+      Alternatively, you can navigate to `dir1` and delete the files directly:
+      ```bash
+      cd ../dir1
+      rm *.txt
+      ```
+
+  - title: "File and Directory Management: Navigating to the Parent Directory"
+    description: |
+      After working inside one of the directories, how would you navigate back to the parent directory that contains all your directories?
+    questiontype: freeform
+    solution: |
+      Simply use:
+      ```bash
+      cd ..
+      ```
+      This command moves you up one level in the directory hierarchy, returning you to the parent directory.
+
+  - title: "Removing Directories and Their Contents"
+    description: |
+      How would you remove each of the 5 directories along with all their contents?
+    questiontype: freeform
+    solution: |
+      You can remove directories and their contents recursively using:
+      ```bash
+      rm -r dir1 dir2 dir3 dir4 dir5
+      ```
+      This command deletes each directory and everything inside it.
+
+  - title: "Verifying Deletion"
+    description: |
+      Finally, how would you verify that all directories and files have been successfully deleted from the parent directory?
+    questiontype: freeform
+    solution: |
+      You can check the parent directory's contents with:
+      ```bash
+      ls
+      ```
+      If the previously created directories and files no longer appear, the deletion was successful.
