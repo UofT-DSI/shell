@@ -5,16 +5,22 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css"> <!-- Inline styles for parsons layout and problem styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             margin-top: 10vh;
             margin-bottom: 10vh;
         }
 
+        code {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
         .problem {
-            margin-bottom: 30px;
+            margin-bottom: 100px;
             padding: 10px;
             border-top: 1px solid #ddd;
         }
@@ -68,9 +74,34 @@
             border: 1px solid #ccc;
             background-color: #f9f9f9;
         }
+
+        .sol_correct {
+            text-decoration: none;
+            color: green;
+        }
+
+        .sol_correct.parsons-item {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .sol_option {
+            color: blue;
+        }
+
+        .sol_incorrect {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        .sol_decoration {}
     </style> <!-- Load js-yaml and marked for YAML and markdown parsing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
+        integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"
+        integrity="sha512-rPuOZPx/WHMHNx2RoALKwiCDiDrCo4ekUctyTYKzBo8NGA79NcTW2gfrbcCL2RYL7RdjX2v9zR0fKyI4U4kPew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -138,7 +169,7 @@
                                 const radio = document.createElement("input");
                                 radio.type = "radio";
                                 radio.name = "problem_" + index;
-                                radio.value = option;
+                                radio.value = idx;
                                 label.appendChild(radio);
                                 label.appendChild(document.createTextNode(" " + option));
                                 interactiveElement.appendChild(label);
@@ -157,13 +188,16 @@
                         const rightCol = document.createElement("div");
                         rightCol.className = "parsons-right";
                         if (problem.options && Array.isArray(problem.options)) {
+                            // Store the original index before shuffling
+                            problem.options = problem.options.map((option, idx) => ({ option, idx }));
                             // Shuffle the options array
                             problem.options = problem.options.sort(() => Math.random() - 0.5);
-                            problem.options.forEach((option, idx) => {
+                            problem.options.forEach(({ option, idx }, shuffledIdx) => {
                                 const item = document.createElement("div");
                                 item.className = "parsons-item";
                                 item.draggable = true;
-                                item.id = "parsons-" + index + "-" + idx;
+                                item.id = "parsons-" + index + "-" + shuffledIdx;
+                                item.dataset.index = idx; // Use the original index
                                 item.innerHTML = marked.parse(option);
                                 item.addEventListener("dragstart", (e) => {
                                     e.dataTransfer.setData("text/plain", item.id);
@@ -221,10 +255,69 @@
                         if (solutionDiv.style.display === "none") {
                             solutionDiv.style.display = "block";
                             solutionButton.innerText = "Hide solutions";
+
+                            if (problem.questiontype === "multiplechoice") {
+                                document.querySelectorAll(`input[name='problem_${index}']`).forEach(radio => {
+                                    if (radio.checked) {
+                                        if (problem.correct_options.includes(parseInt(radio.value, 10))) {
+                                            radio.parentElement.classList.add("sol_correct");
+
+                                            // append checkmark to the label text
+                                            const checkmark = document.createElement('span');
+                                            checkmark.classList.add("sol_decoration");
+                                            checkmark.innerHTML = ' &#10003;'; // HTML entity for checkmark
+                                            radio.parentElement.appendChild(checkmark);
+                                        } else {
+                                            radio.parentElement.classList.add("sol_incorrect");
+                                        }
+                                    }
+                                    else if (problem.correct_options.includes(parseInt(radio.value, 10))) {
+                                        radio.parentElement.classList.add("sol_option");
+                                    }
+                                });
+                            } else if (problem.questiontype === "parsons") {
+                                const leftCol = problemDiv.querySelector(".parsons-left");
+                                const rightCol = problemDiv.querySelector(".parsons-right");
+
+                                // Highlight correct items in the left column
+                                leftCol.childNodes.forEach((item) => {
+                                    const this_index = parseInt(item.dataset.index, 10);
+                                    const sol_order = problem.correct_options.findIndex(option => {
+                                        if (Array.isArray(option)) {
+                                            return option.includes(this_index);
+                                        }
+                                        return option === this_index;
+                                    });
+                                    if (sol_order !== -1) {
+                                        item.classList.add("sol_correct");
+
+                                        // add a floating number to the item
+                                        const number = document.createElement('span');
+                                        number.innerHTML = '' + (sol_order + 1);
+                                        number.classList.add("sol_decoration");
+                                        number.style.position = 'relative';
+                                        number.style.top = '-15px';
+                                        number.style.right = '5px';
+                                        number.style.float = 'right';
+                                        item.appendChild(number);
+                                    }
+                                });
+                            }
                         }
                         else {
-                            solutionDiv.style.display = "none"; solutionButton.innerText = "Show solutions";
+                            solutionDiv.style.display = "none";
+                            solutionButton.innerText = "Show solutions";
+
+                            // find all items with class solution and remove the class
+                            for (const item of document.querySelectorAll('.sol_correct, .sol_incorrect, .sol_option')) {
+                                item.classList.remove('sol_correct', 'sol_incorrect', 'sol_option');
+                            }
+
+                            for (const item of document.querySelectorAll('.sol_decoration')) {
+                                item.remove();
+                            }
                         }
+
                     });
 
                     problemDiv.appendChild(solutionButton);

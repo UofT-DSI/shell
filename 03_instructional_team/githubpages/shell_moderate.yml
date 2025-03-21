@@ -1,6 +1,46 @@
 title: Unix Shell Moderate Practice Problems
 problems:
-  - title: "File and Directory Management"
+  - title: "File and Directory Management 1"
+    description: |
+      You are working on a project and need to create a directory named `data` inside your project directory (`project3`)
+      and a file named `info.txt` inside it.
+
+      This is your current terminal session:
+      ```bash
+      user@computer:~/project3/scripts$ pwd
+          /home/user/project3/scripts
+
+      user@computer:~/project3/scripts$ 
+      ```
+
+      Select and order the following commands to accomplish this task.
+    questiontype: parsons
+    options:
+      - "`cd ..`"
+      - "`mkdir data`"
+      - "`cd data`"
+      - "`touch info.txt`"
+      - "`ls`"
+      - "`echo info.txt`"
+      - "`cd scripts`"
+    correct_options: [0, 1, 2, 3]
+    solution: |
+      We start off in the `scripts` directory.
+      First, we need to navigate to the project root directory using `cd ..` (`project3` is the parent directory of `scripts`)
+      Then, we can create the `data` directory and navigate into it.
+      Finally, we create the `info.txt` file.
+
+      - we can also list the contents of the current directory using `ls` to check if the `data` directory and 
+        `info.txt` file was created successfully
+
+      ```bash
+      user@computer:~/project3/scripts$ cd ..
+      user@computer:~/project3$ mkdir data
+      user@computer:~/project3$ cd data
+      user@computer:~/project3/data$ touch info.txt
+      ```
+
+  - title: "File and Directory Management 2"
     description: |
       Create a directory structure for a project with the following hierarchy:
       ```
@@ -15,10 +55,49 @@ problems:
       ```
     questiontype: freeform
     solution: |
+      To create the directory structure, you can use the following commands.
+      - Since the problem asks us to create this in the current directory, we don't need to `cd` anywhere.
+      - `touch` can also be called individually for each file
+      - `cd` can also be used to change into each directory before creating files, but it is not necessary
+
       ```bash
       mkdir -p project/src project/data
       touch project/src/main.py project/src/utils.py project/data/input.csv project/data/output.csv project/README.md
       ```
+
+      **Alternative solution:**
+      ```bash
+      mkdir project
+      mkdir project/src
+      touch project/src/main.py
+      touch project/src/utils.py
+      mkdir project/data
+      touch project/data/input.csv
+      touch project/data/output.csv
+      touch project/README.md
+      ```
+
+  - title: "Output Redirection"
+    description: |
+      Which command correctly redirects the standard output of `ls` to a file named `filelist.txt` without overwriting?
+    questiontype: multiplechoice
+    options:
+      - "ls > filelist.txt"
+      - "ls < filelist.txt"
+      - "ls >> filelist.txt"
+      - "ls filelist.txt"
+    correct_options: [2]
+    solution: |
+      The correct command is:
+      ```bash
+      ls >> filelist.txt
+      ```
+      This sends the output of `ls` into `filelist.txt`, without overwriting the file if it exists.
+
+      - `ls > filelist.txt`: This command **overwrites** the contents of `filelist.txt` with the output of `ls`.
+      - `ls < filelist.txt`: This command tries to read from `filelist.txt` as input, which is not what we want. (*not covered in the main session*)
+      - `ls filelist.txt`: This command tries to list the contents of `filelist.txt`, instead of writing to it.
+      
 
   - title: "Debugging 1"
     description: |
@@ -34,7 +113,13 @@ problems:
       - The script does not have execute permissions.
       - The script is not in your PATH.
       - There is a syntax error in the script.
-    solution: The script does not exist in the current directory.
+    correct_options: [0]
+    solution: |
+      The script does not exist in the current directory.
+      
+      - The script does not have execute permissions: If this were the case, the error would be `permission denied`, not `No such file or directory`.
+      - The script is not in your PATH: The error message indicates that the script is being called with `./`, which means it is expected to be in the current directory, not in the PATH.
+      - There is a syntax error in the script: A syntax error would occur after the script is found and executed, not before.
     
   - title: "Debugging 2"
     description: |
@@ -64,6 +149,8 @@ problems:
       The error indicates that the directory `myfolder/` does not exist.
       Ordinarily, we could create the directory using the `mkdir` command, but in this case, it looks like the directory is already created as `myfolders/`.
       To fix the error, we can either create the directory `myfolder/` or move the files to `myfolders/` instead.
+
+      Note the spelling of myfolder**s**/
 
       ```bash
       user@computer:~$ mv mydata.csv myfolders/
@@ -98,7 +185,15 @@ problems:
       - "`movefile output* outputs/`"
       - "`cd`"
       - "`ls`"
+    correct_options: [0, [1, 2], [4, 6]]
+
     solution: |
+      First, we need to navigate to the project directory, then create the `datasets` and `outputs` directories.
+      After that, we can move the dataset and output files into their respective directories.
+
+        - Running `mv dataset* datasets/` won't work, because the `dataset*` files are in the `scripts` directory, not the current directory.
+        - The command `ls` can be run to check the contents of the current directory, but it is not necessary to accomplish the task.
+
       ```bash
       user@computer:~$ cd /data/MYPROJECT
       user@computer:/data/MYPROJECT$ mkdir datasets
@@ -106,5 +201,37 @@ problems:
       user@computer:/data/MYPROJECT$ mv scripts/dataset* datasets/
       user@computer:/data/MYPROJECT$ mv scripts/output* outputs/
       ```
+  - title: "Text files"
+    description: |
+      Suppose you havea the following script:
+      ```bash
+      # preview all my data files
+      echo "Data file preview"
+      echo "================="
+      cat mydata/*.txt
+      ```
+
+      When your project had fewer data files, this script worked fine. But now, the output is too long to read.  
+      What are some approaches to fix this?
+    questiontype: freeform
+    solution: |
+      There are several ways to fix this issue. Here are a few options:
+      - Redirect the output to a file for later review with less
+        ```bash
+        cat mydata/*.txt > preview.txt
+        less preview.txt
+        ```
+
+      **More advanced strategies not covered in the main session:**
+      - Use the pipe operator to pipe the output to `less` directly.
+        ```bash
+        cat mydata/*.txt | less
+        ```
+      - Use `head` or `tail` to preview only the first or last few lines of each file.
+        ```bash
+        head mydata/*.txt
+        tail mydata/*.txt
+        ```
+
 
   
