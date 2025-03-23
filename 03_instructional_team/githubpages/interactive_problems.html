@@ -20,6 +20,10 @@
             line-height: 1.5;
         }
 
+        pre {
+            margin: 2.5rem 0;
+        }
+
         .problem {
             margin-bottom: 100px;
             padding: 10px;
@@ -35,6 +39,20 @@
         .multiple-choice-container {
             padding: 15px;
             margin-bottom: 20px;
+        }
+
+        .multiple-choice-option {
+            display: inline-block;
+        }
+
+        .multiple-choice-option p,
+        .multiple-choice-option pre,
+        .multiple-choice-option code {
+            margin: 0;
+        }
+
+        .multiple-choice-option pre>code {
+            padding: .2rem .5rem;
         }
 
         .freeform-textbox {
@@ -88,6 +106,11 @@
 
         .sol_option {
             color: blue;
+        }
+
+        .sol_option code {
+            background-color: #d1ecf1;
+            border-color: #4f8a93;
         }
 
         .sol_incorrect {
@@ -170,15 +193,20 @@
 
                             problem.options.forEach(({ option, idx }, shuffledIdx) => {
                                 const label = document.createElement("label");
+                                label.style.display = "flex";
+                                label.style.alignItems = "center";
+
                                 const radio = document.createElement("input");
                                 radio.type = "radio";
                                 radio.name = "problem_" + index;
                                 radio.value = idx;
+                                radio.style.margin = "0 10px 0 0";
                                 label.appendChild(radio);
                                 label.appendChild(document.createTextNode(" "));
 
-                                const span = document.createElement("span");
-                                span.innerHTML = marked.parseInline(option);
+                                const span = document.createElement("div");
+                                span.classList.add("multiple-choice-option");
+                                span.innerHTML = marked.parse(option);
                                 label.appendChild(span);
                                 interactiveElement.appendChild(label);
                             });
@@ -323,7 +351,7 @@
                                 const rightCol = problemDiv.querySelector(".parsons-right");
 
                                 // Highlight correct items in the left column
-                                const highlight = (item, colour) => {
+                                const highlight = (item, colour, markincorect) => {
                                     const this_index = parseInt(item.dataset.index, 10);
                                     const sol_order = problem.correct_options.findIndex(option => {
                                         if (Array.isArray(option)) {
@@ -343,10 +371,12 @@
                                         number.style.right = '5px';
                                         number.style.float = 'right';
                                         item.appendChild(number);
+                                    } else if (markincorect) {
+                                        item.classList.add("sol_incorrect");
                                     }
                                 };
-                                leftCol.childNodes.forEach(x => highlight(x, "sol_option"));
-                                rightCol.childNodes.forEach(x => highlight(x, "sol_correct"));
+                                leftCol.childNodes.forEach(x => highlight(x, "sol_option", false));
+                                rightCol.childNodes.forEach(x => highlight(x, "sol_correct", true));
                             }
                         }
                         else {
