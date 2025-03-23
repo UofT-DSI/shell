@@ -61,25 +61,27 @@ problems:
       This command would creates `dir1` and its subdirectories `dir2` and `dir3` in a single step.
 
 
-      The other options are incorrect because:
+      The other options are incorrect.
       ```
       mkdir dir1
       mkdir dir2 dir3
       ```
-      This would create `dir2` and `dir3` in the current directory, not inside `dir1`.
+      * This would create `dir2` and `dir3` in the current directory, not inside `dir1`.
+
 
       ```
       cd dir1
       mkdir dir2 dir3
       ```
-      This would fail because `dir1` does not exist yet.
+      * This would fail because `dir1` does not exist yet.
+
 
       ```
       mkdir dir1
       cd dir2
       mkdir dir3
       ```
-      This would fail because `dir2` does not exist yet.
+      * This would fail because `dir2` does not exist yet.
       
 
   - title: "Verifying Directory Creation"
