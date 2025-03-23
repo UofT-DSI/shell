@@ -212,17 +212,25 @@
                             });
                         }
 
-                    } else if (problem.questiontype === "parsons") {
-                        interactiveElement = document.createElement("div");
-                        interactiveElement.className = "parsons-container";
+                    } else if (problem.questiontype === "parsons") {                        
+                        let parsonsDragElem = document.createElement("div");
+                        parsonsDragElem.className = "parsons-container";
 
                         // Left column for draggable items 
                         const leftCol = document.createElement("div");
                         leftCol.className = "parsons-left";
+                        const leftColTitle = document.createElement("b");
+                        leftColTitle.innerText = "Select from the list below by dragging";
+                        leftCol.appendChild(leftColTitle);
 
                         // Right column as drop zone 
                         const rightCol = document.createElement("div");
                         rightCol.className = "parsons-right";
+                        const rightColTitle = document.createElement("b");
+                        rightColTitle.innerText = "Drop code here in the correct order";
+                        rightCol.appendChild(rightColTitle);
+
+
                         if (problem.options && Array.isArray(problem.options)) {
                             // Store the original index before shuffling
                             problem.options = problem.options.map((option, idx) => ({ option, idx }));
@@ -306,8 +314,10 @@
                             }, { offset: Number.NEGATIVE_INFINITY }).element;
                         }
 
-                        interactiveElement.appendChild(leftCol);
-                        interactiveElement.appendChild(rightCol);
+                        parsonsDragElem.appendChild(rightCol);
+                        parsonsDragElem.appendChild(leftCol);
+
+                        interactiveElement = parsonsDragElem;
                     }
 
                     if (interactiveElement) {
@@ -375,8 +385,8 @@
                                         item.classList.add("sol_incorrect");
                                     }
                                 };
-                                leftCol.childNodes.forEach(x => highlight(x, "sol_option", false));
-                                rightCol.childNodes.forEach(x => highlight(x, "sol_correct", true));
+                                leftCol.querySelectorAll('.parsons-item').forEach(x => highlight(x, "sol_option", false));
+                                rightCol.querySelectorAll('.parsons-item').forEach(x => highlight(x, "sol_correct", true));
                             }
                         }
                         else {
