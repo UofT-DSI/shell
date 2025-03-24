@@ -37,7 +37,6 @@ unzip rawdata.zip
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
 
-
 ###########################################
 
 echo "Project setup is complete!"
