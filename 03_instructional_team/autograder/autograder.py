@@ -19,6 +19,7 @@ working_dir = os.environ["WORKING_DIR"]
 
 status_c = '✅'
 status_i = '❌'
+status_u = '⚠️'
 
 
 # functions
@@ -226,9 +227,22 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
     ]
 
     missing = list(compress(processed_files, [not x for x in files_in_inventory]))
-    print('Missing files in inventory: ' + ', '.join(missing))
+    if len(missing) > 0:
+        print('Missing files in inventory: ' + ', '.join(missing))
 
-    if all(files_in_inventory):
+    # check if data/raw is present in the inventory
+    data_raw_present = any(['data/raw' in x for x in inventory_files])
+
+    if data_raw_present:
+        s.append({
+            'question':
+            f'Part 1 - Q{qn:d}',
+            'status':
+            0,
+            'comment':
+            'data/inventory.txt appears to list the contents of data/raw'
+        })
+    elif all(files_in_inventory):
         s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
     else:
         s.append({
@@ -274,7 +288,7 @@ try:
 except Exception as e:
     s.append({
         'question': 'Part 2 - Q1',
-        'status': 0,
+        'status': None,
         'comment': f'Error checking git commit history.'
     })
     print(f"Error checking git commit history: {e}")
@@ -290,7 +304,7 @@ correct = df['status'].sum()
 total = df.shape[0]
 
 # output the score table
-df['status'] = df['status'].replace({1: status_c, 0: status_i})
+df['status'] = df['status'].replace({1: status_c, 0: status_i, None: status_u})
 if github_token:
     df.to_markdown(github_step_output, index=False)
 
