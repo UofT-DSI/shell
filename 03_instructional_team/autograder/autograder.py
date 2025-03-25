@@ -288,7 +288,7 @@ try:
 except Exception as e:
     s.append({
         'question': 'Part 2 - Q1',
-        'status': None,
+        'status': pd.NA,
         'comment': f'Error checking git commit history.'
     })
     print(f"Error checking git commit history: {e}")
@@ -297,14 +297,14 @@ except Exception as e:
 
 ### Postprocessing ###
 df = pd.DataFrame(s)
-df.fillna('', inplace=True)
+df['comment'] = df['comment'].fillna('')
 
 # compute percentage correct
 correct = df['status'].sum()
 total = df.shape[0]
 
 # output the score table
-df['status'] = df['status'].replace({1: status_c, 0: status_i, None: status_u})
+df['status'] = df['status'].replace({1: status_c, 0: status_i, pd.NA: status_u})
 if github_token:
     df.to_markdown(github_step_output, index=False)
 
