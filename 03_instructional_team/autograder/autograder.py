@@ -76,10 +76,10 @@ qn = 0
 # Step 1: Check if 'data' directory exists
 qn += 1
 if os.path.isdir(os.path.join(working_dir, 'data')):
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     s.append({
-        'question': 'Part 1 - Q' + qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': 'data directory does not exist'
     })
@@ -89,10 +89,10 @@ else:
 qn += 1
 if os.path.isdir(os.path.join(working_dir, 'data/raw')) and not os.path.exists(
         os.path.join(working_dir, 'rawdata')):
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     s.append({
-        'question': 'Part 1 - Q' + qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': 'rawdata not moved to data/raw'
     })
@@ -103,10 +103,10 @@ qn += 1
 indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
 if len(indx) > 0:
     if any(['data/raw' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+        s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
     else:
         s.append({
-            'question': 'Part 1 - Q' + qn,
+            'question': f'Part 1 - Q{qn:d}',
             'status': 0,
             'comment': '`ls` command run on wrong directory'
         })
@@ -121,13 +121,13 @@ dirs = [
     'data/processed/event_logs'
 ]
 if all([os.path.isdir(os.path.join(working_dir, d)) for d in dirs]):
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     missing_dirs = [
         d for d in dirs if not os.path.isdir(os.path.join(working_dir, d))
     ]
     s.append({
-        'question': 'Part 1 - Q' + qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': f'Missing directories: {", ".join(missing_dirs)}'
     })
@@ -158,9 +158,9 @@ def check_logs(log_type):
 qn += 1
 result = check_logs('server')
 if result['status'] == 1:
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 0, 'comment': result['comment']})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 0, 'comment': result['comment']})
 
 ############################################################################################################
 # Step 6: Check that user logs and event logs were copied appropriately
@@ -170,14 +170,14 @@ result_user = check_logs('user')
 result_event = check_logs('event')
 
 if result_user['status'] == 1 and result_event['status'] == 1:
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     comments = []
     if result_user['status'] == 0:
         comments.append(result_user['comment'])
     if result_event['status'] == 0:
         comments.append(result_event['comment'])
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 0, 'comment': '; '.join(comments)})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 0, 'comment': '; '.join(comments)})
 
 ############################################################################################################
 # Step 7: Check that files containing 'ipaddr' in the filename were removed from 'data/raw' and 'data/processed/user_logs'
@@ -188,7 +188,7 @@ ipaddr_files_user_logs = glob.glob(
     os.path.join(working_dir, 'data/processed/user_logs/*ipaddr*'))
 
 if not ipaddr_files_raw and not ipaddr_files_user_logs:
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     comments = []
     if ipaddr_files_raw:
@@ -198,7 +198,7 @@ else:
         comments.append(
             'One or more files with ipaddr in data/processed/user_logs not removed'
         )
-    s.append({'question': 'Part 1 - Q' + qn, 'status': 0, 'comment': '; '.join(comments)})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 0, 'comment': '; '.join(comments)})
 
 ############################################################################################################
 # Step 8: Check that 'data/inventory.txt' was created and contains all files in 'data/processed' subfolders
@@ -220,11 +220,11 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
     ]
 
     if all(files_in_inventory):
-        s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
+        s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
     else:
         s.append({
             'question':
-            'Part 1 - Q' + qn,
+            f'Part 1 - Q{qn:d}',
             'status':
             0,
             'comment':
@@ -232,7 +232,7 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
         })
 else:
     s.append({
-        'question': 'Part 1 - Q' + qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': 'data/inventory.txt does not exist'
     })
