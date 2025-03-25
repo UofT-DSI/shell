@@ -297,7 +297,8 @@ except Exception as e:
 
 ### Postprocessing ###
 df = pd.DataFrame(s)
-df['comment'] = df['comment'].fillna('')
+if 'comment' in df.columns:
+    df['comment'] = df['comment'].fillna('')
 
 # compute percentage correct
 correct = df['status'].sum()
