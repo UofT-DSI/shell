@@ -212,18 +212,14 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
     processed_files = []
     for root, dirs, files in os.walk(
             os.path.join(working_dir, 'data/processed')):
-        # remove working_dir from start of root
-        root = root[len(working_dir) + 1:]
-
         for name in files:
             processed_files.append(name)
 
-    foldername_in_inventory = ['data/processed' in x for x in inventory_files]
     files_in_inventory = [
         any([f in x for x in inventory_files]) for f in processed_files
     ]
 
-    if foldername_in_inventory and all(files_in_inventory):
+    if all(files_in_inventory):
         s.append({'question': 'Part 1 - Q' + qn, 'status': 1})
     else:
         s.append({
