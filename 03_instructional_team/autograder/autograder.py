@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import requests
 import glob
+from itertools import compress
 
 # get environment variables for output
 github_step_output = os.environ['GITHUB_STEP_SUMMARY']
@@ -218,6 +219,9 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
     files_in_inventory = [
         any([f in x for x in inventory_files]) for f in processed_files
     ]
+
+    missing = list(compress(processed_files, [not x for x in files_in_inventory]))
+    print(missing)
 
     if all(files_in_inventory):
         s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
