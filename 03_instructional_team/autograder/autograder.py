@@ -5,12 +5,16 @@ import glob
 from itertools import compress
 
 # get environment variables for output
-github_step_output = os.environ['GITHUB_STEP_SUMMARY']
-github_token = os.environ["GITHUB_TOKEN"]
-github_repo_owner = os.environ["REPO_OWNER"]
-github_repo_name = os.environ["REPO_NAME"]
-github_repo_branch = os.environ["REPO_BRANCH"]
-github_pr_number = os.environ["PR_NUMBER"]
+if 'GITHUB_TOKEN' in os.environ:
+    github_token = os.environ["GITHUB_TOKEN"]
+    github_step_output = os.environ['GITHUB_STEP_SUMMARY']
+    github_repo_owner = os.environ["REPO_OWNER"]
+    github_repo_name = os.environ["REPO_NAME"]
+    github_repo_branch = os.environ["REPO_BRANCH"]
+    github_pr_number = os.environ["PR_NUMBER"]
+else:
+    github_token = None
+
 working_dir = os.environ["WORKING_DIR"]
 
 status_c = '✅'
@@ -27,7 +31,8 @@ def is_commit_in_branch(
     other_branch,
 ):
     headers = {}
-    headers['Authorization'] = f'token {github_token}'
+    if github_token:
+        headers['Authorization'] = f'token {github_token}'
 
     # Step 1: Get the latest commit SHA of the other repository's branch
     other_commit_url = f'https://api.github.com/repos/{other_owner}/{other_repo}/commits/{other_branch}'
@@ -221,7 +226,7 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
     ]
 
     missing = list(compress(processed_files, [not x for x in files_in_inventory]))
-    print(missing)
+    print('Missing files in inventory: ' + ', '.join(missing))
 
     if all(files_in_inventory):
         s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
@@ -286,21 +291,25 @@ total = df.shape[0]
 
 # output the score table
 df['status'] = df['status'].replace({1: status_c, 0: status_i})
-df.to_markdown(github_step_output, index=False)
+if github_token:
+    df.to_markdown(github_step_output, index=False)
 
 # also display markdown to console
 render_md = df.to_markdown(index=False)
 print(render_md)
 
 # create GitHub comment with markdown
-headers = {
-    "Authorization": f"Bearer {github_token}",
-    "Accept": "application/vnd.github+json"
-}
-requests.post(
-    f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments",
-    json={"body": "## Autograder results\n" + render_md},
-    headers=headers)
+if github_token:
+    headers = {
+        "Authorization": f"Bearer {github_token}",
+        "Accept": "application/vnd.github+json"
+    }
+    requests.post(
+        f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments",
+        json={"body": "## Autograder results\n" + render_md},
+        headers=headers)
+else:
+    print("GitHub token not found. Skipping comment creation.")
 
 if correct == total:
     print('All tests passed!')
