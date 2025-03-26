@@ -63,7 +63,7 @@ Assignments are typically due on the Sunday following the module's live learning
  
 ## Delivery of the Learning Module
 
-This module will include live learning sessions and optional, asynchronous work periods. During live learning sessions, the Technical Facilitator will introduce and explain key concepts and demonstrate core skills. Learning is facilitated during this time. Before and after each live learning session, the instructional team will be available for questions related to the core concepts of the module. Optional work periods are to be used to seek help from peers, the Learning Support team, and to work through the homework and assignments in the learning module, with access to live help. Content is not facilitated, but rather this time should be driven by participants. We encourage participants to come to these work periods with questions and problems to work through. 
+This module will include live learning sessions and optional, asynchronous work periods. During live learning sessions, the Technical Facilitator will introduce and explain key concepts and demonstrate core skills. Learning is facilitated during this time. Before and after each live learning session, the instructional team will be available for questions related to the core concepts of the module. Optional work periods are to be used to seek help from peers, the Learning Support team, and to work through the practice problems and assignments in the learning module, with access to live help. Content is not facilitated, but rather this time should be driven by participants. We encourage participants to come to these work periods with questions and problems to work through. 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
@@ -135,7 +135,7 @@ Below is an outline of the folder structure for this module:
 ```
 * **.github**: Contains issue templates and pull request templates for the repository.
 * **materials**: Module slides and interactive notebooks (.ipynb files) used during learning sessions.
-* **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
+* **activities**: Contains graded assignments and ungraded practice problems to apply concepts covered in the learning module.
 * **instructional_team**: Resources for the instructional team.
 * **this_cohort**: Additional materials for this cohort.
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
