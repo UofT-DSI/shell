@@ -4,7 +4,7 @@
 
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
-* [Assignments](#assignments)
+* [Activities](#activities)
 * [Contacts](#contacts)
 * [Delivery of the Learning Module](#delivery-of-the-learning-module)
 * [Schedule](#schedule)
@@ -30,7 +30,7 @@ By the end of the module, participants will be able to:
 ## Activities
 This module has two types of activities.
 1. Assignments are mandatory, and form part of your evaluation.
-1. Homework is not assessed, but are provided to you for extra practice. We encourage you to check each other's homework solutions during Work Periods or ask a Learning Support!
+1. Practice problems are not assessed, but are provided to you for extra practice. We encourage you to work on them together and discuss solutions during Work Periods and on the Slack!
 
 ### Assignments
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
@@ -39,8 +39,10 @@ Assignments are typically due on the Sunday following the module's live learning
 
 1. [Shell script assignment](./02_activities/assignments/assignment_instructions.md)
 
-### Homework
-1. [Shell Homework](./02_activities/homework/homework.sh)
+### Practice Problems
+1. [Shell Basics](https://uoft-dsi.github.io/shell/interactive_problems.html#shell_basics)
+1. [Shell Moderate](https://uoft-dsi.github.io/shell/interactive_problems.html#shell_moderate)
+1. [Shell Advanced](./02_activities/practice/shell_advanced/shell_advanced.md)
 
 
 ## Contacts
