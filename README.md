@@ -48,14 +48,16 @@ Assignments are typically due on the Sunday following the module's live learning
 **Questions can be submitted to the _#dc-help_ channel on Slack**
 
 * Technical Facilitator:   
-  * **Abhishek Moturu**
-    abhishek.moturu@mail.utoronto.ca
+  * **Simeon Wong**
+    me@simeon.dev
 
 * Learning Support Staff: 
-  * **Keli Chiu**
-  keli.chiu.kc@gmail.com
-  * **Ananya Jha**
-  ananya.jha@mail.utoronto.ca
+  * **Dmytro Bonislavskyi**
+  dmytro.bonislavskyi@gmail.com
+  * **Laura MacKew**
+  lauramackew@gmail.com
+  * **Moniz Chan**
+  moniz.chan@utoronto.ca
  
 ## Delivery of the Learning Module
 
@@ -63,11 +65,6 @@ This module will include live learning sessions and optional, asynchronous work 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
-## Schedule
-
-||Jan 7|Jan 9|Jan 10|Jan 14|
-|---|---|---|---|---|
-|Week 1|Live Learning Session 1 ([Shell](https://github.com/UofT-DSI/shell))|Live Learning Session 2 (Git & Github)|Work Period|Live Learning Session 3 (Git & Github)|
  
 ## Requirements
 
