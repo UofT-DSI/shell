@@ -1,6 +1,4 @@
-# Unix Shell Advanced Practice
-
-**Note**: Homework problems are not assessed and are provided for your own personal practice. Feel free to discuss these with your peers and learning support during work sessions!
+# Unix Shell Advanced Practice Problems
 
 ## Introduction
 Kaylee and Simeon are biomedical engineering researchers trying to reanalyze data from an undergraduate project, where they collected electroencephalography (EEG), electromyography (EMG), and actigraphy (acceleration and rotational) recordings, and other information from subjects as they tried to keep their balance on a moving platform for a balance project.
@@ -9,7 +7,7 @@ Unfortunately, when they were silly undergraduates, they didn't know to keep the
 
 ## Tasks
 * Complete the listed tasks in Bash
-* This homework requires commands that were not covered in the teaching sessions.
+* This problem set requires commands that were not covered in the teaching sessions.
 * Feel free to use any commands or strategy that you'd like. Suggested commands are listed.
 
 ### Task 1: Setup your environment

@@ -25,20 +25,23 @@ problems:
       - "`cd scripts`"
     correct_options: [0, 1, 2, 3]
     solution: |
-      We start off in the `scripts` directory.
-      First, we need to navigate to the project root directory using `cd ..` (`project3` is the parent directory of `scripts`)
-      Then, we can create the `data` directory and navigate into it.
-      Finally, we create the `info.txt` file.
-
-      - we can also list the contents of the current directory using `ls` to check if the `data` directory and 
-        `info.txt` file was created successfully
-
       ```bash
       user@computer:~/project3/scripts$ cd ..
       user@computer:~/project3$ mkdir data
       user@computer:~/project3$ cd data
       user@computer:~/project3/data$ touch info.txt
       ```
+
+      We start off in the `scripts` directory.
+      - First, we need to navigate to the project root directory using `cd ..` 
+            - (`project3` is the parent directory of `scripts`)
+      - Then, we can create the `data` directory and navigate into it.
+      - Finally, we create the `info.txt` file.
+
+      - we can also list the contents of the current directory using `ls` to check if the `data` directory and 
+        `info.txt` file was created successfully
+
+
 
   - title: "File and Directory Management 2"
     description: |
@@ -60,10 +63,9 @@ problems:
       mkdir -p project/src project/data
       touch project/src/main.py project/src/utils.py project/data/input.csv project/data/output.csv project/README.md
       ```
-      
       - Since the problem asks us to create this in the current directory, we don't need to `cd` anywhere.
-      - `touch` can also be called individually for each file
-      - `cd` can also be used to change into each directory before creating files, but it is not necessary
+      - `mkdir -p` creates the directories and any necessary parent directories.
+      - `touch` creates the files in the specified directories.
 
       **Alternative solution:**
       ```bash
@@ -76,6 +78,13 @@ problems:
       touch project/data/output.csv
       touch project/README.md
       ```
+      - In this longer example, we create the `project` directory first, then create the `src` and `data` directories inside it.
+      - `touch` is called individually for each file
+
+      Additionally:
+      - `cd` can also be used to change into each directory before creating files, but it is not necessary
+
+
 
   - title: "Output Redirection"
     description: |
@@ -146,17 +155,17 @@ problems:
       mv myfile.txt myfolder/
       mv myscript.sh myfolder/
     solution: |
-      The error indicates that the directory `myfolder/` does not exist.
-      Ordinarily, we could create the directory using the `mkdir` command, but in this case, it looks like the directory is already created as `myfolders/`.
-      To fix the error, we can either create the directory `myfolder/` or move the files to `myfolders/` instead.
-
-      Note the spelling of myfolder**s**/
-
       ```bash
       user@computer:~$ mv mydata.csv myfolders/
       user@computer:~$ mv myfile.txt myfolders/
       user@computer:~$ mv myscript.sh myfolders/
       ```
+
+      The error indicates that the directory `myfolder/` does not exist.
+      Ordinarily, we could create the directory using the `mkdir` command, but in this case, it looks like the directory is already created as `myfolders/`.
+      To fix the error, we can either create the directory `myfolder/` or move the files to `myfolders/` instead.
+
+      Note the spelling of myfolder**s**/
 
   - title: "Organizing files"
     description: |
@@ -188,12 +197,6 @@ problems:
     correct_options: [0, [1, 2], [4, 6]]
 
     solution: |
-      First, we need to navigate to the project directory, then create the `datasets` and `outputs` directories.
-      After that, we can move the dataset and output files into their respective directories.
-
-        - Running `mv dataset* datasets/` won't work, because the `dataset*` files are in the `scripts` directory, not the current directory.
-        - The command `ls` can be run to check the contents of the current directory, but it is not necessary to accomplish the task.
-
       ```bash
       user@computer:~$ cd /data/MYPROJECT
       user@computer:/data/MYPROJECT$ mkdir datasets
@@ -201,6 +204,14 @@ problems:
       user@computer:/data/MYPROJECT$ mv scripts/dataset* datasets/
       user@computer:/data/MYPROJECT$ mv scripts/output* outputs/
       ```
+
+      First, we need to navigate to the project directory, then create the `datasets` and `outputs` directories.
+      After that, we can move the dataset and output files into their respective directories.
+
+        - Running `mv dataset* datasets/` won't work, because the `dataset*` files are in the `scripts` directory, not the current directory.
+        - The command `ls` can be run to check the contents of the current directory, but it is not necessary to accomplish the task.
+
+      
   - title: "Text files"
     description: |
       Suppose you have the following script:

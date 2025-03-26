@@ -11,13 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r 03_instructional_team/autograder/requirements.txt
+      - uses: astral-sh/setup-uv@v5
       - name: Setup working directory for script
         run: |
           UUID=$(uuidgen)
@@ -39,4 +33,4 @@ jobs:
           WORKING_DIR: /tmp/${{ env.UUID }}
         run: |
           wget -O /tmp/autograder.py https://github.com/UofT-DSI/shell/raw/refs/heads/main/03_instructional_team/autograder/autograder.py
-          python /tmp/autograder.py
+          uv run --python 3.12 --with pandas,tabulate,requests /tmp/autograder.py

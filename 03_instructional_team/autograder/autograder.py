@@ -2,18 +2,24 @@ import pandas as pd
 import os
 import requests
 import glob
+from itertools import compress
 
 # get environment variables for output
-github_step_output = os.environ['GITHUB_STEP_SUMMARY']
-github_token = os.environ["GITHUB_TOKEN"]
-github_repo_owner = os.environ["REPO_OWNER"]
-github_repo_name = os.environ["REPO_NAME"]
-github_repo_branch = os.environ["REPO_BRANCH"]
-github_pr_number = os.environ["PR_NUMBER"]
+if 'GITHUB_TOKEN' in os.environ:
+    github_token = os.environ["GITHUB_TOKEN"]
+    github_step_output = os.environ['GITHUB_STEP_SUMMARY']
+    github_repo_owner = os.environ["REPO_OWNER"]
+    github_repo_name = os.environ["REPO_NAME"]
+    github_repo_branch = os.environ["REPO_BRANCH"]
+    github_pr_number = os.environ["PR_NUMBER"]
+else:
+    github_token = None
+
 working_dir = os.environ["WORKING_DIR"]
 
 status_c = '✅'
 status_i = '❌'
+status_u = '⚠️'
 
 
 # functions
@@ -26,7 +32,8 @@ def is_commit_in_branch(
     other_branch,
 ):
     headers = {}
-    headers['Authorization'] = f'token {github_token}'
+    if github_token:
+        headers['Authorization'] = f'token {github_token}'
 
     # Step 1: Get the latest commit SHA of the other repository's branch
     other_commit_url = f'https://api.github.com/repos/{other_owner}/{other_repo}/commits/{other_branch}'
@@ -76,10 +83,10 @@ qn = 0
 # Step 1: Check if 'data' directory exists
 qn += 1
 if os.path.isdir(os.path.join(working_dir, 'data')):
-    s.append({'question': qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     s.append({
-        'question': qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': 'data directory does not exist'
     })
@@ -89,24 +96,24 @@ else:
 qn += 1
 if os.path.isdir(os.path.join(working_dir, 'data/raw')) and not os.path.exists(
         os.path.join(working_dir, 'rawdata')):
-    s.append({'question': qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     s.append({
-        'question': qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': 'rawdata not moved to data/raw'
     })
 
 ############################################################################################################
-# Step 4: Check that 'ls data/raw' command was run
+# Step 3: Check that 'ls data/raw' command was run
 qn += 1
 indx = [i for i, x in enumerate(script_rslt) if x['command'].startswith('ls')]
 if len(indx) > 0:
     if any(['data/raw' in script_rslt[i]['command'] for i in indx]):
-        s.append({'question': qn, 'status': 1})
+        s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
     else:
         s.append({
-            'question': qn,
+            'question': f'Part 1 - Q{qn:d}',
             'status': 0,
             'comment': '`ls` command run on wrong directory'
         })
@@ -114,27 +121,27 @@ else:
     s.append({'question': qn, 'status': 0, 'comment': '`ls` command not run'})
 
 ############################################################################################################
-# Step 5: Check that in 'data/processed', the directories server_logs, user_logs, and event_logs were created
+# Step 4: Check that in 'data/processed', the directories server_logs, user_logs, and event_logs were created
 qn += 1
 dirs = [
     'data/processed/server_logs', 'data/processed/user_logs',
     'data/processed/event_logs'
 ]
 if all([os.path.isdir(os.path.join(working_dir, d)) for d in dirs]):
-    s.append({'question': qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     missing_dirs = [
         d for d in dirs if not os.path.isdir(os.path.join(working_dir, d))
     ]
     s.append({
-        'question': qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': f'Missing directories: {", ".join(missing_dirs)}'
     })
 
 
 ############################################################################################################
-# Step 6: Check that server log files were copied from 'data/raw' to 'data/processed/server_logs'
+# Step 5: Check that server log files were copied from 'data/raw' to 'data/processed/server_logs'
 def check_logs(log_type):
     raw_logs = glob.glob(
         os.path.join(working_dir, f'data/raw/*{log_type}*.log'))
@@ -158,29 +165,29 @@ def check_logs(log_type):
 qn += 1
 result = check_logs('server')
 if result['status'] == 1:
-    s.append({'question': qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
-    s.append({'question': qn, 'status': 0, 'comment': result['comment']})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 0, 'comment': result['comment']})
 
 ############################################################################################################
-# Step 7: Check that user logs and event logs were copied appropriately
+# Step 6: Check that user logs and event logs were copied appropriately
 qn += 1
 
 result_user = check_logs('user')
 result_event = check_logs('event')
 
 if result_user['status'] == 1 and result_event['status'] == 1:
-    s.append({'question': qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     comments = []
     if result_user['status'] == 0:
         comments.append(result_user['comment'])
     if result_event['status'] == 0:
         comments.append(result_event['comment'])
-    s.append({'question': qn, 'status': 0, 'comment': '; '.join(comments)})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 0, 'comment': '; '.join(comments)})
 
 ############################################################################################################
-# Step 8: Check that files containing 'ipaddr' in the filename were removed from 'data/raw' and 'data/processed/user_logs'
+# Step 7: Check that files containing 'ipaddr' in the filename were removed from 'data/raw' and 'data/processed/user_logs'
 qn += 1
 
 ipaddr_files_raw = glob.glob(os.path.join(working_dir, 'data/raw/*ipaddr*'))
@@ -188,7 +195,7 @@ ipaddr_files_user_logs = glob.glob(
     os.path.join(working_dir, 'data/processed/user_logs/*ipaddr*'))
 
 if not ipaddr_files_raw and not ipaddr_files_user_logs:
-    s.append({'question': qn, 'status': 1})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
 else:
     comments = []
     if ipaddr_files_raw:
@@ -198,10 +205,10 @@ else:
         comments.append(
             'One or more files with ipaddr in data/processed/user_logs not removed'
         )
-    s.append({'question': qn, 'status': 0, 'comment': '; '.join(comments)})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 0, 'comment': '; '.join(comments)})
 
 ############################################################################################################
-# Step 9: Check that 'data/inventory.txt' was created and contains all files in 'data/processed' subfolders
+# Step 8: Check that 'data/inventory.txt' was created and contains all files in 'data/processed' subfolders
 qn += 1
 
 if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
@@ -212,23 +219,35 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
     processed_files = []
     for root, dirs, files in os.walk(
             os.path.join(working_dir, 'data/processed')):
-        # remove working_dir from start of root
-        root = root[len(working_dir) + 1:]
-
         for name in files:
             processed_files.append(name)
 
-    foldername_in_inventory = ['data/processed' in x for x in inventory_files]
     files_in_inventory = [
         any([f in x for x in inventory_files]) for f in processed_files
     ]
 
-    if foldername_in_inventory and all(files_in_inventory):
-        s.append({'question': qn, 'status': 1})
+    missing = list(compress(processed_files, [not x for x in files_in_inventory]))
+    if len(missing) > 0:
+        print('Missing files in inventory: ' + ', '.join(missing))
+
+    # check if data/raw is present in the inventory
+    data_raw_present = any(['data/raw' in x for x in inventory_files])
+
+    if data_raw_present:
+        s.append({
+            'question':
+            f'Part 1 - Q{qn:d}',
+            'status':
+            0,
+            'comment':
+            'data/inventory.txt appears to list the contents of data/raw'
+        })
+    elif all(files_in_inventory):
+        s.append({'question': f'Part 1 - Q{qn:d}', 'status': 1})
     else:
         s.append({
             'question':
-            qn,
+            f'Part 1 - Q{qn:d}',
             'status':
             0,
             'comment':
@@ -236,14 +255,13 @@ if os.path.isfile(os.path.join(working_dir, 'data/inventory.txt')):
         })
 else:
     s.append({
-        'question': qn,
+        'question': f'Part 1 - Q{qn:d}',
         'status': 0,
         'comment': 'data/inventory.txt does not exist'
     })
 
 ############################################################################################################
-# Step 10: Check if the coworker's commit ID is in the commit history
-qn += 1
+# Step 2-1: Check if the coworker's commit ID is in the commit history
 
 try:
     # Check if commit_id is in git rev-list HEAD using grep and wc -l
@@ -256,11 +274,11 @@ try:
         'coworker-changes',
     )
     if result:
-        s.append({'question': qn, 'status': 1})
+        s.append({'question': 'Part 2 - Q1', 'status': 1})
     else:
         s.append({
             'question':
-            qn,
+            'Part 2 - Q1',
             'status':
             0,
             'comment':
@@ -269,8 +287,8 @@ try:
 
 except Exception as e:
     s.append({
-        'question': qn,
-        'status': 0,
+        'question': 'Part 2 - Q1',
+        'status': pd.NA,
         'comment': f'Error checking git commit history.'
     })
     print(f"Error checking git commit history: {e}")
@@ -279,29 +297,44 @@ except Exception as e:
 
 ### Postprocessing ###
 df = pd.DataFrame(s)
-df.fillna('', inplace=True)
+if 'comment' in df.columns:
+    df['comment'] = df['comment'].fillna('')
 
 # compute percentage correct
 correct = df['status'].sum()
 total = df.shape[0]
 
 # output the score table
-df['status'] = df['status'].replace({1: status_c, 0: status_i})
-df.to_markdown(github_step_output, index=False)
+df['status'] = df['status'].replace({1: status_c, 0: status_i, pd.NA: status_u})
+if github_token:
+    df.to_markdown(github_step_output, index=False)
 
 # also display markdown to console
 render_md = df.to_markdown(index=False)
 print(render_md)
 
 # create GitHub comment with markdown
-headers = {
-    "Authorization": f"Bearer {github_token}",
-    "Accept": "application/vnd.github+json"
-}
-requests.post(
-    f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments",
-    json={"body": "## Autograder results\n" + render_md},
-    headers=headers)
+if github_token:
+    headers = {
+        "Authorization": f"Bearer {github_token}",
+        "Accept": "application/vnd.github+json"
+    }
+
+    if correct == total:
+        # also approve the PR
+        requests.post(
+            f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/pulls/{github_pr_number}/reviews",
+            json={"event": "APPROVE", "body": "## Autograder results\n" + render_md },
+            headers=headers)
+    else:
+        # request changes to the PR
+        requests.post(
+            f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/pulls/{github_pr_number}/reviews",
+            json={"event": "REQUEST_CHANGES", "body": "## Autograder results\n" + render_md + "\n\nPlease address the issues listed above." },
+            headers=headers)
+    
+else:
+    print("GitHub token not found. Skipping comment creation.")
 
 if correct == total:
     print('All tests passed!')
