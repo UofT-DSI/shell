@@ -50,15 +50,15 @@ Assignments are typically due on the Sunday following the module's live learning
 **Questions can be submitted to the _#dc-help_ channel on Slack**
 
 * Technical Facilitator:   
-  * **Simeon Wong**
+  * **Simeon Wong**  
     me@simeon.dev
 
 * Learning Support Staff: 
-  * **Dmytro Bonislavskyi**
+  * **Dmytro Bonislavskyi**  
   dmytro.bonislavskyi@gmail.com
-  * **Laura MacKew**
+  * **Laura MacKew**  
   lauramackew@gmail.com
-  * **Moniz Chan**
+  * **Moniz Chan**  
   moniz.chan@utoronto.ca
  
 ## Delivery of the Learning Module
