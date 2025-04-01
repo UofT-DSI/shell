@@ -1,4 +1,4 @@
-# 🐚 Bash Commands Cheatsheet
+# Bash Commands Reference
 
 ## 📋 Commands Overview
 
@@ -101,7 +101,8 @@ alias showhistory="clear; tail -n0 -F ~/.bash_history | nl"
 * -n0: display no lines currently in the file
 * -F: watch the file for changes and display any new lines
 * ~/.bash_history: command history file for bash
-* | nl: number the lines of the input
+* | nl: line numbering
+
 #### To display live updated command history, run this in a separate window:
 showhistory
 

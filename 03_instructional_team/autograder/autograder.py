@@ -118,7 +118,7 @@ if len(indx) > 0:
             'comment': '`ls` command run on wrong directory'
         })
 else:
-    s.append({'question': qn, 'status': 0, 'comment': '`ls` command not run'})
+    s.append({'question': f'Part 1 - Q{qn:d}', 'status': 0, 'comment': '`ls` command not run'})
 
 ############################################################################################################
 # Step 4: Check that in 'data/processed', the directories server_logs, user_logs, and event_logs were created
@@ -274,11 +274,11 @@ try:
         'coworker-changes',
     )
     if result:
-        s.append({'question': 'Part 2 - Q1', 'status': 1})
+        s.append({'question': 'Part 2', 'status': 1})
     else:
         s.append({
             'question':
-            'Part 2 - Q1',
+            'Part 2',
             'status':
             0,
             'comment':
@@ -287,7 +287,7 @@ try:
 
 except Exception as e:
     s.append({
-        'question': 'Part 2 - Q1',
+        'question': 'Part 2',
         'status': pd.NA,
         'comment': f'Error checking git commit history.'
     })
