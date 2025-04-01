@@ -7,7 +7,7 @@ on:
 jobs:
   autograder:
     name: Assignment autograder
-    if: startsWith(github.head_ref, 'assignment')
+    if: startsWith(github.head_ref, 'assignment') && github.repository_owner != 'UofT-DSI'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
