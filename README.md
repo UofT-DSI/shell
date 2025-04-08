@@ -1,5 +1,3 @@
-# HIRO
-
 # Unix shell
 
 ## Content
