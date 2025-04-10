@@ -13,11 +13,16 @@ mkdir analysis output
 touch README.md
 touch analysis/main.py
 
+# remove everything from the current directory 
+# mentioned during office hours
+rm -rf *
+
 # download client data
 # downloads data from Github
 curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
 # unzips data
-unzip -q rawdata.zip
+# made change here from class office hours
+unzip -0 -q rawdata.zip
 
 ###########################################
 # Complete assignment here
