@@ -21,8 +21,10 @@ unzip -q rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
+mkdir data
 
 # 2. Move the ./rawdata directory to ./data/raw
+
 
 # 3. List the contents of the ./data/raw directory
 
@@ -38,5 +40,11 @@ unzip -q rawdata.zip
 
 
 ###########################################
+#added code to upload to github
+git add assignment.sh
+git status
+git commit -m "finished the assignment"
+git push origin assignment
+
 
 echo "Project setup is complete!"
