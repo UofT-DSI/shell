@@ -1,4 +1,6 @@
 #!/bin/bash
+# Re-triggering autograder
+
 set -x
 
 ############################################
