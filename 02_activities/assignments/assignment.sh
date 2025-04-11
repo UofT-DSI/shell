@@ -21,22 +21,39 @@ unzip -q rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
+mkdir data
 
 # 2. Move the ./rawdata directory to ./data/raw
+mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
+cd ../data/raw
+ls 
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
+cd
+pwd
+cd ../Desktop/DSI_Parent
+cd ../shell/02_activities/assignments/data/processed
+pwd
+ls 
+mkdir event_logs server_logs user_logs 
+ls
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-
+cp ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/raw/*server*.log ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/processed/server_logs/
 # 6. Repeat the above step for user logs and event logs
-
+cp ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/raw/*user*.log ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/processed/user_logs/
+cp ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/raw/*event*.log ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/processed/event_logs/
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+rm ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/raw/*ipaddr*
+
+ls ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/processed/user_logs/*ipaddr*
+
+rm ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/processed/user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-
-
+find ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/processed -type f > ~/Desktop/DSI_Parent/shell/02_activities/assignments/data/inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
