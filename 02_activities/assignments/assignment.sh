@@ -64,8 +64,8 @@ mkdir data/processed/server_logs data/processed/user_logs data/processed/event_l
 # pwd
 # 5b. Copy data
 echo "Copying data"
-cp data/raw/rawdata/server* "processed/server_logs"
-cp data/raw/rawdata/*.log "processed/server_logs"
+cp data/raw/rawdata/*server* "data/processed/server_logs"
+cp data/raw/rawdata/*.log "data/processed/server_logs"
 
 
 # 6. Repeat the above step for user logs and event logs
@@ -80,13 +80,13 @@ rm -f processed/user_logs/ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 # 8a. create file
-touch inventory.txt
+touch data/inventory.txt
 
 # 8b. show all files in the subfolders 
 ls -R
 
 # 8c. add all the data into the inventory text file
-ls -R >> inventory.txt
+ls -R >> data/inventory.txt
 
 ###########################################g
 
