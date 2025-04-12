@@ -15,7 +15,7 @@ touch analysis/main.py
 
 # remove everything from the current directory 
 # mentioned during office hours
-rm -rf *
+# rm -rf *
 
 # download client data
 # downloads data from Github
