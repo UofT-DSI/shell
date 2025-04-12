@@ -47,7 +47,7 @@ ls "data/raw"
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 # 4a create a new directory because this is a new folder; And it'll act as a parent directory / folder
 echo "Creating Directory"
-mkdir "./data/processed"
+# mkdir "./data/processed"
 # 4b. navigate to the new directory
 # cd "./data/processed"
 # 4c. create the following directories
