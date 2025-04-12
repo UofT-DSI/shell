@@ -77,13 +77,13 @@ cp ./data/raw/*server*.log ./data/processed/server_logs
 # 6. Repeat the above step for user logs and event logs
 # Assuming we are moving the contents of the user and event log folders > HW note
 # 6a. move contents - meaning not copying
-mv ./data/raw/rawdata/*user*.log ./data/processed/user_logs
-mv ./data/raw/rawdata/*event*.log ./data/processed/event_logs
+cp ./data/raw/*user*.log ./data/processed/user_logs
+cp ./data/raw/*event*.log ./data/processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with ipaddr in the filename) from ./data/raw and ./data/processed/user_logs
 # 7a. remove files
-rm ./data/raw/rawdata/ipaddr*
-rm -f ./data/processed/user_logs/ipaddr*
+rm ./data/raw/*ipaddr*
+rm -f ./data/processed/user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 # 8a. create file
