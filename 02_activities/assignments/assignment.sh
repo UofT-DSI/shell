@@ -31,27 +31,27 @@ unzip -0 -q rawdata.zip
 # $ before each command?
 
 # 1. Create a directory named data
-echo "Creating Directory"
+echo Creating Directory
 mkdir data
 
 # 2. Move the ./rawdata directory to ./data/raw
 # 2a. Create the new directory
-# mkdir "./data/raw"
+# mkdir ./data/raw
 # 2b. Moving the directory so it can be moved
-# cd "./data/raw"
-echo "moving directory"
-mv ./rawdata/ ./data/raw
+# cd ./data/raw
+echo moving directory
+mv rawdata/ ./data/raw
 # 3. List the contents of the ./data/raw directory
 ls data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 # 4a create a new directory because this is a new folder; And it'll act as a parent directory / folder
-echo "Creating Directory"
-# mkdir "./data/processed"
+echo Creating Directory
+# mkdir ./data/processed
 # 4b. navigate to the new directory
-# cd "./data/processed"
+# cd ./data/processed
 # 4c. create the following directories
-# mkdir "server_logs" "user_logs" "event_logs"
+# mkdir server_logs user_logs event_logs
 
 # 4d. recreate the folders again > not sure why the autograder is rejecting?
 
@@ -59,39 +59,44 @@ mkdir -p data/processed/{server_logs,user_logs,event_logs}
 
 
 
-# 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
+# 5. Copy all server log files (files with server in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 # 5a. Change directory
 # cd ..
 # pwd
 # 5b. Copy data
-echo "Copying data"
-cp data/raw/rawdata/*server* "data/processed/server_logs"
-cp data/raw/rawdata/*.log "data/processed/server_logs"
+echo Copying data
+cp ./data/raw/*server*.log ./data/processed/server_logs
+#cp ./data/raw/*.log ./data/processed/server_logs
 
-cp ./data/raw/rawdata/*server* "data/processed/server_logs"
-cp ./data/raw/rawdata/*.log "data/processed/server_logs"
+#cp ./data/raw/rawdata/*server* data/processed/server_logs
+#cp ./data/raw/rawdata/*.log data/processed/server_logs
 
 
+# Q6
 # 6. Repeat the above step for user logs and event logs
 # Assuming we are moving the contents of the user and event log folders > HW note
 # 6a. move contents - meaning not copying
-mv raw/rawdata/*server* "processed/server_logs"
+mv raw/rawdata/*user*.log processed/user_logs
+mv raw/rawdata/*event*.log processed/event_logs
 
-# 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+# 7. For user privacy, remove all files containing IP addresses (files with ipaddr in the filename) from ./data/raw and ./data/processed/user_logs
 # 7a. remove files
 rm raw/rawdata/ipaddr*
 rm -f processed/user_logs/ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 # 8a. create file
-touch ./data/inventory.txt
+# look for any file type in the processed directory and put it into the inventory text file
+find data/processed -type f > data/inventory.txt
 
-# 8b. show all files in the subfolders 
-ls -R
+# touch ./data/inventory.txt
 
-# 8c. add all the data into the inventory text file
-ls -R >> ./data/inventory.txt
+# # 8b. show all files in the subfolders 
+# ls -R
+
+# # 8c. add all the data into the inventory text file
+# ls -R >> ./data/inventory.txt
 
 ###########################################g
 
-echo "Project setup is complete!"
+echo Project setup is complete!
