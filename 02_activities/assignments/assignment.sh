@@ -22,7 +22,8 @@ touch analysis/main.py
 curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
 # unzips data
 # made change here from class office hours
-unzip -0 -q rawdata.zip
+#unzip -0 -q rawdata.zip
+unzip -oq rawdata.zip
 
 ###########################################
 # Complete assignment here
