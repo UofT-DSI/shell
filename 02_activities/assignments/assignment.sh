@@ -46,6 +46,6 @@ touch data/inventory.txt
 find data/processed -type f > data/inventory.txt
 
 
-###########################################
+#############################################
 
 echo "Project setup is complete!"
