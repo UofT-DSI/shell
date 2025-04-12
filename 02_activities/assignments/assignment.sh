@@ -53,9 +53,10 @@ mkdir "./data/processed"
 # 4c. create the following directories
 # mkdir "server_logs" "user_logs" "event_logs"
 
+# 4d. recreate the folders again
 mkdir data/processed/server_logs data/processed/user_logs data/processed/event_logs
 
-# 4d. recreate the folders again
+
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 # 5a. Change directory
