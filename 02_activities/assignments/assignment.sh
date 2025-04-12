@@ -75,7 +75,7 @@ cp ./data/raw/*server*.log ./data/processed/server_logs
 
 # Q6
 # 6. Repeat the above step for user logs and event logs
-# Assuming we are moving the contents of the user and event log folders > HW note
+# Assuming we are copying the contents of the user and event log folders > HW note
 # 6a. move contents - meaning not copying
 cp ./data/raw/*user*.log ./data/processed/user_logs
 cp ./data/raw/*event*.log ./data/processed/event_logs
