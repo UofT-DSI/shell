@@ -1,0 +1,3 @@
+event_logs/
+server_logs/
+user_logs/
