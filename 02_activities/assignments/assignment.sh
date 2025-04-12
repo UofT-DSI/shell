@@ -36,13 +36,13 @@ mkdir data
 
 # 2. Move the ./rawdata directory to ./data/raw
 # 2a. Create the new directory
-mkdir "./data/raw"
+# mkdir "./data/raw"
 # 2b. Moving the directory so it can be moved
-cd "./data/raw"
+# cd "./data/raw"
 echo "moving directory"
-mv "./rawdata/" "./data/raw"
+mv ./rawdata/ ./data/raw
 # 3. List the contents of the ./data/raw directory
-ls "data/raw"
+ls data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 # 4a create a new directory because this is a new folder; And it'll act as a parent directory / folder
