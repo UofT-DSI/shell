@@ -70,6 +70,11 @@ mkdir -p data/processed/user_logs
 mkdir -p data/processed/event_logs
 mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
 
+mkdir ./data/processed/server_logs
+mkdir ./data/processed/user_logs
+mkdir ./data/processed/event_logs
+mkdir ./data/processed/server_logs data/processed/user_logs data/processed/event_logs
+
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 # 5a. Change directory
 # cd ..
@@ -95,13 +100,13 @@ rm -f processed/user_logs/ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 # 8a. create file
-touch data/inventory.txt
+touch ./data/inventory.txt
 
 # 8b. show all files in the subfolders 
 ls -R
 
 # 8c. add all the data into the inventory text file
-ls -R >> data/inventory.txt
+ls -R >> ./data/inventory.txt
 
 ###########################################g
 
