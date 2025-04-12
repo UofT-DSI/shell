@@ -40,7 +40,7 @@ mkdir data
 # 2b. Moving the directory so it can be moved
 # cd ./data/raw
 echo moving directory
-mv rawdata/ ./data/raw
+mv rawdata ./data/raw
 # 3. List the contents of the ./data/raw directory
 ls data/raw
 
