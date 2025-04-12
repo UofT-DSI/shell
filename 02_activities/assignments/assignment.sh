@@ -42,7 +42,7 @@ cd "./data/raw"
 echo "moving directory"
 mv "./rawdata/" "./data/raw"
 # 3. List the contents of the ./data/raw directory
-ls "./rawdata"
+ls "./raw"
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 # 4a create a new directory because this is a new folder; And it'll act as a parent directory / folder
