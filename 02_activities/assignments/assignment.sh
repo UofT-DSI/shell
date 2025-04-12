@@ -83,6 +83,6 @@ ls -R
 # 8c. add all the data into the inventory text file
 ls -R >> inventory.txt
 
-###########################################
+###########################################g
 
 echo "Project setup is complete!"
