@@ -24,7 +24,7 @@ unzip -q rawdata.zip
 mkdir data
 # 2. Move the ./rawdata directory to ./data/raw
 mkdir -p data/raw
-mv rawdata data/raw
+mv rawdata/* data/raw
 # 3. List the contents of the ./data/raw directory
 ls data/raw
 
@@ -36,6 +36,7 @@ mkdir -p data/processed/event_logs
 cp data/raw/*server*.log data/processed/server_logs
 
 
+
 # 6. Repeat the above step for user logs and event logs
 cp data/raw/*user*.log data/processed/user_logs
 cp data/raw/*event*.log data/processed/event_logs
@@ -44,8 +45,10 @@ rm data/raw/*ipaddr*
 rm data/processed/user_logs/*ipaddr*
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 touch data/inventory.txt    
-ls .data/processed > data/inventory.txt
+ls data/processed > data/inventory.txt
+
 
 ###########################################
 
 echo "Project setup is complete!"
+
