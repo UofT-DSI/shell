@@ -79,6 +79,9 @@ echo "Copying data"
 cp data/raw/rawdata/*server* "data/processed/server_logs"
 cp data/raw/rawdata/*.log "data/processed/server_logs"
 
+cp ./data/raw/rawdata/*server* "data/processed/server_logs"
+cp ./data/raw/rawdata/*.log "data/processed/server_logs"
+
 
 # 6. Repeat the above step for user logs and event logs
 # Assuming we are moving the contents of the user and event log folders > HW note
