@@ -34,7 +34,8 @@ ls
 
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
-
+cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/
+mkdir processed
 cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/processed
 mkdir server_logs user_logs event_logs
 
@@ -50,7 +51,6 @@ cp ./*user*.log ../processed/user_logs
 cp ./*event*.log ../processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-rf -rf ./data
 
 rm -r ./*ipaddr* 
 cd ../processed/user_logs
