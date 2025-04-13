@@ -48,4 +48,4 @@ ls ./processed/event_logs/ >> inventory.txt
 
 ###########################################
 
-echo "Project setup is complete!"  _ _
+echo "Project setup is complete!"  _ _ _
