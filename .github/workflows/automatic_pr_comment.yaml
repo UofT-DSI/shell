@@ -32,7 +32,22 @@ jobs:
               isMember = false;
             }
 
-            if (!isMember || branchName.startsWith('assignment') || pr.base.ref !== 'main') {
+            // Check if user is a contributor to the repo
+            try {
+              const contributors = await github.paginate(
+                github.rest.repos.listContributors,
+                {
+                  owner: repo.owner,
+                  repo: repo.repo,
+                  anon: false
+                }
+              );
+              isContributor = contributors.some(contributor => contributor.login === sender);
+            } catch (error) {
+              isContributor = false;
+            }
+
+            if ((!isMember && !isContributor) || branchName.startsWith('assignment')) {
               const commentBody = `This pull request was made to the wrong repository. If you are a participant, please close it and open it in your own fork instead. Refer to the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for detailed instructions.`;
 
               await github.rest.issues.createComment({
