@@ -4,6 +4,10 @@ on:
     branches:
       - main
     types: [opened, synchronize, reopened]
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   autograder:
     name: Assignment autograder

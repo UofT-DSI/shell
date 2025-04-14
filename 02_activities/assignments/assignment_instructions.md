@@ -12,7 +12,7 @@ You've been asked to update this script to also automate the initial organizatio
    - Forking creates a copy of the main repository in your GitHub account. This allows you to work on your version without affecting the original repository.
 2. **Create a Branch for Your Work**: To keep your changes organized, create a new branch named `assignment`:
    ```bash
-   git checkout -b assignment
+   git switch -c assignment
    ```
 
 ---
