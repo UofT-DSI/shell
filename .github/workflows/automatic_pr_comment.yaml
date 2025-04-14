@@ -9,7 +9,7 @@ jobs:
     if: github.repository_owner == 'UofT-DSI'
     runs-on: ubuntu-latest
     steps:
-      - name: Handle PR based on source branch
+      - name: Handle PR based on branch and author
         uses: actions/github-script@v6
         with:
           script: |
@@ -17,11 +17,24 @@ jobs:
             const branchName = pr.head.ref;
             const issue_number = pr.number;
             const repo = context.repo;
+            const sender = context.payload.sender.login;
 
-            if (branchName.startsWith('assignment')) {
-              const commentBody = `This pull request was made to the wrong repository. Please open it in your own fork instead. Refer to the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for detailed instructions.`;
+            // Check if user is a member of the org
+            let isMember = false;
+            try {
+              const membership = await github.rest.orgs.getMembershipForUser({
+                org: repo.owner,
+                username: sender
+              });
+              isMember = membership && membership.status === "active";
+            } catch (error) {
+              // If not a member, GitHub API throws a 404
+              isMember = false;
+            }
 
-              // Comment on the PR
+            if (!isMember || branchName.startsWith('assignment') || pr.base.ref !== 'main') {
+              const commentBody = `This pull request was made to the wrong repository. If you are a participant, please close it and open it in your own fork instead. Refer to the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for detailed instructions.`;
+
               await github.rest.issues.createComment({
                 owner: repo.owner,
                 repo: repo.repo,
@@ -29,7 +42,6 @@ jobs:
                 body: commentBody
               });
 
-              // Close the PR
               await github.rest.pulls.update({
                 owner: repo.owner,
                 repo: repo.repo,
