@@ -19,8 +19,10 @@ jobs:
             const repo = context.repo;
             const sender = context.payload.sender.login;
 
-            // Check if user is a member of the org
             let isMember = false;
+            let isContributor = false;
+
+            // Check if user is a member of the org
             try {
               const membership = await github.rest.orgs.getMembershipForUser({
                 org: repo.owner,
