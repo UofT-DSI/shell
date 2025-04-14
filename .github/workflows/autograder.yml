@@ -1,0 +1,36 @@
+name: Assignment autograder
+on: 
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+jobs:
+  autograder:
+    name: Assignment autograder
+    if: startsWith(github.head_ref, 'assignment') && github.repository_owner != 'UofT-DSI'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Setup working directory for script
+        run: |
+          UUID=$(uuidgen)
+          echo "UUID=$UUID" >> $GITHUB_ENV
+          mkdir /tmp/$UUID
+          cp $GITHUB_WORKSPACE/02_activities/assignments/assignment.sh /tmp/$UUID
+      - name: Run assignment script
+        run: |
+          bash -c "bash assignment.sh 2>&1 | tee /tmp/${{ env.UUID }}_output.txt"
+        working-directory: /tmp/${{ env.UUID }}
+      - name: Grade responses
+        id: grade
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO_BRANCH: ${{ github.event.pull_request.head.ref }}
+          WORKING_DIR: /tmp/${{ env.UUID }}
+        run: |
+          wget -O /tmp/autograder.py https://github.com/UofT-DSI/shell/raw/refs/heads/main/03_instructional_team/autograder/autograder.py
+          uv run --python 3.12 --with pandas,tabulate,requests /tmp/autograder.py
