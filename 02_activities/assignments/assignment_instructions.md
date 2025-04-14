@@ -10,6 +10,9 @@ You've been asked to update this script to also automate the initial organizatio
 ### Setup
 1. **Forking the Repository**: If you have not already done so, fork this Shell learning module repository following these [instructions](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up). 
    - Forking creates a copy of the main repository in your GitHub account. This allows you to work on your version without affecting the original repository.
+2. **Enable GitHub Actions**: Click on the **Actions** tab in your repository and enable workflows if prompted.  
+<img src="./github_actions.png" width="500px">
+
 2. **Create a Branch for Your Work**: To keep your changes organized, create a new branch named `assignment`:
    ```bash
    git switch -c assignment
@@ -36,26 +39,16 @@ Your coworkers have made some other changes to the script. You'll need to incorp
    ```
 2. **Resolve Merge Conflicts**: If there are any conflicts, use ```git status``` to see which files are affected, resolve the conflicts manually, and then mark them as resolved.
 3. **Commit the Merge**: Once all conflicts are resolved, commit the merge.
+1. **Re-test Your Script**: Make sure that your script still works after merging the updates and make any changes as necessary
 
 ---
 
 ### Part 3: Test Your Script
-1. **Re-test Your Script**: Make sure that your script still works after merging the updates.
-2. **Optional Clean Test Setup**: If you'd like to test your script in a clean environment, follow these steps:
-   ```bash
-   mkdir assignment_test_clean    # make an empty directory
-   ```
-   ```bash
-   cp assignment.sh assignment_test_clean    # copy your script into the empty directory
-   ```
-   ```bash
-   cd assignment_test_clean    # change your working directory to the new clean directory
-   ```
-3. **Run Your Script**:
+2. **Run Your Script**:
    ```bash
    bash assignment.sh
    ```
-4. **Verify the Output**:
+3. **Verify the Output**:
    - Check if the expected directories are created.
    - Verify that files are moved or copied as expected.
    - Ensure that files that should be deleted are no longer present.
@@ -67,11 +60,11 @@ Your coworkers have made some other changes to the script. You'll need to incorp
    ```bash
    git status
    ```
-2. **Enable GitHub Actions**: Click on the **Actions** tab in your repository and enable workflows if prompted.
-![](./github_actions.png)
 3. **Create a Pull Request**:
    - Open a pull request from your `assignment` branch to your repository's `main` branch.
    - The autograder will run automatically and post your assignment grade as a comment.
+   - Ensure the pull request is **NOT** made to the `UofT-DSI` organization
+   - **Do not merge** your pull request until the end of the module. Your teaching team will only grade *open* pull requests.
 
 ---
 
@@ -83,7 +76,6 @@ Your coworkers have made some other changes to the script. You'll need to incorp
 This assignment is considered complete if all autograder tests pass successfully, and incomplete otherwise.
 
 ### Submission Parameters:
-* Submission Due Date: `2025-01-15 - 23:59`
 * The branch name for your repo should be: `assignment`
 * What to submit for this assignment:
     * One or more commits that update the `assignment.sh` script
