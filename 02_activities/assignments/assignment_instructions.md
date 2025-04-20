@@ -38,7 +38,6 @@ Your coworkers have made some other changes to the script. You'll need to incorp
 3. **Commit the Merge**: Once all conflicts are resolved, commit the merge.
 
 ---
-
 ### Part 3: Test Your Script
 1. **Re-test Your Script**: Make sure that your script still works after merging the updates.
 2. **Optional Clean Test Setup**: If you'd like to test your script in a clean environment, follow these steps:
