@@ -1,4 +1,5 @@
 
+
 #!/bin/bash
 
 !/bin/bash
@@ -31,7 +32,9 @@ ls -l data/raw
 
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
-mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
+
+mkdir -p /data/server_logs /data/user_logs/ data/event_logs
+
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 cp data/raw/*server*.log data/processed/server_logs 
