@@ -10,11 +10,12 @@ You've been asked to update this script to also automate the initial organizatio
 ### Setup
 1. **Forking the Repository**: If you have not already done so, fork this Shell learning module repository following these [instructions](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up). 
    - Forking creates a copy of the main repository in your GitHub account. This allows you to work on your version without affecting the original repository.
+   -completed
 2. **Create a Branch for Your Work**: To keep your changes organized, create a new branch named `assignment`:
    ```bash
    git checkout -b assignment
-   ```
-
+   ``
+   -completed 
 ---
 
 ### Part 1: Update the Data Ingest Script
@@ -34,9 +35,9 @@ Your coworkers have made some other changes to the script. You'll need to incorp
    ```bash
    git pull https://github.com/UofT-DSI/shell coworker-changes --no-rebase
    ```
+   Seems the connection is not working, will reach out to the instructor
 2. **Resolve Merge Conflicts**: If there are any conflicts, use ```git status``` to see which files are affected, resolve the conflicts manually, and then mark them as resolved.
 3. **Commit the Merge**: Once all conflicts are resolved, commit the merge.
-
 ---
 
 ### Part 3: Test Your Script
