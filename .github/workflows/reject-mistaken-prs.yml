@@ -2,18 +2,19 @@
 name: Reject mistaken pull‑requests to course repo
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened]
 
 jobs:
   reject_if_to_course_repo:
-    # Run only when the PR’s base repo is the course repo (owner == uoft-dsi)
     if: ${{ github.event.pull_request.base.repo.owner.login == 'uoft-dsi' }}
     runs-on: ubuntu-latest
 
     permissions:
       pull-requests: write       # to post a comment
       contents: write            # to close the PR (via the pulls API)
+      issues: write              # for issue comments
+      
 
     steps:
       - name: Comment and close mistaken PR
