@@ -1,0 +1,38 @@
+# .github/workflows/reject-mistaken-prs.yml
+name: Reject mistaken pull‑requests to course repo
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  reject_if_to_course_repo:
+    # Run only when the PR’s base repo is the course repo (owner == uoft-dsi)
+    if: ${{ github.event.pull_request.base.repo.owner.login == 'uoft-dsi' }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write       # to post a comment
+      contents: write            # to close the PR (via the pulls API)
+
+    steps:
+      - name: Comment and close mistaken PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: `You have unfortunately made a pull request to the wrong repo. You shouldn't be making a pull request to **${ context.repo.owner }/${ context.repo.repo }**, but rather your own forked shell repo. Please read the instructions on your onboarding [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) more carefully. Feel free to also take a look at our [video](https://www.youtube.com/watch?v=03nLtHn11c0)`
+
+            });
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              state: "closed"
+            });
