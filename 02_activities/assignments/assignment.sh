@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 ############################################
 # DSI CONSULTING INC. Project setup script #
