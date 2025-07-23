@@ -30,7 +30,7 @@ unzip -q rawdata.zip
 # 1. Create a directory named data
 asdf
 
-
+awefawefasdf
 # 2. Move the ./rawdata directory to ./data/raw
 
 # 3. List the contents of the ./data/raw directory
