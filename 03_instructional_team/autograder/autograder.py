@@ -15,7 +15,8 @@ if 'GITHUB_TOKEN' in os.environ:
 else:
     github_token = None
 
-working_dir = os.environ["WORKING_DIR"]
+root_dir = os.environ["WORKING_DIR"]
+working_dir = os.path.join(root_dir, 'newproject');
 
 status_c = '✅'
 status_i = '❌'
@@ -68,7 +69,7 @@ def is_commit_in_branch(
 s = []
 
 # load script output
-with open(working_dir + '_output.txt', 'r') as f:
+with open(root_dir + '_output.txt', 'r') as f:
     script_rslt = f.read()
 
 script_rslt = script_rslt.split('\n+')
@@ -332,7 +333,7 @@ if github_token:
             f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/pulls/{github_pr_number}/reviews",
             json={"event": "REQUEST_CHANGES", "body": "## Autograder results\n" + render_md + "\n\nPlease address the issues listed above." },
             headers=headers)
-    
+
 else:
     print("GitHub token not found. Skipping comment creation.")
 
