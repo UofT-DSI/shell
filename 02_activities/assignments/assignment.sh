@@ -32,7 +32,7 @@ mkdir data
 
 # 2. Move the ./rawdata directory to ./data/raw
 
-mv rawdata data/raw
+mv -v rawdata data/raw
 
 # 3. List the contents of the ./data/raw directory
 
