@@ -49,3 +49,6 @@ mkdir data
 ###########################################
 
 echo "Project setup is complete!"
+
+# Q1
+mkdir data
