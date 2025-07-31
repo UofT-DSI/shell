@@ -64,7 +64,7 @@ rm *ipaddr*
 cd ../..
 pwd
 touch inventory.txt
-
+find processed -type f >> inventory.txt
 
 ###########################################
 
