@@ -35,6 +35,7 @@ mkdir data
 mv -v rawdata data/raw
 
 # 3. List the contents of the ./data/raw directory
+ls -l newproject/data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 
