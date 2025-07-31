@@ -37,7 +37,7 @@ mv -v rawdata data/raw
 ls -l data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
-mkdir -p newproject/data/processed/server_logs newproject/data/processed/user_logs newproject/data/processed/event_logs
+mkdir -p newproject/data/processed
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 
