@@ -31,7 +31,7 @@ unzip -q rawdata.zip
 mkdir data
 # 2. Move the ./rawdata directory to ./data/raw
 mkdir data/raw
-mv -r rawdata/* data/raw/
+mv rawdata/* data/raw/
 # 3. List the contents of the ./data/raw directory
 ls ./data/raw/raw 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
