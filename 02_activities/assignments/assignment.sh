@@ -46,7 +46,7 @@ pwd
 mkdir server_logs user_logs event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-mkdir -p ./data/processed/server_logs
+
 find ./data/raw -type f -name '*server*.log' -exec cp {} ./data/processed/server_logs/ \;
 
 
