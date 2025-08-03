@@ -49,7 +49,7 @@ mkdir server_logs user_logs event_logs
 cd ..
 cd data/rawdata
 pwd
-cp ./data/raw/*server*.log .data/processed/server_logs/
+cp ./data/raw/rawdata/*server*.log .data/processed/server_logs/
 # 6. Repeat the above step for user logs and event logs
 cp raw/rawdata/*user*.log processed/user_logs/
 cp raw/rawdata/*event*.log processed/event_logs/
