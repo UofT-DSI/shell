@@ -42,6 +42,7 @@ ls -lh ./data/raw
 
 mkdir ../processed
 cd process
+pwd
 mkdir ../data/processed/server_logs 
 mkdir ../data/processed/user_logs 
 mkdir ../data/processed/event_logs
