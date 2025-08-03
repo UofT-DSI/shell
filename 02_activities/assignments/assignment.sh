@@ -51,8 +51,8 @@ find ../raw -type f -name '*server*.log' -exec cp {} ../processed/server_logs/ \
 
 
 # 6. Repeat the above step for user logs and event logs
-cp raw/rawdata/*user*.log processed/user_logs/
-cp raw/rawdata/*event*.log processed/event_logs/
+find ../raw -type f -name '*user*.log' -exec cp {} ../processed/user_logs/ \;
+find ../raw -type f -name '*event*.log' -exec cp {} ../processed/event_logs/ \;
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 rm raw/rawdata/*ipaddr*
 rm proccessed/user_logs/*ipaddr*
