@@ -40,6 +40,7 @@ unzip -q rawdata.zip
      mkdir -p data/processed/server_logs  
      mkdir -p data/processed/user_logs 
      mkdir -p data/processed/event_logs
+     
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
       cd ..
       cd raw
