@@ -28,43 +28,35 @@ unzip -q rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
-     mkdir data
+mkdir data
 # 2. Move the ./rawdata directory to ./data/raw
-     # I have unzip  rawdata(compressed) to unzip rawdata in assignments files
-     mv ./rawdata ./data/raw
+mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
-     ls ./data/raw
-     # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
+ls ./data/raw
+
+# 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
      
-     mkdir -p data/processed/server_logs  
-     mkdir -p data/processed/user_logs 
-     mkdir -p data/processed/event_logs
-     
+mkdir -p data/processed/server_logs  
+mkdir -p data/processed/user_logs 
+mkdir -p data/processed/event_logs
+
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-      cd ..
-      cd raw
-      cd rawdata
-      cp ./*server*  ./processed/server_logs
-      cp ./*server*   ./processed/server_logs
+      
+cp ./data/raw/*server*.log  ./processed/server_logs
 
 # 6. Repeat the above step for user logs and event logs
-     cp ./*server*  ./processed/user_logs
-     cp ./*server*  ./processed/event_logs
+cp ./data/raw/*server*.log  ./data/processed/user_logs
+cp ./data/raw/*server*.log  ./data/processed/event_logs
+
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-     cd ..
-     cd ..
-     cd raw
-     rm ./*ipaddr*
-     cd ..
-     cd ..
-     cd processed
-     rm ./*ipaddr*
+rm ./data/raw/*ipaddr*
+rm ./data/processed/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
-  code inventory.txt
-  ls > inventory.txt
+code ./data/inventory.tx
+ls > ./data/inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
