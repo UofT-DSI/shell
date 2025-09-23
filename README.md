@@ -47,19 +47,19 @@ Assignments are typically due on the Sunday following the module's live learning
 
 ## Contacts
 
-**Questions can be submitted to the #cohort-7-help channel on Slack**
+**Questions can be submitted to the #dc2-help channel on Slack**
 
 * Technical Facilitator:   
-  * **Simeon Wong**  
-    me@simeon.dev
+  * **Daniel Razavi**  
+    daniel.razavi@utoronto.ca
 
 * Learning Support Staff: 
   * **Dmytro Bonislavskyi**  
   dmytro.bonislavskyi@gmail.com
-  * **Gayathri Girish Kumar**  
-  gayathri.girishkumar@mail.utoronto.ca
-  * **Xindi Zhang**  
-  xindi.zhang@mail.utoronto.ca
+  * **Anjali Desphande**  
+  anju_shrivastava@yahoo.com
+  * **Sergii Khomych**  
+  svkhomich1@gmail.com
  
 ## Delivery of the Learning Module
 
