@@ -142,5 +142,5 @@ Below is an outline of the folder structure for this module:
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
 * **LICENSE**: The license for this repository.
 * **SETUP.md**: Contains the steps required to set up this repo for the module.
-* **README**: This file.
+* **README.md**: This file.
 
