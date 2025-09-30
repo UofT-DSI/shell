@@ -6,9 +6,6 @@
 $ echo Rachael
 Rachael
 
-$ conda activate dsi_participant
-(dsi_participant)
-
 $ date
 Tue, Nov 19, 2024 6:28:10PM
 
