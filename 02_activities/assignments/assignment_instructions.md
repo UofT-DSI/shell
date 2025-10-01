@@ -39,7 +39,7 @@ You've been asked to update this script to also automate the initial organizatio
    - Check if the expected directories are created. (eg. by browsing the directory with `cd` and `ls`)
    - Verify that files are moved or copied as expected.
    - Ensure that files that should be deleted are no longer present.
-   - Ensure your script works regardless of what 
+   - Ensure your script works regardless
 
 3. **Commit Your Changes**: As you complete parts of your script and confirmed that it is working correctly, stage and commit your changes to ensure your progress is saved.
     ```bash
