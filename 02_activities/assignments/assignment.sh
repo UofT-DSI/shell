@@ -25,6 +25,27 @@ curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_ac
 unzip -q rawdata.zip
 
 ###########################################
+# 1. Create a directory named data
+cd ~/Desktop
+cd shell
+cd assignments
+mkdir data
+cd data
+mkdir raw 
+cd ../..
+
+# 2. Move the ./rawdata directory to ./data/raw
+mv ./rawdata* ./data/raw/
+
+# 3. List the contents of the ./data/raw directory
+cd data
+cd raw
+cd ls 
+cd ..
+
+# 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
+mkdir processed 
+
 # Complete assignment here
 
 # 1. Create a directory named data
