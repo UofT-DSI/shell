@@ -28,6 +28,7 @@ unzip -q rawdata.zip
 # 1. Create a directory named data
 cd ~/Desktop
 cd shell
+cd 02_activities
 cd assignments
 mkdir data
 cd data
