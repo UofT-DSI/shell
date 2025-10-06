@@ -9,19 +9,16 @@ set -x
 # project name and a brief description of the project.
 # Then it unzips the raw data provided by the client.
 
-if [ -d newproject ]; then
-  echo "Directory 'newproject' already exists. Please remove it before running this script."
-  exit 1
-fi
 mkdir newproject
 cd newproject
 
 mkdir analysis output
 touch README.md
+echo "# Project Name: DSI Consulting Inc." > README.md
 touch analysis/main.py
 
 # download client data
-curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
+wget -O rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
 unzip -q rawdata.zip
 
 ###########################################
