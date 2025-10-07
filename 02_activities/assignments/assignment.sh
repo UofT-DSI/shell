@@ -57,7 +57,7 @@ rm ./data/processed/user*/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
-ls -la ./data/processed/*/* > ./data/inventory.txt
+ls ./data/processed/*/* > ./data/inventory.txt
 
 ###########################################
 
