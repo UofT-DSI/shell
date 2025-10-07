@@ -50,8 +50,7 @@ Assignments are typically due on the Sunday following the module's live learning
 **Questions can be submitted to the #dc2-help channel on Slack**
 
 * Technical Facilitator:   
-  * **Daniel Razavi**  
-    daniel.razavi@utoronto.ca
+  * **Amy**  
 
 * Learning Support Staff: 
   * **Dmytro Bonislavskyi**  
