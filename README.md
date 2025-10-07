@@ -35,8 +35,6 @@ This module has two types of activities.
 ### Assignments
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
-Assignments are typically due on the Sunday following the module's live learning session.
-
 1. [Shell script assignment](./02_activities/assignments/assignment_instructions.md)
 
 ### Practice Problems
