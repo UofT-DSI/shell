@@ -53,6 +53,26 @@ On MacOS or Linux: open the **Terminal** app
 On newer macs, the default shell is zsh, which is almost identical to Bash.
 
 ---
+### Clearing up an abundance of terminology
+<img src="images/1-terminal.png" height="500px">
+
+---
+### Clearing up an abundance of terminology
+<img src="images/2-shell.png" height="500px">
+
+---
+### Clearing up an abundance of terminology
+<img src="images/3-gitbash.png" height="500px">
+
+---
+### Clearing up an abundance of terminology
+<img src="images/4-windows_shells.png" height="500px">
+
+---
+### Clearing up an abundance of terminology
+<img src="images/5-windows_terminals.png" height="500px">
+
+---
 ### Let's get started!
 
 First, we'll open our terminal. As mentioned earlier, this is most

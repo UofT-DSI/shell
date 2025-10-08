@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+        }
+
+        code,
+        textarea {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        pre {
+            margin: 2.5rem 0;
+        }
+
+        .problem {
+            margin-bottom: 100px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .parsons-container {
+            display: flex;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .multiple-choice-container {
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .multiple-choice-option {
+            display: inline-block;
+        }
+
+        .multiple-choice-option p,
+        .multiple-choice-option pre,
+        .multiple-choice-option code {
+            margin: 0;
+        }
+
+        .multiple-choice-option pre>code {
+            padding: .2rem .5rem;
+        }
+
+        .freeform-textbox {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+        }
+
+        .parsons-left,
+        .parsons-right {
+            flex: 1;
+            padding: 10px;
+            border: 1px dashed #ccc;
+            min-height: 100px;
+        }
+
+        .parsons-item {
+            margin: 5px;
+            padding: 5px;
+            background: #eee;
+            border: 1px solid #ccc;
+            cursor: move;
+        }
+
+        .parsons-item p {
+            margin: 0;
+        }
+
+        label {
+            font-weight: normal;
+        }
+
+        .solution {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .sol_correct {
+            text-decoration: none;
+            color: green;
+        }
+
+        .sol_correct.parsons-item {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .sol_option {
+            color: blue;
+        }
+
+        .sol_option code {
+            background-color: #d1ecf1;
+            border-color: #4f8a93;
+        }
+
+        .sol_incorrect {
+            text-decoration: line-through;
+            color: red;
+        }
+    </style> <!-- Load js-yaml and marked for YAML and markdown parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
+        integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"
+        integrity="sha512-rPuOZPx/WHMHNx2RoALKwiCDiDrCo4ekUctyTYKzBo8NGA79NcTW2gfrbcCL2RYL7RdjX2v9zR0fKyI4U4kPew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h4 id="title"></h4>
+            </div>
+        </div>
+    </div>
+    <script> window.addEventListener('DOMContentLoaded', async () => { // Get problem set name from the URL hash (e.g., "shell_moderate") 
+            const hash = window.location.hash.slice(1); if (!hash) {
+                document.getElementById("title").innerText = "No problem set specified in URL hash."; return;
+            }
+            const yamlFile = hash + '.yml';
+
+            try {
+                const response = await fetch(yamlFile);
+                if (!response.ok)
+                    throw new Error("Failed to load YAML file: " + yamlFile);
+                const yamlText = await response.text();
+                const data = jsyaml.load(yamlText);
+
+                // Set the document title and the h4#title using the YAML title 
+                document.title = data.title;
+                document.getElementById("title").innerText = data.title;
+
+                // Create a container for the problems 
+                const problemsContainer = document.createElement("div");
+                problemsContainer.id = "problems";
+                document.querySelector(".container").appendChild(problemsContainer);
+
+                // Render each problem 
+                data.problems.forEach((problem, index) => {
+                    const problemDiv = document.createElement("div");
+                    problemDiv.className = "problem";
+                    // Problem title 
+                    const problemTitle = document.createElement("h5");
+                    problemTitle.innerText = (index + 1) + ". " + problem.title;
+                    problemDiv.appendChild(problemTitle);
+
+                    // Problem description (rendered as markdown) 
+                    const descDiv = document.createElement("div");
+                    descDiv.innerHTML = marked.parse(problem.description);
+                    problemDiv.appendChild(descDiv);
+
+                    // Create the interactive area based on the question type 
+                    let interactiveElement;
+                    if (problem.questiontype === "freeform") {
+                        interactiveElement = document.createElement("textarea");
+                        interactiveElement.classList.add("freeform-textbox");
+
+                        // If a solution template is provided, prefill the textbox 
+                        if (problem.solution_template) {
+                            interactiveElement.value = problem.solution_template;
+                        }
+
+                    } else if (problem.questiontype === "multiplechoice") {
+                        interactiveElement = document.createElement("div");
+                        interactiveElement.className = "multiple-choice-container";
+                        if (problem.options && Array.isArray(problem.options)) {
+                            // Store the original index before shuffling
+                            problem.options = problem.options.map((option, idx) => ({ option, idx }));
+
+                            // Shuffle the options array
+                            problem.options = problem.options.sort(() => Math.random() - 0.5);
+
+                            problem.options.forEach(({ option, idx }, shuffledIdx) => {
+                                const label = document.createElement("label");
+                                label.style.display = "flex";
+                                label.style.alignItems = "center";
+
+                                const radio = document.createElement("input");
+                                radio.type = "radio";
+                                radio.name = "problem_" + index;
+                                radio.value = idx;
+                                radio.style.margin = "0 10px 0 0";
+                                label.appendChild(radio);
+                                label.appendChild(document.createTextNode(" "));
+
+                                const span = document.createElement("div");
+                                span.classList.add("multiple-choice-option");
+                                span.innerHTML = marked.parse(option);
+                                label.appendChild(span);
+                                interactiveElement.appendChild(label);
+                            });
+                        }
+
+                    } else if (problem.questiontype === "parsons") {                        
+                        let parsonsDragElem = document.createElement("div");
+                        parsonsDragElem.className = "parsons-container";
+
+                        // Left column for draggable items 
+                        const leftCol = document.createElement("div");
+                        leftCol.className = "parsons-left";
+                        const leftColTitle = document.createElement("b");
+                        leftColTitle.innerText = "Select from the list below by dragging";
+                        leftCol.appendChild(leftColTitle);
+
+                        // Right column as drop zone 
+                        const rightCol = document.createElement("div");
+                        rightCol.className = "parsons-right";
+                        const rightColTitle = document.createElement("b");
+                        rightColTitle.innerText = "Drop code here in the correct order";
+                        rightCol.appendChild(rightColTitle);
+
+
+                        if (problem.options && Array.isArray(problem.options)) {
+                            // Store the original index before shuffling
+                            problem.options = problem.options.map((option, idx) => ({ option, idx }));
+
+                            // Shuffle the options array
+                            problem.options = problem.options.sort(() => Math.random() - 0.5);
+
+                            problem.options.forEach(({ option, idx }, shuffledIdx) => {
+                                const item = document.createElement("div");
+                                item.className = "parsons-item";
+                                item.draggable = true;
+                                item.id = "parsons-" + index + "-" + shuffledIdx;
+                                item.dataset.index = idx; // Use the original index
+                                item.innerHTML = marked.parse(option);
+                                item.addEventListener("dragstart", (e) => {
+                                    e.dataTransfer.setData("text/plain", item.id);
+                                    e.dataTransfer.effectAllowed = "move";
+                                });
+                                leftCol.appendChild(item);
+                            });
+                        }
+
+                        // Allow dropping items in the right column
+                        rightCol.addEventListener("dragover", (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = "move";
+                        });
+                        rightCol.addEventListener("drop", (e) => {
+                            e.preventDefault();
+                            const id = e.dataTransfer.getData("text/plain");
+                            const draggable = document.getElementById(id);
+                            if (draggable) {
+                                rightCol.appendChild(draggable);
+                            }
+                        });
+
+                        // Allow dropping items back in the left column
+                        leftCol.addEventListener("dragover", (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = "move";
+                        });
+                        leftCol.addEventListener("drop", (e) => {
+                            e.preventDefault();
+                            const id = e.dataTransfer.getData("text/plain");
+                            const draggable = document.getElementById(id);
+                            if (draggable) {
+                                leftCol.appendChild(draggable);
+                            }
+                        });
+
+                        // Allow reordering items in the right column
+                        rightCol.addEventListener("dragover", (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = "move";
+                        });
+                        rightCol.addEventListener("drop", (e) => {
+                            e.preventDefault();
+                            const id = e.dataTransfer.getData("text/plain");
+                            const draggable = document.getElementById(id);
+                            if (draggable) {
+                                const afterElement = getDragAfterElement(rightCol, e.clientY);
+                                if (afterElement == null) {
+                                    rightCol.appendChild(draggable);
+                                } else {
+                                    rightCol.insertBefore(draggable, afterElement);
+                                }
+                            }
+                        });
+
+                        function getDragAfterElement(container, y) {
+                            const draggableElements = [...container.querySelectorAll('.parsons-item:not(.dragging)')];
+
+                            return draggableElements.reduce((closest, child) => {
+                                const box = child.getBoundingClientRect();
+                                const offset = y - box.top - box.height / 2;
+                                if (offset < 0 && offset > closest.offset) {
+                                    return { offset: offset, element: child };
+                                } else {
+                                    return closest;
+                                }
+                            }, { offset: Number.NEGATIVE_INFINITY }).element;
+                        }
+
+                        parsonsDragElem.appendChild(leftCol);
+                        parsonsDragElem.appendChild(rightCol);
+
+                        interactiveElement = parsonsDragElem;
+                    }
+
+                    if (interactiveElement) {
+                        problemDiv.appendChild(interactiveElement);
+                    }
+
+                    // Create the "Show solutions" button and solution area 
+                    const solutionButton = document.createElement("button");
+                    solutionButton.innerText = "Show solutions";
+                    const solutionDiv = document.createElement("div");
+                    solutionDiv.className = "solution";
+                    solutionDiv.style.display = "none";
+                    solutionDiv.innerHTML = '<b>SOLUTION:</b><br>' + marked.parse(problem.solution);
+
+                    solutionButton.addEventListener("click", () => {
+                        if (solutionDiv.style.display === "none") {
+                            solutionDiv.style.display = "block";
+                            solutionButton.innerText = "Hide solutions";
+
+                            if (problem.questiontype === "multiplechoice") {
+                                document.querySelectorAll(`input[name='problem_${index}']`).forEach(radio => {
+                                    if (radio.checked) {
+                                        if (problem.correct_options.includes(parseInt(radio.value, 10))) {
+                                            radio.parentElement.classList.add("sol_correct");
+
+                                            // append checkmark to the label text
+                                            const checkmark = document.createElement('span');
+                                            checkmark.classList.add("sol_decoration");
+                                            checkmark.innerHTML = ' &#10003;'; // HTML entity for checkmark
+                                            radio.parentElement.appendChild(checkmark);
+                                        } else {
+                                            radio.parentElement.classList.add("sol_incorrect");
+                                        }
+                                    }
+                                    else if (problem.correct_options.includes(parseInt(radio.value, 10))) {
+                                        radio.parentElement.classList.add("sol_option");
+                                    }
+                                });
+                            } else if (problem.questiontype === "parsons") {
+                                const leftCol = problemDiv.querySelector(".parsons-left");
+                                const rightCol = problemDiv.querySelector(".parsons-right");
+
+                                // Highlight correct items in the left column
+                                const highlight = (item, colour, markincorect) => {
+                                    const this_index = parseInt(item.dataset.index, 10);
+                                    const sol_order = problem.correct_options.findIndex(option => {
+                                        if (Array.isArray(option)) {
+                                            return option.includes(this_index);
+                                        }
+                                        return option === this_index;
+                                    });
+                                    if (sol_order !== -1) {
+                                        item.classList.add(colour);
+
+                                        // add a floating number to the item
+                                        const number = document.createElement('span');
+                                        number.innerHTML = '' + (sol_order + 1);
+                                        number.classList.add("sol_decoration");
+                                        number.style.position = 'relative';
+                                        number.style.top = '-15px';
+                                        number.style.right = '5px';
+                                        number.style.float = 'right';
+                                        item.appendChild(number);
+                                    } else if (markincorect) {
+                                        item.classList.add("sol_incorrect");
+                                    }
+                                };
+                                leftCol.querySelectorAll('.parsons-item').forEach(x => highlight(x, "sol_option", false));
+                                rightCol.querySelectorAll('.parsons-item').forEach(x => highlight(x, "sol_correct", true));
+                            }
+                        }
+                        else {
+                            solutionDiv.style.display = "none";
+                            solutionButton.innerText = "Show solutions";
+
+                            // find all items with class solution and remove the class
+                            for (const item of document.querySelectorAll('.sol_correct, .sol_incorrect, .sol_option')) {
+                                item.classList.remove('sol_correct', 'sol_incorrect', 'sol_option');
+                            }
+
+                            for (const item of document.querySelectorAll('.sol_decoration')) {
+                                item.remove();
+                            }
+                        }
+
+                    });
+
+                    problemDiv.appendChild(solutionButton);
+                    problemDiv.appendChild(solutionDiv);
+                    problemsContainer.appendChild(problemDiv);
+                });
+            }
+            catch (error) {
+                console.error(error);
+                document.getElementById("title").innerText = "Error loading problem set: " + error.message;
+            }
+        }); 
+    </script>
+</body>
+
+</html>
