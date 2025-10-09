@@ -29,19 +29,60 @@ unzip -q rawdata.zip
 
 # 1. Create a directory named data
 
+mkdir -p ./data # create data directory
+ls -ld ./ data
+
 # 2. Move the ./rawdata directory to ./data/raw
+
+mv ./rawdata ./data/raw
+# check
+ls -ld ./data/raw && ls -1 ./data/raw | head
 
 # 3. List the contents of the ./data/raw directory
 
+ls -lah ./data/raw
+
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 
+mkdir -p ./data/processed/{server_logs,user_logs,event_logs}
+# check
+ls -lah ./data/processed
+
+
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
+# dry-run preview (what will be copied)
+
+find ./data/raw -maxdepth 1 -type f -iname '*server*.log' -print
+
+# copy
+find ./data/raw -maxdepth 1 -type f -iname '*server*.log' -exec cp -t ./data/processed/server_logs {} +
+# check
+ls -1 ./data/processed/server_logs
 
 # 6. Repeat the above step for user logs and event logs
+# user logs
+find ./data/raw -maxdepth 1 -type f -iname '*user*.log' -exec cp -t ./data/processed/user_logs {} +
+ls -1 ./data/processed/user_logs
+
+# event logs
+find ./data/raw -maxdepth 1 -type f -iname '*event*.log' -exec cp -t ./data/processed/event_logs {} +
+ls -1 ./data/processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+# dry-run preview (see what would be deleted)
+find ./data/raw ./data/processed/user_logs -maxdepth 1 -type f -iname '*ipaddr*' -print
+
+# delete
+find ./data/raw ./data/processed/user_logs -maxdepth 1 -type f -iname '*ipaddr*' -delete
+
+# verify they’re gone
+find ./data/raw ./data/processed/user_logs -maxdepth 1 -type f -iname '*ipaddr*' -print
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
+find ./data/processed -type f | sort > ./data/inventory.txt
+# check
+wc -l ./data/inventory.txt
+head ./data/inventory.txt
 
 
 ###########################################
