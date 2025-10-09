@@ -71,13 +71,13 @@ ls -1 ./data/processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 <<<<<<< HEAD
-# dry-run preview (see what would be deleted)
+
 find ./data/raw ./data/processed/user_logs -maxdepth 1 -type f -iname '*ipaddr*' -print
 
-# delete
+
 find ./data/raw ./data/processed/user_logs -maxdepth 1 -type f -iname '*ipaddr*' -delete
 
-# verify they’re gone
+
 find ./data/raw ./data/processed/user_logs -maxdepth 1 -type f -iname '*ipaddr*' -print
 =======
 rf -rf ./data
