@@ -1,0 +1,20 @@
+/* @theme dsi_certificates_theme */
+@import 'default';
+
+section { position: relative; }
+
+/* Logo → bottom-right */
+section::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 75px;
+  height: 40px;
+  background-image: url("./images/dsi_logo.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0.8;
+}
