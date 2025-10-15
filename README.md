@@ -48,8 +48,7 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 **Questions can be submitted to the #dc2-help channel on Slack**
 
 * Technical Facilitator:   
-  * **Daniel Razavi**  
-    daniel.razavi@utoronto.ca
+  * **Amy**  
 
 * Learning Support Staff: 
   * **Dmytro Bonislavskyi**  
