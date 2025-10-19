@@ -57,6 +57,7 @@ find data/processed/user_logs -type f -name '*ipaddr*' -delete
 find data/processed -type f -print | sed 's#^data/##' > data/inventory.txt
 
 
+
 ###########################################
 
 echo "Project setup is complete!"
