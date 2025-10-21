@@ -28,21 +28,36 @@ unzip -q rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
+mkdir -p data
 
 # 2. Move the ./rawdata directory to ./data/raw
+if [ -d ./rawdata ] && [ ! -e ./data/raw ]; then
+  mv ./rawdata ./data/raw
+fi
 
 # 3. List the contents of the ./data/raw directory
+ls -la ./data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
+mkdir -p ./data/processed/{server_logs,user_logs,event_logs}
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 
+cp ./data/raw/server*.log ./data/processed/server_logs/
+
 # 6. Repeat the above step for user logs and event logs
+cp ./data/raw/user*.log ./data/processed/user_logs/
+cp ./data/raw/event*.log ./data/processed/event_logs/
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+find ./data/raw                      -maxdepth 1 -type f -name '*ipaddr*' -delete
+find ./data/processed/user_logs      -maxdepth 1 -type f -name '*ipaddr*' -delete
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-
+touch ./data/inventory.txt
+#find ./data/processed -type f | sed 's|^./data/||' | sort > "$inventory_file"
+ls -R ./data/processed > ./data/inventory.txt
+echo "Wrote inventory to $inventory_file"
 
 ###########################################
 
