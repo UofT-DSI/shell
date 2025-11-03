@@ -7,7 +7,7 @@ These commands are what I use to setup my environment for teaching and demonstra
 On Windows, these commands should be appended to `~/.bash_profile`.
 On MacOS, these commands should be appended to `~/.zshrc`.
 
-#### Append to the shell profile for extra spacing between previous commands and the subsequent shell prompt**
+#### Append to the shell profile for extra spacing between previous commands and the subsequent shell prompt
 ```
 export PS1="\n\n$PS1"
 ```
