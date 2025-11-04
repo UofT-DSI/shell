@@ -10,8 +10,8 @@ set -x
 # Then it unzips the raw data provided by the client.
 
 if [ -d newproject ]; then
-  echo "Directory 'newproject' already exists. Please remove it before running this script."
-  exit 1
+  echo "Recreating the newproject directory"
+  rm -rf newproject
 fi
 mkdir newproject
 cd newproject

@@ -45,19 +45,19 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 ## Contacts
 
-**Questions can be submitted to the #dc2-help channel on Slack**
+**Questions can be submitted to the #cohort-8-help channel on Slack**
 
 * Technical Facilitator:   
-  * **Daniel Razavi**  
-    daniel.razavi@utoronto.ca
+  * **Simeon Wong**  
+    me@simeon.dev
 
 * Learning Support Staff: 
   * **Dmytro Bonislavskyi**  
   dmytro.bonislavskyi@gmail.com
-  * **Anjali Desphande**  
-  anju_shrivastava@yahoo.com
-  * **Sergii Khomych**  
-  svkhomich1@gmail.com
+  * **Moniz Chan**  
+  chanmoniz526@gmail.com
+  * **Xindi Zhang**  
+  xindi.zhang@mail.utoronto.ca
  
 ## Delivery of the Learning Module
 
