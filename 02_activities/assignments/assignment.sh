@@ -42,6 +42,7 @@ cp -vi ./data/raw/*server*.log ./data/processed/server_logs/
 
 
 # 6. Repeat the above step for user logs and event logs
+mkdir -p ./data/processed/user_logs
 cp ./data/raw/*user*.log ./data/processed/user_logs/
 cp -vi ./data/raw/*event*.log ./data/processed/event_logs/
 
