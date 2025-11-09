@@ -23,7 +23,7 @@ mkdir -p data
 mkdir -p data/raw
 # 2. Move the ./rawdata directory to ./data/raw
 mv ./rawdata/* ./data/raw/ 2>/dev/null
-rmdir .,rawdata 2>/dev/null
+rmdir ./rawdata 2>/dev/null
 # 3. List the contents of the ./data/raw directory
 ls ./data/raw
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
