@@ -56,5 +56,5 @@ rm -f data/processed/user_logs/*ipaddr* 2>/dev/null
  find data/processed -type f > data/inventory.txt
 
 ###########################################
-# Completed my assignments
+
 echo "Project setup is complete!"
