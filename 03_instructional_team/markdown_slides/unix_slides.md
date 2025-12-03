@@ -5,7 +5,6 @@ style: |
     section {
         font-family: Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
     }
-_class: invert
 paginate: true
 ---
 

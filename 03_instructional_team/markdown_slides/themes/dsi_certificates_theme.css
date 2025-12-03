@@ -7,14 +7,20 @@ section { position: relative; }
 section::after {
   content: "";
   position: absolute;
-  right: 20px;
-  bottom: 20px;
-  width: 75px;
-  height: 40px;
-  background-image: url("./images/dsi_logo.png");
+  right: 0px;
+  bottom: 0px;
+  width: 325px;
+  height: 70px;
+  background-image: url("./images/dsi_logo_v4.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
   background-size: contain;
+
+  /* Anti-aliasing improvements */
+  image-rendering: auto;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+
   pointer-events: none;
-  opacity: 0.8;
 }
