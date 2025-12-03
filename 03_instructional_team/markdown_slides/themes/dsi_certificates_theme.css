@@ -24,3 +24,19 @@ section::after {
 
   pointer-events: none;
 }
+
+/* Make tables smaller in Marp slides */
+section table {
+  font-size: 0.8em !important;
+  line-height: 1.2 !important;
+}
+
+section table th,
+section table td {
+  padding: 0.25em 0.5em !important;
+}
+
+/* Optional: slightly smaller headers too */
+section table th {
+  font-size: 0.9em !important;
+}
