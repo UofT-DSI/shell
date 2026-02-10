@@ -34,7 +34,7 @@ cd data
 # 2. Move the ./rawdata directory to ./data/raw
 mkdir raw
 cd ..
-mv rawdata  data/raw
+sudo mv rawdata  data/raw
 
 # 3. List the contents of the ./data/raw directory
 echo "Listing contents of raw directory"
@@ -45,11 +45,37 @@ cd data
 mkdir processed
 
 cd processed
-mkdir server_logs user_logs event_logs
+#mkdir server_logs user_logs event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
+# Define search parameters
+sourceFolder="/data/raw"
+#destinationFolder="./server_logs"
+#extension=".log" 
+
+#mkdir -p $destinationFolder
+
+#mv "$sourceFolder"/*server*"$extension" "destinationFolder"
 
 # 6. Repeat the above step for user logs and event logs
+
+#user logs
+destinationFolder="user_logs"
+#extension=".log" 
+
+mkdir $destinationFolder
+
+cd $sourceFolder
+
+mv "$sourceFolder/"user_log_1.log "destinationFolder"
+
+#event logs
+#destinationFolder="./event_logs"
+#extension=".log" 
+
+#mkdir -p $destinationFolder
+
+#mv "$sourceFolder"/*event*"$extension" "destinationFolder"
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 
