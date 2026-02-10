@@ -34,7 +34,7 @@ cd data
 # 2. Move the ./rawdata directory to ./data/raw
 mkdir raw
 cd ..
-sudo mv rawdata  data/raw
+mv rawdata  data/raw
 
 # 3. List the contents of the ./data/raw directory
 echo "Listing contents of raw directory"
@@ -44,43 +44,53 @@ ls data/raw
 cd data
 mkdir processed
 
-cd processed
-#mkdir server_logs user_logs event_logs
+mkdir -p processed/server_logs processed/user_logs processed/event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 # Define search parameters
-sourceFolder="/data/raw"
-#destinationFolder="./server_logs"
-#extension=".log" 
+sourceFolder="raw/rawdata"
 
-#mkdir -p $destinationFolder
+#server logs
+destinationFolder="../../processed/server_logs"
 
-#mv "$sourceFolder"/*server*"$extension" "destinationFolder"
+cd "$sourceFolder"/
+pwd
+
+mv *server*.log "$destinationFolder"/
+pwd
 
 # 6. Repeat the above step for user logs and event logs
 
 #user logs
-destinationFolder="user_logs"
-#extension=".log" 
+destinationFolder="../../processed/user_logs"
 
-mkdir $destinationFolder
+pwd
 
-cd $sourceFolder
+mv *user*.log "$destinationFolder"/
 
-mv "$sourceFolder/"user_log_1.log "destinationFolder"
 
 #event logs
-#destinationFolder="./event_logs"
-#extension=".log" 
+destinationFolder="../../processed/event_logs"
 
-#mkdir -p $destinationFolder
+pwd
 
-#mv "$sourceFolder"/*event*"$extension" "destinationFolder"
+mv *event*.log "$destinationFolder"/
+
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 
+pwd
+rm -rf *ipaddr*
+
+pwd
+rm -rf ../../processed/user_logs/*ipaddr*
+
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
+cd ../..
+pwd
+
+find processed/ -type f > inventory.txt
 
 ###########################################
 
