@@ -1,5 +1,6 @@
 # Unix shell
-I want to make this file richer
+This document is an overview/syllabus for a Unix shell learning module, describing what you’ll learn, the required and optional activities, how to get help, key contacts, and links to resources plus the module’s repository folder structure.
+
 ## Content
 
 * [Description](#description)
