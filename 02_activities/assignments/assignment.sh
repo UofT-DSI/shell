@@ -36,9 +36,9 @@ mkdir -p data
 mv rawdata data/raw
 
 # 3. List the contents of the ./data/raw directory
-ls raw
+ls ./data/raw
 ## more detailed look of the contents of the directory
-ls -l raw
+ls -l ./data/raw
 
 # 4. Create the directory ./data/processed, 
 ## create parent directory
