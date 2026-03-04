@@ -28,9 +28,10 @@ unzip -q rawdata.zip
 git add assignment.sh
 cd newproject
 mkdir data
-cd data
-mkdir raw 
-mv rawdata
+mv rawdata data/raw
+ls ./data/raw 
+mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
+cp ./data/raw/*server*.log ./data/processed/server_logs/
 
 ###########################################
 # Complete assignment here
