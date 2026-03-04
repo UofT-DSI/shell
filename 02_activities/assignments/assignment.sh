@@ -28,8 +28,9 @@ unzip -q rawdata.zip
 git add assignment.sh
 cd newproject
 mkdir data
-mv ./rawdata /data/raw 
-ls data
+cd data
+mkdir raw 
+mv rawdata
 
 ###########################################
 # Complete assignment here
