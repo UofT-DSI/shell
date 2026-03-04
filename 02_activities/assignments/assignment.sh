@@ -32,7 +32,9 @@ mv rawdata data/raw
 ls ./data/raw 
 mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
 cp ./data/raw/*server*.log ./data/processed/server_logs/
-
+cp ./data/raw/*user*.log ./data/processed/user_logs/
+cp ./data/raw/*event*.log ./data/processed/event_logs/
+rm ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
 ###########################################
 # Complete assignment here
 
