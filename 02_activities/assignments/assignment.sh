@@ -35,6 +35,7 @@ cp ./data/raw/*server*.log ./data/processed/server_logs/
 cp ./data/raw/*user*.log ./data/processed/user_logs/
 cp ./data/raw/*event*.log ./data/processed/event_logs/
 rm ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
+ls ./data/processed/*/* > ./data/inventory.txt
 ###########################################
 # Complete assignment here
 
