@@ -26,7 +26,16 @@ unzip -q rawdata.zip
 
 ###########################################
 # Complete assignment here
-
+mkdir data
+mv rawdata data/raw
+ls data/raw
+mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
+cp data/raw/*server*.log data/processed/server_logs/
+cp data/raw/*user*.log data/processed/user_logs/
+cp data/raw/*event*.log data/processed/event_logs/
+rm -f data/raw/*ipaddr*
+rm -f data/processed/user_logs/*ipaddr*
+find data/processed -type f > data/inventory.txt
 # 1. Create a directory named data
 
 # 2. Move the ./rawdata directory to ./data/raw (eg. move it into ./data and rename it to raw)
