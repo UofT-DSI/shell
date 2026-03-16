@@ -102,7 +102,7 @@ Feel free to use the following as resources:
 
 #### 3. Try asking in your cohort's Slack help channel
 - Since we're all working through the same material, there's a good chance one of your peers has encountered the same error, or has already solved it
-- Try searching in the DSI Certificates Slack help channel for whether a similar query has been posted
+- Try searching in the DSI Microcredentials Slack help channel for whether a similar query has been posted
 - If the question has not yet been answered, post your question!
    - Describe your overall goals, the context, and the specific details of what you were trying to accomplish
    - Make sure to **copy and paste** your code, your error message
@@ -140,4 +140,3 @@ Below is an outline of the folder structure for this module:
 * **LICENSE**: The license for this repository.
 * **SETUP.md**: Contains the steps required to set up this repo for the module.
 * **README.md**: This file.
-
