@@ -48,16 +48,15 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 **Questions can be submitted to the #cohort-8-help channel on Slack**
 
 * Technical Facilitator:   
-  * **Simeon Wong**  
-    me@simeon.dev
+  * **Keli Chiu**  
+    keli.chiu.kc@gmail.com
 
 * Learning Support Staff: 
-  * **Dmytro Bonislavskyi**  
-  dmytro.bonislavskyi@gmail.com
-  * **Moniz Chan**  
-  chanmoniz526@gmail.com
-  * **Xindi Zhang**  
-  xindi.zhang@mail.utoronto.ca
+  * **Kasra Vakiloroayaei**  
+  vakiloroayaei.kasra@gmail.com
+  * **vishnou vinayagame**  
+  vishnou.vina@hotmail.fr
+
 
 ## Delivery of the Learning Module
 
