@@ -48,3 +48,4 @@ unzip -q rawdata.zip
 ###########################################
 
 echo "Project setup is complete!"
+echo "And once more!"
