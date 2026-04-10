@@ -26,25 +26,59 @@ unzip -q rawdata.zip
 
 ###########################################
 # Complete assignment here
+#!/bin/bash
+set -x
 
-# 1. Create a directory named data
+############################################
+# DSI CONSULTING INC. Project setup script #
+############################################
+# This script creates standard analysis and output directories
+# for a new project. It also creates a README file with the
+# project name and a brief description of the project.
+# Then it unzips the raw data provided by the client.
 
-# 2. Move the ./rawdata directory to ./data/raw (eg. move it into ./data and rename it to raw)
+if [ -d newproject ]; then
+  echo "Recreating the newproject directory"
+  rm -rf newproject
+fi
+mkdir newproject
+cd newproject
 
-# 3. List the contents of the ./data/raw directory
+mkdir analysis output
+touch README.md
+touch analysis/main.py
 
-# 4. Create the directory ./data/processed, 
-#    then create the following sub-directories within it: server_logs, user_logs, and event_logs
-
-# 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-
-# 6. Repeat the above step for user logs and event logs
-
-# 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-
-# 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-
+# download client data
+curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
+unzip -q rawdata.zip
 
 ###########################################
+# Complete assignment here
 
-echo "Project setup is complete!"
+# 1.
+mkdir data
+
+# 2.
+mv rawdata data/raw
+
+# 3.
+ls data/raw
+
+# 4.
+mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
+
+# 5.
+cp data/raw/*server*.log data/processed/server_logs/
+
+# 6.
+cp data/raw/*user*.log data/processed/user_logs/
+cp data/raw/*event*.log data/processed/event_logs/
+
+# 7.
+rm -f data/raw/*ipaddr*
+rm -f data/processed/user_logs/*ipaddr*
+
+# 8.
+find data/processed -type f | sort > data/inventory.txt
+
+echo "Project steps complete"
