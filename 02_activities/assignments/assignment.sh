@@ -32,9 +32,10 @@ mkdir data
 
 # 2. Move the ./rawdata directory to ./data/raw (eg. move it into ./data and rename it to raw)
 mv rawdata data
-mv rawdata raw
+mv ./data/rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
+ls ./data/raw
 
 # 4. Create the directory ./data/processed, 
 #    then create the following sub-directories within it: server_logs, user_logs, and event_logs
