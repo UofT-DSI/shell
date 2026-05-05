@@ -44,6 +44,35 @@ unzip -q rawdata.zip
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
+mkdir -p data
+mv rawdata data
+cd data
+mv rawdata raw
+cd raw
+ls
+cd ..
+mkdir -p processed
+cd processed
+mkdir -p server_logs
+mkdir -p user_logs
+mkdir -p event_logs
+cd ..
+cp raw/*server*.log processed/server_logs/
+cp raw/*user*.log processed/user_logs/
+cp raw/*event*.log processed/event_logs/
+
+rm raw/*ipaddr*
+rm processed/user_logs/*ipaddr*
+
+
+touch inventory.txt
+
+find processed -type f > inventory.txt
+
+
+
+
+
 
 ###########################################
 
