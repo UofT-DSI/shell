@@ -1,4 +1,6 @@
-# Unix shell
+# Messy ReadMe for the sake of the exercise
+
+UWU
 
 ## Content
 
@@ -7,7 +9,7 @@
 * [Activities](#activities)
 * [Contacts](#contacts)
 * [Delivery of the Learning Module](#delivery-of-the-learning-module)
-* [Schedule](#schedule)
+* [Schedule](#schedule
 * [Requirements](#requirements)
 * [Resources](#resources)
   + [Cheat sheet](#cheat-sheet)
@@ -24,16 +26,13 @@ Participants will acquire problem-solving skills through live coding sessions. A
 ## Learning Outcomes
 By the end of the module, participants will be able to:
 * Comfortably access and navigate the terminal
-* Create, modify, and delete directories and files
-
-
+* Create, modify, and delete directories and file
 ## Activities
-This module has two types of activities.
+This module has two types of activities
 1. Assignments are mandatory, and form part of your evaluation.
-1. Practice problems are not assessed, but are provided to you for extra practice. We encourage you to work on them together and discuss solutions during Work Periods and on Slack.
-
+1. Practice problems are not assessedbut are provided to you for extra practice. We encourage you to work on them together and discuss solutions during Work Periods and on Slack.
 ### Assignments
-Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
+Participans should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
 1. [Shell script assignment](./02_activities/assignments/assignment_instructions.md)
 
@@ -51,7 +50,7 @@ Participants should review the [Assignment Submission Guide](https://github.com/
   * **Keli Chiu**  
     keli.chiu.kc@gmail.com
 
-* Learning Support Staff: 
+* Learning upport Staff: 
   * **Vishnou Vinayagame**  
   vakiloroayaei.kasra@gmail.com
   * **Kasra Vakiloroayaei**  
@@ -74,7 +73,6 @@ Participants are encouraged to engage actively during the learning module. The k
 * We encourage participants to default to having their camera on at all times, and turning the camera off only as needed. This will greatly enhance the learning experience for all participants and provides real-time feedback for the instructional team. 
 
 ## Resources
-
 Feel free to use the following as resources:
 
 ### Cheat sheet
@@ -94,48 +92,43 @@ Feel free to use the following as resources:
 - (optional) Take a screenshot of your entire workspace
 
 #### 2. Try searching the web for your error message
-- Sometimes, the error has common solutions that can be easy to find!
+- Sometimes, the error has common solutions thcan be easy to find!
    - This will be faster than waiting for an answer
-- If none of the solutions apply, consider asking a Generative AI tool
-   - Paste your code, the error message, and a description of your overall goals
+- If none of the solutions apply, consider asinga Generative AI tool
+   - Paste your code, the error message, anda description of your overall goals
 
-#### 3. Try asking in your cohort's Slack help channel
+#### 3. Try asking in your cohort's Slack hlp channel
 - Since we're all working through the same material, there's a good chance one of your peers has encountered the same error, or has already solved it
 - Try searching in the DSI Microcredentials Slack help channel for whether a similar query has been posted
-- If the question has not yet been answered, post your question!
+- If the question has not yet been answered, post our question!
    - Describe your overall goals, the context, and the specific details of what you were trying to accomplish
-   - Make sure to **copy and paste** your code, your error message
+    Make sure to **copy and paste** your code, your error message
    - Copying and pasting helps:
       1. Your peers and teaching team quickly try out your code
       1. Others to find your question in the future
-
 #### Great resources on how to ask good technical questions that get useful answers
-- [Asking for Help - The Odin Project](https://www.theodinproject.com/lessons/foundations-asking-for-help)
+- [Asking for Help - The Odin Project](htts://www.theodinproject.com/lessons/foundations-asking-for-help)
 - [How do I ask a good question? - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
-- [The XY problem: A question pitfall that won't get useful answers](https://xyproblem.info/)
+- [The XY poblem: A question pitfall that won't get useful answers](https://xyproblem.info/)
 - [How to create a minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
 
 ## Folder Structure
-Below is an outline of the folder structure for this module:
-```
+Below is a utline of the folder structure for this module:
+``
 .
-├── .github
-├── 01_materials
-├── 02_activities
-├── 03_instructional_team
-├── 04_this_cohort
-├── .gitignore
-├── LICENSE
-├── SETUP.md
-└── README.md
+├── .githu
+├─ 01_materials
+├── 02_acti
+├── 03_insructional_team
+├── 04_ths_cohor├── .gitignore
+├── LICENS
+── S
+└── REDME.md
 
-```
-* **.github**: Contains issue templates and pull request templates for the repository.
-* **materials**: Module slides and interactive notebooks (.ipynb files) used during learning sessions.
+``
+* **.github**: Contains issue templates nd pull request templates for the repository.
+* **maerials**: Module slides and interactive otebooks (.ipynb files) used during learning sessions.
 * **activities**: Contains graded assignments and ungraded practice problems to apply concepts covered in the learning module.
-* **instructional_team**: Resources for the instructional team.
-* **this_cohort**: Additional materials for this cohort.
-* **.gitignore**: Files to exclude from this repository, specified by the Technical Facilitator.
-* **LICENSE**: The license for this repository.
-* **SETUP.md**: Contains the steps required to set up this repo for the module.
-* **README.md**: This file.
+* **instructional_team**: Resources for te instructional team.
+* **this_cohort**: Additional materials fois chort.
+* **.gitignore**: Files to exclude from this rm
