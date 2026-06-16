@@ -1,6 +1,5 @@
 #!/bin/bash
 set -x
-
 ############################################
 # DSI CONSULTING INC. Project setup script #
 ############################################
@@ -8,7 +7,6 @@ set -x
 # for a new project. It also creates a README file with the
 # project name and a brief description of the project.
 # Then it unzips the raw data provided by the client.
-
 if [ -d newproject ]; then
   echo "Recreating the newproject directory"
   rm -rf newproject
@@ -33,6 +31,8 @@ unzip -q rawdata.zip
 
 # 3. List the contents of the ./data/raw directory
 
+mkdri data
+
 # 4. Create the directory ./data/processed, 
 #    then create the following sub-directories within it: server_logs, user_logs, and event_logs
 
@@ -43,8 +43,5 @@ unzip -q rawdata.zip
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-
-
 ###########################################
-
 echo "Project setup is complete!"
