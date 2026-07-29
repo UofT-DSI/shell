@@ -323,16 +323,18 @@ if github_token:
 
     if correct == total:
         # also approve the PR
-        requests.post(
+        response = requests.post(
             f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/pulls/{github_pr_number}/reviews",
             json={"event": "APPROVE", "body": "## Autograder results\n" + render_md },
             headers=headers)
+        response.raise_for_status()
     else:
         # request changes to the PR
-        requests.post(
+        response = requests.post(
             f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/pulls/{github_pr_number}/reviews",
             json={"event": "REQUEST_CHANGES", "body": "## Autograder results\n" + render_md + "\n\nPlease address the issues listed above." },
             headers=headers)
+        response.raise_for_status()
 
 else:
     print("GitHub token not found. Skipping comment creation.")
