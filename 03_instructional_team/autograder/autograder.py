@@ -65,6 +65,17 @@ def is_commit_in_branch(
     return other_commit_sha in commit_shas
 
 
+def post_to_github(url, payload, headers, description):
+    response = requests.post(url, json=payload, headers=headers)
+    if response.ok:
+        print(f'GitHub {description} posted successfully.')
+    else:
+        print(
+            f'GitHub {description} failed with status {response.status_code}: '
+            f'{response.text}')
+    return response
+
+
 # score table
 s = []
 
@@ -320,21 +331,26 @@ if github_token:
         "Authorization": f"Bearer {github_token}",
         "Accept": "application/vnd.github+json"
     }
-
+    comment_body = "## Autograder results\n" + render_md
     if correct == total:
-        # also approve the PR
-        response = requests.post(
-            f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/pulls/{github_pr_number}/reviews",
-            json={"event": "APPROVE", "body": "## Autograder results\n" + render_md },
-            headers=headers)
-        response.raise_for_status()
-    else:
+        comment_body += "\n\nAll autograder tests passed. This submission is approved by the autograder."
+
+    post_to_github(
+        f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/issues/{github_pr_number}/comments",
+        {"body": comment_body},
+        headers,
+        "comment")
+
+    if correct != total:
         # request changes to the PR
-        response = requests.post(
+        post_to_github(
             f"https://api.github.com/repos/{github_repo_owner}/{github_repo_name}/pulls/{github_pr_number}/reviews",
-            json={"event": "REQUEST_CHANGES", "body": "## Autograder results\n" + render_md + "\n\nPlease address the issues listed above." },
-            headers=headers)
-        response.raise_for_status()
+            {
+                "event": "REQUEST_CHANGES",
+                "body": "Autograder checks failed. Please address the issues listed in the results comment."
+            },
+            headers,
+            "request changes review")
 
 else:
     print("GitHub token not found. Skipping comment creation.")

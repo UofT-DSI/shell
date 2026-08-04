@@ -9,7 +9,11 @@ on:
   workflow_dispatch:
 
 permissions:
+  # Read repository contents for checkout and grading.
   contents: read
+  # Pull request comments use the Issues API.
+  issues: write
+  # Required to create REQUEST_CHANGES reviews when checks fail.
   pull-requests: write
 
 jobs:
