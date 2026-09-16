@@ -48,14 +48,17 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 **Questions can be submitted to the #cohort-8-help channel on Slack**
 
 * Technical Facilitator:   
-  * **Keli Chiu**  
-    keli.chiu.kc@gmail.com
+  * **Madeleine Bonsma-Fisher**  
+    m.bonsma@utoronto.ca
 
 * Learning Support Staff: 
-  * **Vishnou Vinayagame**  
-  vakiloroayaei.kasra@gmail.com
+  * **Sergii Khomych**  
+  svkhomich1@gmail.com
   * **Kasra Vakiloroayaei**  
   vakiloroayaei.kasra@gmail.com
+  * **Dmytro Bonislavskyi**
+  dmytro.bonislavskyi@gmail.com
+
 
 
 ## Delivery of the Learning Module
