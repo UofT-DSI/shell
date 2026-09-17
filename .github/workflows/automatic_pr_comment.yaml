@@ -4,6 +4,11 @@ on:
   pull_request_target:
     types: [opened, reopened]
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 jobs:
   handle-pr:
     if: github.repository_owner == 'UofT-DSI'
@@ -14,42 +19,35 @@ jobs:
         with:
           script: |
             const pr = context.payload.pull_request;
-            const branchName = pr.head.ref;
             const issue_number = pr.number;
             const repo = context.repo;
             const sender = context.payload.sender.login;
 
-            let isMember = false;
-            let isContributor = false;
+            let isRepoContributor = ["CONTRIBUTOR", "COLLABORATOR", "OWNER"].includes(
+              pr.author_association
+            );
 
-            // Check if user is a member of the org
-            try {
-              const membership = await github.rest.orgs.getMembershipForUser({
-                org: repo.owner,
-                username: sender
-              });
-              isMember = membership && membership.status === "active";
-            } catch (error) {
-              // If not a member, GitHub API throws a 404
-              isMember = false;
-            }
-
-            // Check if user is a contributor to the repo
-            try {
-              const contributors = await github.paginate(
-                github.rest.repos.listContributors,
-                {
-                  owner: repo.owner,
-                  repo: repo.repo,
-                  anon: false
+            if (!isRepoContributor) {
+              try {
+                const contributors = await github.paginate(
+                  github.rest.repos.listContributors,
+                  {
+                    owner: repo.owner,
+                    repo: repo.repo,
+                    anon: false
+                  }
+                );
+                isRepoContributor = contributors.some((contributor) => {
+                  return contributor.login === sender;
+                });
+              } catch (error) {
+                if (error.status !== 404) {
+                  throw error;
                 }
-              );
-              isContributor = contributors.some(contributor => contributor.login === sender);
-            } catch (error) {
-              isContributor = false;
+              }
             }
 
-            if ((!isMember && !isContributor) || branchName.startsWith('assignment')) {
+            if (!isRepoContributor) {
               const commentBody = `This pull request was made to the wrong repository. If you are a participant, please close it and open it in your own fork instead. Refer to the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for detailed instructions.`;
 
               await github.rest.issues.createComment({
