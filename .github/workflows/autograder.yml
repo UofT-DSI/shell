@@ -29,10 +29,10 @@ jobs:
           UUID=$(uuidgen)
           echo "UUID=$UUID" >> $GITHUB_ENV
           mkdir /tmp/$UUID
-          cp $GITHUB_WORKSPACE/02_activities/assignments/assignment.sh /tmp/$UUID
+          cp $GITHUB_WORKSPACE/02_activities/assignments/assignment_script.sh /tmp/$UUID
       - name: Run assignment script
         run: |
-          bash -c "bash assignment.sh 2>&1 | tee /tmp/${{ env.UUID }}_output.txt"
+          bash -c "bash assignment_script.sh 2>&1 | tee /tmp/${{ env.UUID }}_output.txt"
         working-directory: /tmp/${{ env.UUID }}
       - name: Grade responses
         id: grade

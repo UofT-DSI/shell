@@ -20,20 +20,20 @@ You've been asked to update this script to also automate the initial organizatio
    git clone <url to your repo>
    ```
 
-2. **Create a Branch for Your Work**: To keep your changes organized, create a new branch named `assignment`:
+2. **Create a Branch for Your Work**: To keep your changes organized, create a new branch named `assignment_shell`:
    ```bash
-   git switch -c assignment
+   git switch -c assignment_shell
    ```
 
 ---
 
 ### Part 1: Update the Data Ingest Script
-1. **Modify the Script**: Using the template in ``02_activities/assignments/assignment.sh``, fill in the correct commands as described by the comments.
+1. **Modify the Script**: Using the template in ``02_activities/assignments/assignment_script.sh``, fill in the correct commands as described by the comments.
     - It may help to paste your commands into the Terminal as you write your script (or vice versa) to test as you go
 
 2. **Test Your Script Locally**: Execute your script to ensure it works as expected. You may need to make additional tweaks and re-run it until you are satisfied with the results.
     ```bash
-    bash assignment.sh
+    bash assignment_script.sh
     ```
 
    - Check if the expected directories are created. (eg. by browsing the directory with `cd` and `ls`)
@@ -43,30 +43,30 @@ You've been asked to update this script to also automate the initial organizatio
 
 3. **Commit Your Changes**: As you complete parts of your script and confirmed that it is working correctly, stage and commit your changes to ensure your progress is saved.
     ```bash
-    git add assignment.sh
+    git add assignment_script.sh
     git commit
     ```
 
     - Remember that the script is shared amongst your team members. Your script should run properly in any directory and should not have any hardcoded absolute paths or rely on advanced functionality not available in standard Bash.
-    - *Note*: Your assignment is graded solely based on `assignment.sh`. 
+    - *Note*: Your assignment is graded solely based on `assignment_script.sh`. 
     - ‼️ You **must not** include any data files created during testing of your script and you **must not** change any other files.
 
 4. **Push Your Changes to GitHub**
    ```bash
    git status                   # check that your working directory is clean (all changes committed)
-   git push origin assignment   # push your changes
+   git push origin assignment_shell   # push your changes
    ```
    - ‼️ **Do not** push to `main`
 
 5. **Create a pull request**
-   - Open a pull request from your `assignment` branch to your repository's `main` branch.
+   - Open a pull request from your `assignment_shell` branch to your repository's `main` branch.
    - The autograder will run automatically and post your assignment grade as a comment.
    - Ensure the pull request is **NOT** made to the `UofT-DSI` organization
    - ‼️ **Do not merge** your pull request until the end of the module. Your teaching team will only grade *open* pull requests.
 
-6. **Repeat steps 1-4 as needed**: As you make tweaks to your assignment, push new changes to your `assignment` branch to rerun the autograder
+6. **Repeat steps 1-4 as needed**: As you make tweaks to your assignment, push new changes to your `assignment_shell` branch to rerun the autograder
    - There's no need to create a new pull request
-   - Pushes to the `assignment` branch will trigger additional runs
+   - Pushes to the `assignment_shell` branch will trigger additional runs
 
 ---
 
@@ -90,14 +90,14 @@ Your coworkers have made some other changes to the script. You'll need to incorp
 This assignment is considered complete if all autograder tests pass successfully and your Pull Request is approved by the github-actions bot, and incomplete otherwise.
 
 ### Submission Parameters:
-* The branch name for your repo should be: `assignment`
+* The branch name for your repo should be: `assignment_shell`
 * What to submit for this assignment:
-    * One or more commits that update the `assignment.sh` script
+    * One or more commits that update the `assignment_script.sh` script
 * What the pull request link should look like for this assignment: `https://github.com/<your_github_username>/shell/pull/<pr_id>`
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment`.
+- [ ] Create a branch called `assignment_shell`.
 - [ ] Ensure that your repository is public.
 - [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
 - [ ] Verify that your link is accessible in a private browser window.
