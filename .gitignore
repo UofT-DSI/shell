@@ -14,5 +14,16 @@ package.json
 
 # Un-ignore the specific files
 !02_activities/assignments/assignment.sh
+!02_activities/assignments/github_actions.png
 !02_activities/assignments/assignment_instructions.md
 
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+newproject/

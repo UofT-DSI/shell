@@ -9,25 +9,33 @@ set -x
 # project name and a brief description of the project.
 # Then it unzips the raw data provided by the client.
 
+if [ -d newproject ]; then
+  echo "Recreating the newproject directory"
+  rm -rf newproject
+fi
+mkdir newproject
+cd newproject
+
 mkdir analysis output
 touch README.md
 echo "# Project Name: DSI Consulting Inc." > README.md
 touch analysis/main.py
 
 # download client data
-wget -O rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
-unzip rawdata.zip
+curl -Lo rawdata.zip https://github.com/UofT-DSI/shell/raw/refs/heads/main/02_activities/assignments/rawdata.zip
+unzip -q rawdata.zip
 
 ###########################################
 # Complete assignment here
 
 # 1. Create a directory named data
 
-# 2. Move the ./rawdata directory to ./data/raw
+# 2. Move the ./rawdata directory to ./data/raw (eg. move it into ./data and rename it to raw)
 
 # 3. List the contents of the ./data/raw directory
 
-# 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
+# 4. Create the directory ./data/processed, 
+#    then create the following sub-directories within it: server_logs, user_logs, and event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 
@@ -37,7 +45,6 @@ unzip rawdata.zip
 rf -rf ./data
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-
 
 
 ###########################################
