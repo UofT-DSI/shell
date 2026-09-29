@@ -52,7 +52,7 @@ cp ./data/raw/*event*.log ./data/processed/event_logs
 find "./data/raw" "./data/processed/user_logs" -type f -iname '*ipaddr*' -delete
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-
+find ./data/processed -type f -name '*.log' -exec basename {} \; > inventory.txt
 
 ###########################################
 
